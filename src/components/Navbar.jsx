@@ -35,7 +35,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection('hero')}>
             <a href="/">
-             <img src="./src/assets/logo.png" alt="TechFest logo" className="w-auto h-14 lg:h-16" />
+             <img src="../logo.png" alt="TechFest logo" className="w-auto h-14 lg:h-16" />
              </a>
            
           </div>

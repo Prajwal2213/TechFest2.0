@@ -2,7 +2,7 @@ const Footer = () => {
   return (
 <footer
   id="footer"
-  className="relative bg-gradient-to-b from-slate-900 via-black to-black border-t border-white/10 backdrop-blur-xl font-sans"
+  className="relative bg-gradient-to-b from-slate-900 via-black to-black border-t border-white/10 backdrop-blur-xl"
 >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
 
