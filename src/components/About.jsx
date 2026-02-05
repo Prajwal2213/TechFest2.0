@@ -24,7 +24,7 @@ const About = () => {
           </div>
 
           <div >
-            <img src="./public/image2.png" alt="College Image" className="rounded-lg shadow-lg " />
+            <img src="./image2.png" alt="College Image" className="rounded-lg shadow-lg " />
           </div>
 
         
