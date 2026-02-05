@@ -84,15 +84,17 @@ const EventSection = () => {
               {/* Content */}
               <div className="relative md:absolute inset-0 z-10 flex flex-col p-6 bg-gradient-to-t from-black/90">
                 <h3
-                  className={`
-                    text-white font-semibold transition-all duration-500 ease-in-out
-                    text-xl md:text-3xl
-
-                    ${current === i
-                      ? 'md:[writing-mode:horizontal-tb] md:rotate-0'
-                      : 'md:[writing-mode:vertical-rl] md:rotate-180'}
-                  `}
-                >
+  className={`
+    text-white font-semibold transition-all duration-500 origin-left
+    text-xl md:text-3xl
+    whitespace-nowrap
+    ${
+      current === i
+        ? 'md:[writing-mode:horizontal-tb] md:rotate-0 '
+        : 'md:[writing-mode:vertical-rl] md:rotate-180 md:ml-2 md:text-center'
+    }
+  `}
+>
                   {item.title}
                 </h3>
 
