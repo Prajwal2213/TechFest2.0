@@ -83,7 +83,16 @@ const EventSection = () => {
 
               {/* Content */}
               <div className="relative md:absolute inset-0 z-10 flex flex-col p-6 bg-gradient-to-t from-black/90">
-                <h3 className="text-white text-xl md:text-3xl font-semibold">
+                <h3
+                  className={`
+                    text-white font-semibold transition-all duration-500 ease-in-out
+                    text-xl md:text-3xl
+
+                    ${current === i
+                      ? 'md:[writing-mode:horizontal-tb] md:rotate-0'
+                      : 'md:[writing-mode:vertical-rl] md:rotate-180'}
+                  `}
+                >
                   {item.title}
                 </h3>
 
@@ -119,7 +128,7 @@ const EventSection = () => {
                 </a>
 
                 {/* Desktop thumbnail */}
-                <img
+                {/* <img
                   src={item.thumb}
                   alt=""
                   className={`
@@ -127,8 +136,8 @@ const EventSection = () => {
                     object-cover rounded-lg shadow-xl
                     transition-opacity duration-500
                     ${current === i ? 'opacity-100' : 'opacity-0'}
-                  `}
-                />
+                  `}/> */}
+                
               </div>
             </article>
           ))}
