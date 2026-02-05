@@ -13,15 +13,22 @@ import Sponsors from './components/Sponsors.jsx';
 import EventPage from './components/EventPage.jsx';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CosmicParticles from './components/CosmicParticles.jsx';
+import ComingSoon from './components/ComingSoon.jsx';
+import ScrollToTop from './components/ScrolltoTop.jsx';
 
 function App() {
+  
   return (
     <Layout>
       <div className='z-2'>
-      <CosmicParticles /> 
+        
+
+      <CosmicParticles />
+       
 
       </div>
         <Navbar />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={
             <>
@@ -35,6 +42,7 @@ function App() {
           } />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/events" element={<EventPage />} />
+          <Route path="/gallery" element={<ComingSoon />} />
         </Routes>
         <Footer />
     

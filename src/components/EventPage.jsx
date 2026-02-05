@@ -114,9 +114,9 @@ const DetailOverlay = ({ event, onClose }) => {
                 </div>
 
                 <div className="pt-8 flex flex-col md:flex-row gap-4">
-                  <button className="flex-1 py-4 bg-yellow-500 text-black font-black text-xs tracking-[0.4em] uppercase hover:bg-white transition-all flex items-center justify-center gap-3">
+                  {/* <button className="flex-1 py-4 bg-yellow-500 text-black font-black text-xs tracking-[0.4em] uppercase hover:bg-white transition-all flex items-center justify-center gap-3">
                     <span className="" > Register </span>
-                  </button>
+                  </button> */}
                   <button className="flex-1 py-4 bg-white text-black font-black text-xs tracking-[0.4em] uppercase hover:bg-white transition-all flex items-center justify-center gap-3">
                     <span className="" > problem Statement </ span>
                   </button>

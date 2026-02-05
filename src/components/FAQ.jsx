@@ -141,29 +141,29 @@ const FAQ = () => {
   );
 
   return (
-    /* ✅ RELATIVE ROOT — LIMITS BACKGROUND TO FAQ ONLY */
     <section
       id="faq"
-      className="relative min-h-screen overflow-hidden "
+      className="relative min-h-screen overflow-hidden"
     >
-      {/* SILK BACKGROUND (FAQ ONLY)
+      {/* OPTIONAL BACKGROUND */}
+      {/*
       <div className="absolute inset-0 z-0">
         <Canvas dpr={[1, 2]}>
           <SilkPlane ref={meshRef} uniforms={uniforms} />
         </Canvas>
-      </div> */}
+      </div>
+      */}
 
-      {/* DARK OVERLAY FOR READABILITY */}
-      <div className="absolute inset-0  z-10" />
+      <div className="absolute inset-0 z-10" />
 
-      {/* FAQ CONTENT */}
-      <div className="relative z-20 max-w-4xl mx-auto px-6 py-24">
-        <div className="rounded-3xl bg-white/5 backdrop-blur-2xl border border-white/10 p-10 shadow-[0_0_120px_-40px_rgba(34,211,238,0.6)]">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-14 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-indigo-400">
+      {/* CONTENT */}
+      <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24">
+        <div className="rounded-3xl bg-white/5 backdrop-blur-2xl border border-white/10 p-6 sm:p-8 md:p-10 shadow-[0_0_120px_-40px_rgba(34,211,238,0.6)]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-10 sm:mb-12 md:mb-14 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-indigo-400">
             Frequently Asked Questions
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -173,10 +173,12 @@ const FAQ = () => {
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
-                  className="w-full flex justify-between items-center px-6 py-5 text-left text-white font-medium hover:bg-white/10 transition"
+                  className="w-full flex justify-between items-center px-4 sm:px-6 py-4 sm:py-5 text-left text-white font-medium hover:bg-white/10 transition"
                 >
-                  <span>{faq.question}</span>
-                  <span className="text-2xl text-cyan-400">
+                  <span className="text-sm sm:text-base">
+                    {faq.question}
+                  </span>
+                  <span className="text-xl sm:text-2xl text-cyan-400">
                     {openIndex === index ? "−" : "+"}
                   </span>
                 </button>
@@ -184,11 +186,11 @@ const FAQ = () => {
                 <div
                   className={`transition-all duration-500 ease-in-out overflow-hidden ${
                     openIndex === index
-                      ? "max-h-96 px-6 pb-5"
-                      : "max-h-0 px-6"
+                      ? "max-h-96 px-4 sm:px-6 pb-4 sm:pb-5"
+                      : "max-h-0 px-4 sm:px-6"
                   }`}
                 >
-                  <p className="text-slate-300 leading-relaxed">
+                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

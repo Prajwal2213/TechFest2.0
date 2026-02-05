@@ -11,7 +11,7 @@ const CosmicParticles = () => {
     let scene, camera, renderer, points;
     let bgLayer1, bgLayer2, bgLayer3;
     let particlesGeometry;
-    const particleCount = 20000;
+    const particleCount = 10000;
     const LOOP_RANGE = 800;
 
     const shapes = {
@@ -358,9 +358,8 @@ const CosmicParticles = () => {
         depthWrite: false
       });
 
-    points = new THREE.Points(particlesGeometry, particlesMaterial);
-points.position.x = 6; // Moves the entire particle system 6 units to the right
-scene.add(points);
+      points = new THREE.Points(particlesGeometry, particlesMaterial);
+      scene.add(points);
     };
 
     const lerp = (a, b, t) => a + (b - a) * t;
@@ -424,27 +423,16 @@ scene.add(points);
 
       particlesGeometry.attributes.position.needsUpdate = true;
 
-      const baseFallSpeed = time * 4.5;
-      const halfRange = LOOP_RANGE / 2;
-
-      const wrap = (val) => {
-        const m = (val + halfRange) % LOOP_RANGE;
-        return m < 0 ? m + LOOP_RANGE - halfRange : m - halfRange;
-      };
-
-      bgLayer1.position.y = wrap(-baseFallSpeed * 0.5);
-      bgLayer2.position.y = wrap(-baseFallSpeed * 1.2);
-      bgLayer3.position.y = wrap(-baseFallSpeed * 2.5);
+      // REMOVED FALLING STARFIELD ANIMATION
+      // The background stars will now remain stationary in their generated positions.
 
       bgLayer3.material.opacity = 0.6 + Math.abs(Math.sin(time * 0.8)) * 0.35;
-const rightSideOffset = -6; 
-camera.position.x += (mouse.x * 5 + rightSideOffset - camera.position.x) * 0.05;
+
+      camera.position.x += (mouse.x * 5 - camera.position.x) * 0.05;
       camera.position.y += (-mouse.y * 5 - camera.position.y) * 0.05;
       camera.lookAt(0, 0, 0);
       points.rotation.y += 0.0015;
       renderer.render(scene, camera);
-
-    
       
       return frameId;
     };

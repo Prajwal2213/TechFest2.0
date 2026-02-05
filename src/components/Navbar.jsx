@@ -1,60 +1,42 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Hero from './Hero';
-import Schedule from './Schedule';
-import EventPage from './EventPage';
-import { element } from 'three/tsl';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-    setIsOpen(false);
-  };
-
   const navItems = [
-    { label: 'Home', id: 'hero', color: 'text-white/90 hover:text-cyan-400' },
-    { label: 'Events', id: 'events', color: 'text-white/90 hover:text-purple-400' },
-    { label: 'Schedule', id: 'schedule', color: 'text-white/90 hover:text-purple-400' },
-    { label: 'Sponsors', id: 'sponsors', color: 'text-white/90 hover:text-emerald-400' },
-    { label: 'About', id: 'about', color: 'text-white/90 hover:text-amber-400' },
+    { label: 'Home', path: '/', color: 'text-white/90 hover:text-cyan-400' },
+    { label: 'Events', path: '/events', color: 'text-white/90 hover:text-cyan-400' },
+    { label: 'Schedule', path: '/schedule', color: 'text-white/90 hover:text-cyan-400' },
+    { label: 'Gallery', path: '/gallery', color: 'text-white/90 hover:text-cyan-400' },
   ];
 
   return (
-    <nav className="fixed top-3 w-full z-50">
+    <nav className="fixed top-3 w-full z-50 font-Orbitron">
       {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-black/10 backdrop-blur-xl rounded-3xl shadow-xl border border-white/10">
-        <div className=" flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+
           {/* Logo */}
-          <div className="flex items-center cursor-pointer" onClick={() => scrollToSection('hero')}>
-            <a href="/">
-             <img src="../logo.png" alt="TechFest logo" className="w-auto h-14 lg:h-16" />
-             </a>
-           
+          <div className="flex items-center cursor-pointer">
+            <Link to="/">
+              <img src="../logo.png" alt="TechFest logo" className="w-auto h-14 lg:h-16" />
+            </Link>
           </div>
 
           {/* Desktop Menu */}
-          <div className="flex items-center justify-center gap-10 max-w-lg">
-          <div className="hidden lg:flex items-center space-x-2 xl:space-x-6">
-              
-            <a href='/' className='text-white text-xl' >Home</a>
-            <a href='/events' className='text-white  text-xl'>Events</a>
-            <a href='/schedule' className='text-white text-xl'>Schedule</a>
-            <a href='/gallery' className='text-white text-xl'>Gallery </a>
-             
+          <div className="hidden lg:flex items-center gap-10">
+            {navItems.map(item => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`text-xl font-semibold ${item.color}`}
+                onClick={() => setIsOpen(false)} // optional: close menu if somehow triggered
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
-          </div>
-
-         
-    
-         
 
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center">
@@ -78,17 +60,16 @@ const Navbar = () => {
       {isOpen && (
         <div className="lg:hidden absolute top-full left-0 w-full bg-black/80 backdrop-blur-2xl border-t border-white/10 shadow-2xl">
           <div className="px-4 pt-4 pb-8 max-w-md mx-auto space-y-2">
-            {navItems.map((item) => (
-              <a
-                key={item.id}
-                href=''
-                onClick={() => scrollToSection(item.id)}
-                className={`block font-bold ${item.color.replace('hover:', 'hover:text-white ')} hover:bg-white/10 px-6 py-4 rounded-2xl text-lg uppercase tracking-wide backdrop-blur-sm border border-white/10`}
+            {navItems.map(item => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setIsOpen(false)} // close menu after click
+                className={`block w-full text-left font-bold ${item.color} hover:bg-white/10 px-6 py-4 rounded-2xl text-lg uppercase tracking-wide backdrop-blur-sm border border-white/10`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
-           
           </div>
         </div>
       )}
