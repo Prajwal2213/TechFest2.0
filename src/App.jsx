@@ -14,7 +14,7 @@ import EventPage from './components/EventPage.jsx';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CosmicParticles from './components/CosmicParticles.jsx';
 import ComingSoon from './components/ComingSoon.jsx';
-import ScrollToTop from './components/ScrolltoTop.jsx';
+import ScrolltoTop from './components/ScrolltoTop.jsx';
 
 function App() {
   
@@ -28,7 +28,7 @@ function App() {
 
       </div>
         <Navbar />
-        <ScrollToTop />
+        <ScrolltoTop />
         <Routes>
           <Route path="/" element={
             <>

@@ -131,7 +131,7 @@ const EventSection = () => {
                 <div>
                   <h3
                     className={`
-                      text-white font-bold transition-all
+                      text-white font-semibold transition-all
                       text-lg md:text-3xl
                       ${current !== i
                         ? 'md:[writing-mode:vertical-rl] md:rotate-180'
