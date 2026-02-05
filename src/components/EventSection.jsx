@@ -6,8 +6,6 @@ const projects = [
   { title: "Robosoccer", desc: "Robots compete in high-speed soccer.", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/filmmakers.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-film.webp?w=480", link:"https://techfestvnit.org/robosoccer" },
   { title: "Techzibition", desc: "Show off your genius", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/content-creators.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-content.webp?w=480", link:"https://techfestvnit.org/techzibition" },
   { title: "Workshops", desc: "Learn cool stuff. Build faster.", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/art-directors.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-art.webp?w=480", link:"https://techfestvnit.org/workshops" },
-  { title: "Techzibition", desc: "Show off your genius", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/content-creators.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-content.webp?w=480", link:"https://techfestvnit.org/techzibition" },
-  { title: "Workshops", desc: "Learn cool stuff. Build faster.", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/art-directors.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-art.webp?w=480", link:"https://techfestvnit.org/workshops" },
 ];
 
 const EventSection = () => {
@@ -38,61 +36,26 @@ const EventSection = () => {
     centerCard(index);
   };
 
-  const go = (step) => {
-    const next = Math.min(Math.max(current + step, 0), projects.length - 1);
-    activate(next);
-  };
-
   useEffect(() => {
     centerCard(current);
   }, [current]);
-
-  const handleTouchStart = (e) => {
-    touchStart.current = {
-      x: e.touches[0].clientX,
-      y: e.touches[0].clientY
-    };
-  };
-
-  const handleTouchEnd = (e) => {
-    const dx = e.changedTouches[0].clientX - touchStart.current.x;
-    const dy = e.changedTouches[0].clientY - touchStart.current.y;
-    const isMobile = window.innerWidth < 768;
-
-    if ((isMobile ? Math.abs(dy) : Math.abs(dx)) > 50) {
-      go((isMobile ? dy : dx) > 0 ? -1 : 1);
-    }
-  };
 
   return (
     <section className="text-[#c5c7ce] py-20 overflow-hidden bg-transparent">
 
       {/* Header */}
-      <div className="max-w-[1400px] mx-auto px-5 mb-10 flex flex-col md:flex-row justify-between items-center gap-5">
+      <div className="max-w-[1400px] mx-auto px-5 mb-10">
         <h1 className="text-cyan-400 text-4xl sm:text-5xl md:text-6xl uppercase font-extrabold">
           Events
         </h1>
-
-        {/* ❌ Hidden on mobile */}
-        <div className="hidden md:flex gap-2">
-          <button onClick={() => go(-1)} disabled={current === 0}
-            className="w-10 h-10 rounded-full bg-white/10 text-white text-2xl hover:bg-[#ff6b35] disabled:opacity-30">
-            ‹
-          </button>
-          <button onClick={() => go(1)} disabled={current === projects.length - 1}
-            className="w-10 h-10 rounded-full bg-white/10 text-white text-2xl hover:bg-[#ff6b35] disabled:opacity-30">
-            ›
-          </button>
-        </div>
       </div>
 
       {/* Slider */}
-      <div ref={scrollContainerRef} className="max-w-[1400px] mx-auto overflow-x-auto md:overflow-x-hidden no-scrollbar">
-        <div
-          className="flex flex-col mx-5 md:flex-row gap-5 items-center md:items-start pb-10 "
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
+      <div
+        ref={scrollContainerRef}
+        className="max-w-[1400px] mx-auto overflow-x-auto md:overflow-x-hidden no-scrollbar"
+      >
+        <div className="flex flex-col mx-5 md:flex-row gap-5 pb-10">
           {projects.map((item, i) => (
             <article
               key={i}
@@ -102,51 +65,70 @@ const EventSection = () => {
                 window.matchMedia("(hover: hover)").matches && activate(i)
               }
               className={`
-                relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500
+                relative rounded-2xl cursor-pointer overflow-hidden
+                transition-all duration-500 ease-in-out
+                w-full md:w-auto
+                md:h-[26rem]
                 ${current === i
-                  ? 'basis-full md:basis-[30rem] -translate-y-1.5 shadow-[0_18px_55px_rgba(0,0,0,0.45)]'
-                  : 'basis-[12rem] md:basis-[5rem]'}
-                h-[20rem] md:h-[26rem] flex-shrink-0 w-full md:w-auto
+                  ? 'md:basis-[30rem] shadow-[0_18px_55px_rgba(0,0,0,0.45)]'
+                  : 'md:basis-[5rem]'}
               `}
             >
+              {/* Background */}
               <img
                 src={item.bg}
                 alt=""
-                className="absolute inset-0 w-full h-full object-cover brightness-[0.7]"
+                className="absolute inset-0 w-full h-full min-h-[14rem] object-cover brightness-[0.7]"
               />
 
-              <div className={`absolute inset-0 z-10 flex bg-gradient-to-t from-black/90
-                ${current === i
-                  ? 'flex-row items-center p-6 gap-5'
-                  : 'flex-col items-center justify-center'}`}
-              >
-                {current === i && (
-                  <img
-                    src={item.thumb}
-                    className="hidden md:block w-[133px] h-[269px] object-cover rounded-lg shadow-xl"
-                    alt=""
-                  />
-                )}
+              {/* Content */}
+              <div className="relative md:absolute inset-0 z-10 flex flex-col p-6 bg-gradient-to-t from-black/90">
+                <h3 className="text-white text-xl md:text-3xl font-semibold">
+                  {item.title}
+                </h3>
 
-                <div>
-                  <h3
-                    className={`
-                      text-white font-semibold transition-all
-                      text-lg md:text-3xl
-                      ${current !== i
-                        ? 'md:[writing-mode:vertical-rl] md:rotate-180'
-                        : ''}
-                    `}
-                  >
-                    {item.title}
-                  </h3>
+                <p
+                  className={`
+                    text-gray-300 text-sm mt-3 max-w-[16rem]
+                    transition-all duration-500
+                    ${current === i
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-3 hidden md:block'}
+                  `}
+                >
+                  {item.desc}
+                </p>
 
-                  {current === i && (
-                    <p className="text-gray-300 text-sm mt-3 max-w-[15rem]">
-                      {item.desc}
-                    </p>
-                  )}
-                </div>
+                {/* CTA BUTTON */}
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className={`
+                    mt-5 inline-block w-fit
+                    px-5 py-2 rounded-full text-sm font-semibold
+                    bg-cyan-500 text-black hover:bg-cyan-400
+                    transition-all duration-300
+                    ${current === i
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-4 pointer-events-none'}
+                  `}
+                >
+                  View Event →
+                </a>
+
+                {/* Desktop thumbnail */}
+                <img
+                  src={item.thumb}
+                  alt=""
+                  className={`
+                    hidden md:block mt-auto w-[120px] h-[220px]
+                    object-cover rounded-lg shadow-xl
+                    transition-opacity duration-500
+                    ${current === i ? 'opacity-100' : 'opacity-0'}
+                  `}
+                />
               </div>
             </article>
           ))}
