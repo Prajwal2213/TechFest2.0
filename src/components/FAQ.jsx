@@ -144,17 +144,17 @@ const FAQ = () => {
     /* ✅ RELATIVE ROOT — LIMITS BACKGROUND TO FAQ ONLY */
     <section
       id="faq"
-      className="relative min-h-screen overflow-hidden bg-black"
+      className="relative min-h-screen overflow-hidden "
     >
-      {/* SILK BACKGROUND (FAQ ONLY) */}
+      {/* SILK BACKGROUND (FAQ ONLY)
       <div className="absolute inset-0 z-0">
         <Canvas dpr={[1, 2]}>
           <SilkPlane ref={meshRef} uniforms={uniforms} />
         </Canvas>
-      </div>
+      </div> */}
 
       {/* DARK OVERLAY FOR READABILITY */}
-      <div className="absolute inset-0 bg-black/60 z-10" />
+      <div className="absolute inset-0  z-10" />
 
       {/* FAQ CONTENT */}
       <div className="relative z-20 max-w-4xl mx-auto px-6 py-24">

@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-start px-6 sm:px-12 lg:px-24  bg-black max-w-6xl"
+      className="relative min-h-screen flex items-center justify-start px-6 sm:px-12 lg:px-24   max-w-6xl bg-transparent"
     >
       <div className="max-w-3xl space-y-6">
         {/* Presented by */}

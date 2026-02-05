@@ -123,7 +123,7 @@ const TeamCard = ({ member }) => {
 
   return (
     <div
-      className="perspective-1000 w-full max-w-[280px] group flex-shrink-0 animate-in fade-in zoom-in duration-500"
+      className="perspective-1000 w-full max-w-[280px] group shrink-0 animate-in fade-in zoom-in duration-500 "
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={handleMouseLeave}
@@ -141,10 +141,8 @@ const TeamCard = ({ member }) => {
         
         <div className="relative px-6 py-8 flex flex-col items-center min-h-[460px] h-full z-10">
           <div className="w-full flex justify-between items-center mb-6">
-            <div className="flex flex-col">
-              <span className="text-[7px] text-white/30 tracking-[0.3em] font-mono font-bold uppercase leading-none">ID // {personnelId}</span>
-              <div className="w-8 h-[1px] bg-white/10 mt-1" />
-            </div>
+            
+            
             <div className={`w-1.5 h-1.5 rounded-full ${theme.glow} animate-pulse shadow-[0_0_8px_currentColor]`} />
           </div>
 
@@ -211,7 +209,7 @@ export default function TeamSection() {
   return (
     <section id="team" className="relative min-h-screen text-white font-Orbitron py-20 isolate overflow-hidden ">
       {/* Background Decor */}
-      <TeamBackground />
+      
       
       {/* Main Container */}
       <main className="relative z-10 max-w-[1400px] mx-auto px-6 pt-16">
@@ -220,19 +218,15 @@ export default function TeamSection() {
         <div className="flex flex-col items-center mb-16 text-center">
           <div className="relative group mb-8">
             <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-pink-600 rounded-3xl blur-2xl opacity-10 group-hover:opacity-25 transition duration-1000"></div>
-            <div className="relative w-24 h-24 bg-black/40 backdrop-blur-xl rounded-3xl flex items-center justify-center border border-white/10 shadow-2xl">
-              <Users className="text-cyan-400" size={40} />
-            </div>
+           
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-black tracking-[0.2em] uppercase italic flex items-baseline gap-4 flex-wrap justify-center">
+          <h1 className="text-5xl md:text-7xl font-black tracking-[0.2em] uppercase  flex items-baseline gap-4 flex-wrap justify-center">
             TECHFEST <span className="text-cyan-400 not-italic tracking-tighter text-7xl md:text-8xl font-black drop-shadow-[0_0_20px_rgba(34,211,238,0.3)]">CORE</span>
           </h1>
           
           <div className="h-[2px] w-48 bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent mt-8" />
-          <p className="mt-8 text-white/20 max-w-2xl text-xs tracking-[0.4em] uppercase font-black leading-loose">
-            Authorizing Personnel Registry // Segment View
-          </p>
+          
         </div>
 
         {/* ==========================================
@@ -247,7 +241,7 @@ export default function TeamSection() {
                 px-8 py-3 rounded-full text-sm font-bold tracking-widest uppercase transition-all duration-300
                 ${activeCategory === category 
                   ? 'bg-cyan-500 text-white shadow-[0_0_25px_rgba(6,182,212,0.4)] scale-105 border-transparent' 
-                  : 'bg-white/5 text-white/40 hover:bg-white/10 hover:text-white/70 border border-white/5'
+                  : 'bg-white/5 text-white hover:bg-white/10 hover:text-white/70 border border-white backdrop-blur-sm'
                 }
               `}
             >
@@ -259,12 +253,6 @@ export default function TeamSection() {
         {/* Display filtered members */}
         <section className="animate-in fade-in slide-in-from-bottom-4 duration-700">
           <div className="flex flex-col items-center mb-16 text-center">
-            <div className="flex items-center gap-4 mb-2">
-              <Database className="text-cyan-500/30" size={16} />
-              <h2 className="text-[10px] font-black uppercase tracking-[0.8em] text-white/30 leading-none">
-                Active Registry Node
-              </h2>
-            </div>
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-white/90">
               {activeCategory}
             </h2>

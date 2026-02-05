@@ -1,4 +1,5 @@
 import './App.css'
+import { useEffect, useState, useRef } from 'react';
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Hero from "./components/Hero.jsx";
@@ -11,20 +12,22 @@ import TeamSection from './components/TeamSection.jsx';
 import Sponsors from './components/Sponsors.jsx';
 import EventPage from './components/EventPage.jsx';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CosmicParticles from './components/CosmicParticles.jsx';
 
 function App() {
+ 
 
   return (
   
       <Layout>
-       
+        <CosmicParticles  />
       <Navbar />
       <Routes>
         <Route path="/" element={
           <>
             <Hero />
-            <About />
             <EventSection />
+            <About />
             <Sponsors />
             <TeamSection />   
             <FAQ />

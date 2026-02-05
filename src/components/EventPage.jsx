@@ -49,7 +49,7 @@ const DetailOverlay = ({ event, onClose }) => {
   if (!event) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-6 lg:p-12 animate-in fade-in zoom-in duration-300">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-6 lg:p-12 animate-in fade-in zoom-in duration-300 ">
       <div className="absolute inset-0 bg-black/95 backdrop-blur-md" onClick={onClose}></div>
       
       <div className="relative w-full max-w-7xl h-full md:h-[90vh] bg-[#050505] border border-zinc-800 flex flex-col overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.8)]">
@@ -292,7 +292,7 @@ export default function EventPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#020202] text-white font-Orbitron selection:bg-yellow-500 selection:text-black overflow-x-hidden relative">
+    <div className="w-screen min-h-screen bg-[#020202] text-white font-Orbitron selection:bg-yellow-500 selection:text-black overflow-x-hidden relative pb-10">
       
       {/* Global Overlays */}
       <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
@@ -329,7 +329,7 @@ export default function EventPage() {
 
       {selectedEvent && <DetailOverlay event={selectedEvent} onClose={() => setSelectedEvent(null)} />}
 
-      <main className="relative z-10 pt-40 pb-40 space-y-32">
+      <main className="relative z-10 pt-40 space-y-32 ">
         <section className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mb-32">
            <div className="flex flex-col items-center text-center">
               <h1 className="text-7xl md:text-9xl font-Orbitron font-semibold tracking-tighter uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl ">

@@ -172,8 +172,8 @@ const Sponsors = () => {
   }, []);
 
   const goldSponsors = [
-    { name: "Google Cloud", logo: "https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_light_color_92x30dp.png", url: "#" },
-    { name: "Microsoft Azure", logo: "https://swimlane.com/wp-content/uploads/2022/02/Microsoft-Azure-Logo.png", url: "#" },
+    // { name: "Google Cloud", logo: "https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_light_color_92x30dp.png", url: "#" },
+    // { name: "Microsoft Azure", logo: "https://swimlane.com/wp-content/uploads/2022/02/Microsoft-Azure-Logo.png", url: "#" },
     { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg", url: "#" }
   ];
 
@@ -181,7 +181,7 @@ const Sponsors = () => {
     { name: "Vercel", logo: "https://assets.vercel.com/image/upload/v1588853000/repositories/vercel/logo.png", url: "#" },
     { name: "Netlify", logo: "https://www.netlify.com/v3/img/components/logomark.svg", url: "#" },
     { name: "Firebase", logo: "https://firebase.google.com/downloads/brand-guidelines/PNG/logo-standard.png", url: "#" },
-    { name: "GitHub", logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png", url: "#" }
+    // { name: "GitHub", logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png", url: "#" }
   ];
 
   const bronzeSponsors = [
@@ -194,7 +194,7 @@ const Sponsors = () => {
     <section 
       ref={sectionRef}
       id="sponsors" 
-      className="relative py-32 lg:py-48 bg-[#020205] overflow-hidden font-Orbitron"
+      className="relative py-32 lg:py-48  overflow-hidden font-Orbitron"
     >
       {/* Background Layer 1: Moving Grid */}
       <div className="absolute inset-0 z-0 opacity-30">
@@ -203,7 +203,7 @@ const Sponsors = () => {
 
       {/* Background Layer 2: Mouse Spotlight */}
       <div 
-        className="absolute pointer-events-none z-0 blur-[120px] rounded-full opacity-30 bg-blue-500 w-[600px] h-[600px] transition-transform duration-300 ease-out"
+        className="absolute pointer-events-none z-0 blur-[120px] rounded-full opacity-30  w-[600px] h-[600px] transition-transform duration-300 ease-out"
         style={{
           transform: `translate(${mousePos.x - 300}px, ${mousePos.y - 300}px)`
         }}
@@ -211,31 +211,27 @@ const Sponsors = () => {
 
       {/* Background Layer 3: Nebula Gradients */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-900/20 blur-[150px] rounded-full" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-900/20 blur-[150px] rounded-full" />
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%]   rounded-full" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%]  rounded-full" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-32">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-blue-400 text-xs font-bold tracking-[0.3em] uppercase mb-8 animate-pulse">
-            <Sparkles size={14} /> Global Partners
-          </div>
-          <h2 className="text-6xl md:text-8xl font-black tracking-tighter text-white mb-8">
-            The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-500">Innovation</span> Network
+         
+          <h2 className="text-6xl md:text-8xl font-black tracking-wide text-cyan-400 mb-8 uppercase">
+            Our Sponspors
           </h2>
-          <p className="text-xl md:text-2xl text-white/40 max-w-3xl mx-auto leading-relaxed">
-            Collaborating with the world's most visionary companies to build the future of TechFest 2026.
-          </p>
+          
         </div>
 
         {/* Gold Tier */}
         <div className="mb-32">
           <div className="flex items-center justify-center gap-4 mb-16">
             <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-yellow-500/20" />
-            <div className="flex items-center gap-3 px-6 py-2 rounded-2xl bg-yellow-500/10 border border-yellow-500/20">
+            <div className="flex items-center gap-3 px-6 py-2 rounded-2xl bg-yellow-500/50 border border-yellow-500/20">
               <Trophy className="text-yellow-500" size={20} />
-              <h3 className="text-xl font-bold text-yellow-500 tracking-widest uppercase italic">Gold Vanguard</h3>
+              <h3 className="text-xl font-bold text-white tracking-widest uppercase italic">Gold Vanguard</h3>
             </div>
             <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-yellow-500/20" />
           </div>
@@ -272,10 +268,10 @@ const Sponsors = () => {
         </div>
 
         {/* Modernized CTA */}
-        <div className="mt-40 relative group overflow-hidden p-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-[3rem] max-w-3xl mx-auto shadow-2xl shadow-blue-500/20">
-          <div className="bg-[#020205] rounded-[2.9rem] p-12 text-center relative overflow-hidden">
+        <div className="mt-40 relative group overflow-hidden p-1  rounded-[3rem] max-w-3xl mx-auto shadow-2xl shadow-blue-500/20">
+          <div className="backdrop-blur-sm rounded-[2.9rem] p-12 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-[100px] -mr-32 -mt-32" />
-            <h4 className="text-3xl font-black text-white mb-4">Join the Ecosystem</h4>
+            <h4 className="text-3xl font-black text-white mb-4">Join  the Ecosystem</h4>
             <p className="text-white/40 mb-10 max-w-md mx-auto">Elevate your brand and connect with 10,000+ developers, innovators, and leaders.</p>
             <button className="relative z-10 inline-flex items-center gap-4 bg-white text-black font-black px-12 py-5 rounded-2xl hover:bg-cyan-400 transition-colors duration-300">
               PARTNER WITH US

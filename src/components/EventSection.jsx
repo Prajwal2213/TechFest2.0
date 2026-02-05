@@ -35,11 +35,32 @@ const projects = [
     bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/art-directors.webp",
     thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-art.webp?w=480",
     link:"https://techfestvnit.org/workshops"
-  }
+  },
+  {
+    title: "Drone Quest",
+    desc: "Navigate drones through skill challenges",
+    bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/marketers.webp",
+    thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-marketer.webp?w=480",
+    link:"https://techfestvnit.org/dronequest"
+  },
+  {
+    title: "Drone Quest",
+    desc: "Navigate drones through skill challenges",
+    bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/marketers.webp",
+    thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-marketer.webp?w=480",
+    link:"https://techfestvnit.org/dronequest"
+  },
+  {
+    title: "Techzibition",
+    desc: "Show off your genius",
+    bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/content-creators.webp",
+    thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-content.webp?w=480",
+    link:"https://techfestvnit.org/techzibition"
+  },
 ];
 
 const EventSection = () => {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(null);
   const scrollContainerRef = useRef(null);
   const cardRefs = useRef([]);
   const touchStart = useRef({ x: 0, y: 0 });
@@ -108,7 +129,7 @@ const EventSection = () => {
     <section className="bg-[#07090d] text-[#c5c7ce] py-20 overflow-hidden ">
       {/* Header Area */}
       <div className="max-w-[1400px] mx-auto px-5 mb-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-5">
-        <h1 className="text-cyan-400 md:text-4xl leading-tight uppercase text-center font-extrabold">
+        <h1 className="text-cyan-400 md:text-5xl leading-tight uppercase text-center font-extrabold z-10">
             Events
         </h1>
 
