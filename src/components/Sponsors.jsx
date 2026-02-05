@@ -293,7 +293,7 @@ const Sponsors = () => {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#020205]">
+    <div className="min-h-screen ">
       <Sponsors />
     </div>
   );

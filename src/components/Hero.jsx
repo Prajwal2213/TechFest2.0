@@ -2,13 +2,9 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-start px-6 sm:px-12 lg:px-24   max-w-6xl bg-transparent"
+      className="relative min-h-screen max-w-screen  flex items-center justify-start px-6 sm:px-12 lg:px-24    "
     >
-      <div className="max-w-3xl space-y-6">
-        {/* Presented by */}
-        <p className="text-sm text-white/70 tracking-wide">
-         IEEE CAD
-        </p>
+      <div className="max-w-4xl space-y-6">
 
         {/* Date */}
         <p className="text-cyan-400 font-semibold tracking-widest text-sm sm:text-base">
@@ -17,10 +13,10 @@ const Hero = () => {
 
         {/* Title */}
         <h1 className="font-extrabold uppercase tracking-wider leading-tight">
-          <span className="block text-white text-4xl sm:text-6xl lg:text-7xl">
+          <span className="block text-white text-[clamp(2.5rem,5vw,4rem)] sm:text-5xl lg:text-7xl">
             DSU
           </span>
-          <span className="block text-white text-5xl sm:text-7xl lg:text-8xl mt-2">
+          <span className="block text-white text-[clamp(3rem,6vw,5rem)] sm:text-6xl lg:text-8xl mt-2">
             TechFest 1.0
           </span>
         </h1>

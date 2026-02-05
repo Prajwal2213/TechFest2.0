@@ -126,10 +126,10 @@ const EventSection = () => {
   };
 
   return (
-    <section className="bg-[#07090d] text-[#c5c7ce] py-20 overflow-hidden ">
+    <section className=" text-[#c5c7ce] py-20 overflow-hidden ">
       {/* Header Area */}
-      <div className="max-w-[1400px] mx-auto px-5 mb-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-5">
-        <h1 className="text-cyan-400 md:text-5xl leading-tight uppercase text-center font-extrabold z-10">
+      <div className="max-w-[1400px] mx-auto px-5 mb-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-5 ">
+        <h1 className="text-cyan-400  md:text-6xl leading-tight uppercase text-center font-extrabold z-10 ">
             Events
         </h1>
 
@@ -220,7 +220,7 @@ const EventSection = () => {
       </div>
 
       {/* Pagination Dots (Hidden on Mobile as per your JS) */}
-      <div className="hidden md:flex justify-center gap-3 py-5">
+      {/* <div className="hidden md:flex justify-center gap-3 py-5">
         {projects.map((_, i) => (
           <span 
             key={i}
@@ -228,12 +228,14 @@ const EventSection = () => {
             className={`w-3 h-3 rounded-full cursor-pointer transition-all ${current === i ? 'bg-[#ff6b35] scale-125' : 'bg-white/30'}`}
           />
         ))}
-      </div>
+      </div> */}
 
-      <style jsx>{`
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-      `}</style>
+       <style>
+{`
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+`}
+</style>
     </section>
   );
 };

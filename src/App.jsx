@@ -15,30 +15,30 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CosmicParticles from './components/CosmicParticles.jsx';
 
 function App() {
- 
-
   return (
-  
-      <Layout>
-        <CosmicParticles  />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={
-          <>
-            <Hero />
-            <EventSection />
-            <About />
-            <Sponsors />
-            <TeamSection />   
-            <FAQ />
-          </>
-        } />
-        <Route path="/schedule" element={<Schedule />} />
-        <Route path="/events" element={<EventPage />} />
-      </Routes>\
-      
-      <Footer />
-      </Layout>
+    <Layout>
+      <div className='z-2'>
+      <CosmicParticles /> 
+
+      </div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <EventSection />
+              <About />
+              <Sponsors />
+              <TeamSection />   
+              <FAQ />
+            </>
+          } />
+          <Route path="/schedule" element={<Schedule />} />
+          <Route path="/events" element={<EventPage />} />
+        </Routes>
+        <Footer />
+    
+    </Layout>
   )
 }
 

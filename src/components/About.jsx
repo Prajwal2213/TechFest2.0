@@ -4,11 +4,11 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative py-24 px-6 sm:px-12 lg:px-24 bg-transparent "
+      className="relative py-24 px-6 sm:px-12 lg:px-24 bg-transparent mr-50 w-full "
     >
       <div className="max-w-6xl mx-auto  p-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className=" ">
           <p className="text-cyan-400 tracking-widest  uppercase mb-3 text-6xl font-extrabold">
             About Us
           </p>

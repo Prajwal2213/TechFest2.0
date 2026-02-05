@@ -13,8 +13,8 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-bold text-white mb-6">Contact Us</h4>
             <div className="space-y-4 text-white/80 text-sm">
-              <p>📧 <span className="text-white">dsudevhack@dsu.edu.in</span></p>
-              <p>📞 +91 98765 43210</p>
+              <p>📧 <span className="text-white">dsutechfest1@dsu.edu.in</span></p>
+              <p>📞 +91 </p>
             </div>
           </div>
 
@@ -25,11 +25,11 @@ const Footer = () => {
             </h4>
             <div className="space-y-3 text-white/80 text-sm">
               <p>
-                <span className="text-white font-medium">Utkarsh Priye</span><br />
-                +91 93963 5206
+                <span className="text-white font-medium">Prokshith J S</span><br />
+                +91 9036526233
               </p>
               <p>
-                <span className="text-white font-medium">Ritvik Vasundh</span><br />
+                <span className="text-white font-medium"></span><br />
                 +91 82969 85668
               </p>
               <p>
@@ -45,8 +45,8 @@ const Footer = () => {
               Faculty Coordinator
             </h4>
             <div className="text-white/80 text-sm space-y-2">
-              <p className="text-white font-medium">Dr. Bipin Kumar Rai</p>
-              <p>Professor, CSE</p>
+              <p className="text-white font-medium"></p>
+              <p></p>
               <p>Dayananda Sagar University</p>
             </div>
 

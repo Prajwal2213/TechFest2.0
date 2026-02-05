@@ -1,28 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
-/**
- * CosmicParticles: The 3D Engine Component
- * Handles the particle system and the morphing logic.
- */
-const CosmicParticles = ({ scrollPercent }) => {
+const CosmicParticles = () => {
   const canvasRef = useRef(null);
-  const mountRef = useRef(true);
-  const scrollRef = useRef(0);
-
-  // Sync scroll percentage to a ref to avoid re-initializing the Three.js scene
-  useEffect(() => {
-    scrollRef.current = scrollPercent;
-  }, [scrollPercent]);
 
   useEffect(() => {
-    mountRef.current = true;
+    if (!canvasRef.current) return;
+
+    // --- Core Variables ---
     let scene, camera, renderer, points;
     let bgLayer1, bgLayer2, bgLayer3;
     let particlesGeometry;
-    const particleCount = 12000;
-
-    let smoothedScroll = 0;
+    const particleCount = 20000;
+    const LOOP_RANGE = 800;
 
     const shapes = {
       globe: new Float32Array(particleCount * 3),
@@ -42,12 +32,14 @@ const CosmicParticles = ({ scrollPercent }) => {
     };
 
     const scatterOffsets = new Float32Array(particleCount * 3);
-    let colors = new Float32Array(particleCount * 3);
-    let currentPositions = new Float32Array(particleCount * 3);
+    const colors = new Float32Array(particleCount * 3);
+    const currentPositions = new Float32Array(particleCount * 3);
     let mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
     let isMouseDown = false;
+    let scrollPercent = 0;
 
-    function createCircleTexture() {
+    // --- Initialization Helpers ---
+    const createCircleTexture = () => {
       const canvas = document.createElement('canvas');
       canvas.width = 128;
       canvas.height = 128;
@@ -60,24 +52,24 @@ const CosmicParticles = ({ scrollPercent }) => {
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, 128, 128);
       return new THREE.CanvasTexture(canvas);
-    }
+    };
 
     const starTexture = createCircleTexture();
 
-    function generateShapes() {
+    const generateShapes = () => {
       const mapCanvas = document.createElement('canvas');
       const mapCtx = mapCanvas.getContext('2d');
       mapCanvas.width = 1000;
       mapCanvas.height = 500;
       mapCtx.fillStyle = 'white';
 
-      function drawPath(coords) {
+      const drawPath = (coords) => {
         mapCtx.beginPath();
         mapCtx.moveTo(coords[0][0], coords[0][1]);
         for (let i = 1; i < coords.length; i++) mapCtx.lineTo(coords[i][0], coords[i][1]);
         mapCtx.closePath();
         mapCtx.fill();
-      }
+      };
 
       drawPath([[100, 100], [250, 80], [350, 150], [300, 250], [200, 300], [150, 250], [100, 200]]);
       drawPath([[280, 280], [350, 280], [320, 450], [280, 450], [250, 350]]);
@@ -102,7 +94,7 @@ const CosmicParticles = ({ scrollPercent }) => {
         scatterOffsets[i3 + 1] = (Math.random() - 0.5) * 6;
         scatterOffsets[i3 + 2] = (Math.random() - 0.5) * 6;
 
-        // 1. GLOBE
+        // Globe
         let lat, lon;
         if (i < particleCount * 0.98 && landPoints.length > 0) {
           const p = landPoints[Math.floor(Math.random() * landPoints.length)];
@@ -117,24 +109,24 @@ const CosmicParticles = ({ scrollPercent }) => {
         shapes.globe[i3 + 1] = rGlobe * Math.sin(lat);
         shapes.globe[i3 + 2] = rGlobe * Math.cos(lat) * Math.sin(lon);
 
-        // 2. GALAXY
+        // Galaxy
         if (i < particleCount * 0.2) {
           const r = Math.pow(Math.random(), 2) * 3;
           const theta = Math.random() * Math.PI * 2;
-          const phi = Math.acos((Math.random() * 2) - 1);
+          const phi = Math.acos(Math.random() * 2 - 1);
           shapes.galaxy[i3] = r * Math.sin(phi) * Math.cos(theta);
-          shapes.galaxy[i3 + 1] = (r * Math.sin(phi) * Math.sin(theta)) * 0.4;
+          shapes.galaxy[i3 + 1] = r * Math.sin(phi) * Math.sin(theta) * 0.4;
           shapes.galaxy[i3 + 2] = r * Math.cos(phi);
         } else {
           const arm = i % 3;
           const r = 3 + Math.random() * 9;
-          const angle = r * 1.8 + (arm * Math.PI * 2 / 3);
+          const angle = r * 1.8 + (arm * Math.PI * 2) / 3;
           shapes.galaxy[i3] = Math.cos(angle) * r + (Math.random() - 0.5) * 0.8;
           shapes.galaxy[i3 + 1] = (Math.random() - 0.5) * (1.2 / r);
           shapes.galaxy[i3 + 2] = Math.sin(angle) * r + (Math.random() - 0.5) * 0.8;
         }
 
-        // 3. ROCKET
+        // Rocket
         const rI = i / particleCount;
         if (rI < 0.2) {
           const h = 4 + Math.random() * 2;
@@ -153,67 +145,66 @@ const CosmicParticles = ({ scrollPercent }) => {
         } else {
           const h = -5.5 + Math.random() * 2;
           const ang = (Math.floor(i % 4) * Math.PI * 2) / 4;
-          const rad = 1.4 + (Math.abs(h + 4) * 2.2);
+          const rad = 1.4 + Math.abs(h + 4) * 2.2;
           shapes.rocket[i3] = Math.cos(ang) * rad;
           shapes.rocket[i3 + 1] = h;
           shapes.rocket[i3 + 2] = Math.sin(ang) * rad;
         }
 
-        // 4. ROBOT
+        // Robot
         const robI = i / particleCount;
         if (robI < 0.1) {
           const r = 1.0;
           const theta = Math.random() * Math.PI * 2;
-          const phi = Math.acos((Math.random() * 2) - 1);
+          const phi = Math.acos(Math.random() * 2 - 1);
           shapes.robot[i3] = r * Math.sin(phi) * Math.cos(theta);
           shapes.robot[i3 + 1] = 5 + r * Math.sin(phi) * Math.sin(theta);
           shapes.robot[i3 + 2] = r * Math.cos(phi);
         } else if (robI < 0.5) {
           shapes.robot[i3] = (Math.random() - 0.5) * 3.2;
-          shapes.robot[i3 + 1] = 0.5 + (Math.random() * 4.2);
+          shapes.robot[i3 + 1] = 0.5 + Math.random() * 4.2;
           shapes.robot[i3 + 2] = (Math.random() - 0.5) * 1.8;
         } else {
           const side = i % 2 === 0 ? -1.1 : 1.1;
           shapes.robot[i3] = side + (Math.random() - 0.5) * 0.8;
-          shapes.robot[i3 + 1] = -5.5 + (Math.random() * 6.5);
+          shapes.robot[i3 + 1] = -5.5 + Math.random() * 6.5;
           shapes.robot[i3 + 2] = (Math.random() - 0.5) * 0.9;
         }
 
-        // 5. CIRCUIT
+        // Circuit
         if (i < particleCount * 0.4) {
-          shapes.circuit[i3] = (Math.round((Math.random() - 0.5) * 10)) * 1.2;
-          shapes.circuit[i3 + 1] = (Math.round((Math.random() - 0.5) * 10)) * 1.2;
+          shapes.circuit[i3] = Math.round((Math.random() - 0.5) * 10) * 1.2;
+          shapes.circuit[i3 + 1] = Math.round((Math.random() - 0.5) * 10) * 1.2;
           shapes.circuit[i3 + 2] = 0;
         } else {
           const axis = i % 2;
           const dir = i % 4 < 2 ? 1 : -1;
           const length = 4 + Math.random() * 9;
-          shapes.circuit[i3] = axis === 0 ? dir * length : (Math.round((Math.random() - 0.5) * 10)) * 1.2;
-          shapes.circuit[i3 + 1] = axis === 1 ? dir * length : (Math.round((Math.random() - 0.5) * 10)) * 1.2;
+          shapes.circuit[i3] = axis === 0 ? dir * length : Math.round((Math.random() - 0.5) * 10) * 1.2;
+          shapes.circuit[i3 + 1] = axis === 1 ? dir * length : Math.round((Math.random() - 0.5) * 10) * 1.2;
           shapes.circuit[i3 + 2] = 0;
         }
 
-        // 6. ATOM
+        // Atom
         if (i < particleCount * 0.15) {
           const r = Math.random() * 1.8;
           const theta = Math.random() * Math.PI * 2;
-          const phi = Math.acos((Math.random() * 2) - 1);
+          const phi = Math.acos(Math.random() * 2 - 1);
           shapes.atom[i3] = r * Math.sin(phi) * Math.cos(theta);
           shapes.atom[i3 + 1] = r * Math.sin(phi) * Math.sin(theta);
           shapes.atom[i3 + 2] = r * Math.cos(phi);
         } else {
           const ring = i % 3;
-          const r = 6.5 + (ring * 2.0);
+          const r = 6.5 + ring * 2.0;
           const ang = Math.random() * Math.PI * 2;
           const tilt = (ring * Math.PI) / 3;
           shapes.atom[i3] = Math.cos(ang) * r;
-          shapes.atom[i3 + 1] = (Math.sin(ang) * r) * Math.cos(tilt);
-          shapes.atom[i3 + 2] = (Math.sin(ang) * r) * Math.sin(tilt);
+          shapes.atom[i3 + 1] = Math.sin(ang) * r * Math.cos(tilt);
+          shapes.atom[i3 + 2] = Math.sin(ang) * r * Math.sin(tilt);
         }
 
-        // 7. DNA
-        const dnaIdx = i / particleCount;
-        const dnaY = (dnaIdx - 0.5) * 18;
+        // DNA
+        const dnaY = (i / particleCount - 0.5) * 18;
         const dnaAngle = dnaY * 1.8;
         const dnaStrand = i % 2 === 0 ? 0 : Math.PI;
         if (i % 12 < 10) {
@@ -227,11 +218,11 @@ const CosmicParticles = ({ scrollPercent }) => {
           shapes.dna[i3 + 2] = Math.sin(dnaAngle) * 2.8 * (lVal * 2 - 1);
         }
 
-        // 8. SATURN
+        // Saturn
         if (i < particleCount * 0.45) {
           const r = 4.2;
           const theta = Math.random() * Math.PI * 2;
-          const phi = Math.acos((Math.random() * 2) - 1);
+          const phi = Math.acos(Math.random() * 2 - 1);
           shapes.saturn[i3] = r * Math.sin(phi) * Math.cos(theta);
           shapes.saturn[i3 + 1] = r * Math.sin(phi) * Math.sin(theta);
           shapes.saturn[i3 + 2] = r * Math.cos(phi);
@@ -244,14 +235,14 @@ const CosmicParticles = ({ scrollPercent }) => {
           shapes.saturn[i3 + 2] = Math.sin(theta) * r * Math.cos(tilt);
         }
 
-        // 9. INFINITY
+        // Infinity
         const infT = (i / particleCount) * Math.PI * 2;
         const infScale = 14 / (3 - Math.cos(2 * infT));
         shapes.infinity[i3] = infScale * Math.cos(infT);
-        shapes.infinity[i3 + 1] = infScale * Math.sin(2 * infT) / 2;
+        shapes.infinity[i3 + 1] = (infScale * Math.sin(2 * infT)) / 2;
         shapes.infinity[i3 + 2] = (Math.random() - 0.5) * 1.2;
 
-        // 10. DIAMOND
+        // Diamond
         const dSeg = i % 8;
         const dRadius = 8;
         const dVertices = [[0, dRadius, 0], [0, -dRadius, 0], [dRadius, 0, 0], [-dRadius, 0, 0], [0, 0, dRadius], [0, 0, -dRadius], [dRadius / 1.4, dRadius / 1.4, 0], [-dRadius / 1.4, -dRadius / 1.4, 0]];
@@ -262,35 +253,32 @@ const CosmicParticles = ({ scrollPercent }) => {
         shapes.diamond[i3 + 1] = dv1[1] + (dv2[1] - dv1[1]) * dL + (Math.random() - 0.5) * 0.2;
         shapes.diamond[i3 + 2] = dv1[2] + (dv2[2] - dv1[2]) * dL + (Math.random() - 0.5) * 0.2;
 
-        // 11. BRAIN
-        const nodeX = (Math.random() - 0.5) * 10;
-        const nodeY = (Math.random() - 0.5) * 10;
-        const nodeZ = (Math.random() - 0.5) * 10;
-        shapes.brain[i3] = nodeX + (Math.random() - 0.5) * 2;
-        shapes.brain[i3 + 1] = nodeY + (Math.random() - 0.5) * 2;
-        shapes.brain[i3 + 2] = nodeZ + (Math.random() - 0.5) * 2;
+        // Brain
+        shapes.brain[i3] = (Math.random() - 0.5) * 10 + (Math.random() - 0.5) * 2;
+        shapes.brain[i3 + 1] = (Math.random() - 0.5) * 10 + (Math.random() - 0.5) * 2;
+        shapes.brain[i3 + 2] = (Math.random() - 0.5) * 10 + (Math.random() - 0.5) * 2;
 
-        // 12. LOTUS FLOWER
+        // Lotus
         const petal = i % 8;
         const pR = 2 + Math.random() * 7;
-        const pTheta = (petal * Math.PI * 2) / 8 + (Math.sin(pR * 0.5) * 0.5);
+        const pTheta = (petal * Math.PI * 2) / 8 + Math.sin(pR * 0.5) * 0.5;
         shapes.lotus[i3] = Math.cos(pTheta) * pR;
         shapes.lotus[i3 + 1] = Math.sin(pR * 0.8) * 3;
         shapes.lotus[i3 + 2] = Math.sin(pTheta) * pR;
 
-        // 13. CUBE
-        const side = i % 6;
+        // Cube
+        const cside = i % 6;
         const cSize = 6;
         const cVal1 = (Math.random() - 0.5) * cSize * 2;
         const cVal2 = (Math.random() - 0.5) * cSize * 2;
-        if (side === 0) { shapes.cube[i3] = cSize; shapes.cube[i3 + 1] = cVal1; shapes.cube[i3 + 2] = cVal2; }
-        else if (side === 1) { shapes.cube[i3] = -cSize; shapes.cube[i3 + 1] = cVal1; shapes.cube[i3 + 2] = cVal2; }
-        else if (side === 2) { shapes.cube[i3] = cVal1; shapes.cube[i3 + 1] = cSize; shapes.cube[i3 + 2] = cVal2; }
-        else if (side === 3) { shapes.cube[i3] = cVal1; shapes.cube[i3 + 1] = -cSize; shapes.cube[i3 + 2] = cVal2; }
-        else if (side === 4) { shapes.cube[i3] = cVal1; shapes.cube[i3 + 1] = cVal2; shapes.cube[i3 + 2] = cSize; }
+        if (cside === 0) { shapes.cube[i3] = cSize; shapes.cube[i3 + 1] = cVal1; shapes.cube[i3 + 2] = cVal2; }
+        else if (cside === 1) { shapes.cube[i3] = -cSize; shapes.cube[i3 + 1] = cVal1; shapes.cube[i3 + 2] = cVal2; }
+        else if (cside === 2) { shapes.cube[i3] = cVal1; shapes.cube[i3 + 1] = cSize; shapes.cube[i3 + 2] = cVal2; }
+        else if (cside === 3) { shapes.cube[i3] = cVal1; shapes.cube[i3 + 1] = -cSize; shapes.cube[i3 + 2] = cVal2; }
+        else if (cside === 4) { shapes.cube[i3] = cVal1; shapes.cube[i3 + 1] = cVal2; shapes.cube[i3 + 2] = cSize; }
         else { shapes.cube[i3] = cVal1; shapes.cube[i3 + 1] = cVal2; shapes.cube[i3 + 2] = -cSize; }
 
-        // 14. VORTEX
+        // Vortex
         const vAngle = (i / particleCount) * Math.PI * 40;
         const vRadius = (i / particleCount) * 8;
         const vHeight = (i / particleCount) * 20 - 10;
@@ -299,17 +287,12 @@ const CosmicParticles = ({ scrollPercent }) => {
         shapes.vortex[i3 + 2] = Math.sin(vAngle) * vRadius;
 
         const c = new THREE.Color();
-        const h = 0.55 + Math.random() * 0.1;
-        const s = 0.8 + Math.random() * 0.2;
-        const l = 0.45 + Math.random() * 0.3;
-        c.setHSL(h, s, l);
+        c.setHSL(0.55 + Math.random() * 0.1, 0.8 + Math.random() * 0.2, 0.45 + Math.random() * 0.3);
         colors[i3] = c.r; colors[i3 + 1] = c.g; colors[i3 + 2] = c.b;
       }
-    }
+    };
 
-    const LOOP_RANGE = 800;
-
-    function createStarfield(count, radiusRange, size, opacity) {
+    const createStarfield = (count, radiusRange, size, opacity) => {
       const pos = new Float32Array(count * 3);
       const starColors = new Float32Array(count * 3);
       const white = new THREE.Color(0xffffff);
@@ -318,9 +301,9 @@ const CosmicParticles = ({ scrollPercent }) => {
         const i3 = i * 3;
         const r = radiusRange[0] + Math.random() * (radiusRange[1] - radiusRange[0]);
         const theta = Math.random() * Math.PI * 2;
-        const phi = Math.acos((Math.random() * 2) - 1);
+        const phi = Math.acos(Math.random() * 2 - 1);
         pos[i3] = r * Math.sin(phi) * Math.cos(theta);
-        pos[i3 + 1] = Math.random() * LOOP_RANGE - (LOOP_RANGE / 2);
+        pos[i3 + 1] = Math.random() * LOOP_RANGE - LOOP_RANGE / 2;
         pos[i3 + 2] = r * Math.cos(phi);
         const color = Math.random() > 0.4 ? white : blue;
         starColors[i3] = color.r; starColors[i3 + 1] = color.g; starColors[i3 + 2] = color.b;
@@ -329,37 +312,32 @@ const CosmicParticles = ({ scrollPercent }) => {
       geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
       geo.setAttribute('color', new THREE.BufferAttribute(starColors, 3));
       const mat = new THREE.PointsMaterial({
-        size: size,
+        size,
         vertexColors: true,
         transparent: true,
-        opacity: opacity,
+        opacity,
         blending: THREE.AdditiveBlending,
         sizeAttenuation: true,
         map: starTexture,
         depthWrite: false
       });
       return new THREE.Points(geo, mat);
-    }
+    };
 
-    function init() {
+    const init = () => {
       scene = new THREE.Scene();
       camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1500);
       camera.position.z = 13;
 
-      const canvas = canvasRef.current;
-      renderer = new THREE.WebGLRenderer({
-        canvas,
-        antialias: true,
-        alpha: true
-      });
+      renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current, antialias: true, alpha: true });
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(window.innerWidth, window.innerHeight);
 
       generateShapes();
 
-      bgLayer1 = createStarfield(40000, [80, 300], 0.15, 0.45);
+      bgLayer1 = createStarfield(85000, [80, 300], 0.15, 0.45);
       scene.add(bgLayer1);
-      bgLayer2 = createStarfield(20000, [40, 150], 0.25, 0.55);
+      bgLayer2 = createStarfield(45000, [40, 150], 0.25, 0.55);
       scene.add(bgLayer2);
       bgLayer3 = createStarfield(18000, [20, 100], 0.4, 0.7);
       scene.add(bgLayer3);
@@ -380,72 +358,17 @@ const CosmicParticles = ({ scrollPercent }) => {
         depthWrite: false
       });
 
-      points = new THREE.Points(particlesGeometry, particlesMaterial);
-      scene.add(points);
+    points = new THREE.Points(particlesGeometry, particlesMaterial);
+points.position.x = 6; // Moves the entire particle system 6 units to the right
+scene.add(points);
+    };
 
-      const handleResize = () => {
-        if (!mountRef.current) return;
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-      };
+    const lerp = (a, b, t) => a + (b - a) * t;
 
-      const handleMouseMove = (e) => {
-        mouse.targetX = (e.clientX / window.innerWidth) * 2 - 1;
-        mouse.targetY = -(e.clientY / window.innerHeight) * 2 + 1;
-      };
-
-      const handleMouseDown = () => isMouseDown = true;
-      const handleMouseUp = () => isMouseDown = false;
-
-      window.addEventListener('resize', handleResize);
-      window.addEventListener('mousemove', handleMouseMove);
-      window.addEventListener('mousedown', handleMouseDown);
-      window.addEventListener('mouseup', handleMouseUp);
-
-      animate();
-
-      return () => {
-  mountRef.current = false;
-
-  window.removeEventListener('resize', handleResize);
-  window.removeEventListener('mousemove', handleMouseMove);
-  window.removeEventListener('mousedown', handleMouseDown);
-  window.removeEventListener('mouseup', handleMouseUp);
-
-  if (points) {
-    points.geometry.dispose();
-    points.material.dispose();
-    scene.remove(points);
-  }
-
-  [bgLayer1, bgLayer2, bgLayer3].forEach(layer => {
-    if (layer) {
-      layer.geometry.dispose();
-      layer.material.dispose();
-      scene.remove(layer);
-    }
-  });
-
-  starTexture.dispose();
-
-  renderer.dispose();
-  renderer.forceContextLoss();
-};
-    }
-
-    function lerp(a, b, t) {
-      return a + (b - a) * t;
-    }
-
-    function animate() {
-      if (!mountRef.current) return;
-      requestAnimationFrame(animate);
-
+    const animate = () => {
+      const frameId = requestAnimationFrame(animate);
       mouse.x += (mouse.targetX - mouse.x) * 0.1;
       mouse.y += (mouse.targetY - mouse.y) * 0.1;
-
-      smoothedScroll += (scrollRef.current - smoothedScroll) * 0.05;
 
       const time = Date.now() * 0.001;
       const positions = particlesGeometry.attributes.position.array;
@@ -458,7 +381,7 @@ const CosmicParticles = ({ scrollPercent }) => {
       ];
 
       const stageCount = stages.length - 1;
-      const progress = smoothedScroll * stageCount;
+      const progress = scrollPercent * stageCount;
       const index = Math.min(Math.floor(progress), stageCount - 1);
       const localT = progress - index;
 
@@ -466,21 +389,19 @@ const CosmicParticles = ({ scrollPercent }) => {
       const target = stages[index + 1];
 
       const scatterFactor = Math.sin(localT * Math.PI) * 0.35;
-
       const mouse3D = new THREE.Vector3(mouse.x * 12, mouse.y * 7, 0);
       const repelRadius = isMouseDown ? 7.0 : 3.5;
       const repelStrength = isMouseDown ? 1.2 : 0.45;
 
       for (let i = 0; i < particleCount; i++) {
         const i3 = i * 3;
-
         const tx = lerp(source[i3], target[i3], localT);
         const ty = lerp(source[i3 + 1], target[i3 + 1], localT);
         const tz = lerp(source[i3 + 2], target[i3 + 2], localT);
 
-        const finalTargetX = tx + (scatterOffsets[i3] * scatterFactor);
-        const finalTargetY = ty + (scatterOffsets[i3 + 1] * scatterFactor);
-        const finalTargetZ = tz + (scatterOffsets[i3 + 2] * scatterFactor);
+        const finalTargetX = tx + scatterOffsets[i3] * scatterFactor;
+        const finalTargetY = ty + scatterOffsets[i3 + 1] * scatterFactor;
+        const finalTargetZ = tz + scatterOffsets[i3 + 2] * scatterFactor;
 
         const dx = positions[i3] - mouse3D.x;
         const dy = positions[i3 + 1] - mouse3D.y;
@@ -488,7 +409,6 @@ const CosmicParticles = ({ scrollPercent }) => {
         const distSq = dx * dx + dy * dy + dz * dz;
 
         let repelX = 0, repelY = 0, repelZ = 0;
-
         if (distSq < repelRadius * repelRadius) {
           const dist = Math.sqrt(distSq);
           const force = (repelRadius - dist) / repelRadius;
@@ -497,15 +417,16 @@ const CosmicParticles = ({ scrollPercent }) => {
           repelZ = (dz / dist) * force * repelStrength;
         }
 
-        positions[i3] += (finalTargetX - positions[i3]) * 0.08 + repelX;
-        positions[i3 + 1] += (finalTargetY - positions[i3 + 1]) * 0.08 + repelY;
-        positions[i3 + 2] += (finalTargetZ - positions[i3 + 2]) * 0.08 + repelZ;
+        positions[i3] += (finalTargetX - positions[i3]) * 0.06 + repelX;
+        positions[i3 + 1] += (finalTargetY - positions[i3 + 1]) * 0.06 + repelY;
+        positions[i3 + 2] += (finalTargetZ - positions[i3 + 2]) * 0.06 + repelZ;
       }
 
       particlesGeometry.attributes.position.needsUpdate = true;
 
       const baseFallSpeed = time * 4.5;
       const halfRange = LOOP_RANGE / 2;
+
       const wrap = (val) => {
         const m = (val + halfRange) % LOOP_RANGE;
         return m < 0 ? m + LOOP_RANGE - halfRange : m - halfRange;
@@ -514,48 +435,69 @@ const CosmicParticles = ({ scrollPercent }) => {
       bgLayer1.position.y = wrap(-baseFallSpeed * 0.5);
       bgLayer2.position.y = wrap(-baseFallSpeed * 1.2);
       bgLayer3.position.y = wrap(-baseFallSpeed * 2.5);
-      bgLayer3.material.opacity = 0.6 + Math.abs(Math.sin(time * 0.8)) * 0.35;
 
-      camera.position.x += (mouse.x * 5 - camera.position.x) * 0.05;
+      bgLayer3.material.opacity = 0.6 + Math.abs(Math.sin(time * 0.8)) * 0.35;
+const rightSideOffset = -6; 
+camera.position.x += (mouse.x * 5 + rightSideOffset - camera.position.x) * 0.05;
       camera.position.y += (-mouse.y * 5 - camera.position.y) * 0.05;
       camera.lookAt(0, 0, 0);
       points.rotation.y += 0.0015;
       renderer.render(scene, camera);
-    }
+
+    
+      
+      return frameId;
+    };
+
+    // --- Listeners ---
+    const handleResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    };
+
+    const handleMouseMove = (e) => {
+      mouse.targetX = (e.clientX / window.innerWidth) * 2 - 1;
+      mouse.targetY = -(e.clientY / window.innerHeight) * 2 + 1;
+    };
+
+    const handleMouseDown = () => isMouseDown = true;
+    const handleMouseUp = () => isMouseDown = false;
+    const handleScroll = () => {
+      const h = document.documentElement;
+      scrollPercent = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    };
 
     init();
+    const animationFrameId = animate();
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousedown', handleMouseDown);
+    window.addEventListener('mouseup', handleMouseUp);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mousedown', handleMouseDown);
+      window.removeEventListener('mouseup', handleMouseUp);
+      window.removeEventListener('scroll', handleScroll);
+      renderer.dispose();
+    };
   }, []);
 
   return (
-    <div className="fixed inset-0 w-full h-full bg-black">
-      <canvas ref={canvasRef} className="w-full h-full block" />
+    <div className=" overflow-x-hidden m-0 text-white font-sans bg-transparent z-0">
+      <canvas
+        id="bg"
+        ref={canvasRef}
+        className="fixed top-0 left-0 w-full h-full pointer-events-none"
+        style={{ zIndex: -1 }}
+      />
     </div>
   );
 };
 
-/**
- * Main App Component
- * Only keeps the background and the scroll-morphing logic.
- */
-export default function App() {
-  const [scrollPercent, setScrollPercent] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const h = document.documentElement;
-      const percent = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      setScrollPercent(percent);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <div className="bg-black selection:bg-blue-500/30">
-      <CosmicParticles scrollPercent={scrollPercent} />
-
-      
-      <div className="relative  w-full pointer-events-none" />
-    </div>
-  );
-}
+export default CosmicParticles;
