@@ -182,7 +182,7 @@ const Sponsors = () => {
             <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-yellow-500/20" />
             <div className="flex items-center gap-3 px-4 py-2 rounded-2xl bg-yellow-500/50 border border-yellow-500/20">
               <Trophy className="text-yellow-500" size={20} />
-              <h3 className="text-sm sm:text-xl font-bold text-white tracking-widest uppercase italic">Gold Vanguard</h3>
+              <h3 className="text-sm sm:text-xl font-bold text-white tracking-widest uppercase ">Gold Vanguard</h3>
             </div>
             <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-yellow-500/20" />
           </div>

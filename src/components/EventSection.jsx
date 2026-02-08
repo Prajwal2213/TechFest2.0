@@ -6,6 +6,11 @@ const projects = [
   { title: "Robosoccer", desc: "Robots compete in high-speed soccer.", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/filmmakers.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-film.webp?w=480", link:"https://techfestvnit.org/robosoccer" },
   { title: "Techzibition", desc: "Show off your genius", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/content-creators.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-content.webp?w=480", link:"https://techfestvnit.org/techzibition" },
   { title: "Workshops", desc: "Learn cool stuff. Build faster.", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/art-directors.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-art.webp?w=480", link:"https://techfestvnit.org/workshops" },
+   { title: "Hack Hustle", desc: "Code fast. Build bold solutions", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/designers.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-designer.webp?w=480", link:"https://techfestvnit.org/hackhustle" },
+  { title: "Drone Quest", desc: "Navigate drones through skill challenges", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/marketers.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-marketer.webp?w=480", link:"https://techfestvnit.org/dronequest" },
+  { title: "Robosoccer", desc: "Robots compete in high-speed soccer.", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/filmmakers.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-film.webp?w=480", link:"https://techfestvnit.org/robosoccer" },
+  { title: "Techzibition", desc: "Show off your genius", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/content-creators.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-content.webp?w=480", link:"https://techfestvnit.org/techzibition" },
+  { title: "Workshops", desc: "Learn cool stuff. Build faster.", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/art-directors.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-art.webp?w=480", link:"https://techfestvnit.org/workshops" },
 ];
 
 const EventSection = () => {

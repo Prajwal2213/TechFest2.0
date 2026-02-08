@@ -1,3 +1,5 @@
+import * as Icons from "lucide-react";
+
 const Footer = () => {
   return (
     <footer
@@ -32,10 +34,7 @@ const Footer = () => {
                   <span className="text-white font-medium">Prokshith J S</span><br />
                   +91 9036526233
                 </p>
-                <p>
-                  <span className="text-white font-medium">Jiya Patel</span><br />
-                  +91 73832 22339
-                </p>
+
               </div>
             </div>
 
@@ -44,28 +43,34 @@ const Footer = () => {
               <h4 className="text-xl font-bold text-white mb-6">
                 Faculty Coordinator
               </h4>
+              <h2>  Dr Divyashree H B</h2>
               <div className="text-white/80 text-sm space-y-2 mb-6">
                 <p className="text-white font-medium">Dayananda Sagar University</p>
               </div>
 
               {/* Social Icons */}
-              <div>
-                <p className="text-white font-semibold mb-3">Follow Us</p>
-                <div className="flex gap-3">
-                  {["𝕏", "📸", "💼", "💬"].map((icon, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      className="w-10 h-10 rounded-xl bg-white/10 border border-white/20
-                        flex items-center justify-center text-white
-                        hover:bg-cyan-500/20 hover:border-cyan-400
-                        hover:-translate-y-1 transition-all duration-300"
-                    >
-                      {icon}
-                    </a>
-                  ))}
-                </div>
-              </div>
+             <div className="flex gap-3">
+  {[
+    { Icon: Icons.Twitter, link: "#" },
+    { Icon: Icons.Instagram, link: "#" },
+    { Icon: Icons.Linkedin, link: "#" },
+    { Icon: Icons.MessageCircle, link: "#" },
+  ].map(({ Icon, link }, i) => (
+    <a
+      key={i}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 rounded-xl bg-white/10 border border-white/20
+        flex items-center justify-center text-white
+        hover:bg-cyan-500/20 hover:border-cyan-400
+        hover:-translate-y-1 transition-all duration-300
+        hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
+    >
+      <Icon className="w-5 h-5" />
+    </a>
+  ))}
+</div>
             </div>
 
             {/* Venue */}

@@ -31,7 +31,7 @@ const About = () => {
           {/* Right Content: Image */}
           <div className="flex justify-center lg:justify-end -mr-6 lg:-mr-12">
             <img
-              src="./image2.png"
+              src="./image2.webp"
               alt="College Image"
               className="w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-lg shadow-lg object-cover"
             />
