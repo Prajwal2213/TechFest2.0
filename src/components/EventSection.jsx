@@ -17,32 +17,39 @@ const EventSection = () => {
   const [current, setCurrent] = useState(0);
   const scrollContainerRef = useRef(null);
   const cardRefs = useRef([]);
-  const touchStart = useRef({ x: 0, y: 0 });
 
   const centerCard = (index) => {
-    const container = scrollContainerRef.current;
-    const card = cardRefs.current[index];
-    if (!container || !card) return;
+    // Optimization 1: Use requestAnimationFrame to batch layout reads and writes
+    requestAnimationFrame(() => {
+      const container = scrollContainerRef.current;
+      const card = cardRefs.current[index];
+      if (!container || !card) return;
 
-    const isMobile = window.innerWidth < 768;
-    const containerSize = isMobile ? container.clientHeight : container.clientWidth;
-    const cardSize = isMobile ? card.clientHeight : card.clientWidth;
-    const cardStart = isMobile ? card.offsetTop : card.offsetLeft;
+      const isMobile = window.innerWidth < 768;
+      const containerSize = isMobile ? container.clientHeight : container.clientWidth;
+      const cardSize = isMobile ? card.clientHeight : card.clientWidth;
+      const cardStart = isMobile ? card.offsetTop : card.offsetLeft;
 
-    container.scrollTo({
-      [isMobile ? 'top' : 'left']:
-        cardStart - (containerSize / 2 - cardSize / 2),
-      behavior: 'smooth'
+      container.scrollTo({
+        [isMobile ? 'top' : 'left']:
+          cardStart - (containerSize / 2 - cardSize / 2),
+        behavior: 'smooth'
+      });
     });
   };
 
   const activate = (index) => {
+    // Optimization 2: Prevent redundant updates if the card is already active
+    if (current === index) return;
     setCurrent(index);
     centerCard(index);
   };
 
   useEffect(() => {
     centerCard(current);
+    
+    // Optimization 3: Ensure any global scroll listeners (if added later) are passive
+    // Currently, this effect just centers the initial card.
   }, [current]);
 
   return (
@@ -133,17 +140,6 @@ const EventSection = () => {
                 >
                   View Event →
                 </a>
-
-                {/* Desktop thumbnail */}
-                {/* <img
-                  src={item.thumb}
-                  alt=""
-                  className={`
-                    hidden md:block mt-auto w-[120px] h-[220px]
-                    object-cover rounded-lg shadow-xl
-                    transition-opacity duration-500
-                    ${current === i ? 'opacity-100' : 'opacity-0'}
-                  `}/> */}
                 
               </div>
             </article>

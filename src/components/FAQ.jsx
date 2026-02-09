@@ -158,7 +158,7 @@ const FAQ = () => {
 
       {/* CONTENT */}
       <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24">
-        <div className="rounded-3xl bg-white/5 backdrop-blur-2xl border border-white/10 p-6 sm:p-8 md:p-10 shadow-[0_0_120px_-40px_rgba(34,211,238,0.6)]">
+        <div className="rounded-3xl bg-white/5 backdrop-blur-3xl border border-white/10 p-6 sm:p-8 md:p-10 shadow-[0_0_120px_-40px_rgba(34,211,238,0.6)]">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-10 sm:mb-12 md:mb-14 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-indigo-400">
             Frequently Asked Questions
           </h2>

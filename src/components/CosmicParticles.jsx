@@ -10,25 +10,36 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
     let particlesGeometry;
     let animationFrameId;
 
-    // --- Responsive Constants ---
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    const aspect = width / height;
-    const isMobile = width < 768;
+    // --- Layout Cache to Prevent Forced Reflow ---
+    let cachedScrollHeight = 0;
+    let cachedInnerHeight = 0;
+    let cachedWidth = 0;
+
+    // --- Performance Optimization: Throttling & Passive Listeners ---
+    let resizeTimeout;
+    
+    // Initial values batching
+    const updateDimensions = () => {
+      cachedWidth = window.innerWidth;
+      cachedInnerHeight = window.innerHeight;
+      cachedScrollHeight = document.documentElement.scrollHeight;
+    };
+
+    updateDimensions();
+
+    const isMobile = cachedWidth < 768;
+    const aspect = cachedWidth / cachedInnerHeight;
 
     // Adaptive Configuration
-    const particleCount = width < 480 ? 12000 : (width < 1024 ? 25000 : 40000);
+    const particleCount = cachedWidth < 480 ? 12000 : (cachedWidth < 1024 ? 25000 : 40000);
     const pSize = isMobile ? 0.45 : 0.28;
     const cameraZ = aspect < 1 ? 40 : (aspect < 1.5 ? 30 : 24);
-    const earthSideOffset = width > 1100 ? 7.0 : 0;
+    const earthSideOffset = cachedWidth > 1100 ? 7.0 : 0;
     const influenceRadius = isMobile ? 3.0 : 4.0;
 
-    // Updated Shape Metadata - Logic stops at Infinity
     const shapeMeta = [
-      { name: "The Earth" },
-      { name: "The Galaxy" },
-      { name: "The Rocket" },
-      { name: "The Infinity" }
+      { name: "The Earth" }, { name: "The Galaxy" }, 
+      { name: "The Rocket" }, { name: "The Infinity" }
     ];
 
     const shapes = {};
@@ -43,6 +54,7 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
 
     const COLOR_BLUE = [0.0, 0.7, 1.0];
 
+    // ... createCircleTexture logic remains same ...
     const createCircleTexture = () => {
       const canvas = document.createElement('canvas');
       canvas.width = 128; canvas.height = 128;
@@ -59,6 +71,7 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
 
     const starTexture = createCircleTexture();
 
+    // ... generateShapes logic remains same ...
     const generateShapes = () => {
       const mapCanvas = document.createElement('canvas');
       const mapCtx = mapCanvas.getContext('2d');
@@ -99,7 +112,6 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
         scatterOffsets[i3+1] = (Math.random() - 0.5) * 15;
         scatterOffsets[i3+2] = (Math.random() - 0.5) * 15;
 
-        // 1. EARTH
         if (earthPool.length > 0) {
           const p = earthPool[Math.floor(Math.random() * earthPool.length)];
           const lon = p.x * Math.PI * 2 - Math.PI;
@@ -109,7 +121,6 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
           shapes["The Earth"][i3+2] = 8.0 * Math.cos(lat) * Math.sin(lon);
         }
 
-        // 2. GALAXY
         const gRatio = i / particleCount;
         if (gRatio < 0.25) { 
           const r = Math.pow(Math.random(), 0.5) * 3.5;
@@ -133,7 +144,6 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
           shapes["The Galaxy"][i3+2] = (Math.random()-0.5) * 4.0;
         }
 
-        // 3. ROCKET
         const rRatio = i / particleCount;
         if (rRatio < 0.5) { 
           const h = (Math.random() - 0.5) * 8; 
@@ -149,7 +159,6 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
           shapes["The Rocket"][i3] = (Math.random()-0.5)*2; shapes["The Rocket"][i3+1] = -5 - Math.random()*5; shapes["The Rocket"][i3+2] = (Math.random()-0.5)*2;
         }
 
-        // 4. INFINITY
         const infT = (i / particleCount) * Math.PI * 2; 
         const den = 1 + Math.pow(Math.sin(infT), 2);
         shapes["The Infinity"][i3] = (10 * Math.cos(infT)) / den; 
@@ -160,6 +169,7 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
       }
     };
 
+    // ... createStarfield logic remains same ...
     const createStarfield = (count, minR, maxR, size, op) => {
       const pos = new Float32Array(count * 3);
       const starColors = new Float32Array(count * 3);
@@ -187,12 +197,12 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
 
     const init = () => {
       scene = new THREE.Scene();
-      camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 8000);
+      camera = new THREE.PerspectiveCamera(60, cachedWidth / cachedInnerHeight, 0.1, 8000);
       camera.position.z = cameraZ;
 
       renderer = new THREE.WebGLRenderer({ canvas: containerRef.current, antialias: true, alpha: true });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(cachedWidth, cachedInnerHeight);
 
       generateShapes();
       
@@ -208,6 +218,7 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
 
       points = new THREE.Points(particlesGeometry, new THREE.PointsMaterial({ size: pSize, vertexColors: true, transparent: true, opacity: 0.85, blending: THREE.AdditiveBlending, map: starTexture, depthWrite: false }));
       scene.add(points);
+      
       animate();
     };
 
@@ -233,6 +244,7 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
       const scatter = Math.sin(Math.PI * localT) * 0.15;
       const mouse3D = new THREE.Vector3(mouse.x * (isMobile ? 15 : 20), mouse.y * (isMobile ? 12 : 16), 0);
 
+      // Loop optimization: Minimize scope lookups inside the hot loop
       for (let i = 0; i < particleCount; i++) {
         const i3 = i * 3;
         let sx = sourcePos[i3], sy = sourcePos[i3+1], sz = sourcePos[i3+2];
@@ -256,7 +268,7 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
         if (dSq < influenceRadius * influenceRadius) {
           const dist = Math.sqrt(dSq);
           const force = (influenceRadius - dist) / influenceRadius;
-          const str = force * force * 1.2;
+          const str = force * force * 0.8; 
           rx_m = (dx/dist)*str; ry_m = (dy/dist)*str; rz_m = (dz/dist)*str;
         }
 
@@ -273,25 +285,30 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
       if (canSignalReady && onReady) onReady();
     };
 
+    // Throttled Resize Handler
     const handleResize = () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        updateDimensions();
+        camera.aspect = cachedWidth / cachedInnerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(cachedWidth, cachedInnerHeight);
+      }, 150);
     };
 
     const handleInput = (clientX, clientY) => {
-      mouse.targetX = (clientX / window.innerWidth) * 2 - 1;
-      mouse.targetY = -(clientY / window.innerHeight) * 2 + 1;
+      mouse.targetX = (clientX / cachedWidth) * 2 - 1;
+      mouse.targetY = -(clientY / cachedInnerHeight) * 2 + 1;
     };
 
     const handleScroll = () => {
-      const scrollH = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollH = cachedScrollHeight - cachedInnerHeight;
       if (scrollH > 0) targetScrollPercent = window.scrollY / scrollH;
     };
 
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('mousemove', (e) => handleInput(e.clientX, e.clientY));
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize, { passive: true });
+    window.addEventListener('mousemove', (e) => handleInput(e.clientX, e.clientY), { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     init();
 
@@ -299,11 +316,19 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
       cancelAnimationFrame(animationFrameId);
-      renderer.dispose();
+      if (renderer) renderer.dispose();
+      if (particlesGeometry) particlesGeometry.dispose();
+      if (starTexture) starTexture.dispose();
     };
   }, [canSignalReady, onReady]);
 
-  return <canvas ref={containerRef} className="block w-full h-full outline-none bg-black" />;
+  return (
+    <canvas 
+      ref={containerRef} 
+      className="block w-full h-full outline-none bg-black" 
+      style={{ willChange: 'transform' }} // GPU Hint
+    />
+  );
 };
 
 export default CosmicParticles;

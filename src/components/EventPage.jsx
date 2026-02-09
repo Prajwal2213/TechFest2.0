@@ -74,7 +74,7 @@ const DetailOverlay = ({ event, onClose }) => {
           <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
             <div className="w-full lg:w-2/5 relative border-r border-zinc-800 bg-zinc-950 flex flex-col">
               <div className="relative flex-1 group overflow-hidden">
-                 <img src={event.imageURL} className="w-full h-full object-cover transition-all duration-1000" alt={event.title} />
+                 <img src={event.imageURL} className="w-full h-full object-cover object-center transition-all duration-1000" alt={event.title} />
                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent"></div>
 
                  <div className="absolute bottom-6 left-6 right-6">
