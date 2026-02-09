@@ -249,7 +249,7 @@ const Loader = () => {
             {!isLoaded && (
               <div ref={uiRef} className="fixed inset-0 z-10 flex flex-col items-center justify-center pointer-events-none transition-all duration-700 px-4">
     {/* Changed: added px-4 to the outer container and max-w-[560px] to the inner div */}
-    <div className="relative w-full max-w-[560px] p-8 md:p-12 bg-[#040406]/94 border border-white/10 backdrop-blur-xl shadow-2xl overflow-hidden animate-shimmer pointer-events-auto"
+    <div className="relative w-full max-w-[560px]  p-8 md:p-12 bg-[#040406]/94 border border-white/10 backdrop-blur-xl shadow-2xl overflow-hidden animate-shimmer pointer-events-auto"
          style={{ clipPath: 'polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px)' }}>
         
         {/* Shimmer Border effect */}

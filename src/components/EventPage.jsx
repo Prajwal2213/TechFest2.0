@@ -45,6 +45,7 @@ const DetailOverlay = ({ event, onClose }) => {
       clearTimeout(timer);
     };
   }, []);
+  
 
   if (!event) return null;
 
@@ -77,16 +78,17 @@ const DetailOverlay = ({ event, onClose }) => {
                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent"></div>
 
                  <div className="absolute bottom-6 left-6 right-6">
-                    <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white uppercase leading-none mb-2">
-                      {event.title}
-                    </h2>
+                   
                  </div>
               </div>
               <div className="h-32 p-6 border-t border-zinc-800 flex items-center gap-6">
-                 <div className="shrink-0 flex flex-col">
+                 {/* <div className="shrink-0 flex flex-col">
                     <span className="text-xl text-zinc-500 mb-1">Prize</span>
                     <span className="text-xl font-black text-yellow-500">Rs. {event.prize}</span>
-                 </div>
+                 </div> */}
+                  <h2 className="text-4xl md:text-6xl font-black tracking-wide text-white uppercase leading-none mb-2">
+                      {event.title}
+                    </h2>
               </div>
             </div>
 
@@ -117,7 +119,7 @@ const DetailOverlay = ({ event, onClose }) => {
                   {/* <button className="flex-1 py-4 bg-yellow-500 text-black font-black text-xs tracking-[0.4em] uppercase hover:bg-white transition-all flex items-center justify-center gap-3">
                     <span className="" > Register </span>
                   </button> */}
-                  <button className="flex-1 py-4 bg-white text-black font-black text-xs tracking-[0.4em] uppercase hover:bg-white transition-all flex items-center justify-center gap-3">
+                  <button className="flex-1 py-4 bg-yellow-500 text-black font-black text-xs tracking-[0.4em] uppercase hover:bg-white transition-all flex items-center justify-center gap-3" onClick={() => window.open(event.link, '_blank')}>
                     <span className="" > problem Statement </ span>
                   </button>
                 </div>
@@ -179,13 +181,19 @@ const EventCard = ({ event, onOpenDetail }) => {
             
             <div className="absolute inset-x-0 bottom-0 p-8 z-30 translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-t from-black via-black/95 to-transparent">
                <div className="flex flex-col gap-4">
-                  <p className="text-[10px] text-zinc-300 font-bold uppercase tracking-tight leading-relaxed line-clamp-3">
+                  {/* <p className="text-[10px] text-zinc-300 font-bold uppercase tracking-tight leading-relaxed line-clamp-3">
                     {description}
-                  </p>
+                  </p> */}
                   <div className="flex justify-between items-end border-t border-white/10 pt-4">
-                     <div className="flex flex-col">
+                     {/* <div className="flex flex-col">
                         <span className="text-[8px] font-black text-yellow-500 tracking-widest uppercase mb-1">Rewards</span>
                         <span className="text-xl font-black text-white ">Rs. {prize}</span>
+                     </div> */}
+                      <p className="text-[10px] text-zinc-300 font-bold uppercase tracking-tight leading-relaxed line-clamp-3">
+                    {description}
+                  </p>
+                     <div>
+                      
                      </div>
                      <div className="p-2 border border-yellow-500/30 text-yellow-500">
                         <ArrowUpRight className="w-4 h-4" />
@@ -268,26 +276,26 @@ export default function EventPage() {
 
   const eventData = {
     robosoccer: [
-      { title: "Wiki-Run", sideLabel: "WIKI-RUN", prize: "1,50,000", imageURL: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=800", description: "Search and target acquisition in vast knowledge graphs. Navigate the web of information." },
-      { title: "Striker Alpha", sideLabel: "ATTACK_01", prize: "1,50,000", imageURL: "https://imgs.search.brave.com/NfGM3dszNHwdBlCT8WRUAb1gXIF4aXXcnkHpL8_XVxY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/ODkyNjQ5My9waG90/by9wYXJ0LW9mLWEt/Y2l0eS1idWlsZGlu/Zy11bmRlci1yZXBh/aXItd2l0aC1ibHVl/LXNreS1hbmQtY3Jh/bmUtb24tdG9wLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1n/anJCNUswSHp3UU5L/aTNtMzdDb3NzTWp6/X3loRjdkMlJDekpT/WFY3amRnPQ", description: "Autonomous robotic strikers designed for high-impact goal conversion." },
-      { title: "Shield V2", sideLabel: "KEEPER_V2", prize: "50,000", imageURL: "https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=1600&q=80", description: "Defensive algorithm competition for impenetrable goal-line tech." },
-      { title: "Mid-Logic", sideLabel: "LOGIC_V3", prize: "75,000", imageURL: "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=800", description: "Spatial navigation and precision passing challenge in dynamic environments." }
+      { title: "Wiki-Run", sideLabel: "WIKI-RUN", prize: "1,50,000", imageURL: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=800", description: "Search and target acquisition in vast knowledge graphs. Navigate the web of information.",link: "" },
+      { title: "Striker Alpha", sideLabel: "ATTACK_01", prize: "1,50,000", imageURL: "https://imgs.search.brave.com/NfGM3dszNHwdBlCT8WRUAb1gXIF4aXXcnkHpL8_XVxY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/ODkyNjQ5My9waG90/by9wYXJ0LW9mLWEt/Y2l0eS1idWlsZGlu/Zy11bmRlci1yZXBh/aXItd2l0aC1ibHVl/LXNreS1hbmQtY3Jh/bmUtb24tdG9wLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1n/anJCNUswSHp3UU5L/aTNtMzdDb3NzTWp6/X3loRjdkMlJDekpT/WFY3amRnPQ", description: "Autonomous robotic strikers designed for high-impact goal conversion.",link: "" },
+      { title: "Shield V2", sideLabel: "KEEPER_V2", prize: "50,000", imageURL: "https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=1600&q=80", description: "Defensive algorithm competition for impenetrable goal-line tech.",link: "" },
+      { title: "Mid-Logic", sideLabel: "LOGIC_V3", prize: "75,000", imageURL: "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=800", description: "Spatial navigation and precision passing challenge in dynamic environments.",link: "" }
     ],
     drone: [
-      { title: "Sky Hunter", sideLabel: "PREDATOR", prize: "2,00,000", imageURL: "https://images.unsplash.com/photo-1506947411487-a56738267384?q=80&w=800", description: "Aerial target acquisition and neutralization protocol." },
-      { title: "FPV Core", sideLabel: "VELOCITY", prize: "1,00,000", imageURL: "https://images.unsplash.com/photo-1473960103865-8acc98b5fd65?q=80&w=800", description: "First-person-view obstacle navigation at maximum throttle." }
+      { title: "Sky Rift", sideLabel: "PREDATOR", imageURL: "./sky_rift.jpeg", description: "Skyrift is a competitive drone challenge featuring precision payload drops, obstacle navigation, and high‑speed racing. It tests teams on technical design, pilot skill, and safety.",link: "" },
+      { title: "Fling Fury", sideLabel: "VELOCITY", imageURL: "./fling_fury.jpeg", description: "Fling Fury is a mechanical design competition where teams build safe, manually powered launchers to hit precision targets. It tests creativity, engineering ingenuity, and accuracy under strict safety and design constraints.",link: "" }
     ],
     hack: [
-      { title: "Dev Siege", sideLabel: "HUSTLE_01", prize: "3,00,000", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours." }
+      { title: "Dev Siege", sideLabel: "HUSTLE_01", prize: "3,00,000", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours." ,link: ""}
     ],
     techzibition: [
-      { title: "Expo Alpha", sideLabel: "PROTO_V1", prize: "1,00,000", imageURL: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800", description: "Showcase of breakthrough automation systems and industrial prototypes." }
+      { title: "Expo Alpha", sideLabel: "PROTO_V1", prize: "1,00,000", imageURL: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800", description: "Showcase of breakthrough automation systems and industrial prototypes.",link: "" }
     ],
     artistic: [
-      { title: "Algo Art", sideLabel: "CREATIVE_OS", prize: "50,000", imageURL: "https://images.unsplash.com/photo-1547891301-15a50bda6140?q=80&w=800", description: "Generative algorithms and aesthetic design systems." }
+      { title: "Algo Art", sideLabel: "CREATIVE_OS", prize: "50,000", imageURL: "https://images.unsplash.com/photo-1547891301-15a50bda6140?q=80&w=800", description: "Generative algorithms and aesthetic design systems.",link: "" }
     ],
     workshops: [
-      { title: "Skill Lab", sideLabel: "LAB_ALPHA", prize: "DIPLOMA", imageURL: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800", description: "Deep-dive technical sessions in embedded logic and ROS." }
+      { title: "Skill Lab", sideLabel: "LAB_ALPHA", prize: "DIPLOMA", imageURL: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800", description: "Deep-dive technical sessions in embedded logic and ROS.",link: ""}
     ]
   };
 
@@ -310,10 +318,10 @@ export default function EventPage() {
         .animate-loading-bar { animation: loading-bar 2s ease-in-out infinite; }
         
         .clip-path-wiki {
-          clip-path: polygon(0% 5%, 35% 5%, 38% 0%, 62% 0%, 65% 5%, 100% 5%, 100% 30%, 96% 33%, 96% 75%, 100% 78%, 100% 95%, 95% 100%, 5% 100%, 0% 95%);
+          clip-path: polygon(0% 5%, 35% 5%, 38% 0%, 62% 0%, 65% 5%, 100% 5%, 100% 30%, 96% 100%, 96% 100%, 100% 78%, 100% 95%, 95% 100%, 5% 100%, 0% 95%);
         }
         .clip-path-notch {
-          clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
         }
         .clip-path-side-tab {
            clip-path: polygon(100% 0, 0 10%, 0 90%, 100% 100%);

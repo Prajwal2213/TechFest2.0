@@ -20,7 +20,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center cursor-pointer">
             <Link to="/">
-              <img src="../logo.png" alt="TechFest logo" className="w-auto h-14 lg:h-16" />
+              <img src="./logo.svg" alt="TechFest logo" className="w-auto h-14 lg:h-16" />
             </Link>
           </div>
 
