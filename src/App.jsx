@@ -16,6 +16,8 @@ import CosmicParticles from './components/CosmicParticles.jsx';
 import ComingSoon from './components/ComingSoon.jsx';
 import ScrolltoTop from './components/ScrolltoTop.jsx';
 import Loader from './components/Loader.jsx';
+import PatronSection from './components/PatronSection.jsx';
+import EventCarousel from './components/EventCaursol.jsx';
 
 function App() {
   const [loaderAnimationDone, setLoaderAnimationDone] = useState(false);
@@ -29,22 +31,16 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoaderAnimationDone(true);
-      setCanSignalBgReady(true); // 🔓 allow BG to finish now
+      setCanSignalBgReady(true);
     }, 3500);
 
     return () => clearTimeout(timer);
   }, []);
 
-  /**
-   * 2️⃣ App is ready ONLY when:
-   *    - loader animation finished
-   *    - background actually rendered
-   */
+  
   const appReady = loaderAnimationDone && bgReady;
 
-  /**
-   * 3️⃣ Lock scroll until everything is visible
-   */
+
   useEffect(() => {
     document.body.style.overflow = appReady ? "auto" : "hidden";
     return () => (document.body.style.overflow = "auto");
@@ -52,11 +48,9 @@ function App() {
 
   return (
     <>
-      {/* 🔥 Loader stays visible until BOTH loader + bg ready */}
       {!appReady && <Loader />}
 
       <Layout>
-        {/* 🌌 Background always mounts, but cannot signal early */}
         <div className="fixed inset-0 z-[-1]">
           <CosmicParticles
             canSignalReady={canSignalBgReady}
@@ -64,7 +58,7 @@ function App() {
           />
         </div>
 
-        {/* 🎬 UI fades in ONLY after everything is ready */}
+    
         <div
           className={`
             relative z-10 transition-opacity duration-700 ease-out
@@ -79,20 +73,21 @@ function App() {
               path="/"
               element={
                 <>
-                  <Hero />
+                {/* <EventCarousel /> */}
+                <Hero />
                   <EventSection />
                   <About />
                   <Sponsors />
-                  <TeamSection />
+                  <PatronSection />
                   <FAQ />
                 </>
               }
             />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/events" element={<EventPage />} />
+            <Route path="/team" element={<TeamSection />} />
             <Route path="/gallery" element={<ComingSoon />} />
           </Routes>
-
           <Footer />
         </div>
       </Layout>

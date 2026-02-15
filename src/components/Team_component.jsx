@@ -12,32 +12,32 @@ import {
 // ==========================================
 // 1. DATASET (TEAM_MEMBERS)
 // ==========================================
- const TEAM_MEMBERS = [
-  { id: 'o1', name: 'Devam Jasani', role: 'Event Director', email: 'devam@techfest.org', phone: '+91 8469218000', imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'cyan', category: 'Organizing Team' },
-  { id: 'o2', name: 'Jaya Meena', role: 'Operations Head', email: 'jaya@techfest.org', phone: '+91 9004619906', accentColor: 'purple', imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&h=600&auto=format&fit=crop', category: 'Organizing Team' },
-  { id: 'o3', name: 'Aarav Mehta', role: 'Finance Head', email: 'aarav@techfest.org', phone: '+91 9822334455', accentColor: 'blue', imageUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&h=600&auto=format&fit=crop', category: 'Organizing Team' },
-  { id: 'o4', name: 'Isha Sharma', role: 'Hospitality Lead', email: 'isha@techfest.org', phone: '+91 9112233445', accentColor: 'cyan', imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&h=600&auto=format&fit=crop', category: 'Organizing Team' },
-  { id: 'o5', name: 'Rohan Varma', role: 'Security Chief', email: 'rohan.v@techfest.org', phone: '+91 9223344556', accentColor: 'purple', imageUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&h=600&auto=format&fit=crop', category: 'Organizing Team' },
-  { id: 't1', name: 'Vaibhav Avhad', role: 'Lead Developer', email: 'vaibhav@techfest.org', phone: '+91 9373189754', imageUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'blue', category: 'Tech Team' },
-  { id: 't2', name: 'Aryan Singh', role: 'Systems Architect', email: 'aryan@techfest.org', phone: '+91 9876543210', imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'cyan', category: 'Tech Team' },
-  { id: 't3', name: 'Vikram Rathore', role: 'Full Stack Dev', email: 'vikram@techfest.org', phone: '+91 9555666777', imageUrl: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'purple', category: 'Tech Team' },
-  { id: 't4', name: 'Sneha Patel', role: 'UI/UX Designer', email: 'sneha@techfest.org', phone: '+91 9444333221', imageUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'blue', category: 'Tech Team' },
-  { id: 't5', name: 'Kabir Khan', role: 'DevOps Engineer', email: 'kabir.k@techfest.org', phone: '+91 9555444333', imageUrl: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'cyan', category: 'Tech Team' },
-  { id: 'm1', name: 'Manish Chahar', role: 'PR Specialist', email: 'manish@techfest.org', phone: '+91 9123456789', imageUrl: 'https://images.unsplash.com/photo-1492562080023-ab3dbdf9bbbd?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'purple', category: 'Marketing Team' },
-  { id: 'm2', name: 'Mohit Doke', role: 'Outreach Manager', email: 'mohit@techfest.org', phone: '+91 9234567890', imageUrl: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'blue', category: 'Marketing Team' },
-  { id: 'm3', name: 'Kabir Das', role: 'Social Media Manager', email: 'kabir@techfest.org', phone: '+91 9333221100', imageUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'cyan', category: 'Marketing Team' },
-  { id: 'm4', name: 'Ananya Rao', role: 'Content Strategist', email: 'ananya@techfest.org', phone: '+91 9000111222', imageUrl: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'purple', category: 'Marketing Team' },
-  { id: 'm5', name: 'Siddharth Roy', role: 'Brand Manager', email: 'sid.r@techfest.org', phone: '+91 9111222333', imageUrl: 'https://images.unsplash.com/photo-1504257406239-8b5170ad18b0?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'blue', category: 'Marketing Team' },
-  { id: 's1', name: 'Sarah Khan', role: 'General Coordinator', email: 'sarah@techfest.org', phone: '+91 9345678901', imageUrl: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'cyan', category: 'Student Coordinators' },
-  { id: 's2', name: 'Rohan Gupta', role: 'Logistics Coordinator', email: 'rohan@techfest.org', phone: '+91 9456789012', imageUrl: 'https://images.unsplash.com/photo-1463453091185-61582044d556?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'purple', category: 'Student Coordinators' },
-  { id: 's3', name: 'Zaid Ahmed', role: 'Event Flow Coord', email: 'zaid@techfest.org', phone: '+91 9222444666', imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'blue', category: 'Student Coordinators' },
-  { id: 's4', name: 'Megha Reddy', role: 'Volunteer Lead', email: 'megha@techfest.org', phone: '+91 9111333555', imageUrl: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'cyan', category: 'Student Coordinators' },
-  { id: 's5', name: 'Arjun Malhotra', role: 'Tech Support', email: 'arjun.m@techfest.org', phone: '+91 9555666000', imageUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'purple', category: 'Student Coordinators' },
-  { id: 'tc1', name: 'Dr. Anita Desai', role: 'Faculty Advisor', email: 'anita.d@techfest.org', phone: '+91 9567890123', imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'blue', category: 'Teachers Coordinators' },
-  { id: 'tc2', name: 'Prof. S. Verma', role: 'Tech Mentor', email: 'verma.s@techfest.org', phone: '+91 9678901234', imageUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'cyan', category: 'Teachers Coordinators' },
-  { id: 'tc3', name: 'Dr. Rajesh Khanna', role: 'Research Head', email: 'rajesh.k@techfest.org', phone: '+91 9888777666', imageUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'purple', category: 'Teachers Coordinators' },
-  { id: 'tc4', name: 'Prof. N. Kapoor', role: 'Cultural Head', email: 'kapoor.n@techfest.org', phone: '+91 9777555333', imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'blue', category: 'Teachers Coordinators' },
-  { id: 'tc5', name: 'Dr. M. Joshi', role: 'Dean of Students', email: 'joshi.m@techfest.org', phone: '+91 9444333000', imageUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&h=600&auto=format&fit=crop', accentColor: 'cyan', category: 'Teachers Coordinators' }
+const EVENT_ORGANIZERS = [
+  // =========================
+  // ORGANISERS
+  // =========================
+  { id: 'org1', name: 'Dr. Divyashree HB', role: 'Asst Prof, ECE', category: 'Organisers' },
+  { id: 'org2', name: 'Dr. Prashanth Kumar H G', role: 'Organiser', category: 'Organisers' },
+  { id: 'org3', name: 'Prof. Shivamma', role: 'Organiser', category: 'Organisers' },
+
+  // =========================
+  // CO-ORGANISERS
+  // =========================
+  { id: 'co1', name: 'Srinath', role: 'ASE', category: 'Co-Organisers' },
+  { id: 'co2', name: 'Sripad', role: 'ASE', category: 'Co-Organisers' },
+  { id: 'co3', name: 'Monish', role: 'DS', category: 'Co-Organisers' },
+
+  // =========================
+  // STUDENT COMMITTEE
+  // =========================
+  { id: 'sc1', name: 'Prokshith', role: 'Student Committee Member', category: 'Student Committee' },
+  { id: 'sc2', name: 'Vikram', role: 'Student Committee Member', category: 'Student Committee' },
+  { id: 'sc3', name: 'Dev Sharma', role: 'Student Committee Member', category: 'Student Committee' },
+  { id: 'sc4', name: 'Eshwari', role: 'Student Committee Member', category: 'Student Committee' },
+  { id: 'sc5', name: 'Ranatha', role: 'Student Committee Member', category: 'Student Committee' },
+  { id: 'sc6', name: 'Sushrutha', role: 'Student Committee Member', category: 'Student Committee' },
+  { id: 'sc7', name: 'Sai Bhuvan', role: 'Student Committee Member', category: 'Student Committee' },
+  { id: 'sc8', name: 'Pratham', role: 'Student Committee Member', category: 'Student Committee' }
 ];
 
 // ==========================================
@@ -121,75 +121,58 @@ const TeamCard = ({ member }) => {
   }[member.accentColor];
 
   return (
+  <div
+    className="perspective-1000 w-full max-w-[280px] sm:max-w-[300px] group flex-shrink-0"
+    onMouseMove={handleMouseMove}
+    onMouseEnter={() => setIsHovering(true)}
+    onMouseLeave={handleMouseLeave}
+  >
     <div
-      className="perspective-1000 w-[280px] group flex-shrink-0"
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={handleMouseLeave}
+      ref={cardRef}
+      style={{
+        transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+        transition: isHovering
+          ? "transform 0.05s ease-out"
+          : "transform 0.6s cubic-bezier(0.2, 1, 0.3, 1)",
+      }}
+      className="relative h-full flex flex-col rounded-[2.5rem] border border-white/10 
+                 transition-all duration-300 hover:scale-[1.02] 
+                 bg-white/[0.02] backdrop-blur-[20px] overflow-hidden"
     >
-      <div
-        ref={cardRef}
-        style={{
-          transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
-          transition: isHovering ? 'transform 0.05s ease-out' : 'all 0.6s cubic-bezier(0.2, 1, 0.3, 1)',
-        }}
-        className={`relative h-full flex flex-col rounded-[2.5rem] border transition-all duration-300 hover:scale-[1.02] bg-white/[0.02] backdrop-blur-[20px] overflow-hidden ${theme.border}`}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-        <div className={`absolute inset-0 bg-gradient-to-br ${theme.accent} opacity-30 group-hover:opacity-50 transition-opacity duration-700`} />
+      {/* Hover Glow */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+      <div className="relative px-6 py-8 flex flex-col items-center justify-center min-h-[220px] sm:min-h-[250px] z-10">
         
-        <div className="relative px-6 py-8 flex flex-col items-center min-h-[460px] h-full z-10">
-          <div className="w-full flex justify-between items-center mb-6">
-            <div className="flex flex-col">
-              <span className="text-[7px] text-white/30 tracking-[0.3em] font-mono font-bold uppercase">Personnel ID // {personnelId}</span>
-              <div className="w-10 h-[1px] bg-white/10 mt-1" />
-            </div>
-            <div className={   `w-1.5 h-1.5 rounded-full ${theme.glow} animate-pulse shadow-[0_0_8px_currentColor]`} />
-          </div>
+        {/* Personnel ID */}
+        <span className="text-[7px] text-white/30 tracking-[0.3em] font-mono font-bold uppercase mb-4">
+          ID // {member.id.toUpperCase()}
+        </span>
 
-          <div className="text-center mb-6 w-full flex flex-col items-center">
-            <h3 className="text-xl font-black text-white mb-1.5 uppercase tracking-tight drop-shadow-lg leading-tight">
-              {member.name}
-            </h3>
-            <div className="flex items-center justify-center gap-2">
-              <div className="h-[1px] w-3 bg-white/10" />
-              <p className={`text-[8px] font-bold uppercase tracking-[0.4em] ${theme.text}`}>
-                {member.role}
-              </p>
-              <div className="h-[1px] w-3 bg-white/10" />
-            </div>
-          </div>
+        {/* Name */}
+        <h3 className="text-lg sm:text-xl font-black text-white mb-2 uppercase tracking-tight text-center leading-tight">
+          {member.name}
+        </h3>
 
-          <div className="relative w-full aspect-square mb-6 overflow-hidden rounded-[1.8rem] border border-white/5 bg-black/40 shadow-inner group-hover:border-white/20 transition-all duration-700">
-            <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-60" />
-            <div className="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-              <div className="absolute top-0 left-0 w-full h-[1px] bg-white/20 blur-[1px] animate-[scan_4s_linear_infinite]" />
-            </div>
-            <img
-              src={member.imageUrl}
-              alt={member.name}
-              className="h-full w-full object-cover transition-all duration-[1.5s] group-hover:scale-110 brightness-[0.8] group-hover:brightness-105 saturate-[0.5] group-hover:saturate-100"
-            />
-          </div>
+        {/* Role */}
+        <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-cyan-400 text-center">
+          {member.role}
+        </p>
 
-          <div className="mt-auto w-full p-4 rounded-2xl border border-white/5 bg-black/30 backdrop-blur-xl group-hover:bg-black/50 transition-all duration-500 group-hover:border-white/10 shadow-lg flex flex-col items-center justify-center gap-1.5">
-             <div className="flex items-center gap-2 text-white/40 group-hover:text-white/70 transition-colors">
-               <Mail size={10} />
-               <span className="text-[9px] font-medium tracking-wide truncate w-32 text-center">
-                 {member.email}
-               </span>
-             </div>
-             <div className={`flex items-center gap-2 ${theme.text} opacity-80`}>
-               <Phone size={10} />
-               <span className="text-[10px] font-black tracking-[0.2em]">
-                 {member.phone}
-               </span>
-             </div>
-          </div>
-        </div>
+        {/* Divider */}
+        <div className="w-10 h-[1px] bg-white/20 mt-4" />
+
+        {/* Category */}
+        <p className="mt-4 text-[9px] uppercase tracking-[0.4em] text-white/40 text-center">
+          {member.category}
+        </p>
+
       </div>
     </div>
-  );
+  </div>
+);
+
+
 };
 
-export { TeamCard, TeamBackground, TEAM_MEMBERS };
+export { TeamCard, TeamBackground, EVENT_ORGANIZERS };

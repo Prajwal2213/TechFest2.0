@@ -86,7 +86,7 @@ const DetailOverlay = ({ event, onClose }) => {
                     <span className="text-xl text-zinc-500 mb-1">Prize</span>
                     <span className="text-xl font-black text-yellow-500">Rs. {event.prize}</span>
                  </div> */}
-                  <h2 className="text-4xl md:text-6xl font-black tracking-wide text-white uppercase leading-none mb-2">
+                  <h2 className="text-4xl md:text-4xl font-black tracking-wide text-white uppercase leading-none mb-2">
                       {event.title}
                     </h2>
               </div>
@@ -227,13 +227,13 @@ const SectionHeader = ({ title, onPrev, onNext }) => (
     <div className="flex items-center gap-6">
      
       <div className="flex flex-col">
-        <h2 className="text-4xl md:text-5xl font-Orbitron tracking-tighter uppercase  leading-none group-hover/header:text-yellow-500 transition-colors">
+        <h2 className="text-4xl md:text-5xl font-Orbitron tracking-wide uppercase  leading-none group-hover/header:text-yellow-500 transition-colors">
           <GlitchText text={title} />
         </h2>
         
       </div>
     </div>
-    <div className="flex-1 h-[1px] bg-zinc-900 hidden md:block ml-4 relative">
+    <div className="flex-1 h-[1px] bg-white hidden md:block ml-4 relative">
        <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 to-transparent opacity-0 group-hover/header:opacity-100 transition-opacity"></div>
     </div>
     <div className="flex gap-2 self-end md:self-center">
@@ -275,25 +275,28 @@ export default function EventPage() {
   };
 
   const eventData = {
-    robosoccer: [
-      { title: "Wiki-Run", sideLabel: "WIKI-RUN", prize: "1,50,000", imageURL: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=800", description: "Search and target acquisition in vast knowledge graphs. Navigate the web of information.",link: "" },
-      { title: "Striker Alpha", sideLabel: "ATTACK_01", prize: "1,50,000", imageURL: "https://imgs.search.brave.com/NfGM3dszNHwdBlCT8WRUAb1gXIF4aXXcnkHpL8_XVxY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/ODkyNjQ5My9waG90/by9wYXJ0LW9mLWEt/Y2l0eS1idWlsZGlu/Zy11bmRlci1yZXBh/aXItd2l0aC1ibHVl/LXNreS1hbmQtY3Jh/bmUtb24tdG9wLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1n/anJCNUswSHp3UU5L/aTNtMzdDb3NzTWp6/X3loRjdkMlJDekpT/WFY3amRnPQ", description: "Autonomous robotic strikers designed for high-impact goal conversion.",link: "" },
-      { title: "Shield V2", sideLabel: "KEEPER_V2", prize: "50,000", imageURL: "https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=1600&q=80", description: "Defensive algorithm competition for impenetrable goal-line tech.",link: "" },
-      { title: "Mid-Logic", sideLabel: "LOGIC_V3", prize: "75,000", imageURL: "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=800", description: "Spatial navigation and precision passing challenge in dynamic environments.",link: "" }
+    RoboEdge: [
+      { title: "RoboRace", sideLabel: "WIKI-RUN", prize: "1,50,000", imageURL: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=800", description: "Search and target acquisition in vast knowledge graphs. Navigate the web of information.",link: "" },
+      { title: "Robo Obstacle", sideLabel: "ATTACK_01", prize: "1,50,000", imageURL: "https://imgs.search.brave.com/NfGM3dszNHwdBlCT8WRUAb1gXIF4aXXcnkHpL8_XVxY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/ODkyNjQ5My9waG90/by9wYXJ0LW9mLWEt/Y2l0eS1idWlsZGlu/Zy11bmRlci1yZXBh/aXItd2l0aC1ibHVl/LXNreS1hbmQtY3Jh/bmUtb24tdG9wLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1n/anJCNUswSHp3UU5L/aTNtMzdDb3NzTWp6/X3loRjdkMlJDekpT/WFY3amRnPQ", description: "Autonomous robotic strikers designed for high-impact goal conversion.",link: "" },
+      { title: "Robo Soccer", sideLabel: "KEEPER_V2", prize: "50,000", imageURL: "https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=1600&q=80", description: "Defensive algorithm competition for impenetrable goal-line tech.",link: "" },
+      { title: "EdgeIQ Challenge", sideLabel: "LOGIC_V3", prize: "75,000", imageURL: "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=800", description: "Spatial navigation and precision passing challenge in dynamic environments.",link: "" }
     ],
-    drone: [
-      { title: "Sky Rift", sideLabel: "PREDATOR", imageURL: "./sky_rift.jpeg", description: "Skyrift is a competitive drone challenge featuring precision payload drops, obstacle navigation, and high‑speed racing. It tests teams on technical design, pilot skill, and safety.",link: "" },
-      { title: "Fling Fury", sideLabel: "VELOCITY", imageURL: "./fling_fury.jpeg", description: "Fling Fury is a mechanical design competition where teams build safe, manually powered launchers to hit precision targets. It tests creativity, engineering ingenuity, and accuracy under strict safety and design constraints.",link: "" }
+    SkyRift: [
+      { title: "Sky Rift", sideLabel: "PREDATOR", imageURL: "./sky_rift1.png", description: "Skyrift is a competitive drone challenge featuring precision payload drops, obstacle navigation, and high‑speed racing. It tests teams on technical design, pilot skill, and safety.",link: "" },
+      { title: "Fling Fury", sideLabel: "VELOCITY", imageURL: "./fling_fury1.png", description: "Fling Fury is a mechanical design competition where teams build safe, manually powered launchers to hit precision targets. It tests creativity, engineering ingenuity, and accuracy under strict safety and design constraints.",link: "" },
+      { title: "Fluid Force X", sideLabel: "VELOCITY", imageURL: "./fling_fury1.png", description: "Fling Fury is a mechanical design competition where teams build safe, manually powered launchers to hit precision targets. It tests creativity, engineering ingenuity, and accuracy under strict safety and design constraints.",link: "" }
     ],
-    hack: [
-      { title: "Dev Siege", sideLabel: "HUSTLE_01", prize: "3,00,000", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours." ,link: ""}
+    EdgeIQChallenge : [
+      { title: "Edge Audio Intelligence", sideLabel: "HUSTLE_01", prize: "3,00,000", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours." ,link: ""},
+      { title: "Edge Vision Intelligence", sideLabel: "HUSTLE_01", prize: "3,00,000", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours." ,link: ""},
+      { title: "Predictive Intelligence At The Edge", sideLabel: "HUSTLE_01", prize: "3,00,000", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours." ,link: ""},
+      { title: "Edge Ai For Sustainability", sideLabel: "HUSTLE_01", prize: "3,00,000", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours." ,link: ""},
+      { title: "Open Innovation Edgeiq Open Track", sideLabel: "HUSTLE_01", prize: "3,00,000", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours." ,link: ""}
     ],
     techzibition: [
       { title: "Expo Alpha", sideLabel: "PROTO_V1", prize: "1,00,000", imageURL: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800", description: "Showcase of breakthrough automation systems and industrial prototypes.",link: "" }
     ],
-    artistic: [
-      { title: "Algo Art", sideLabel: "CREATIVE_OS", prize: "50,000", imageURL: "https://images.unsplash.com/photo-1547891301-15a50bda6140?q=80&w=800", description: "Generative algorithms and aesthetic design systems.",link: "" }
-    ],
+
     workshops: [
       { title: "Skill Lab", sideLabel: "LAB_ALPHA", prize: "DIPLOMA", imageURL: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800", description: "Deep-dive technical sessions in embedded logic and ROS.",link: ""}
     ]
@@ -340,7 +343,7 @@ export default function EventPage() {
       <main className="relative z-10 pt-40 space-y-32 ">
         <section className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mb-32">
            <div className="flex flex-col items-center text-center">
-              <h1 className="text-7xl md:text-9xl font-Orbitron font-semibold tracking-tighter uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl ">
+              <h1 className="text-7xl md:text-9xl font-Orbitron font-semibold tracking-wide uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl ">
                 Events
               </h1>
            </div>
@@ -350,7 +353,7 @@ export default function EventPage() {
           <section key={key}>
             <SectionHeader title={key} sub={`PRTCL_${key.toUpperCase()}`} onPrev={() => scroll(refs[key], 'left')} onNext={() => scroll(refs[key], 'right')} />
             {/* REDUCED PADDING FOR A TIGHTER LEFT GAP */}
-            <div ref={refs[key]} className="flex gap-10 overflow-x-auto pb-16 pt-4 scrollbar-hide px-6 md:px-10 lg:px-16 scroll-smooth">
+            <div ref={refs[key]} className="flex gap-10 overflow-x-auto ml-15 pb-16 pt-4 scrollbar-hide px-6 md:px-10 lg:px-16 scroll-smooth">
               {events.map((event, idx) => (
                 <EventCard key={idx} event={event} onOpenDetail={setSelectedEvent} />
               ))}

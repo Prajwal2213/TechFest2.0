@@ -2,22 +2,22 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen max-w-screen  flex items-center justify-start px-6 sm:px-12 lg:px-24    "
+      className="relative min-h-screen max-w-screen   flex items-center justify-start px-6 sm:px-12 lg:px-24    "
     >
       <div className="max-w-4xl space-y-6">
 
         {/* Date */}
         <p className="text-cyan-400 font-semibold tracking-widest text-sm sm:text-base">
-          MARCH 23 – 25, 2026
+          APRIL 23 – 25, 2026
         </p>
 
         {/* Title */}
-        <h1 className="font-extrabold uppercase tracking-wider leading-tight">
+        <h1 className="font-extrabold uppercase tracking-wider leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 text-[clamp(3rem,8vw,6rem)] sm:text-7xl lg:text-9xl">
           <span className="block text-white text-[clamp(2.5rem,5vw,4rem)] sm:text-5xl lg:text-7xl">
             DSU
           </span>
           <span className="block text-white text-[clamp(3rem,6vw,5rem)] sm:text-6xl lg:text-8xl mt-2">
-            TechFest 1.0
+           CELESTAI’26
           </span>
         </h1>
 

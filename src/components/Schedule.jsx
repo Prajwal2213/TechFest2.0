@@ -68,9 +68,13 @@ const Schedule = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto">
         <header className="text-center mb-24">
-          <h2 className="text-6xl md:text-8xl font-black  tracking-wide uppercase text-white leading-none">
-            Timeline 
-          </h2>
+          <section className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mb-32 mt-15">
+           <div className="flex flex-col items-center text-center">
+              <h1 className="text-7xl md:text-9xl font-Orbitron font-semibold tracking-wide uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl ">
+                Timeline
+              </h1>
+           </div>
+        </section>
           
           <div className="flex justify-center gap-4 mt-12">
             {FEST_SCHEDULE.map(day => (

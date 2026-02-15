@@ -8,7 +8,9 @@ const Navbar = () => {
     { label: 'Home', path: '/', color: 'text-white/90 hover:text-cyan-400' },
     { label: 'Events', path: '/events', color: 'text-white/90 hover:text-cyan-400' },
     { label: 'Schedule', path: '/schedule', color: 'text-white/90 hover:text-cyan-400' },
+    { label: 'Team', path: '/team', color: 'text-white/90 hover:text-cyan-400' },
     { label: 'Gallery', path: '/gallery', color: 'text-white/90 hover:text-cyan-400' },
+
   ];
 
   return (

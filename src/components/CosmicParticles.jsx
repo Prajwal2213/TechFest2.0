@@ -10,15 +10,12 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
     let particlesGeometry;
     let animationFrameId;
 
-    // --- Layout Cache to Prevent Forced Reflow ---
+    // --- Layout Cache ---
     let cachedScrollHeight = 0;
     let cachedInnerHeight = 0;
     let cachedWidth = 0;
-
-    // --- Performance Optimization: Throttling & Passive Listeners ---
     let resizeTimeout;
-    
-    // Initial values batching
+
     const updateDimensions = () => {
       cachedWidth = window.innerWidth;
       cachedInnerHeight = window.innerHeight;
@@ -34,7 +31,10 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
     const particleCount = cachedWidth < 480 ? 12000 : (cachedWidth < 1024 ? 25000 : 40000);
     const pSize = isMobile ? 0.45 : 0.28;
     const cameraZ = aspect < 1 ? 40 : (aspect < 1.5 ? 30 : 24);
-    const earthSideOffset = cachedWidth > 1100 ? 7.0 : 0;
+    
+    // --- SHIFT GLOBE TO RIGHT ---
+    const earthSideOffset = cachedWidth > 1100 ? 12.0 : 0; 
+    
     const influenceRadius = isMobile ? 3.0 : 4.0;
 
     const shapeMeta = [
@@ -49,12 +49,15 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
     const colors = new Float32Array(particleCount * 3);
     const currentPositions = new Float32Array(particleCount * 3);
     const mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
+    
+    // Animation State
     let scrollPercent = 0;
     let targetScrollPercent = 0;
+    // Removed currentOpacity state, fixed to 0.85
 
     const COLOR_BLUE = [0.0, 0.7, 1.0];
 
-    // ... createCircleTexture logic remains same ...
+    // Texture
     const createCircleTexture = () => {
       const canvas = document.createElement('canvas');
       canvas.width = 128; canvas.height = 128;
@@ -71,7 +74,7 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
 
     const starTexture = createCircleTexture();
 
-    // ... generateShapes logic remains same ...
+    // Shape Generation
     const generateShapes = () => {
       const mapCanvas = document.createElement('canvas');
       const mapCtx = mapCanvas.getContext('2d');
@@ -112,15 +115,18 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
         scatterOffsets[i3+1] = (Math.random() - 0.5) * 15;
         scatterOffsets[i3+2] = (Math.random() - 0.5) * 15;
 
+        // --- Earth Shape ---
         if (earthPool.length > 0) {
           const p = earthPool[Math.floor(Math.random() * earthPool.length)];
           const lon = p.x * Math.PI * 2 - Math.PI;
           const lat = -(p.y * Math.PI - Math.PI / 2);
+          
           shapes["The Earth"][i3] = (8.0 * Math.cos(lat) * Math.cos(lon)) + earthSideOffset;
           shapes["The Earth"][i3+1] = 8.0 * Math.sin(lat);
           shapes["The Earth"][i3+2] = 8.0 * Math.cos(lat) * Math.sin(lon);
         }
 
+        // --- Galaxy Shape ---
         const gRatio = i / particleCount;
         if (gRatio < 0.25) { 
           const r = Math.pow(Math.random(), 0.5) * 3.5;
@@ -144,6 +150,7 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
           shapes["The Galaxy"][i3+2] = (Math.random()-0.5) * 4.0;
         }
 
+        // --- Rocket Shape ---
         const rRatio = i / particleCount;
         if (rRatio < 0.5) { 
           const h = (Math.random() - 0.5) * 8; 
@@ -159,6 +166,7 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
           shapes["The Rocket"][i3] = (Math.random()-0.5)*2; shapes["The Rocket"][i3+1] = -5 - Math.random()*5; shapes["The Rocket"][i3+2] = (Math.random()-0.5)*2;
         }
 
+        // --- Infinity Shape ---
         const infT = (i / particleCount) * Math.PI * 2; 
         const den = 1 + Math.pow(Math.sin(infT), 2);
         shapes["The Infinity"][i3] = (10 * Math.cos(infT)) / den; 
@@ -169,7 +177,6 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
       }
     };
 
-    // ... createStarfield logic remains same ...
     const createStarfield = (count, minR, maxR, size, op) => {
       const pos = new Float32Array(count * 3);
       const starColors = new Float32Array(count * 3);
@@ -216,6 +223,7 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
       particlesGeometry.setAttribute('position', new THREE.BufferAttribute(currentPositions, 3));
       particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
+      // CHANGED: Start with opacity 0.85 instead of 0.0
       points = new THREE.Points(particlesGeometry, new THREE.PointsMaterial({ size: pSize, vertexColors: true, transparent: true, opacity: 0.85, blending: THREE.AdditiveBlending, map: starTexture, depthWrite: false }));
       scene.add(points);
       
@@ -225,6 +233,10 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);
       scrollPercent = THREE.MathUtils.lerp(scrollPercent, targetScrollPercent, 0.05);
+
+      // --- VISIBILITY LOGIC REMOVED ---
+      // Particles stay at opacity 0.85 (set during init)
+
       mouse.x = THREE.MathUtils.lerp(mouse.x, mouse.targetX, 0.1);
       mouse.y = THREE.MathUtils.lerp(mouse.y, mouse.targetY, 0.1);
 
@@ -244,17 +256,22 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
       const scatter = Math.sin(Math.PI * localT) * 0.15;
       const mouse3D = new THREE.Vector3(mouse.x * (isMobile ? 15 : 20), mouse.y * (isMobile ? 12 : 16), 0);
 
-      // Loop optimization: Minimize scope lookups inside the hot loop
       for (let i = 0; i < particleCount; i++) {
         const i3 = i * 3;
         let sx = sourcePos[i3], sy = sourcePos[i3+1], sz = sourcePos[i3+2];
         let tx = targetPos[i3], ty = targetPos[i3+1], tz = targetPos[i3+2];
 
+        // Apply Earth rotation logic if current or next shape is Earth
         if (shapeMeta[index].name === "The Earth") {
-          let rx = sx - earthSideOffset; sx = (rx * cosE - sz * sinE) + earthSideOffset; sz = rx * sinE + sz * cosE;
+          // Temporarily remove offset to rotate around center, then re-add offset
+          let rx = sx - earthSideOffset; 
+          sx = (rx * cosE - sz * sinE) + earthSideOffset; 
+          sz = rx * sinE + sz * cosE;
         }
         if (shapeMeta[index+1]?.name === "The Earth") {
-          let rx = tx - earthSideOffset; tx = (rx * cosE - tz * sinE) + earthSideOffset; tz = rx * sinE + tz * cosE;
+          let rx = tx - earthSideOffset; 
+          tx = (rx * cosE - tz * sinE) + earthSideOffset; 
+          tz = rx * sinE + tz * cosE;
         }
 
         const fx = THREE.MathUtils.lerp(sx, tx, localT) + (scatterOffsets[i3] * scatter);
@@ -285,7 +302,6 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
       if (canSignalReady && onReady) onReady();
     };
 
-    // Throttled Resize Handler
     const handleResize = () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
@@ -301,9 +317,19 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
       mouse.targetY = -(clientY / cachedInnerHeight) * 2 + 1;
     };
 
+    // --- SCROLL HANDLER UPDATED ---
     const handleScroll = () => {
-      const scrollH = cachedScrollHeight - cachedInnerHeight;
-      if (scrollH > 0) targetScrollPercent = window.scrollY / scrollH;
+      const currentScroll = window.scrollY;
+      const totalScrollable = cachedScrollHeight - cachedInnerHeight;
+      // Removed offset calculation
+      
+      if (totalScrollable > 0) {
+         targetScrollPercent = currentScroll / totalScrollable;
+      } else {
+         targetScrollPercent = 0;
+      }
+      
+      targetScrollPercent = Math.min(1, Math.max(0, targetScrollPercent));
     };
 
     window.addEventListener('resize', handleResize, { passive: true });
@@ -325,8 +351,8 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
   return (
     <canvas 
       ref={containerRef} 
-      className="block w-full h-full outline-none bg-black" 
-      style={{ willChange: 'transform' }} // GPU Hint
+      className="block w-full h-full outline-none bg-black " 
+      style={{ willChange: 'transform' }} 
     />
   );
 };

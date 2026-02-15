@@ -171,9 +171,9 @@ const Sponsors = () => {
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="text-center mb-20 sm:mb-32">
-          <h2 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-wide text-cyan-400 mb-8 uppercase">Our Sponsors</h2>
+          <h2 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-wide text-cyan-400 mb-8 uppercase bg-black/70 py-4">Our Sponsors</h2>
         </div>
 
         {/* Gold */}

@@ -34,6 +34,10 @@ const Footer = () => {
                   <span className="text-white font-medium">Prokshith J S</span><br />
                   +91 9036526233
                 </p>
+                <p>
+                  <span className="text-white font-medium">Tanushree</span><br />
+                  +91 8310152917
+                </p>
 
               </div>
             </div>
@@ -102,7 +106,7 @@ const Footer = () => {
           {/* BOTTOM BAR */}
           <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm text-center md:text-left">
-              © 2026 TechFest • Dayananda Sagar University • Bengaluru
+              © 2026 CELESTAI • Dayananda Sagar University • Bengaluru
             </p>
 
             <div className="flex gap-4 text-sm text-white/50">

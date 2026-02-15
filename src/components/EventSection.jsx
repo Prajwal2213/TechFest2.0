@@ -1,16 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const projects = [
-  { title: "Hack Hustle", desc: "Code fast. Build bold solutions", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/designers.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-designer.webp?w=480", link:"https://techfestvnit.org/hackhustle" },
-  { title: "Drone Quest", desc: "Navigate drones through skill challenges", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/marketers.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-marketer.webp?w=480", link:"https://techfestvnit.org/dronequest" },
-  { title: "Robosoccer", desc: "Robots compete in high-speed soccer.", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/filmmakers.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-film.webp?w=480", link:"https://techfestvnit.org/robosoccer" },
-  { title: "Techzibition", desc: "Show off your genius", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/content-creators.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-content.webp?w=480", link:"https://techfestvnit.org/techzibition" },
-  { title: "Workshops", desc: "Learn cool stuff. Build faster.", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/art-directors.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-art.webp?w=480", link:"https://techfestvnit.org/workshops" },
-   { title: "Hack Hustle", desc: "Code fast. Build bold solutions", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/designers.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-designer.webp?w=480", link:"https://techfestvnit.org/hackhustle" },
-  { title: "Drone Quest", desc: "Navigate drones through skill challenges", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/marketers.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-marketer.webp?w=480", link:"https://techfestvnit.org/dronequest" },
-  { title: "Robosoccer", desc: "Robots compete in high-speed soccer.", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/filmmakers.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-film.webp?w=480", link:"https://techfestvnit.org/robosoccer" },
-  { title: "Techzibition", desc: "Show off your genius", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/content-creators.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-content.webp?w=480", link:"https://techfestvnit.org/techzibition" },
-  { title: "Workshops", desc: "Learn cool stuff. Build faster.", bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/art-directors.webp", thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-art.webp?w=480", link:"https://techfestvnit.org/workshops" },
+  { title: "RoboEdge", desc: "RoboEdge at CELESTAI’26 is a robotics challenge where participants design, control, and operate intelligent robots through hands-on contests, workshops, and tech showcases, making it both competitive and educational", bg: "./images/home_event/robohuman.jpeg", link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" },
+  { title: "EdgeIQ Challenge ", desc: "Navigate drones through skill challenges", bg: "./images/home_event/brain.jpeg",link:"https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
+  { title: "SkyRift ", desc: "Robots compete in high-speed soccer.", bg: "./images/home_event/sky_rift1.jpeg",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+ 
 ];
 
 const EventSection = () => {
@@ -112,7 +106,7 @@ const EventSection = () => {
 
                 <p
                   className={`
-                    text-gray-300 text-sm mt-3 max-w-[16rem]
+                    text-gray-300 text-sm mt-3 max-w-[20rem]
                     transition-all duration-500
                     ${current === i
                       ? 'opacity-100 translate-y-0'
