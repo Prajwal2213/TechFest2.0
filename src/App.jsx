@@ -7,7 +7,7 @@ import About from "./components/About.jsx";
 import EventSection from './components/EventSection.jsx';
 import Layout from './components/Layout.jsx';
 import FAQ from './components/FAQ.jsx';
-import Schedule from './components/Schedule.jsx';
+// import Schedule from './components/Schedule.jsx';
 import TeamSection from './components/TeamSection.jsx';
 import Sponsors from './components/Sponsors.jsx';
 import EventPage from './components/EventPage.jsx';
@@ -17,7 +17,7 @@ import ComingSoon from './components/ComingSoon.jsx';
 import ScrolltoTop from './components/ScrolltoTop.jsx';
 import Loader from './components/Loader.jsx';
 import PatronSection from './components/PatronSection.jsx';
-import SponsorPage from './components/SponsorPage.jsx';
+// import SponsorPage from './components/SponsorPage.jsx';
 
 function App() {
   const [loaderAnimationDone, setLoaderAnimationDone] = useState(false);
@@ -73,9 +73,7 @@ function App() {
               path="/"
               element={
                 <>
-            
                   <Hero />
-
                   <EventSection />
                   <About />
                   <Sponsors />
@@ -87,7 +85,7 @@ function App() {
             {/* <Route path="/schedule" element={<Schedule />} /> */}
             <Route path="/events" element={<EventPage />} />
             <Route path="/team" element={<TeamSection />} />
-            <Route path="/sponsors" element={<SponsorPage />} />
+            {/* <Route path="/sponsors" element={<SponsorPage />} /> */}
             <Route path="/gallery" element={<ComingSoon />} />
           </Routes>
           <Footer />

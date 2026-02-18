@@ -16,17 +16,13 @@ const EVENT_ORGANIZERS = [
   // =========================
   // ORGANISERS
   // =========================
-  { id: 'org1', name: 'Dr. Divyashree HB', role: 'Asst Prof, ECE', category: 'Organisers' },
-  { id: 'org2', name: 'Dr. Prashanth Kumar H G', role: 'Organiser', category: 'Organisers' },
-  { id: 'org3', name: 'Prof. Shivamma', role: 'Organiser', category: 'Organisers' },
-  { id: 'org4', name: 'Ms. Jisy N K', role: 'Organiser', category: 'Organisers' },
+  { id: 'org1', name: 'Dr. Divyashree HB', role: 'Asst Prof, ECE', category: 'Organisers', imageUrl: ''},
+  { id: 'org2', name: 'Dr. Prashanth Kumar H G', role: 'Organiser', category: 'Organisers', imageUrl: ''},
+  { id: 'org3', name: 'Srinath', role: 'ASE', category: 'Co-Organisers' },
+  { id: 'org4', name: 'Sripad', role: 'ASE', category: 'Co-Organisers' },
+  { id: 'org5', name: 'Prof. Shivamma', role: 'Organiser', category: 'Organisers' },
+  { id: 'org6', name: 'Ms. Jisy N K', role: 'Organiser', category: 'Organisers' },
 
-  // =========================
-  // CO-ORGANISERS
-  // =========================
-  { id: 'co1', name: 'Srinath', role: 'ASE', category: 'Co-Organisers' },
-  { id: 'co2', name: 'Sripad', role: 'ASE', category: 'Co-Organisers' },
-  { id: 'co3', name: 'Monish', role: 'DS', category: 'Co-Organisers' },
 
   // =========================
   // STUDENT COMMITTEE

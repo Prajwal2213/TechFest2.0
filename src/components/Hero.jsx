@@ -1,12 +1,22 @@
 const Hero = () => {
   return (
     <section
-      id="hero"
-      className=" relative min-h-[50vh] md:min-h-screen max-w-screen   flex items-center justify-start px-6 sm:px-12 lg:px-24 mb-30  bg-no-repeat bg-cover bg-center md:bg-[url('https://res.cloudinary.com/dstbnmjwh/image/upload/v1771321472/image2_oc8zev.webp')]"
-      
-    >
+  id="hero"
+  className="
+    relative
+    min-h-[50vh] md:min-h-screen
+    flex flex-col md:flex-row
+    items-start md:items-center
+    justify-start
+    px-6 sm:px-12 lg:px-24
+    bg-no-repeat
+    bg-cover
+    bg-center
+    md:bg-[url('https://res.cloudinary.com/dstbnmjwh/image/upload/v1771321472/image2_oc8zev.webp')]
+  "
+>
        
-      <div className="max-w-4xl space-y-6 -mt-60">
+      <div className="max-w-4xl space-y-6 md:-mt-60 mt-30">
 
         {/* Date */}
         <p className="text-cyan-400 font-semibold tracking-widest text-sm sm:text-base ">
