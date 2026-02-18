@@ -5,6 +5,9 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
+     const savedScroll = sessionStorage.getItem("cosmicScroll") || 0;
+window.scrollTo(0, parseInt(savedScroll, 10));
+
     let scene, camera, renderer, points;
     let bgLayers = [];
     let particlesGeometry;
@@ -22,6 +25,7 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
       cachedScrollHeight = document.documentElement.scrollHeight;
     };
 
+   
     updateDimensions();
 
     const isMobile = cachedWidth < 768;
@@ -317,35 +321,43 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
       mouse.targetY = -(clientY / cachedInnerHeight) * 2 + 1;
     };
 
-    // --- SCROLL HANDLER UPDATED ---
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      const totalScrollable = cachedScrollHeight - cachedInnerHeight;
-      // Removed offset calculation
-      
-      if (totalScrollable > 0) {
-         targetScrollPercent = currentScroll / totalScrollable;
-      } else {
-         targetScrollPercent = 0;
-      }
-      
-      targetScrollPercent = Math.min(1, Math.max(0, targetScrollPercent));
-    };
+   // --- SCROLL HANDLER UPDATED ---
+const handleScroll = () => {
+  const currentScroll = window.scrollY;
+  const totalScrollable = cachedScrollHeight - cachedInnerHeight;
+  // Removed offset calculation
+  
+  if (totalScrollable > 0) {
+     targetScrollPercent = currentScroll / totalScrollable;
+  } else {
+     targetScrollPercent = 0;
+  }
+  
+  targetScrollPercent = Math.min(1, Math.max(0, targetScrollPercent));
+};
 
-    window.addEventListener('resize', handleResize, { passive: true });
-    window.addEventListener('mousemove', (e) => handleInput(e.clientX, e.clientY), { passive: true });
-    window.addEventListener('scroll', handleScroll, { passive: true });
+window.addEventListener('resize', handleResize, { passive: true });
+window.addEventListener('mousemove', (e) => handleInput(e.clientX, e.clientY), { passive: true });
+window.addEventListener('scroll', handleScroll, { passive: true });
 
-    init();
+init();
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-      cancelAnimationFrame(animationFrameId);
-      if (renderer) renderer.dispose();
-      if (particlesGeometry) particlesGeometry.dispose();
-      if (starTexture) starTexture.dispose();
-    };
+const handleBeforeUnload = () => {
+  sessionStorage.setItem("cosmicScroll", window.scrollY);
+};
+
+window.addEventListener("beforeunload", handleBeforeUnload);
+
+return () => {
+  window.removeEventListener('resize', handleResize);
+  window.removeEventListener('scroll', handleScroll);
+  window.removeEventListener("beforeunload", handleBeforeUnload); // <- added this line
+  cancelAnimationFrame(animationFrameId);
+  if (renderer) renderer.dispose();
+  if (particlesGeometry) particlesGeometry.dispose();
+  if (starTexture) starTexture.dispose();
+};
+
   }, [canSignalReady, onReady]);
 
   return (

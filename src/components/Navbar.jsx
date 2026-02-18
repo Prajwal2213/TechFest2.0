@@ -7,8 +7,9 @@ const Navbar = () => {
   const navItems = [
     { label: 'Home', path: '/', color: 'text-white/90 hover:text-cyan-400' },
     { label: 'Events', path: '/events', color: 'text-white/90 hover:text-cyan-400' },
-    { label: 'Schedule', path: '/schedule', color: 'text-white/90 hover:text-cyan-400' },
-    { label: 'Team', path: '/team', color: 'text-white/90 hover:text-cyan-400' },
+    // { label: 'Schedule', path: '/schedule', color: 'text-white/90 hover:text-cyan-400' },
+    { label: 'Sponsors', path: '/sponsors', color: 'text-white/90 hover:text-cyan-400' },
+    { label: 'Team', path: '/team', color: 'text-white/90 hover:text-cyan-400' }, 
     { label: 'Gallery', path: '/gallery', color: 'text-white/90 hover:text-cyan-400' },
 
   ];
@@ -22,7 +23,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center cursor-pointer">
             <Link to="/">
-              <img src="./logo.svg" alt="TechFest logo" className="w-auto h-14 lg:h-16" />
+              <img src="https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318366/logo_hkmnrq.svg" alt="TechFest logo" className="w-auto h-14 lg:h-16" />
             </Link>
           </div>
 

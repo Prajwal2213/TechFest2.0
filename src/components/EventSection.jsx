@@ -1,14 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const projects = [
-  { title: "RoboEdge", desc: "RoboEdge at CELESTAI’26 is a robotics challenge where participants design, control, and operate intelligent robots through hands-on contests, workshops, and tech showcases, making it both competitive and educational", bg: "./images/home_event/robohuman.jpeg", link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" },
-  { title: "EdgeIQ Challenge ", desc: "Navigate drones through skill challenges", bg: "./images/home_event/brain.jpeg",link:"https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
-  { title: "SkyRift ", desc: "Robots compete in high-speed soccer.", bg: "./images/home_event/sky_rift1.jpeg",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+  { title: "RoboEdge", desc: "RoboEdge at CELESTAI’26 is a robotics challenge where participants design, control, and operate intelligent robots through hands-on contests, workshops, and tech showcases, making it both competitive and educational", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg", link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" },
+  { title: "EdgeIQ Challenge ", desc: "Navigate drones through skill challenges", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg",link:"https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
+  { title: "SkyRift ", desc: "Robots compete in high-speed soccer.", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318583/sky_rift1_bkxqsm.jpg",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+  { title: "Techzibition ", desc: "Robots compete in high-speed soccer.", bg:"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+  { title: "Workshop ", desc: "Robots compete in high-speed soccer.", bg: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+  { title: "RoboSoccer ", desc: "Robots compete in high-speed soccer.", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318000/RoboSoccer_w3fnhv.jpg",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+  { title: "SkyRift ", desc: "Robots compete in high-speed soccer.", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/sky_rift1_yig1jj.png",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+  { title: "FlingFury ", desc: "Robots compete in high-speed soccer.", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/fling_fury1_fce5l4.png",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
  
 ];
 
 const EventSection = () => {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(null);
   const scrollContainerRef = useRef(null);
   const cardRefs = useRef([]);
 
@@ -47,7 +52,7 @@ const EventSection = () => {
   }, [current]);
 
   return (
-    <section className="text-[#c5c7ce] py-20 overflow-hidden bg-transparent">
+    <section className="text-[#c5c7ce] py-20 overflow-hidden bg-transparent relative">
 
       {/* Header */}
       <div className="max-w-[1400px] mx-auto px-5 mb-10">
@@ -106,8 +111,8 @@ const EventSection = () => {
 
                 <p
                   className={`
-                    text-gray-300 text-sm mt-3 max-w-[20rem]
-                    transition-all duration-500
+                    text-white text-sm mt-3 max-w-[20rem] 
+                    transition-all duration-500 
                     ${current === i
                       ? 'opacity-100 translate-y-0'
                       : 'opacity-0 translate-y-3 hidden md:block'}

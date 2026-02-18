@@ -154,7 +154,7 @@ const Sponsors = () => {
   const silverSponsors = [
     { name: "Vercel", logo: "https://assets.vercel.com/image/upload/v1588853000/repositories/vercel/logo.png", url: "#" },
     { name: "Netlify", logo: "https://www.netlify.com/v3/img/components/logomark.svg", url: "#" },
-    { name: "Firebase", logo: "https://firebase.google.com/downloads/brand-guidelines/PNG/logo-standard.png", url: "#" }
+    // { name: "Firebase", logo: "https://firebase.google.com/downloads/brand-guidelines/PNG/logo-standard.png", url: "#" }our
   ];
   const bronzeSponsors = [
     { name: "DigitalOcean", logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/DigitalOcean_logo.svg", url: "#" },
@@ -163,7 +163,7 @@ const Sponsors = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="sponsors" className="relative py-20 sm:py-32 lg:py-48 overflow-hidden font-Orbitron">
+    <section ref={sectionRef} id="sponsors" className="relative py-20 sm:py-32 lg:py-48 overflow-hidden font-Orbitron -mt-20">
       <div className="absolute inset-0 z-0 opacity-30"><Squares squareSize={80} speed={0.3} /></div>
       <div className="absolute pointer-events-none z-0 blur-[120px] rounded-full opacity-30 w-[300px] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] md:h-[600px] transition-transform duration-300 ease-out" style={{ transform: `translate(${mousePos.x - 150}px, ${mousePos.y - 150}px)` }} />
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
@@ -173,19 +173,19 @@ const Sponsors = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="text-center mb-20 sm:mb-32">
-          <h2 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-wide text-cyan-400 mb-8 uppercase bg-black/70 py-4">Our Sponsors</h2>
+          <h2 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-wide text-white mb-8 uppercase bg-black/50 backdrop-blur-sm">Our Sponsors</h2>
         </div>
 
         {/* Gold */}
         <div className="mb-20 sm:mb-32">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 sm:mb-16">
+          {/* <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 sm:mb-16">
             <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-yellow-500/20" />
-            <div className="flex items-center gap-3 px-4 py-2 rounded-2xl bg-yellow-500/50 border border-yellow-500/20">
+            <div className="flex items-center gap-3 px-4 py-2 rounded-2xl bg-yellow-500/50 border border-yellow-500/20 backdrop-blur-sm">
               <Trophy className="text-yellow-500" size={20} />
-              <h3 className="text-sm sm:text-xl font-bold text-white tracking-widest uppercase ">Gold Vanguard</h3>
+              <h3 className="text-sm sm:text-xl font-bold text-white tracking-widest uppercase  ">Gold Vanguard</h3>
             </div>
             <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-yellow-500/20" />
-          </div>
+          </div> */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {goldSponsors.map((s, i) => <SponsorCard key={i} sponsor={s} tier="gold" />)}
           </div>

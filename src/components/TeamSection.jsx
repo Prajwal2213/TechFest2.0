@@ -15,6 +15,7 @@ const EVENT_ORGANIZERS = [
   { id: 'org1', name: 'Dr. Divyashree HB', role: 'Assistant Professor, ECE',imageUrl:'/images/Organisers/divyashree.jpg', category: 'Organisers' },
   { id: 'org2', name: 'Dr. Prashanth Kumar H G', role: 'Assistant Professor,ASE', imageUrl:'/images/Organisers/Prashanth_K.jpg', category: 'Organisers' },
   { id: 'org3', name: 'Prof. Shivamma D', role: 'Assistant Professor, DS', imageUrl:'/images/Organisers/Shivamma_D.jpg', category: 'Organisers' },
+  { id: 'org4', name: 'Ms.Jisy N K', role: 'Assistant Professor, DS', imageUrl:'/images/Organisers/jisy_mam.jpeg', category: 'Organisers' },
 
   // =========================
   // CO-ORGANISERS
@@ -33,7 +34,9 @@ const EVENT_ORGANIZERS = [
   { id: 'sc5', name: 'Ranatha', role: 'Student Committee Member', category: 'Student Committee' },
   { id: 'sc6', name: 'Sushrutha', role: 'Student Committee Member', category: 'Student Committee' },
   { id: 'sc7', name: 'Sai Bhuvan', role: 'Student Committee Member', category: 'Student Committee' },
-  { id: 'sc8', name: 'Pratham', role: 'Student Committee Member', category: 'Student Committee' }
+  { id: 'sc8', name: 'Pratham', role: 'Student Committee Member', category: 'Student Committee' },
+  { id: 'sc9', name: 'Prajwal M', role: 'Student Committee Member', category: 'Student Committee' },
+  { id: 'sc10', name: 'Pavan Kumar GR', role: 'Student Committee Member', category: 'Student Committee' }
 ];
 
 // ==========================================
@@ -200,7 +203,7 @@ export default function TeamSection() {
           
          <section className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mb-20">
            <div className="flex flex-col items-center text-center">
-              <h1 className="text-6xl md:text-8xl font-Orbitron font-semibold tracking-wide uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl ">
+              <h1 className="text-4xl md:text-8xl font-Orbitron font-semibold tracking-wide uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl ">
                 CELESTAI'26 TEAM
               </h1>
            </div>

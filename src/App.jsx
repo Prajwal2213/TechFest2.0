@@ -17,7 +17,7 @@ import ComingSoon from './components/ComingSoon.jsx';
 import ScrolltoTop from './components/ScrolltoTop.jsx';
 import Loader from './components/Loader.jsx';
 import PatronSection from './components/PatronSection.jsx';
-import EventCarousel from './components/EventCaursol.jsx';
+import SponsorPage from './components/SponsorPage.jsx';
 
 function App() {
   const [loaderAnimationDone, setLoaderAnimationDone] = useState(false);
@@ -73,8 +73,9 @@ function App() {
               path="/"
               element={
                 <>
-                {/* <EventCarousel /> */}
-                <Hero />
+            
+                  <Hero />
+
                   <EventSection />
                   <About />
                   <Sponsors />
@@ -83,9 +84,10 @@ function App() {
                 </>
               }
             />
-            <Route path="/schedule" element={<Schedule />} />
+            {/* <Route path="/schedule" element={<Schedule />} /> */}
             <Route path="/events" element={<EventPage />} />
             <Route path="/team" element={<TeamSection />} />
+            <Route path="/sponsors" element={<SponsorPage />} />
             <Route path="/gallery" element={<ComingSoon />} />
           </Routes>
           <Footer />

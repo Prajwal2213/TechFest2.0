@@ -19,6 +19,7 @@ const EVENT_ORGANIZERS = [
   { id: 'org1', name: 'Dr. Divyashree HB', role: 'Asst Prof, ECE', category: 'Organisers' },
   { id: 'org2', name: 'Dr. Prashanth Kumar H G', role: 'Organiser', category: 'Organisers' },
   { id: 'org3', name: 'Prof. Shivamma', role: 'Organiser', category: 'Organisers' },
+  { id: 'org4', name: 'Ms. Jisy N K', role: 'Organiser', category: 'Organisers' },
 
   // =========================
   // CO-ORGANISERS
@@ -47,7 +48,7 @@ const TeamBackground = () => {
   return (
     <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden bg-[#02040a] isolate">
       <div 
-        className="absolute inset-0 bg-cover bg-center brightness-[0.3] saturate-[1.3] blur-[8px] scale-110"
+        className="absolute inset-0 bg-cover bg-center brightness-[0.3] saturate-[1.3]  scale-110"
         // style={{ 
         //   backgroundImage: 'url("https://images.unsplash.com/photo-1605142859862-978be7eba909?auto=format&fit=crop&q=80&w=2560")',
         //   backgroundAttachment: 'scroll',  // ✅ CHANGED: fixed → scroll
