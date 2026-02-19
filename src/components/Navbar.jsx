@@ -22,8 +22,9 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex items-center cursor-pointer">
-            <Link to="/">
-              <img src="https://res.cloudinary.com/dstbnmjwh/image/upload/v1771439897/techfest_logo1-_lz9fxk.png" alt="TechFest logo" className="w-auto h-14 lg:h-16" />
+            <Link to="/" className="flex items-center gap-4">
+              <img src="https://res.cloudinary.com/dstbnmjwh/image/upload/v1771526218/download_gnrxgw.png" alt="TechFest logo" className="w-auto h-14 lg:h-16" />
+              <img src="https://res.cloudinary.com/dstbnmjwh/image/upload/v1771439897/techfest_logo1-_lz9fxk.png" alt="TechFest logo" className="w-auto h-14 lg:h-16 scale-110 origin-lef" />
             </Link>
           </div>
 
