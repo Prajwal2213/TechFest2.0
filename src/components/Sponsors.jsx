@@ -11,7 +11,7 @@ import {
  const sponsorData = [
   {
     name: "GeeksforGeeks",
-    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771435105/geeksforgeeks_logo_icon_248241_ysnrhn.png",
+    logo: "https://cdn.brandfetch.io/idw2s-0Tuo/w/820/h/410/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1764778603089",
     url: "https://www.geeksforgeeks.org/"
   },
   {
@@ -127,40 +127,29 @@ const Squares = ({
 };
 
 const SponsorCard = ({ sponsor, tier }) => {
-  const styles = {
-    gold: "border-yellow-500/20 hover:border-yellow-500/60 shadow-yellow-500/5 hover:shadow-yellow-500/20",
-    silver: "border-slate-400/20 hover:border-slate-300 shadow-slate-400/5 hover:shadow-slate-400/20",
-    bronze: "border-orange-800/20 hover:border-orange-500/50 shadow-orange-800/5 hover:shadow-orange-800/20"
-  };
-
-  const bgGradients = {
-    gold: "from-yellow-500/10 via-transparent to-orange-500/5",
-    silver: "from-slate-400/10 via-transparent to-white/5",
-    bronze: "from-orange-800/10 via-transparent to-amber-700/5"
-  };
+ 
 
   return (
     <a
       href={sponsor.url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`group relative flex flex-col items-center justify-center p-6 sm:p-8 md:p-8 bg-black/80 border-2 rounded-3xl transition-all duration-700 hover:-translate-y-2 sm:hover:-translate-y-3 overflow-hidden ${styles[tier]}`}
+      className={`group relative flex flex-col items-center justify-center p-6 sm:p-8 md:p-8 bg-white/80 border-2 rounded-3xl transition-all duration-700 hover:-translate-y-2 sm:hover:-translate-y-3 overflow-hidden `}
     >
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none">
         <div className="absolute inset-[-100%] bg-gradient-to-tr from-transparent via-white/5 to-transparent rotate-45 animate-[shimmer_2s_infinite]" />
       </div>
-      <div className={`absolute inset-0 bg-gradient-to-br ${bgGradients[tier]} opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
       <div className="relative z-10 w-full h-24 flex items-center justify-center mb-4">
         <img 
           src={sponsor.logo} 
           alt={sponsor.name}
-          className="max-h-16 max-w-[80%] object-contain brightness-0 invert opacity-40 group-hover:opacity-100 group-hover:scale-105 sm:group-hover:scale-110 transition-all duration-500"
+          className="max-h-16 max-w-[80%] object-contain opacity-100 group-hover:scale-105 sm:group-hover:scale-110 transition-all duration-500"
         />
       </div>
-      <span className="relative z-10 text-xs sm:text-sm font-bold tracking-[0.1em] sm:tracking-[0.2em] group-hover:text-white/60 uppercase transition-colors">
+      <span className="relative z-10 text-xs sm:text-sm font-bold tracking-[0.1em] sm:tracking-[0.2em] group-hover:text-black uppercase transition-colors text-black">
         {sponsor.name}
       </span>
-      <ExternalLink className="absolute top-4 right-4 text-white/0 group-hover:text-white/30 transition-all duration-300" size={14} />
+      <ExternalLink className="absolute top-4 right-4 text-black group-hover:text-black/30 transition-all duration-300" size={14} />
     </a>
   );
 };
@@ -182,9 +171,12 @@ const Sponsors = () => {
 
 
 
+
+
+
   return (
     <section ref={sectionRef} id="sponsors" className="relative py-20 sm:py-32 lg:py-48 overflow-hidden font-Orbitron -mt-20">
-      <div className="absolute inset-0 z-0 opacity-30"><Squares squareSize={80} speed={0.3} /></div>
+      <div className="absolute inset-0 z-0 "><Squares squareSize={80} speed={0.3} /></div>
       <div className="absolute pointer-events-none z-0 blur-[120px] rounded-full opacity-30 w-[300px] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] md:h-[600px] transition-transform duration-300 ease-out" style={{ transform: `translate(${mousePos.x - 150}px, ${mousePos.y - 150}px)` }} />
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full" />
@@ -196,7 +188,7 @@ const Sponsors = () => {
           <h2 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-wide text-white mb-8 uppercase bg-black/50 backdrop-blur-sm">Partners </h2>
         </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 ">
         {sponsorData.map((sponsor, index) => (
           <SponsorCard key={index} sponsor={sponsor} />
         ))}

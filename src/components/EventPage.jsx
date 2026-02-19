@@ -311,6 +311,9 @@ export default function EventPage() {
     techzibition: [
       { title: "Expo Alpha", sideLabel: "PROTO_V1", imageURL: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800", description: "Showcase of breakthrough automation systems and industrial prototypes.", link: "" }
     ],
+    hackathon: [
+      { title: "Hack Hustle", sideLabel: "HUSTLE_01", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "48-hour sprint to build innovative solutions on the Edge.", link: "" }
+    ],
 
     workshops: [
       { title: "Skill Lab", sideLabel: "LAB_ALPHA", imageURL: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800", description: "Deep-dive technical sessions in embedded logic and ROS.", link: "" }
