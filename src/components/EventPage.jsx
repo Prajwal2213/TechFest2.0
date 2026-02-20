@@ -120,7 +120,7 @@ const DetailOverlay = ({ event, onClose }) => {
               <div className="flex-1 overflow-y-auto p-4 sm:p-6 md:p-12 space-y-6 sm:space-y-8 scrollbar-custom">
 
                 <div className="space-y-4">
-                  <p className="text-zinc-300 text-sm sm:text-base md:text-lg leading-relaxed font-medium uppercase tracking-tight">
+                  <p className="text-zinc-300 text-sm sm:text-base md:text-lg leading-relaxed font-medium Camelcase tracking-tight">
                     {event.description}
                   </p>
                 </div>
@@ -130,7 +130,7 @@ const DetailOverlay = ({ event, onClose }) => {
                     className="w-full sm:flex-1 py-3 sm:py-4 bg-yellow-500 text-black font-black text-[10px] sm:text-xs tracking-[0.4em] uppercase hover:bg-white transition-all flex items-center justify-center gap-3"
                     onClick={() => window.open(event.link, '_blank')}
                   >
-                    <span>Problem Statement</span>
+                    <span>Register Now</span>
                   </button>
                 </div>
 
@@ -306,17 +306,17 @@ export default function EventPage() {
       { title: "Edge Vision Intelligence", sideLabel: "HUSTLE_01", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours.", link: "" },
       { title: "Predictive Intelligence At The Edge", sideLabel: "HUSTLE_01", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours.", link: "" },
       { title: "Edge Ai For Sustainability", sideLabel: "HUSTLE_01", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours.", link: "" },
-      { title: "Open Innovation Edgeiq Open Track", sideLabel: "HUSTLE_01", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours.", link: "" }
+      { title: "Open Innovation EdgeIQ Open Track", sideLabel: "HUSTLE_01", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours.", link: "" }
     ],
     techzibition: [
-      { title: "Expo Alpha", sideLabel: "PROTO_V1", imageURL: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800", description: "Showcase of breakthrough automation systems and industrial prototypes.", link: "" }
+      { title: "Expo Alpha", sideLabel: "PROTO_V1", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771522995/77d7fc94-b27d-4b5e-bcd0-f8b6451ee458_farwgs.jpg", description: "Showcase of breakthrough automation systems and industrial prototypes.", link: "" }
     ],
     hackathon: [
-      { title: "Hack Hustle", sideLabel: "HUSTLE_01", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "48-hour sprint to build innovative solutions on the Edge.", link: "" }
+      { title: "Hack Hustle", sideLabel: "HUSTLE_01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: "Get ready for 24 hours of unstoppable innovation! HACK HUSTLE is the premier multi-domain hackathon at [Tech Fest Name], designed to push boundaries and fuel your ambition. We invite the brightest minds to team up, code, and hustle through real-world problem statements. Whether you’re into AI, Web3, or CyberSecurity, this is your arena to turn bold ideas into groundbreaking, working prototypes. Are you ready to hustle for your vision?", link: "" }
     ],
 
     workshops: [
-      { title: "Skill Lab", sideLabel: "LAB_ALPHA", imageURL: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800", description: "Deep-dive technical sessions in embedded logic and ROS.", link: "" }
+      { title: "Skill Lab", sideLabel: "LAB_ALPHA", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg", description: "Deep-dive technical sessions in embedded logic and ROS.", link: "" }
     ]
   };
 

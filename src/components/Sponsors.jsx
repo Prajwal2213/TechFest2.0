@@ -63,40 +63,38 @@ const Squares = ({
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    const drawGrid = () => {
-      if (!ctx) return;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // const drawGrid = () => {
+    //   if (!ctx) return;
+    //   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      const startX = Math.floor(gridOffset.current.x / squareSize) * squareSize;
-      const startY = Math.floor(gridOffset.current.y / squareSize) * squareSize;
+    //   const startX = Math.floor(gridOffset.current.x / squareSize) * squareSize;
+    //   const startY = Math.floor(gridOffset.current.y / squareSize) * squareSize;
 
-      for (let x = startX; x < canvas.width + squareSize; x += squareSize) {
-        for (let y = startY; y < canvas.height + squareSize; y += squareSize) {
-          const squareX = x - (gridOffset.current.x % squareSize);
-          const squareY = y - (gridOffset.current.y % squareSize);
+    //   for (let x = startX; x < canvas.width + squareSize; x += squareSize) {
+    //     for (let y = startY; y < canvas.height + squareSize; y += squareSize) {
+    //       const squareX = x - (gridOffset.current.x % squareSize);
+    //       const squareY = y - (gridOffset.current.y % squareSize);
 
-          if (
-            hoveredSquareRef.current &&
-            Math.floor((x - startX) / squareSize) === hoveredSquareRef.current.x &&
-            Math.floor((y - startY) / squareSize) === hoveredSquareRef.current.y
-          ) {
-            ctx.fillStyle = hoverFillColor;
-            ctx.fillRect(squareX, squareY, squareSize, squareSize);
-          }
+    //       if (
+    //         hoveredSquareRef.current &&
+    //         Math.floor((x - startX) / squareSize) === hoveredSquareRef.current.x &&
+    //         Math.floor((y - startY) / squareSize) === hoveredSquareRef.current.y
+    //       ) {
+    //         ctx.fillStyle = hoverFillColor;
+    //         ctx.fillRect(squareX, squareY, squareSize, squareSize);
+    //       }
 
-          ctx.strokeStyle = borderColor;
-          ctx.lineWidth = 1;
-          ctx.strokeRect(squareX, squareY, squareSize, squareSize);
-        }
-      }
-    };
+    //       ctx.strokeStyle = borderColor;
+    //       ctx.lineWidth = 1;
+    //       ctx.strokeRect(squareX, squareY, squareSize, squareSize);
+    //     }
+    //   }
+    // };
 
     const updateAnimation = () => {
       const effectiveSpeed = Math.max(speed, 0.1);
       gridOffset.current.x = (gridOffset.current.x - effectiveSpeed + squareSize) % squareSize;
       gridOffset.current.y = (gridOffset.current.y - effectiveSpeed + squareSize) % squareSize;
-      
-      drawGrid();
       requestRef.current = requestAnimationFrame(updateAnimation);
     };
 
@@ -190,7 +188,7 @@ const Sponsors = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 ">
         {sponsorData.map((sponsor, index) => (
-          <SponsorCard key={index} sponsor={sponsor} />
+            <SponsorCard key={index} sponsor={sponsor} />
         ))}
       </div>
        
