@@ -10,10 +10,10 @@ const Footer = () => {
       <div className="w-full">
 
         {/* CONTENT CONTAINER */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-16 sm:py-20 ">
 
           {/* TOP GRID */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-14 items-start">
 
             {/* Contact Us */}
             <div>
@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
 
             {/* Student Coordinators */}
-            <div>
+            {/* <div>
               <h4 className="text-xl font-bold text-white mb-6">
                 Student Coordinators
               </h4>
@@ -40,7 +40,7 @@ const Footer = () => {
                 </p>
 
               </div>
-            </div>
+            </div> */}
 
             {/* Faculty Coordinator + Social */}
             <div>
@@ -48,7 +48,8 @@ const Footer = () => {
                 Faculty Coordinator
               </h4>
               <h2>  Dr Divyashree H B</h2>
-              <div className="text-white/80 text-sm space-y-2 mb-6">
+              <div className="text-white/80 text-sm space-y-2 mb-6 mt-2">
+              <p className="text-white font-medium">Organizing chair, CELESTAI’26</p>
                 <p className="text-white font-medium">Dayananda Sagar University</p>
               </div>
 
@@ -80,7 +81,7 @@ const Footer = () => {
             {/* Venue */}
             <div>
               <h4 className="text-xl font-bold text-white mb-6">
-                Hackathon Venue
+              Venue
               </h4>
 
               <p className="text-white/80 text-sm mb-4 leading-relaxed">

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { 
+import {
   ExternalLink,
   ChevronRight,
   Trophy,
@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 
 
- const sponsorData = [
+const sponsorData = [
   {
     name: "GeeksforGeeks",
     logo: "https://cdn.brandfetch.io/idw2s-0Tuo/w/820/h/410/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1764778603089",
@@ -125,7 +125,7 @@ const Squares = ({
 };
 
 const SponsorCard = ({ sponsor, tier }) => {
- 
+
 
   return (
     <a
@@ -138,8 +138,8 @@ const SponsorCard = ({ sponsor, tier }) => {
         <div className="absolute inset-[-100%] bg-gradient-to-tr from-transparent via-white/5 to-transparent rotate-45 animate-[shimmer_2s_infinite]" />
       </div>
       <div className="relative z-10 w-full h-24 flex items-center justify-center mb-4">
-        <img 
-          src={sponsor.logo} 
+        <img
+          src={sponsor.logo}
           alt={sponsor.name}
           className="max-h-16 max-w-[80%] object-contain opacity-100 group-hover:scale-105 sm:group-hover:scale-110 transition-all duration-500"
         />
@@ -186,24 +186,27 @@ const Sponsors = () => {
           <h2 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-wide text-white mb-8 uppercase bg-black/50 backdrop-blur-sm">Partners </h2>
         </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 ">
-        {sponsorData.map((sponsor, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 ">
+          {sponsorData.map((sponsor, index) => (
             <SponsorCard key={index} sponsor={sponsor} />
-        ))}
-      </div>
-       
+          ))}
+        </div>
 
-       
-       
+
+
+
 
         {/* CTA */}
         <div className="mt-20 sm:mt-40 relative group overflow-hidden p-1 rounded-[2rem] sm:rounded-[3rem] max-w-3xl mx-auto shadow-2xl shadow-blue-500/20">
           <div className="backdrop-blur-xl rounded-[1.9rem] sm:rounded-[2.9rem] p-8 sm:p-12 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-40 sm:w-64 h-40 sm:h-64 bg-blue-500/10 blur-[80px] sm:blur-[100px] -mr-16 sm:-mr-32 -mt-16 sm:-mt-32" />
-            <h4 className="text-2xl sm:text-3xl font-black text-white mb-4">Join the Ecosystem</h4>
-            <p className="text-white mb-6 sm:mb-10 max-w-md mx-auto text-sm sm:text-base">Elevate your brand and connect with 10,000+ developers, innovators, and leaders.</p>
+            <h4 className="text-2xl sm:text-3xl font-black text-white mb-4">Join the Innovation Ecosystem</h4>
+            <p className="text-white mb-6 sm:mb-10 max-w-md mx-auto text-sm sm:text-base">Empower the future with CELESTAI and connect with
+              10,000+ students, engineers, innovators, and industry leaders
+              at Dayananda Sagar University.
+            </p>
             <button className="relative z-10 inline-flex items-center gap-2 sm:gap-4 bg-white text-black font-black px-6 sm:px-12 py-3 sm:py-5 rounded-2xl sm:rounded-3xl hover:bg-cyan-400 transition-colors duration-300 text-sm sm:text-base">
-              PARTNER WITH US
+             COLLABORATE WITH CELESTAI     
               <ChevronRight size={16} className="sm:ml-2" />
             </button>
           </div>

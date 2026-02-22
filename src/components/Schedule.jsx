@@ -9,7 +9,9 @@ const FEST_SCHEDULE = [
     events: [
       { id: "d1e1", time: "09:00 AM", title: "Aero-EC Fusion", description: "System initialization and mission parameters release.", location: "Command Alpha", accent: "cyan" },
       { id: "d1e2", time: "11:30 AM", title: "Signal Lab", description: "FPGA architectures for telemetry data noise reduction.", location: "EC Wing Lab 4", accent: "cyan" },
-      { id: "d1e2", time: "12:30 AM", title: "Signal Lab", description: "FPGA architectures for telemetry data noise reduction.", location: "EC Wing Lab 4", accent: "cyan" },
+      { id: "d1e3", time: "12:30 PM", title: "Signal Lab", description: "FPGA architectures for telemetry data noise reduction.", location: "EC Wing Lab 4", accent: "cyan" },
+      { id: "d1e4", time: "01:30 PM", title: "Signal Lab", description: "FPGA architectures for telemetry data noise reduction.", location: "EC Wing Lab 4", accent: "cyan" },
+      { id: "d1e5", time: "02:30 PM", title: "Signal Lab", description: "FPGA architectures for telemetry data noise reduction.", location: "EC Wing Lab 4", accent: "cyan" },
     ]
   },
   {
@@ -17,6 +19,8 @@ const FEST_SCHEDULE = [
     label: "PHASE_02",
     events: [
       { id: "d2e1", time: "10:00 AM", title: "Cubesat Logic", description: "Power-efficiency focus for miniaturized satellite arrays.", location: "Design Wing", accent: "purple" },
+      { id: "d2e2", time: "01:00 PM", title: "Stress Test", description: "Simulating solar interference on error-correction robustness.", location: "Hangar 7", accent: "magenta" },
+      { id: "d2e3", time: "02:00 PM", title: "Cubesat Logic", description: "Power-efficiency focus for miniaturized satellite arrays.", location: "Design Wing", accent: "purple" },
       { id: "d2e2", time: "01:00 PM", title: "Stress Test", description: "Simulating solar interference on error-correction robustness.", location: "Hangar 7", accent: "magenta" },
     ]
   }

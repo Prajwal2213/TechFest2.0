@@ -22,6 +22,8 @@ const EVENT_ORGANIZERS = [
   { id: 'org4', name: 'Sripad', role: 'ASE', category: 'Co-Organisers' },
   { id: 'org5', name: 'Prof. Shivamma', role: 'Organiser', category: 'Organisers' },
   { id: 'org6', name: 'Ms. Jisy N K', role: 'Organiser', category: 'Organisers' },
+  { id: 'org7', name: 'Ms. Jisy N K', role: 'Organiser', category: 'Organisers' },
+  { id: 'org8', name: 'Ms. Jisy N K', role: 'Organiser', category: 'Organisers' },
 
 
   // =========================

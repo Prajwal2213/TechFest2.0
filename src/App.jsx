@@ -7,7 +7,7 @@ import About from "./components/About.jsx";
 import EventSection from './components/EventSection.jsx';
 import Layout from './components/Layout.jsx';
 import FAQ from './components/FAQ.jsx';
-// import Schedule from './components/Schedule.jsx';
+import Schedule from './components/Schedule.jsx';
 import TeamSection from './components/TeamSection.jsx';
 import Sponsors from './components/Sponsors.jsx';
 import EventPage from './components/EventPage.jsx';
@@ -74,6 +74,7 @@ function App() {
               element={
                 <>
                   <Hero />
+               
                   <EventSection />
                   <About />
                   <Sponsors />
@@ -82,7 +83,7 @@ function App() {
                 </>
               }
             />
-            {/* <Route path="/schedule" element={<Schedule />} /> */}
+            <Route path="/schedule" element={<Schedule />} />
             <Route path="/events" element={<EventPage />} />
             <Route path="/team" element={<TeamSection />} />
             {/* <Route path="/sponsors" element={<SponsorPage />} /> */}

@@ -1,75 +1,153 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-const Loader = () => {
-  const [progress, setProgress] = useState(0);
-  const [phase, setPhase] = useState("OVERCLOCKING_CORE");
-  const [hex, setHex] = useState("0x00000000");
-  const [mainLabel, setMainLabel] = useState("DSU TECHFEST 1.0");
-
+const ChipLoader = ({ onFinish }) => {
   useEffect(() => {
-    let currentProgress = 0;
-    const phases = ["OVERCLOCKING_CORE", "MAPPING_VECTORS", "VERIFYING_AUTH", "MAX_BANDWIDTH"];
+    const timer = setTimeout(() => {
+      onFinish();
+    }, 4000);
 
-    const interval = setInterval(() => {
-      currentProgress += Math.random() * 4.5;
-      setHex('0x' + Math.floor(Math.random() * 0xFFFFFFFF).toString(16).toUpperCase());
-
-      if (currentProgress >= 100) {
-        currentProgress = 100;
-        clearInterval(interval);
-        setProgress(100);
-        setPhase("SYNC_LOCKED");
-        setMainLabel("ACCESS_INSTANTIATED");
-      } else {
-        setProgress(Math.floor(currentProgress));
-        setPhase(phases[Math.floor((currentProgress / 100) * phases.length)]);
-      }
-    }, 50);
-
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearTimeout(timer);
+  }, [onFinish]);
 
   return (
-    <div className="fixed inset-0 bg-[#010103] flex items-center justify-center font-sans px-4">
+    <div className="fixed inset-0 flex items-center justify-center bg-[#0b0b0b] overflow-hidden z-[9999]">
+      {/* Large Container */}
+      <div className="w-[90vw] max-w-[1400px] scale-[1.25] md:scale-[1.35] lg:scale-[1.5]">
+        <svg
+          viewBox="0 0 800 500"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-auto drop-shadow-[0_0_40px_rgba(0,255,255,0.25)]"
+        >
+          <defs>
+            <linearGradient id="chipGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#2d2d2d" />
+              <stop offset="100%" stopColor="#0f0f0f" />
+            </linearGradient>
 
-      <div
-        className="relative w-full max-w-[560px] p-8 md:p-12 bg-[#040406]/94 border border-white/10 backdrop-blur-xl shadow-2xl overflow-hidden"
-        style={{
-          clipPath:
-            'polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px)'
-        }}
-      >
+            <linearGradient id="textGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#ffffff" />
+              <stop offset="100%" stopColor="#8dfcff" />
+            </linearGradient>
 
-        <div className="text-white tracking-[0.6em] md:tracking-[1.2em] uppercase text-center mb-8 md:mb-12 text-xs md:text-sm font-bold opacity-90">
-          {mainLabel}
-        </div>
+            <linearGradient id="pinGradient" x1="1" y1="0" x2="0" y2="0">
+              <stop offset="0%" stopColor="#bbbbbb" />
+              <stop offset="50%" stopColor="#888888" />
+              <stop offset="100%" stopColor="#555555" />
+            </linearGradient>
 
-        <div className="w-full h-3 md:h-4 bg-black/90 border border-white/15 relative overflow-hidden">
-          <div
-            className="absolute top-0 left-0 h-full bg-gradient-to-r from-pink-500 via-yellow-400 to-green-400 transition-all duration-200"
-            style={{ width: `${progress}%` }}
+            <style>
+              {`
+              @keyframes flow {
+                to { stroke-dashoffset: 0; }
+              }
+
+              @keyframes textReveal {
+                0% { opacity: 0; filter: blur(8px); transform: translateY(10px); }
+                100% { opacity: 1; filter: blur(0); transform: translateY(0); }
+              }
+
+              .trace-flow {
+                stroke-dasharray: 40 400;
+                stroke-dashoffset: 438;
+                animation: flow 3s cubic-bezier(0.5, 0, 0.9, 1) infinite;
+              }
+
+              .reveal-text {
+                opacity: 0;
+                animation: textReveal 1.6s ease-out forwards;
+                animation-delay: 1.8s;
+              }
+              `}
+            </style>
+          </defs>
+
+          {/* Traces */}
+          <g>
+            {[
+              { d: "M100 100 H200 V210 H326", c: "#8b5cf6" },
+              { d: "M80 180 H180 V230 H326", c: "#06b6d4" },
+              { d: "M60 260 H150 V250 H326", c: "#facc15" },
+              { d: "M100 350 H200 V270 H326", c: "#22c55e" },
+              { d: "M700 90 H560 V210 H474", c: "#06b6d4" },
+              { d: "M740 160 H580 V230 H474", c: "#22c55e" },
+              { d: "M720 250 H590 V250 H474", c: "#ef4444" },
+              { d: "M680 340 H570 V270 H474", c: "#facc15" }
+            ].map((trace, i) => (
+              <g key={i}>
+                <path d={trace.d} fill="none" stroke="#222" strokeWidth="2" />
+                <path
+                  d={trace.d}
+                  fill="none"
+                  stroke={trace.c}
+                  strokeWidth="2"
+                  className="trace-flow"
+                  style={{ filter: `drop-shadow(0 0 10px ${trace.c})` }}
+                />
+              </g>
+            ))}
+          </g>
+
+          {/* Chip */}
+          <rect
+            x="330"
+            y="185"
+            width="150"
+            height="110"
+            rx="14"
+            fill="url(#chipGradient)"
+            stroke="#000"
+            strokeWidth="2"
           />
-        </div>
 
-        <div className="flex justify-between items-end mt-6">
-          <div className="flex flex-col gap-1">
-            <span className="text-[9px] md:text-[11px] font-bold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400">
-              {phase}
-            </span>
-            <span className="text-[7px] md:text-[9px] opacity-40 font-mono">
-              {hex}
-            </span>
-          </div>
+          {/* Pins */}
+          {[205, 230, 255, 280].map((y, i) => (
+            <rect key={i} x="322" y={y} width="10" height="12" fill="url(#pinGradient)" rx="2" />
+          ))}
 
-          <div className="text-4xl md:text-6xl font-bold text-white leading-none">
-            {progress}
-            <span className="text-xl md:text-2xl ml-1 opacity-20 font-normal">%</span>
-          </div>
-        </div>
+          {[205, 230, 255, 280].map((y, i) => (
+            <rect key={i} x="480" y={y} width="10" height="12" fill="url(#pinGradient)" rx="2" />
+          ))}
 
+          {/* Text */}
+          <text
+            x="405"
+            y="245"
+            fontFamily="monospace"
+            fontSize="17"
+            fontWeight="bold"
+            fill="url(#textGradient)"
+            textAnchor="middle"
+            className="reveal-text"
+            style={{ letterSpacing: "4px" }}
+          >
+            CELESTAI'26
+          </text>
+
+          {/* Circuit Nodes */}
+          {[
+            [100, 100], [80, 180], [60, 260], [100, 350],
+            [700, 90], [740, 160], [720, 250], [680, 340]
+          ].map(([x, y], i) => (
+            <circle key={i} cx={x} cy={y} r="5" fill="#111" stroke="#555" />
+          ))}
+        </svg>
       </div>
     </div>
   );
 };
 
-export default Loader;
+export default function App() {
+  const [loading, setLoading] = useState(true);
+
+  return (
+    <>
+      {loading && <ChipLoader onFinish={() => setLoading(false)} />}
+
+      {!loading && (
+        <div className="min-h-screen flex items-center justify-center bg-black text-white text-3xl">
+          Website Loaded 🚀
+        </div>
+      )}
+    </>
+  );
+}

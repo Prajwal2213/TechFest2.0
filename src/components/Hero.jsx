@@ -16,21 +16,23 @@ const Hero = () => {
   "
 >
        
-      <div className="max-w-4xl space-y-6 md:-mt-60 mt-30">
+      <div className="max-w-4xl space-y-6 md:-mt-60 mt-40">
 
         {/* Date */}
-        <p className="text-cyan-400 font-semibold tracking-widest text-sm sm:text-base ">
-          APRIL 23 – 25, 2026
-        </p>
+       
 
         {/* Title */}
-        <h1 className="font-extrabold  uppercase tracking-wider leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 text-[clamp(3rem,8vw,6rem)] sm:text-7xl lg:text-9xl ">
-          <span className="block text-white text-[clamp(2.5rem,5vw,4rem)] sm:text-5xl lg:text-7xl">
-            DSU
+        <h1 className="font-extrabold  uppercase tracking-wider leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 text-[clamp(3rem,8vw,6rem)] sm:text-xs lg:text-9xl ">
+          <span className="block text-white text-sm sm:text-lg lg:text-xl w-full ">
+            Dayananda Sagar University 
           </span>
+          <span className="block text-white text-sm sm:text-lg lg:text-xl w-full ml-45 mt-2">presents</span>
           <span className="block text-white text-[clamp(3rem,6vw,5rem)] sm:text-6xl lg:text-8xl mt-2 ">
            CELESTAI’<span className="text-yellow-300">26</span>
           </span>
+           <p className="text-fuchsia-300 font-extrabold tracking-widest text-xl sm:text-2xl ml-105 mt-4">
+          APRIL 23 – 25, 2026
+        </p>
         </h1>
 
         {/* Description */}

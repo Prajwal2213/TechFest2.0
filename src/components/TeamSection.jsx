@@ -10,19 +10,21 @@ const EVENT_ORGANIZERS = [
   { id: "org3", name: "Dr. Srinath Ramakrishnan", role: "Assistant Professor", category: "Organisers", imageUrl: "./images/Organisers/srinath_11.jpg" },
   { id: "org4", name: "Prof. Sripad Kulkarni", role: "Assistant Professor", category: "Organisers", imageUrl: "./images/Organisers/Sripad.jpg" },
   { id: "org5", name: "Prof. Shivamma", role: "Assistant Professor", category: "Organisers", imageUrl: "./images/Organisers/Shivamma_D.jpg" },
-  { id: "org6", name: "Ms. Jisy N K", role: "Assistant Professor", category: "Organisers", imageUrl: "./images/Organisers/jisy.jpeg" },
+  { id: "org6", name: "Dr. Santhosh Kumar G", role: "Associate Professor", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771735881/Picture1_odr7hc.jpg" },
+  { id: "org7", name: "Dr. U Pavan Kumar", role: "Assistant Professor", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771735880/Picture2_ozopgq.jpg" },
+  { id: "org8", name: "Ms. Jisy N K", role: "Assistant Professor", category: "Organisers", imageUrl: "./images/Organisers/jisy.jpeg" },
 
-  // STUDENT COMMITTEE
-  { id: "sc1", name: "Prokshith", role: "Member", category: "Student Committee", team: "Marketing Team", imageUrl: "" },
-  { id: "sc2", name: "Vikram", role: "Member", category: "Student Committee", team: "Design Team", imageUrl: "" },
-  { id: "sc3", name: "Dev Sharma", role: "Member", category: "Student Committee", team: "Design Team", imageUrl: "" },
-  { id: "sc4", name: "Eshwari", role: "Member", category: "Student Committee", team: "Sponsorship Team", imageUrl: "" },
-  { id: "sc5", name: "Ranatha", role: "Member", category: "Student Committee", team: "Marketing Team", imageUrl: "" },
-  { id: "sc6", name: "Sushrutha", role: "Member", category: "Student Committee", team: "Design Team", imageUrl: "" },
-  { id: "sc7", name: "Sai Bhuvan", role: "Member", category: "Student Committee", team: "Sponsorship Team", imageUrl: "" },
-  { id: "sc8", name: "Pratham", role: "Member", category: "Student Committee", team: "Sponsorship Team", imageUrl: "" },
-  { id: "sc9", name: "Prajwal M", role: "Member", category: "Student Committee", team: "Web Team", imageUrl: "" },
-  { id: "sc10", name: "Pavan Kumar G R ", role: "Member", category: "Student Committee", team: "Web Team", imageUrl: "" },
+  // // STUDENT COMMITTEE
+  // { id: "sc1", name: "Prokshith", role: "Member", category: "Student Committee", team: "Marketing Team", imageUrl: "" },
+  // { id: "sc2", name: "Vikram", role: "Member", category: "Student Committee", team: "Design Team", imageUrl: "" },
+  // { id: "sc3", name: "Dev Sharma", role: "Member", category: "Student Committee", team: "Design Team", imageUrl: "" },
+  // { id: "sc4", name: "Eshwari", role: "Member", category: "Student Committee", team: "Sponsorship Team", imageUrl: "" },
+  // { id: "sc5", name: "Ranatha", role: "Member", category: "Student Committee", team: "Marketing Team", imageUrl: "" },
+  // { id: "sc6", name: "Sushrutha", role: "Member", category: "Student Committee", team: "Design Team", imageUrl: "" },
+  // { id: "sc7", name: "Sai Bhuvan", role: "Member", category: "Student Committee", team: "Sponsorship Team", imageUrl: "" },
+  // { id: "sc8", name: "Pratham", role: "Member", category: "Student Committee", team: "Sponsorship Team", imageUrl: "" },
+  // { id: "sc9", name: "Prajwal M", role: "Member", category: "Student Committee", team: "Web Team", imageUrl: "" },
+  // { id: "sc10", name: "Pavan Kumar G R ", role: "Member", category: "Student Committee", team: "Web Team", imageUrl: "" },
 ];
 
 /* ==========================================
@@ -70,7 +72,7 @@ const TeamCard = ({ member }) => {
 
   return (
     <div
-      className="perspective-1000 w-full max-w-[280px] group"
+      className="perspective-1000 w-full max-w-[280px] h-[480px] group"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={handleMouseLeave}
@@ -83,39 +85,47 @@ const TeamCard = ({ member }) => {
             ? "transform 0.05s ease-out"
             : "transform 0.6s cubic-bezier(0.2, 1, 0.3, 1)",
         }}
-        className="relative flex flex-col rounded-[2.5rem] border border-white/10 
+        className="relative flex flex-col h-full rounded-[2.5rem] border border-white/10 
                    transition-all duration-300 hover:scale-[1.02] 
                    bg-white/[0.02] backdrop-blur-[20px] overflow-hidden"
       >
-        <div className="relative w-full h-60 overflow-hidden">
+        {/* Image */}
+        <div className="relative w-full h-[240px] overflow-hidden">
           <img
-            src={member.imageUrl || "https://via.placeholder.com/400x400?text=Member"}
+            src={
+              member.imageUrl ||
+              "https://via.placeholder.com/400x400?text=Member"
+            }
             alt={member.name}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         </div>
 
-        <div className="px-6 py-6 text-center">
-          <h3 className="text-lg font-black text-white mb-2 uppercase tracking-wide">
-            {member.name}
-          </h3>
+        {/* Content */}
+        <div className="flex flex-col flex-1 px-6 py-6 text-center justify-between">
+          <div>
+            <h3 className="text-lg font-black text-white mb-2 uppercase tracking-wide">
+              {member.name}
+            </h3>
 
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-cyan-400">
-            {member.role}
-          </p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-cyan-400">
+              {member.role}
+            </p>
+          </div>
 
-          <div className="w-10 h-[1px] bg-white/20 mt-4 mx-auto" />
+          <div>
+            <div className="w-10 h-[1px] bg-white/20 mt-4 mx-auto" />
 
-          <p className="mt-4 text-[10px] uppercase tracking-[0.4em] text-white/40">
-            {member.category}
-          </p>
+            <p className="mt-4 text-[10px] uppercase tracking-[0.4em] text-white/40">
+              {member.category}
+            </p>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
 /* ==========================================
    4️⃣ MAIN TEAM SECTION
 ========================================== */
