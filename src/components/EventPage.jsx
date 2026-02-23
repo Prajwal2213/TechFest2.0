@@ -278,7 +278,7 @@ export default function EventPage() {
   const refs = {
   RoboEdge: useRef(null),
   SkyRift: useRef(null),
-  EdgeIQ_Challenge: useRef(null), // Ensure exact match with eventData key
+  EdgeIQ_Challenge: useRef(null), 
   techzibition: useRef(null),
   workshops: useRef(null),
   Special_Events: useRef(null)
@@ -293,7 +293,9 @@ const FEATURED_SECTIONS = ['techzibition', 'EdgeIQ_Challenge','RoboEdge', 'SkyRi
   }, []);
 
   const scroll = (ref, direction) => {
-    if (!ref || !ref.current) return; // exit if ref not ready
+    if (!ref || !ref.current) {
+    return;
+  }
 
     const scrollAmount = window.innerWidth < 768 ? 320 : 450;
     ref.current.scrollBy({
@@ -304,7 +306,11 @@ const FEATURED_SECTIONS = ['techzibition', 'EdgeIQ_Challenge','RoboEdge', 'SkyRi
 
   const eventData = {
     RoboEdge: [
-      {title : "RoboEdge", sideLabel : "Main", imageURL : "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771840738/348cbd6f-f2aa-4cca-bcfa-7296f4ffc245_n9t7cr.png", description : "", link : "https://hackculture.io/hackathons/robotics-challenge-celestai26"},
+      {title : "RoboEdge", sideLabel : "Main", imageURL : "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771840738/348cbd6f-f2aa-4cca-bcfa-7296f4ffc245_n9t7cr.png", description : `ROBOEDGE, the flagship robotics event of CELESTAI’26 – “AI at the Edge”, is a premier multi-event robotics challenge that celebrates innovation, precision, and intelligent system design. This high-energy competition brings together aspiring engineers and robotics enthusiasts to design, control, and operate advanced robotic systems in real-world scenarios.
+
+The challenge combines hands-on competitions that test core engineering fundamentals including electronics, embedded systems, control logic, mechanical integration, and intelligent on-device decision-making. Participants work across complete robotic pipelines — from sensing and signal processing to control, motion planning, and execution — transforming theoretical concepts into practical, high-performance systems.
+
+ROBOEDGE emphasizes reliability, adaptability, and smart system integration, challenging teams to deliver robust robotic solutions under dynamic competitive conditions. It is not just a competition, but a platform to showcase technical depth, creativity, and real-world engineering capability.`, link : "https://hackculture.io/hackathons/robotics-challenge-celestai26"},
       { title: "ROBOEDGE AI", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783079/roboedgeai_xnplkt.png", description: `This round is software-only; no hardware is required.
 
 Evaluation will be based on:
@@ -547,12 +553,12 @@ change.`,
       { title: "Skill Lab", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg", description: "Deep-dive technical sessions in embedded logic and ROS.", link: "" }
     ],
 
-    Special_Events : [
-       { title: "Artistic Aura", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg", description: `Artistic Aura: UI/UX Design Challenge
+     EdgeAI_Elite_Event: [
+       { title: "Artistic Aura", sideLabel: "UI/UX", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg", description: `Artistic Aura: UI/UX Design Challenge
 "Where Creativity Meets Functionality"
 Do you have the vision to turn complex problems into intuitive, beautiful digital experiences? Welcome to Artistic Aura, the premier UI/UX showdown at [Insert Tech Fest Name] 2026. This isn't just about making things look good; it's about crafting seamless, user-centric designs that define the future of digital interaction.
 Bring your creative flair and design thinking to the table, and prove that your designs can deliver both, aesthetic appeal and user-friendly functionality.`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
-       { title: "Hack Hustle", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: `HACK HUSTLE: Where Tech Meets Talent! 🚀
+       { title: "Circuit-thon", sideLabel: "", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: `HACK HUSTLE: Where Tech Meets Talent! 🚀
 Body: Get ready for 24 hours of unstoppable innovation! HACK HUSTLE is the premier multi-domain hackathon at [Tech Fest Name], designed to push boundaries and fuel your ambition. We invite the brightest minds to team up, code, and "hustle" through real-world problem statements. Whether you’re into AI, Web3, or CyberSecurity, this is your arena to turn bold ideas into groundbreaking, working prototypes. Are you ready to hustle for your vision?`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" }
     ]
   };

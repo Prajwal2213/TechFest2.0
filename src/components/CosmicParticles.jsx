@@ -5,8 +5,21 @@ const CosmicParticles = ({ canSignalReady, onReady }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-     const savedScroll = sessionStorage.getItem("cosmicScroll") || 0;
-window.scrollTo(0, parseInt(savedScroll, 10));
+//      const savedScroll = sessionStorage.getItem("cosmicScroll") || 0;
+// window.scrollTo(0, parseInt(savedScroll, 10));
+
+ if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
+
+  const goTop = () => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  };
+
+  goTop();
+  setTimeout(goTop, 50);
 
     let scene, camera, renderer, points;
     let bgLayers = [];
@@ -342,16 +355,16 @@ window.addEventListener('scroll', handleScroll, { passive: true });
 
 init();
 
-const handleBeforeUnload = () => {
-  sessionStorage.setItem("cosmicScroll", window.scrollY);
-};
+// const handleBeforeUnload = () => {
+//   sessionStorage.setItem("cosmicScroll", window.scrollY);
+// };
 
-window.addEventListener("beforeunload", handleBeforeUnload);
+// window.addEventListener("beforeunload", handleBeforeUnload);
 
 return () => {
   window.removeEventListener('resize', handleResize);
   window.removeEventListener('scroll', handleScroll);
-  window.removeEventListener("beforeunload", handleBeforeUnload); // <- added this line
+  // window.removeEventListener("beforeunload", handleBeforeUnload); // <- added this line
   cancelAnimationFrame(animationFrameId);
   if (renderer) renderer.dispose();
   if (particlesGeometry) particlesGeometry.dispose();
