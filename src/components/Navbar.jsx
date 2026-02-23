@@ -21,9 +21,9 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex items-center cursor-pointer">
-            <Link to="/" className="flex items-center gap-4">
-              <img src="https://res.cloudinary.com/dstbnmjwh/image/upload/v1771785466/unnamed-removebg-preview_lqhrm3.png" alt="TechFest logo" className="w-auto h-20 lg:h-16 scale-150 mr-7" />
-              <img src="https://res.cloudinary.com/dstbnmjwh/image/upload/v1771526218/download_gnrxgw.png" alt="DSU logo"  className="w-auto h-14 lg:h-16 " />
+            <Link to="/" className="flex items-center  md:gap-4">
+              <img src="https://res.cloudinary.com/dstbnmjwh/image/upload/v1771785466/unnamed-removebg-preview_lqhrm3.png" alt="TechFest logo" className="w-auto h-20 lg:h-16  scale-100 md:scale-150 mr-7" />
+              <img src="https://res.cloudinary.com/dstbnmjwh/image/upload/v1771526218/download_gnrxgw.png" alt="DSU logo"  className="w-auto h-14 lg:h-16 scale-90 md:scale-90" />
             </Link>
           </div>
 

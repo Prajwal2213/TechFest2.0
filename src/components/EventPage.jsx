@@ -126,12 +126,15 @@ const DetailOverlay = ({ event, onClose }) => {
                 </div>
 
                 <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row gap-4">
-                  <button
-                    className="w-full sm:flex-1 py-3 sm:py-4 bg-yellow-500 text-black font-black text-[10px] sm:text-xs tracking-[0.4em] uppercase hover:bg-white transition-all flex items-center justify-center gap-3"
-                    onClick={() => window.open(event.link, '_blank')}
-                  >
-                    <span>Register Now</span>
-                  </button>
+                 <button
+  className="w-full sm:flex-1 py-3 sm:py-4 bg-yellow-500 text-black font-black text-[10px] sm:text-xs tracking-[0.4em] uppercase hover:bg-white transition-all flex items-center justify-center gap-3"
+  onClick={() => {
+    window.location.href = event.link;
+  }}
+>
+  {/* Your button content/icon here */}
+  REGISTER NOW
+</button>
                 </div>
 
               </div>
@@ -273,12 +276,15 @@ export default function EventPage() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const refs = {
-    RoboEdge: useRef(null),
-    SkyRift: useRef(null),
-    EdgeIQChallenge: useRef(null),
-    techzibition: useRef(null),
-    workshops: useRef(null)
-  };
+  RoboEdge: useRef(null),
+  SkyRift: useRef(null),
+  EdgeIQ_Challenge: useRef(null), // Ensure exact match with eventData key
+  techzibition: useRef(null),
+  workshops: useRef(null),
+  Special_Events: useRef(null)
+};
+
+const FEATURED_SECTIONS = ['techzibition', 'EdgeIQ_Challenge','RoboEdge', 'SkyRift'];
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -298,6 +304,7 @@ export default function EventPage() {
 
   const eventData = {
     RoboEdge: [
+      {title : "RoboEdge", sideLabel : "Main", imageURL : "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771840738/348cbd6f-f2aa-4cca-bcfa-7296f4ffc245_n9t7cr.png", description : "", link : "https://hackculture.io/hackathons/robotics-challenge-celestai26"},
       { title: "ROBOEDGE AI", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783079/roboedgeai_xnplkt.png", description: `This round is software-only; no hardware is required.
 
 Evaluation will be based on:
@@ -307,28 +314,28 @@ Decision-making and optimization
 Clarity of implementation
 
 Examples
-Object detection, Line following, Image recognition, Signage Detection etc...`, link: "" },
+Object detection, Line following, Image recognition, Signage Detection etc...`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26" },
       { title: "RoboRace", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771782762/roborace_r2wekc.jpg", description: `Robots must complete a predefined race track in the minimum possible time.
 Manual or assisted control is permitted.
 Time penalties may be imposed for:
 1.Track violations
 2.External or human interference
-The fastest valid run will rank higher.`, link: "" },
+The fastest valid run will rank higher.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26" },
       { title: "Robo Obstacle", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783003/roboobstcale_sic5xo.png", description: `Robots must navigate an obstacle course featuring ramps, turns, and barriers.
 Evaluation will focus on:
 1.Stability and balance
 2.Control accuracy
 3.Obstacle handling capability
-Touching or modifying obstacles may result in penalties.`, link: "" },
+Touching or modifying obstacles may result in penalties.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26" },
       { title: "Robo Soccer", sideLabel: "Track 04", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318000/RoboSoccer_w3fnhv.jpg", description: `Matches may be one-on-one or team-based, as decided by organizers.
 The objective is to score the maximum number of goals within the allotted time.
 Manual control is allowed.
-Robots designed to intentionally damage opponents are strictly prohibited.`, link: "" },
-      { title: "Techno Hunt", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771522995/77d7fc94-b27d-4b5e-bcd0-f8b6451ee458_farwgs.jpg", description: "Spatial navigation and precision passing challenge in dynamic environments.", link: "", included: true },
+Robots designed to intentionally damage opponents are strictly prohibited.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26" },
+      // { title: "Techno Hunt", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771522995/77d7fc94-b27d-4b5e-bcd0-f8b6451ee458_farwgs.jpg", description: "Spatial navigation and precision passing challenge in dynamic environments.", link: "", included: true },
     ],
     SkyRift: [
-      // { title: "Sky Rift", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/sky_rift1_yig1jj.png", description: "Skyrift is a competitive drone challenge featuring precision payload drops, obstacle navigation, and high‑speed racing. It tests teams on technical design, pilot skill, and safety.", link: "" },
-      { title: "Fling Fury", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/fling_fury1_fce5l4.png", description: "Fling Fury is a hands-on mechanical design challenge where teams build safe, manually operated launchers inspired by sling and catapult systems. The competition tests engineering design, creativity, reliability, and accuracy, with the goal of hitting progressively difficult targets while meeting strict technical and safety standards.", link: "" },
+      { title: "Sky Rift", sideLabel: "Main", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771841351/d4a46d47-8494-4918-bf0c-f2a7126c1d0f_by7ku6.png", description: "Skyrift is a competitive drone challenge featuring precision payload drops, obstacle navigation, and high‑speed racing. It tests teams on technical design, pilot skill, and safety.", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
+      { title: "Fling Fury", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/fling_fury1_fce5l4.png", description: "Fling Fury is a hands-on mechanical design challenge where teams build safe, manually operated launchers inspired by sling and catapult systems. The competition tests engineering design, creativity, reliability, and accuracy, with the goal of hitting progressively difficult targets while meeting strict technical and safety standards.", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
       { title: "Blaze Wing", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771756030/blaze_wing_v4bd2y.png", description: `Design and build a drone capable of handling real-world challenges such as:
 Obstacle Avoidance: Navigate safely in dynamic environments.
 
@@ -340,25 +347,64 @@ A separate Edge AI layer will be integrated to enhance autonomy. After demonstra
 This problem statement emphasizes building a hybrid system:\n
 Manual operation for baseline functionality.\n
 
-Edge AI intelligence for advanced autonomy, perception, and decision-making.`, link: "" },
+Edge AI intelligence for advanced autonomy, perception, and decision-making.`, link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
 
-      { title: "Glide Storm", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771756031/glide_storm_ryhu04.png", description: `GlideStrom is a premier aerospace design challenge focused on the core fundamentals of flight: lift, drag, and stability. Participants must engineer a high-performance, unpowered fixed-wing glider with a maximum wingspan of 50cm and a mass limit of 200g, utilizing foam as the primary structural material. The competition tests aero-efficiency through a specialized formula that rewards the longest flight time relative to the aircraft's weight. Following a mandatory Technical Audit, teams of three must execute precise manual launches to maximize airtime and distance while navigating a high-stakes "two-attempt" rule..`, link: "" },
+      { title: "Glide Storm", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771756031/glide_storm_ryhu04.png", description: `GlideStrom is a premier aerospace design challenge focused on the core fundamentals of flight: lift, drag, and stability. Participants must engineer a high-performance, unpowered fixed-wing glider with a maximum wingspan of 50cm and a mass limit of 200g, utilizing foam as the primary structural material. The competition tests aero-efficiency through a specialized formula that rewards the longest flight time relative to the aircraft's weight. Following a mandatory Technical Audit, teams of three must execute precise manual launches to maximize airtime and distance while navigating a high-stakes "two-attempt" rule..`, link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
 
-      { title: "Fluid Force X", sideLabel: "Track 04", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771778827/3085da35-50c2-4736-91f6-b03e2a890bb3_bdvg7m.png", description: "Fluid Force X is an intensive technical challenge where fluid power meets aerospace engineering. Designed to simulate real-world aircraft MRO (Maintenance, Repair, and Overhaul) environments, the event tests participants on their ability to design and troubleshoot complex hydraulic and pneumatic systems. Teams of 2 to 4 members must progress through two elimination rounds: conceptualizing and validating flight-critical circuits—such as landing gear and braking systems—before diagnosing faults in a high-pressure, time-bound troubleshooting scenario. Success requires a mastery of fluid mechanics principles combined with sound engineering logic.", link: "" }
+      { title: "Fluid Force X", sideLabel: "Track 04", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771778827/3085da35-50c2-4736-91f6-b03e2a890bb3_bdvg7m.png", description: "Fluid Force X is an intensive technical challenge where fluid power meets aerospace engineering. Designed to simulate real-world aircraft MRO (Maintenance, Repair, and Overhaul) environments, the event tests participants on their ability to design and troubleshoot complex hydraulic and pneumatic systems. Teams of 2 to 4 members must progress through two elimination rounds: conceptualizing and validating flight-critical circuits—such as landing gear and braking systems—before diagnosing faults in a high-pressure, time-bound troubleshooting scenario. Success requires a mastery of fluid mechanics principles combined with sound engineering logic.", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" }
     ],
-    // EdgeIQChallenge: [https://res.cloudinary.com/dstbnmjwh/image/upload/v1771778307/unnamed_wehuws.jpg
-    //   { title: "Edge Audio Intelligence", sideLabel: "HUSTLE_01", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours.", link: "" },
-    //   { title: "Edge Vision Intelligence", sideLabel: "HUSTLE_01", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours.", link: "" },
-    //   { title: "Predictive Intelligence At The Edge", sideLabel: "HUSTLE_01", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours.", link: "" },
-    //   { title: "Edge Ai For Sustainability", sideLabel: "HUSTLE_01", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours.", link: "" },
-    //   { title: "Open Innovation EdgeIQ Open Track", sideLabel: "HUSTLE_01", imageURL: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800", description: "Extreme hardware/software integration sprint spanning 48 hours.", link: "" }
-    // ],
     EdgeIQ_Challenge: [
-      { title: "Audio Intelligence", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783676/unnamed_gpjz4n.jpg", description: "", link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
-      { title: "Vision Intelligence", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783795/unnamed_nyryfp.jpg", description: "", link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
-      { title: "Predictive Intelligence At The Edge", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771784309/pred_int_si2k8f.png", description: "", link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
-      { title: "AI For Sustainability", sideLabel: "Track 04", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783964/ai_sustain_ee0n57.png", description: "", link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
-      { title: "Open Innovation EdgeIQ Open Track", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771784270/open_innnn_x6lxzn.png", description: "", link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" }
+      { title: "EdgeIQ Challenge", sideLabel: "Main", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771840630/b70881e5-878a-48e6-b47b-f2871a3ecc16_c3mte8.png", description: `The EdgeIQ Challenge is a flagship AI hackathon under CELESTAI’26 – “AI at the Edge”, the annual tech fest of Dayananda Sagar University. This premier software-focused AI event brings together innovators to design and build intelligent systems that solve real-world problems through practical implementation and creative engineering.
+
+Participants develop complete AI pipelines—from data processing and model development to optimization and deployment—focusing on performance, scalability, and real-world applicability. The challenge encourages system-level thinking and innovation beyond accuracy-centric solutions, pushing teams to build intelligent systems that are impactful and deployment-ready.`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
+      { title: "Audio Intelligence", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783676/unnamed_gpjz4n.jpg", description: `Innovative Solution for Audio Intelligence
+Create an innovative solution that addresses challenges in the Audio Intelligence domain.
+
+Focus Areas:
+   •  User experience optimization
+   •  Technology integration
+   •  Scalability and performance
+   •  Real-world impact`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
+      { title: "Vision Intelligence", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783795/unnamed_nyryfp.jpg", description: `Innovative Solution for Vision Intelligence
+Create an innovative solution that addresses challenges in the Vision Intelligence domain.
+
+Focus Areas:
+   •  User experience optimization
+   •  Technology integration
+   •  Scalability and performance
+   •  Real-world impact`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
+      { title: "Predictive Intelligence At The Edge", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771784309/pred_int_si2k8f.png", description: `Innovative Solution for Predictive Intelligence at the Edge
+Create an innovative solution that addresses challenges in the Predictive Intelligence at the Edge domain.
+
+Focus Areas:
+   •  User experience optimization
+   •  Technology integration
+   •  Scalability and performance
+   •  Real-world impact`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
+      { title: "AI For Sustainability", sideLabel: "Track 04", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783964/ai_sustain_ee0n57.png", description: `Innovative Solution fo AI for Sustainability
+Create an innovative solution that addresses challenges in the AI for Sustainability domain.
+
+Focus Areas:
+   •  User experience optimization
+   •  Technology integration
+   •  Scalability and performance
+   •  Real-world impact`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
+      { title: "IOT Healthcare", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771839530/unnamed_mr9l1j.jpg", description: `Innovative Solution for IoT Healthcare
+Create an innovative solution that addresses challenges in the IoT Healthcare domain.
+
+Focus Areas:
+   •  User experience optimization
+   •  Technology integration
+   •  Scalability and performance
+   •  Real-world impact`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
+      { title: "Open Innovation EdgeIQ Open Track", sideLabel: "Track 06", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771784270/open_innnn_x6lxzn.png", description: `Innovative Solution for Open Innovation (EdgeIQ Open Track)
+Create an innovative solution that addresses challenges in the Open Innovation (EdgeIQ Open Track) domain.
+
+Focus Areas:
+   •  User experience optimization
+   •  Technology integration
+   •  Scalability and performance
+   •  Real-world impact`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" }
      
     ],
     techzibition: [
@@ -502,8 +548,12 @@ change.`,
     ],
 
     Special_Events : [
-       { title: "Artistic Aura", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg", description: "", link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
-       { title: "Hack Hustle", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: "", link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" }
+       { title: "Artistic Aura", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg", description: `Artistic Aura: UI/UX Design Challenge
+"Where Creativity Meets Functionality"
+Do you have the vision to turn complex problems into intuitive, beautiful digital experiences? Welcome to Artistic Aura, the premier UI/UX showdown at [Insert Tech Fest Name] 2026. This isn't just about making things look good; it's about crafting seamless, user-centric designs that define the future of digital interaction.
+Bring your creative flair and design thinking to the table, and prove that your designs can deliver both, aesthetic appeal and user-friendly functionality.`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
+       { title: "Hack Hustle", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: `HACK HUSTLE: Where Tech Meets Talent! 🚀
+Body: Get ready for 24 hours of unstoppable innovation! HACK HUSTLE is the premier multi-domain hackathon at [Tech Fest Name], designed to push boundaries and fuel your ambition. We invite the brightest minds to team up, code, and "hustle" through real-world problem statements. Whether you’re into AI, Web3, or CyberSecurity, this is your arena to turn bold ideas into groundbreaking, working prototypes. Are you ready to hustle for your vision?`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" }
     ]
   };
 
@@ -555,50 +605,38 @@ change.`,
         </section>
 
        {Object.entries(eventData).map(([key, events]) => {
-  const isTechzibition = key === "techzibition";
+  const isFeatured = FEATURED_SECTIONS.includes(key);
 
   return (
-    <section key={key}>
+    <section key={key} className="relative">
       <SectionHeader
-        title={key}
-        sub={`PRTCL_${key.toLowerCase()}`}
+        title={key.replace(/_/g, ' ')} // Replaces underscores with spaces for clean titles
         onPrev={() => scroll(refs[key], "left")}
         onNext={() => scroll(refs[key], "right")}
       />
 
-      {isTechzibition ? (
-        <div className="max-w-9xl mx-auto px-6 md:px-10 lg:px-16 ml-20">
-          
-          {/* MAIN CARD */}
-          <div className="flex justify-center mb-20">
+      <div className={`max-w-[1600px] mx-auto px-6 md:px-10 lg:px-16 ${isFeatured ? 'flex flex-col items-center' : ''}`}>
+        
+        {/* IF FEATURED: Show the first card as a centered Main Card */}
+        {isFeatured && (
+          <div className="mb-20 transform hover:scale-105 transition-transform duration-500">
             <EventCard
               event={events[0]}
               onOpenDetail={setSelectedEvent}
             />
+            {/* Optional: Visual connector line between main and tracks */}
+            <div className="w-[2px] h-20 bg-gradient-to-b from-yellow-500/50 to-transparent mx-auto mt-4 hidden md:block"></div>
           </div>
+        )}
 
-          {/* TRACK CARDS UNDER MAIN */}
-          <div
-            ref={refs[key]}
-            className="flex gap-10 overflow-x-auto pb-16 pt-4 scrollbar-hide scroll-smooth"
-          >
-            {events.slice(1).map((event, idx) => (
-              <EventCard
-                key={idx}
-                event={event}
-                onOpenDetail={setSelectedEvent}
-              />
-            ))}
-
-            <div className="md:80 shrink-0 border border-dashed border-zinc-800 flex flex-col items-center justify-center gap-4 opacity-30" />
-          </div>
-        </div>
-      ) : (
+        {/* TRACKS SCROLLABLE ROW */}
         <div
           ref={refs[key]}
-          className="flex gap-10 overflow-x-auto md:ml-16 pb-16 pt-4 scrollbar-hide px-6 md:px-10 lg:px-16 scroll-smooth"
+          className={`flex gap-10 overflow-x-auto pb-16 pt-4 scrollbar-hide scroll-smooth w-full 
+            ${!isFeatured ? 'md:ml-16' : ''}`}
         >
-          {events.map((event, idx) => (
+          {/* If featured, we skip the first card (index 0) because it's the Main Card */}
+          {(isFeatured ? events.slice(1) : events).map((event, idx) => (
             <EventCard
               key={idx}
               event={event}
@@ -606,9 +644,10 @@ change.`,
             />
           ))}
 
-          <div className="md:80 shrink-0 border border-dashed border-zinc-800 flex flex-col items-center justify-center gap-4 opacity-30" />
+          {/* End-of-list Spacer */}
+          <div className="w-20 shrink-0 border-r border-dashed border-zinc-800/30 mr-10" />
         </div>
-      )}
+      </div>
     </section>
   );
 })}
