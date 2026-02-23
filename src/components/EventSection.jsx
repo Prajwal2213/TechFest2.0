@@ -12,8 +12,8 @@ const projects = [
   { title: "Techzibition ", desc: "", bg:"https://res.cloudinary.com/dstbnmjwh/image/upload/v1771737726/Picture4_wjrfog.jpg",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
 { title: "Artistic Aura", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
 { title: "Hack Hustle", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "Workshop ", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg", link:"https://hackculture.io/hackathons/robotics-challenge-celestai26",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-];
+  { title: "Workshop ", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg", link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" }
+]
 
 const EventSection = () => {
   const [current, setCurrent] = useState(0);

@@ -6,13 +6,13 @@ import React, { useRef, useState, useCallback, useMemo } from "react";
 const EVENT_ORGANIZERS = [
   // ORGANISERS
   { id: "org1", name: "Dr. Divyashree HB", role: "Assistant Professor, ECE", category: "Organisers", imageUrl: "./images/Organisers/divyashree.jpg" },
-  { id: "org2", name: "Dr. Prashanth Kumar H G", role: "Associate Professor", category: "Organisers", imageUrl: "./images/Organisers/Prashanth_K.jpg" },
-  { id: "org5", name: "Prof. Shivamma", role: "Assistant Professor", category: "Organisers", imageUrl: "./images/Organisers/Shivamma_D.jpg" },
-  { id: "org3", name: "Dr. Srinath Ramakrishnan", role: "Assistant Professor", category: "Organisers", imageUrl: "./images/Organisers/srinath_11.jpg" },
-  { id: "org4", name: "Prof. Sripad Kulkarni", role: "Assistant Professor", category: "Organisers", imageUrl: "./images/Organisers/Sripad.jpg" },
-  { id: "org6", name: "Dr. Santhosh Kumar G", role: "Associate Professor", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771735881/Picture1_odr7hc.jpg" },
-  { id: "org8", name: "Ms. Jisy N K", role: "Assistant Professor", category: "Organisers", imageUrl: "./images/Organisers/jisy.jpeg" },
-  { id: "org7", name: "Dr. U Pavan Kumar", role: "Assistant Professor", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771735880/Picture2_ozopgq.jpg" },
+  { id: "org2", name: "Dr. Prashanth Kumar H G", role: "Associate Professor,ASE", category: "Organisers", imageUrl: "./images/Organisers/Prashanth_K.jpg" },
+  { id: "org5", name: "Prof. Shivamma", role: "Assistant Professor,DS", category: "Organisers", imageUrl: "./images/Organisers/Shivamma_D.jpg" },
+  { id: "org3", name: "Dr. Srinath Ramakrishnan", role: "Assistant Professor,ASE", category: "Organisers", imageUrl: "./images/Organisers/srinath_11.jpg" },
+  { id: "org4", name: "Prof. Sripad Kulkarni", role: "Assistant Professor,ASE", category: "Organisers", imageUrl: "./images/Organisers/Sripad.jpg" },
+  { id: "org6", name: "Dr. Santhosh Kumar G", role: "Associate Professor,DS", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771735881/Picture1_odr7hc.jpg" },
+  { id: "org8", name: "Ms. Jisy N K", role: "Assistant Professor,ECE", category: "Organisers", imageUrl: "./images/Organisers/jisy.jpeg" },
+  { id: "org7", name: "Dr. U Pavan Kumar", role: "Assistant Professor,DS", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771735880/Picture2_ozopgq.jpg" },
 
   // // STUDENT COMMITTEE
   // { id: "sc1", name: "Prokshith", role: "Member", category: "Student Committee", team: "Marketing Team", imageUrl: "" },
@@ -97,7 +97,7 @@ const TeamCard = ({ member }) => {
               "https://via.placeholder.com/400x400?text=Member"
             }
             alt={member.name}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 "
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         </div>
@@ -153,7 +153,7 @@ export default function TeamSection() {
         {/* Title */}
         <div className="flex flex-col items-center text-center mb-16 mt-20">
           <h1 className="text-4xl md:text-7xl font-semibold uppercase bg-gradient-to-b from-white to-zinc-700 text-transparent bg-clip-text">
-            CELESTAI'26 TEAM
+            CELESTAI'26 Committee
           </h1>
         </div>
 
