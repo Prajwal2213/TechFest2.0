@@ -12,7 +12,7 @@ const ChipLoader = ({ onFinish }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-[#0b0b0b] overflow-hidden z-[9999]">
       {/* Large Container */}
-      <div className="w-[90vw] max-w-[1400px] scale-[1.25] md:scale-[1.35] lg:scale-[1.5]">
+      <div className="w-[90vw] max-w-[1000px] scale-[.9] md:scale-[1] lg:scale-[1.05]">
         <svg
           viewBox="0 0 800 500"
           xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ const ChipLoader = ({ onFinish }) => {
           <rect
             x="330"
             y="185"
-            width="150"
+            width="155"
             height="110"
             rx="14"
             fill="url(#chipGradient)"

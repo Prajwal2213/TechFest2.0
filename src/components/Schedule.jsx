@@ -5,23 +5,43 @@ import { Rocket, Brain, Satellite, MapPin, User, Cpu } from 'lucide-react';
 const FEST_SCHEDULE = [
   {
     id: 1,
-    label: "PHASE_01",
+    label: "DAY 01",
+    theme: "Foundation & Exploration",
     events: [
-      { id: "d1e1", time: "09:00 AM", title: "Aero-EC Fusion", description: "System initialization and mission parameters release.", location: "Command Alpha", accent: "cyan" },
-      { id: "d1e2", time: "11:30 AM", title: "Signal Lab", description: "FPGA architectures for telemetry data noise reduction.", location: "EC Wing Lab 4", accent: "cyan" },
-      { id: "d1e3", time: "12:30 PM", title: "Signal Lab", description: "FPGA architectures for telemetry data noise reduction.", location: "EC Wing Lab 4", accent: "cyan" },
-      { id: "d1e4", time: "01:30 PM", title: "Signal Lab", description: "FPGA architectures for telemetry data noise reduction.", location: "EC Wing Lab 4", accent: "cyan" },
-      { id: "d1e5", time: "02:30 PM", title: "Signal Lab", description: "FPGA architectures for telemetry data noise reduction.", location: "EC Wing Lab 4", accent: "cyan" },
+      { id: "d1e1", time: "09:00 AM - 11:00 AM", title: "Inauguration Ceremony", description: "Main Stage", location: "", accent: "cyan" },
+      { id: "d1e2", time: "11:00 AM - 01:00 PM", title: "Roboedge AI & Fling Fury", description: "Tracks: Roboedge (Track 01), Sky Rift (Track 01)", location: "", accent: "cyan" },
+      { id: "d1e3", time: "01:00 PM - 02:00 PM", title: "Lunch Break", description: "", location: "", accent: "cyan" },
+      { id: "d1e4", time: "02:00 PM - 04:00 PM", title: "Roborace & Blaze Wing", description: "Tracks: Roboedge (Track 02), Sky Rift (Track 02)", location: "", accent: "cyan" },
+      { id: "d1e5", time: "04:00 PM - 06:00 PM", title: "Skill Lab (Workshop 1) & Circuit-Thon", description: "Tracks: Workshops (Track 01), EdgeAI Elite Event", location: "", accent: "cyan" }
     ]
   },
   {
     id: 2,
-    label: "PHASE_02",
+    label: "DAY 02",
+    theme: "The Endurance Phase",
     events: [
-      { id: "d2e1", time: "10:00 AM", title: "Cubesat Logic", description: "Power-efficiency focus for miniaturized satellite arrays.", location: "Design Wing", accent: "purple" },
-      { id: "d2e2", time: "01:00 PM", title: "Stress Test", description: "Simulating solar interference on error-correction robustness.", location: "Hangar 7", accent: "magenta" },
-      { id: "d2e3", time: "02:00 PM", title: "Cubesat Logic", description: "Power-efficiency focus for miniaturized satellite arrays.", location: "Design Wing", accent: "purple" },
-      { id: "d2e2", time: "01:00 PM", title: "Stress Test", description: "Simulating solar interference on error-correction robustness.", location: "Hangar 7", accent: "magenta" },
+      { id: "d2e1", time: "09:00 AM", title: "EdgeIQ Challenge Start", description: "24hr Hackathon Kickoff", location: "", accent: "purple" },
+      { id: "d2e2", time: "09:00 AM - 11:00 AM", title: "Robo Obstacle", description: "Roboedge (Track 03)", location: "", accent: "purple" },
+      { id: "d2e3", time: "11:00 AM - 01:00 PM", title: "Techzibition & Glide Storm", description: "Techzibition (Tracks 01-04), Sky Rift (Track 03)", location: "", accent: "purple" },
+      { id: "d2e4", time: "12:59 PM", title: "Hackathon Milestone 1", description: "1st Prototype Due", location: "", accent: "purple" },
+      { id: "d2e5", time: "01:00 PM - 02:00 PM", title: "Lunch Break", description: "", location: "", accent: "purple" },
+      { id: "d2e6", time: "02:00 PM - 04:00 PM", title: "Robo Soccer", description: "Roboedge (Track 04)", location: "", accent: "purple" },
+      { id: "d2e7", time: "04:00 PM - 06:00 PM", title: "Artistic Aura", description: "EdgeAI Elite Event", location: "", accent: "purple" },
+      { id: "d2e8", time: "06:59 PM", title: "Hackathon Milestone 2", description: "2nd Prototype Due", location: "", accent: "purple" }
+    ]
+  },
+  {
+    id: 3,
+    label: "DAY 03",
+    theme: "The Grand Finale",
+    events: [
+      { id: "d3e1", time: "09:00 AM", title: "Hackathon Milestone 3", description: "3rd Prototype Due", location: "", accent: "magenta" },
+      { id: "d3e2", time: "09:00 AM - 11:00 AM", title: "Robowar & Fluid Force X", description: "Roboedge (New Event), Sky Rift (Track 04)", location: "", accent: "magenta" },
+      { id: "d3e3", time: "11:00 AM - 01:00 PM", title: "Workshop 2 (TBA)", description: "Workshops (Track 02)", location: "", accent: "magenta" },
+      { id: "d3e4", time: "01:00 PM", title: "EdgeIQ Conclusion", description: "Final Prototype Due", location: "", accent: "magenta" },
+      { id: "d3e5", time: "01:00 PM - 02:00 PM", title: "Lunch Break", description: "", location: "", accent: "magenta" },
+      { id: "d3e6", time: "02:00 PM - 04:00 PM", title: "Workshop 3 (TBA)", description: "Workshops (Track 03)", location: "", accent: "magenta" },
+      { id: "d3e7", time: "04:00 PM - 06:00 PM", title: "Valedictory Ceremony", description: "Grand Finale & Awards", location: "Main Stage", accent: "magenta" }
     ]
   }
 ];
@@ -113,7 +133,7 @@ const Schedule = () => {
                 <div key={idx} className="relative flex flex-col md:flex-row items-center gap-12 md:gap-0">
                   {/* Time Section */}
                   <div className={`md:w-1/2 flex items-center ${idx % 2 === 0 ? 'md:justify-end md:pr-24' : 'md:order-last md:pl-24'}`}>
-                    <span className={`text-4xl md:text-6xl font-black  tracking-tighter transition-all duration-1000 ${
+                    <span className={`text-4xl md:text-4xl font-black  tracking-wide transition-all duration-1000 ${
                       isActive ? 'text-white opacity-100' : 'text-zinc-900 opacity-20'
                     }`}>
                       {event.time}
@@ -137,14 +157,14 @@ const Schedule = () => {
                     <div className={`p-8 border-l-4 transition-all duration-700 backdrop-blur-xl ${
                       isActive ? 'border-cyan-400 bg-cyan-500/5 translate-x-2' : 'border-zinc-800 bg-zinc-900/20 grayscale'
                     }`}>
-                      <h3 className={`text-2xl font-black italic tracking-tight uppercase mb-2 ${isActive ? 'text-white' : 'text-zinc-600'}`}>
+                      <h3 className={`text-2xl font-black  tracking-wide uppercase mb-2 ${isActive ? 'text-white' : 'text-zinc-600'}`}>
                         {event.title}
                       </h3>
-                      <p className="text-zinc-500 text-sm leading-relaxed mb-6 uppercase tracking-wider">
+                      <p className="text-zinc-500 text-sm leading-relaxed mb-6 camelcase tracking-wider">
                         {event.description}
                       </p>
                       <div className="flex gap-6 text-[9px] font-black uppercase tracking-[0.2em] text-cyan-500/60">
-                         <span className="flex items-center gap-2"><MapPin size={12} /> {event.location}</span>
+                         {/* <span className="flex items-center gap-2"><MapPin size={12} /> {event.location}</span> */}
                       </div>
                     </div>
                   </div>

@@ -18,7 +18,7 @@ import ScrolltoTop from './components/ScrolltoTop.jsx';
 import Loader from './components/Loader.jsx';
 import PatronSection from './components/PatronSection.jsx';
 // import SponsorPage from './components/SponsorPage.jsx';
-
+import Gallery from './components/Gallery.jsx';
 function App() {
   const [loaderAnimationDone, setLoaderAnimationDone] = useState(false);
   const [canSignalBgReady, setCanSignalBgReady] = useState(false);
@@ -74,6 +74,7 @@ function App() {
               element={
                 <>
                   <Hero />
+                  
                
                   <EventSection />
                   <About />
@@ -87,7 +88,7 @@ function App() {
             <Route path="/events" element={<EventPage />} />
             <Route path="/team" element={<TeamSection />} />
             {/* <Route path="/sponsors" element={<SponsorPage />} /> */}
-            <Route path="/gallery" element={<ComingSoon />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
           <Footer />
         </div>
