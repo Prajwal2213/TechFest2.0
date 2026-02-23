@@ -29,19 +29,6 @@ import React from 'react';
     id: 7,
     img: " https://res.cloudinary.com/dstbnmjwh/image/upload/v1771864414/Copy_of_IMG_3584_n4tc7l.jpg",
   },
-   {
-    id: 8,
-    img: " https://res.cloudinary.com/dstbnmjwh/image/upload/v1771864410/Copy_of_IMG_3481_x15cqq.jpg",
-  },
-  {
-    id: 9,
-    img: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771864413/Copy_of_IMG_3391_jmx8dc.jpg",
-  },
-  {
-    id: 10,
-    img: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771869132/DJI_0325_bnw493.jpg",
-    
-  },
 ];
 
 /* NEW: different images for bottom carousel */
@@ -74,18 +61,7 @@ const CAROUSEL_DATA_BOTTOM = [
     id: 7,
     img: " https://res.cloudinary.com/dstbnmjwh/image/upload/v1771864414/Copy_of_IMG_3584_n4tc7l.jpg",
   },
-   {
-    id: 8,
-    img: " https://res.cloudinary.com/dstbnmjwh/image/upload/v1771864410/Copy_of_IMG_3481_x15cqq.jpg",
-  },
-  {
-    id: 9,
-    img: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771864413/Copy_of_IMG_3391_jmx8dc.jpg",
-  },
-  {
-    id: 10,
-    img: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771864403/Copy_of_IMG_3500_cntocp.jpg",
-  },
+
 ];
 
 

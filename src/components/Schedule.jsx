@@ -5,43 +5,45 @@ import { Rocket, Brain, Satellite, MapPin, User, Cpu } from 'lucide-react';
 const FEST_SCHEDULE = [
   {
     id: 1,
-    label: "DAY 01",
+    label: "Phase 01",
     theme: "Foundation & Exploration",
     events: [
-      { id: "d1e1", time: "09:00 AM - 11:00 AM", title: "Inauguration Ceremony", description: "Main Stage", location: "", accent: "cyan" },
-      { id: "d1e2", time: "11:00 AM - 01:00 PM", title: "Roboedge AI & Fling Fury", description: "Tracks: Roboedge (Track 01), Sky Rift (Track 01)", location: "", accent: "cyan" },
-      { id: "d1e3", time: "01:00 PM - 02:00 PM", title: "Lunch Break", description: "", location: "", accent: "cyan" },
-      { id: "d1e4", time: "02:00 PM - 04:00 PM", title: "Roborace & Blaze Wing", description: "Tracks: Roboedge (Track 02), Sky Rift (Track 02)", location: "", accent: "cyan" },
-      { id: "d1e5", time: "04:00 PM - 06:00 PM", title: "Skill Lab (Workshop 1) & Circuit-Thon", description: "Tracks: Workshops (Track 01), EdgeAI Elite Event", location: "", accent: "cyan" }
+      { id: "d1e1", time: "08:00 AM - 10:00 AM", title: "Inauguration Ceremony", description: "Main Stage", location: "", accent: "cyan" },
+      { id: "d1e2", time: "10:00 AM - 11:00 AM", title: "Skill Lab (Workshop 1) & Circuit-Thon", description: "Tracks: Workshops (Track 01), EdgeAI Elite Event", location: "", accent: "cyan" },
+      { id: "d1e3", time: "11:00 AM - 1:30 PM", title: "Roboedge AI & Fling Fury", description: "Tracks: Roboedge (Track 01), Sky Rift (Track 01)", location: "", accent: "cyan" },
+      { id: "d1e4", time: "01:30 PM - 02:30 PM", title: "Lunch Break", description: "", location: "", accent: "cyan" },
+      { id: "d1e5", time: "03:00 PM - 05:00 PM", title: "Roborace & Blaze Wing", description: "Tracks: Roboedge (Track 02), Sky Rift (Track 02)", location: "", accent: "cyan" },
+      { id: "d1e6", time: "05:00 PM - 07:00 PM", title: "Cultural Nights", description: "", location: "", accent: "cyan" },
     ]
   },
   {
     id: 2,
-    label: "DAY 02",
+    label: "Phase 02",
     theme: "The Endurance Phase",
     events: [
       { id: "d2e1", time: "09:00 AM", title: "EdgeIQ Challenge Start", description: "24hr Hackathon Kickoff", location: "", accent: "purple" },
-      { id: "d2e2", time: "09:00 AM - 11:00 AM", title: "Robo Obstacle", description: "Roboedge (Track 03)", location: "", accent: "purple" },
-      { id: "d2e3", time: "11:00 AM - 01:00 PM", title: "Techzibition & Glide Storm", description: "Techzibition (Tracks 01-04), Sky Rift (Track 03)", location: "", accent: "purple" },
-      { id: "d2e4", time: "12:59 PM", title: "Hackathon Milestone 1", description: "1st Prototype Due", location: "", accent: "purple" },
+      { id: "d2e2", time: "09:00 AM - 1:00 AM", title: "Robo Obstacle, Techzibition & Glide Storm Events Kickoff", description: "Roboedge (Track 03) and Techzibition & Sky Rift(Track 03) start", location: "", accent: "purple" },
+      // {ription: "Techzibition (Tracks 01-04), Sky Rift (Track 03)", location: "", accent: "purple" },
+      { id: "d2e3", time: "11:00 AM - 12:00 PM", title: "Workshop 2 ", description: "Workshops (Track 02)", location: "", accent: "magenta" },
+      { id: "d2e4", time: "01:00 PM", title: "Hackathon Milestone 1", description: "1st Prototype Due", location: "", accent: "purple" },
       { id: "d2e5", time: "01:00 PM - 02:00 PM", title: "Lunch Break", description: "", location: "", accent: "purple" },
-      { id: "d2e6", time: "02:00 PM - 04:00 PM", title: "Robo Soccer", description: "Roboedge (Track 04)", location: "", accent: "purple" },
-      { id: "d2e7", time: "04:00 PM - 06:00 PM", title: "Artistic Aura", description: "EdgeAI Elite Event", location: "", accent: "purple" },
-      { id: "d2e8", time: "06:59 PM", title: "Hackathon Milestone 2", description: "2nd Prototype Due", location: "", accent: "purple" }
+      { id: "d2e6", time: "02:00 PM - 05:00 PM", title: "Robo Soccer", description: "Roboedge (Track 04)", location: "", accent: "purple" },
+      { id: "d2e7", time: "03:00 PM - 06:00 PM", title: "Artistic Aura", description: "EdgeAI Elite Event", location: "", accent: "purple" },
+      { id: "d2e8", time: "07:00 PM", title: "Hackathon Milestone 2", description: "2nd Prototype Due", location: "", accent: "purple" },
+      { id: "d2e9", time: "07:00 PM", title: "Cultural Nights", description: "Cultural Events", location: "", accent: "purple" },
     ]
   },
   {
     id: 3,
-    label: "DAY 03",
+    label: "Phase 03",
     theme: "The Grand Finale",
     events: [
       { id: "d3e1", time: "09:00 AM", title: "Hackathon Milestone 3", description: "3rd Prototype Due", location: "", accent: "magenta" },
-      { id: "d3e2", time: "09:00 AM - 11:00 AM", title: "Robowar & Fluid Force X", description: "Roboedge (New Event), Sky Rift (Track 04)", location: "", accent: "magenta" },
-      { id: "d3e3", time: "11:00 AM - 01:00 PM", title: "Workshop 2 (TBA)", description: "Workshops (Track 02)", location: "", accent: "magenta" },
+      { id: "d3e2", time: "09:00 AM - 01:00 AM", title: "Robowar & Fluid Force X", description: "Roboedge (New Event), Sky Rift (Track 04)", location: "", accent: "magenta" },
+      { id: "d3e6", time: "11:00 PM - 01:00 PM", title: "Workshop 3 ", description: "Workshops (Track 03)", location: "", accent: "magenta" },
       { id: "d3e4", time: "01:00 PM", title: "EdgeIQ Conclusion", description: "Final Prototype Due", location: "", accent: "magenta" },
       { id: "d3e5", time: "01:00 PM - 02:00 PM", title: "Lunch Break", description: "", location: "", accent: "magenta" },
-      { id: "d3e6", time: "02:00 PM - 04:00 PM", title: "Workshop 3 (TBA)", description: "Workshops (Track 03)", location: "", accent: "magenta" },
-      { id: "d3e7", time: "04:00 PM - 06:00 PM", title: "Valedictory Ceremony", description: "Grand Finale & Awards", location: "Main Stage", accent: "magenta" }
+      { id: "d3e7", time: "02:00 PM - 05:00 PM", title: "Valedictory Ceremony", description: "Grand Finale & Awards", location: "Main Stage", accent: "magenta" }
     ]
   }
 ];
