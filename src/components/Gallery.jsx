@@ -122,7 +122,7 @@ export default function Gallery() {
       </style>
 
       <div className="flex flex-col items-center text-center mt-25">
-        <h1 className="text-7xl md:text-9xl font-Orbitron font-semibold tracking-wide uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl">
+        <h1 className=" text-5xl md:text-7xl md:text-9xl font-Orbitron font-semibold tracking-wide uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl">
           Gallery
         </h1>
       </div>
