@@ -28,7 +28,7 @@ const About = () => {
           <div className="inline-block px-6 py-3 rounded-xl bg-black/50 backdrop-blur-sm">
             <p className="text-white tracking-widest uppercase 
                           text-4xl sm:text-3xl lg:text-5xl font-extrabold ">
-              About the College             </p>
+              About the University          </p>
           </div>
         </div>
 

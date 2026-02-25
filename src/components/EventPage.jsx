@@ -587,7 +587,7 @@ Do you have the vision to turn complex problems into intuitive, beautiful digita
 Bring your creative flair and design thinking to the table, and prove that your designs can deliver both, aesthetic appeal and user-friendly functionality.`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "Circutathon", sideLabel: "Circuit Design", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: `HACK HUSTLE: Where Tech Meets Talent! 🚀
+        title: "Circuit-thon", sideLabel: "Circuit Design", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: `HACK HUSTLE: Where Tech Meets Talent! 🚀
 Body: Get ready for 24 hours of unstoppable innovation! HACK HUSTLE is the premier multi-domain hackathon at [Tech Fest Name], designed to push boundaries and fuel your ambition. We invite the brightest minds to team up, code, and "hustle" through real-world problem statements. Whether you’re into AI, Web3, or CyberSecurity, this is your arena to turn bold ideas into groundbreaking, working prototypes. Are you ready to hustle for your vision?`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       }
     ]
@@ -656,44 +656,57 @@ Body: Get ready for 24 hours of unstoppable innovation! HACK HUSTLE is the premi
                 {/* IF FEATURED: Show the first card as a centered Main Card */}
                 {isFeatured && (
                   <>
-                    <div className="mb-20 transform hover:scale-105 transition-transform duration-500">
-                      <EventCard
-                        event={events[0]}
-                        onOpenDetail={setSelectedEvent}
+                    <div
+                      className="mb-20 w-full max-w-[1100px] cursor-pointer group relative overflow-hidden border border-zinc-800"
+                      onClick={() => setSelectedEvent(events[0])}
+                    >
+                      <img
+                        src={events[0].imageURL}
+                        alt={events[0].title}
+                        className="w-full h-[260px] md:h-[380px] lg:h-[420px] object-cover transition-transform duration-700 group-hover:scale-105"
                       />
 
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+                      {/* Title */}
+                      {/* <div className="absolute bottom-6 left-6">
+                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-wide text-white group-hover:text-yellow-500 transition-colors">
+                          {events[0].title}
+                        </h2>
+                      </div> */}
                     </div>
 
-<div className="flex justify-center">
-  <div className="px-4 py-2 md:px-6 md:py-4 border border-yellow-500/40 text-yellow-500 
+                    <div className="flex justify-center">
+                      <div className="px-4 py-2 md:px-6 md:py-4 border border-yellow-500/40 text-yellow-500 
                   text-sm sm:text-lg md:text-2xl tracking-[0.3em] md:tracking-[0.5em] uppercase">
-    Themes
-  </div>
-</div>
+                        Themes
+                      </div>
+                    </div>
 
-<div className="flex justify-end w-full ">
-  <div className="flex gap-2 -mt-10">
-    <button
-      onClick={() => scroll(refs[key], "left")}
-      className="w-10 h-10 md:w-14 md:h-14 bg-black border border-zinc-800 
+                    <div className="flex justify-end w-full ">
+                      <div className="flex gap-2 -mt-10">
+                        <button
+                          onClick={() => scroll(refs[key], "left")}
+                          className="w-10 h-10 md:w-14 md:h-14 bg-black border border-zinc-800 
                  flex items-center justify-center hover:bg-zinc-900 md:-mt-4 
                  hover:text-yellow-500 transition-all active:scale-90"
-    >
-      <ChevronLeft className="w-4 h-4 md:w-6 md:h-6" />
-    </button>
+                        >
+                          <ChevronLeft className="w-4 h-4 md:w-6 md:h-6" />
+                        </button>
 
-    <button
-      onClick={() => scroll(refs[key], "right")}
-      className="w-10 h-10 md:w-14 md:h-14 bg-black border border-zinc-800 
+                        <button
+                          onClick={() => scroll(refs[key], "right")}
+                          className="w-10 h-10 md:w-14 md:h-14 bg-black border border-zinc-800 
                  flex items-center justify-center hover:bg-zinc-900 md:-mt-4
                  hover:text-yellow-500 transition-all active:scale-90"
-    >
-      <ChevronRight className="w-4 h-4 md:w-6 md:h-6" />
-    </button>
-  </div>
-</div>
+                        >
+                          <ChevronRight className="w-4 h-4 md:w-6 md:h-6" />
+                        </button>
+                      </div>
+                    </div>
 
-                    
+
                   </>
                 )}
 

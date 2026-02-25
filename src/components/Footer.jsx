@@ -13,77 +13,48 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-16 sm:py-20 ">
 
           {/* TOP GRID */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-14 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-14 items-start">
 
             {/* Contact Us */}
             <div>
               <h4 className="text-xl font-bold text-white mb-6">Contact Us</h4>
               <div className="space-y-3 text-white/80 text-sm">
-                <p>📧 <span className="text-white">dsutechfest1@dsu.edu.in</span></p>
-                <p>📞 +91</p>
+                <p>📧 <span className="text-white">dsutechfest@dsu.edu.in</span></p>
+                <p>Helpline Number:</p>
+                <span className="text-white font-medium">Vikram Aditya</span><br />
+                <p>📞 +91 84311 37026</p>
+              </div>
+            </div>
+
+            {/* Faculty Coordinator */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Faculty Coordinator</h4>
+              <h2 className="text-white font-semibold tracking-wide">Dr Divyashree H B</h2>
+              <div className="text-white/80 text-sm space-y-2 mt-2">
+                <p className="text-white font-medium">Organizing chair, CELESTAI’26</p>
+                <p className="text-white font-medium">Assistant Professor, ECE</p>
+                <p className="text-white font-medium">Dayananda Sagar University</p>
               </div>
             </div>
 
             {/* Student Coordinators */}
-            {/* <div>
-              <h4 className="text-xl font-bold text-white mb-6">
-                Student Coordinators
-              </h4>
-              <div className="space-y-3 text-white/80 text-sm">
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Student Coordinators</h4>
+              <div className="space-y-6 text-white/80 text-sm">
                 <p>
                   <span className="text-white font-medium">Prokshith J S</span><br />
-                  +91 9036526233
+                  <span className="tracking-wide">eng23ec0105@dsu.edu.in</span>
                 </p>
                 <p>
-                  <span className="text-white font-medium">Tanushree</span><br />
-                  +91 8310152917
+                  <span className="text-white font-medium">Vikram Aditya</span><br />
+                  <span className="tracking-wide">eng23ec0064@dsu.edu.in</span>
                 </p>
-
               </div>
-            </div> */}
-
-            {/* Faculty Coordinator + Social */}
-            <div>
-              <h4 className="text-xl font-bold text-white mb-6">
-                Faculty Coordinator
-              </h4>
-              <h2>  Dr Divyashree H B</h2>
-              <div className="text-white/80 text-sm space-y-2 mb-6 mt-2">
-              <p className="text-white font-medium">Organizing chair, CELESTAI’26</p>
-                <p className="text-white font-medium">Dayananda Sagar University</p>
-              </div>
-
-              {/* Social Icons */}
-             <div className="flex gap-3">
-  {[
-    { Icon: Icons.Twitter, link: "#" },
-    { Icon: Icons.Instagram, link: "#" },
-    { Icon: Icons.Linkedin, link: "#" },
-    { Icon: Icons.MessageCircle, link: "#" },
-  ].map(({ Icon, link }, i) => (
-    <a
-      key={i}
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-10 h-10 rounded-xl bg-white/10 border border-white/20
-        flex items-center justify-center text-white
-        hover:bg-cyan-500/20 hover:border-cyan-400
-        hover:-translate-y-1 transition-all duration-300
-        hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
-    >
-      <Icon className="w-5 h-5" />
-    </a>
-  ))}
-</div>
             </div>
 
             {/* Venue */}
             <div>
-              <h4 className="text-xl font-bold text-white mb-6">
-              Venue
-              </h4>
-
+              <h4 className="text-xl font-bold text-white mb-6">Venue</h4>
               <p className="text-white/80 text-sm mb-4 leading-relaxed">
                 Dayananda Sagar University<br />
                 Devarakaggalahalli, Harohalli,<br />
@@ -102,8 +73,8 @@ const Footer = () => {
                 />
               </div>
             </div>
-          </div>
 
+          </div>
           {/* BOTTOM BAR */}
           <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm text-center md:text-left">
