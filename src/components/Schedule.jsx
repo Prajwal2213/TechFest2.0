@@ -6,24 +6,25 @@ const FEST_SCHEDULE = [
   {
     id: 1,
     label: "Phase 01",
+    date: "April 23, 2026",
     theme: "Foundation & Exploration",
     events: [
       { id: "d1e1", time: "08:00 AM - 10:00 AM", title: "Inauguration Ceremony", description: "Main Stage", location: "", accent: "cyan" },
       { id: "d1e2", time: "10:00 AM - 11:00 AM", title: "Skill Lab (Workshop 1) & Circuit-Thon", description: "Tracks: Workshops (Track 01), EdgeAI Elite Event", location: "", accent: "cyan" },
       { id: "d1e3", time: "11:00 AM - 1:30 PM", title: "Roboedge AI & Fling Fury", description: "Tracks: Roboedge (Track 01), Sky Rift (Track 01)", location: "", accent: "cyan" },
       { id: "d1e4", time: "01:30 PM - 02:30 PM", title: "Lunch Break", description: "", location: "", accent: "cyan" },
-      { id: "d1e5", time: "03:00 PM - 05:00 PM", title: "Roborace & Blaze Wing", description: "Tracks: Roboedge (Track 02), Sky Rift (Track 02)", location: "", accent: "cyan" },
+      { id: "d1e5", time: "03:00 PM - 05:00 PM", title: "Robo-Obstacle & Blaze Wing", description: "Tracks: Roboedge (Track 02), Sky Rift (Track 02)", location: "", accent: "cyan" },
       { id: "d1e6", time: "05:00 PM - 07:00 PM", title: "Cultural Nights", description: "", location: "", accent: "cyan" },
     ]
   },
   {
     id: 2,
     label: "Phase 02",
+    date: "April 24, 2026",
     theme: "The Endurance Phase",
     events: [
       { id: "d2e1", time: "09:00 AM", title: "EdgeIQ Challenge Start", description: "24hr Hackathon Kickoff", location: "", accent: "purple" },
       { id: "d2e2", time: "09:00 AM - 1:00 AM", title: "Robo Obstacle, Techzibition & Glide Storm Events Kickoff", description: "Roboedge (Track 03) and Techzibition & Sky Rift(Track 03) start", location: "", accent: "purple" },
-      // {ription: "Techzibition (Tracks 01-04), Sky Rift (Track 03)", location: "", accent: "purple" },
       { id: "d2e3", time: "11:00 AM - 12:00 PM", title: "Workshop 2 ", description: "Workshops (Track 02)", location: "", accent: "magenta" },
       { id: "d2e4", time: "01:00 PM", title: "Hackathon Milestone 1", description: "1st Prototype Due", location: "", accent: "purple" },
       { id: "d2e5", time: "01:00 PM - 02:00 PM", title: "Lunch Break", description: "", location: "", accent: "purple" },
@@ -36,6 +37,7 @@ const FEST_SCHEDULE = [
   {
     id: 3,
     label: "Phase 03",
+    date: "April 25, 2026",
     theme: "The Grand Finale",
     events: [
       { id: "d3e1", time: "09:00 AM", title: "Hackathon Milestone 3", description: "3rd Prototype Due", location: "", accent: "magenta" },
@@ -93,14 +95,24 @@ const Schedule = () => {
            style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
 
       <div className="relative z-10 max-w-5xl mx-auto">
-        <header className="text-center mb-24">
-          <section className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mb-32 mt-15">
-           <div className="flex flex-col items-center text-center">
-              <h1 className="text-7xl md:text-9xl font-Orbitron font-semibold tracking-wide uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl ">
-                Timeline
-              </h1>
-           </div>
-        </section>
+       <header className="text-center mb-24">
+  <section className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mb-10 mt-15">
+    <div className="flex flex-col items-center text-center">
+      <h1 className="text-7xl md:text-9xl font-Orbitron font-semibold tracking-wide uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl">
+        Timeline
+      </h1>
+    </div>
+  </section>
+
+  {/* DATE HERE */}
+  <div className="mb-12">
+    <p className="text-cyan-400 text-sm md:text-base tracking-[0.5em] uppercase font-semibold">
+      {currentData.date}
+    </p>
+  </div>
+
+  {/* PHASE BUTTONS */}
+  <div className="flex justify-center gap-4 mt-6"></div>
           
           <div className="flex justify-center gap-4 mt-12">
             {FEST_SCHEDULE.map(day => (

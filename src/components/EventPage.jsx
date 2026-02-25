@@ -307,7 +307,7 @@ export default function EventPage() {
   const eventData = {
     RoboEdge: [
       {
-        title: "RoboEdge", sideLabel: "Main", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771840738/348cbd6f-f2aa-4cca-bcfa-7296f4ffc245_n9t7cr.png", description: `ROBOEDGE, the flagship robotics event of CELESTAI’26 – “AI at the Edge”, is a premier multi-event robotics challenge that celebrates innovation, precision, and intelligent system design. This high-energy competition brings together aspiring engineers and robotics enthusiasts to design, control, and operate advanced robotic systems in real-world scenarios.
+        title: "RoboEdge", sideLabel: "Main", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772015196/roboedge_kiitqy.jpg", description: `ROBOEDGE, the flagship robotics event of CELESTAI’26 – “AI at the Edge”, is a premier multi-event robotics challenge that celebrates innovation, precision, and intelligent system design. This high-energy competition brings together aspiring engineers and robotics enthusiasts to design, control, and operate advanced robotic systems in real-world scenarios.
 
 The challenge combines hands-on competitions that test core engineering fundamentals including electronics, embedded systems, control logic, mechanical integration, and intelligent on-device decision-making. Participants work across complete robotic pipelines — from sensing and signal processing to control, motion planning, and execution — transforming theoretical concepts into practical, high-performance systems.
 
@@ -325,14 +325,14 @@ Clarity of implementation
 Examples
 Object detection, Line following, Image recognition, Signage Detection etc...`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
       },
-      {
-        title: "RoboRace", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771782762/roborace_r2wekc.jpg", description: `Robots must complete a predefined race track in the minimum possible time.
-Manual or assisted control is permitted.
-Time penalties may be imposed for:
-1.Track violations
-2.External or human interference
-The fastest valid run will rank higher.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
-      },
+//       {
+//         title: "RoboRace", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771782762/roborace_r2wekc.jpg", description: `Robots must complete a predefined race track in the minimum possible time.
+// Manual or assisted control is permitted.
+// Time penalties may be imposed for:
+// 1.Track violations
+// 2.External or human interference
+// The fastest valid run will rank higher.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
+//       },
       {
         title: "Robo Obstacle", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783003/roboobstcale_sic5xo.png", description: `Robots must navigate an obstacle course featuring ramps, turns, and barriers.
 Evaluation will focus on:
