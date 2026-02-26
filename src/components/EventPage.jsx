@@ -443,7 +443,7 @@ Focus Areas:
       {
         title: "Techzibition",
         sideLabel: "Main",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771737726/Picture4_wjrfog.jpg",
+        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772104689/ChatGPT_Image_Feb_26_2026_04_47_52_PM_l1avvu.png",
         description: `TECHZIBITION is a distinguished three-day event dedicated to showcasing
 student innovations, cutting-edge projects, and pioneering research across
 all engineering disciplines. The event is designed to promote technical
@@ -579,7 +579,7 @@ change.`,
       { title: "Skill Lab", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg", description: "Deep-dive technical sessions in embedded logic and ROS.", link: "" }
     ],
 
-    EdgeAI_Elite_Event: [
+    Elite_Event: [
       {
         title: "Artistic Aura", sideLabel: "UI/UX", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg", description: `Artistic Aura: UI/UX Design Challenge
 "Where Creativity Meets Functionality"
