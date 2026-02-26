@@ -98,7 +98,7 @@ const Schedule = () => {
        <header className="text-center mb-24">
   <section className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mb-10 mt-15">
     <div className="flex flex-col items-center text-center">
-      <h1 className="text-7xl md:text-9xl font-Orbitron font-semibold tracking-wide uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl">
+      <h1 className="text-5xl md:text-9xl font-Orbitron font-semibold tracking-wide uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl">
         Timeline
       </h1>
     </div>
@@ -114,19 +114,27 @@ const Schedule = () => {
   {/* PHASE BUTTONS */}
   <div className="flex justify-center gap-4 mt-6"></div>
           
-          <div className="flex justify-center gap-4 mt-12">
-            {FEST_SCHEDULE.map(day => (
-              <button
-                key={day.id}
-                onClick={() => setActiveDay(day.id)}
-                className={`px-10 py-3 rounded-sm text-[10px] font-black tracking-[0.4em] uppercase transition-all border ${
-                  activeDay === day.id ? 'bg-white border-white text-black shadow-[0_0_30px_#fff]' : 'border-zinc-800 text-zinc-500 hover:border-cyan-500 hover:text-cyan-400'
-                }`}
-              >
-                {day.label}
-              </button>
-            ))}
-          </div>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-12">
+  {FEST_SCHEDULE.map(day => (
+    <button
+      key={day.id}
+      onClick={() => setActiveDay(day.id)}
+      className={`
+        px-4 sm:px-6 md:px-10
+        py-2 sm:py-3
+        rounded-sm
+        text-[8px] sm:text-[10px] md:text-[12px]
+        font-black tracking-[0.3em] sm:tracking-[0.4em] uppercase
+        transition-all border
+        ${activeDay === day.id 
+          ? 'bg-white border-white text-black shadow-[0_0_20px_#fff] sm:shadow-[0_0_30px_#fff]' 
+          : 'border-zinc-800 text-zinc-500 hover:border-cyan-500 hover:text-cyan-400'}
+      `}
+    >
+      {day.label}
+    </button>
+  ))}
+</div>
         </header>
 
         <div className="relative" ref={timelineRef}>
@@ -146,7 +154,7 @@ const Schedule = () => {
               return (
                 <div key={idx} className="relative flex flex-col md:flex-row items-center gap-12 md:gap-0">
                   {/* Time Section */}
-                  <div className={`md:w-1/2 flex items-center ${idx % 2 === 0 ? 'md:justify-end md:pr-24' : 'md:order-last md:pl-24'}`}>
+                  <div className={`md:w-1/2 flex items-center ${idx % 2 === 0 ? 'md:justify-end md:pr-6 sm:pr-4' : 'md:order-last md:pl-6 sm:pl-4'}`}>
                     <span className={`text-4xl md:text-4xl font-black  tracking-wide transition-all duration-1000 ${
                       isActive ? 'text-white opacity-100' : 'text-zinc-900 opacity-20'
                     }`}>

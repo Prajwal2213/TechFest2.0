@@ -19,15 +19,15 @@ const Hero = () => {
 
         <h1 className="font-extrabold uppercase tracking-wider leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 text-[clamp(3rem,8vw,6rem)] sm:text-xs lg:text-9xl">
           
-          <span className="block text-white text-sm sm:text-lg md:text-xl lg:text-xl w-full">
+          <span className="block text-white text-xs sm:text-lg md:text-xl lg:text-xl w-full">
             Dayananda Sagar University
           </span>
 
-          <span className="block text-white text-sm sm:text-lg md:text-xl lg:text-xl w-full ml-0 md:ml-16 lg:ml-45 mt-2">
+          <span className="block text-white text-xs sm:text-lg md:text-xl lg:text-xl w-full ml-0 md:ml-16 lg:ml-45 mt-2">
             presents
           </span>
 
-          <span className="block text-white text-[clamp(3rem,6vw,5rem)] sm:text-6xl md:text-7xl lg:text-8xl mt-2">
+          <span className="block text-white  text-4xl sm:text-4xl md:text-7xl lg:text-8xl mt-2">
             CELEST<span className = "text-sky-500">AI</span>’<span className="text-amber-500">26</span>
           </span>
 

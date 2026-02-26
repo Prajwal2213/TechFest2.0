@@ -634,7 +634,7 @@ Body: Get ready for 24 hours of unstoppable innovation! HACK HUSTLE is the premi
       <main className="relative z-10 pt-40 space-y-32 ">
         <section className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mb-32">
           <div className="flex flex-col items-center text-center">
-            <h1 className="text-7xl md:text-9xl font-Orbitron font-semibold tracking-wide uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl ">
+            <h1 className="text-5xl md:text-9xl font-Orbitron font-semibold tracking-wide uppercase leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800 drop-shadow-2xl ">
               Events
             </h1>
           </div>
