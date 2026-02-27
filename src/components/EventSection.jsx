@@ -1,18 +1,25 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
 
+
+const optimize = (url) => {
+  return url.replace(
+    "/upload/",
+    "/upload/f_auto,q_auto,w_900/"
+  );
+};
 const projects = [
-  { title: "RoboEdge", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318000/RoboSoccer_w3fnhv.jpg", link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" },
-  { title: "EdgeIQ Challenge ", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg",link:"https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
-  { title: "Sky Rift ", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/sky_rift1_yig1jj.png",link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "BlazeWing ", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771756030/blaze_wing_v4bd2y.png",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-{ title: "Fling Fury", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/fling_fury1_fce5l4.png",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-{ title: "Glide Storm", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771756031/glide_storm_ryhu04.png",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-{ title: "Fluid Force", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771778827/3085da35-50c2-4736-91f6-b03e2a890bb3_bdvg7m.png",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "Techzibition ", desc: "", bg:"https://res.cloudinary.com/dstbnmjwh/image/upload/v1771737726/Picture4_wjrfog.jpg",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-{ title: "Artistic Aura", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-{ title: "Hack Hustle", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg",  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "Workshop ", desc: "", bg: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg", link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" }
+  { title: "RoboEdge", desc: "", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318000/RoboSoccer_w3fnhv.jpg"), link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" },
+  { title: "EdgeIQ Challenge ", desc: "", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg"),link:"https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
+  { title: "Sky Rift ", desc: "", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/sky_rift1_yig1jj.png"),link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+  { title: "BlazeWing ", desc: "", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771756030/blaze_wing_v4bd2y.png"),  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+{ title: "Fling Fury", desc: "", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/fling_fury1_fce5l4.png"),  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+{ title: "Glide Storm", desc: "", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771756031/glide_storm_ryhu04.png"),  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+{ title: "Fluid Force", desc: "", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771778827/3085da35-50c2-4736-91f6-b03e2a890bb3_bdvg7m.png"),  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+  { title: "Techzibition ", desc: "", bg:optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771737726/Picture4_wjrfog.jpg"),  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+{ title: "Artistic Aura", desc: "", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg"),  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+{ title: "Hack Hustle", desc: "", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg"),  link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+  { title: "Workshop ", desc: "", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg"), link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" }
 ]
 
 const EventSection = () => {
