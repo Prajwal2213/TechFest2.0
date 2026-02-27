@@ -11,7 +11,7 @@ import {
 const sponsorData = [
   {
     name: "GeeksforGeeks",
-    logo: "https://cdn.brandfetch.io/idw2s-0Tuo/w/820/h/410/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1764778603089",
+    logo: "https://cdn.brandfetch.io/idw2s-0Tuo/w/820/h/410/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1764778603089?v=2",
     url: "https://www.geeksforgeeks.org/"
   },
   {
@@ -141,6 +141,9 @@ const SponsorCard = ({ sponsor, tier }) => {
         <img
           src={sponsor.logo}
           alt={sponsor.name}
+          width={200}
+         height={100}
+         loading="lazy"
           className="max-h-16 max-w-[80%] object-contain opacity-100 group-hover:scale-105 sm:group-hover:scale-110 transition-all duration-500"
         />
       </div>

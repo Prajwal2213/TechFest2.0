@@ -115,8 +115,9 @@ useEffect(() => {
               {/* Background */}
               <img
                 src={item.bg}
-                alt=""
+                alt={item.title}
                 className="absolute inset-0 w-full h-full min-h-[14rem] object-cover brightness-[0.7]"
+                loading = "lazy"
               />
 
               {/* Content */}
@@ -150,35 +151,35 @@ useEffect(() => {
 
               {/* CTA BUTTONS */}
 <div
-  className={`
-    mt-5 flex gap-3
-    transition-all duration-300
-    ${current === i
-      ? 'opacity-100 translate-y-0'
-      : 'opacity-0 translate-y-4 pointer-events-none'}
-  `}
+  className={`
+    mt-5 flex gap-3
+    transition-all duration-300
+    ${current === i
+      ? 'opacity-100 translate-y-0'
+      : 'opacity-0 translate-y-4 pointer-events-none'}
+  `}
 >
-  {/* Register */}
-  <a
-    href={item.link}
-    target=""
-    rel="noopener noreferrer"
-    onClick={(e) => e.stopPropagation()}
-    className="px-5 py-2 rounded-full text-sm font-semibold bg-cyan-500 text-black hover:bg-cyan-400 transition"
-  >
-    Register
-  </a>
+  {/* Register */}
+  <a
+    href={item.link}
+    target=""
+    rel="noopener noreferrer"
+    onClick={(e) => e.stopPropagation()}
+    className="px-5 py-2 rounded-full text-sm font-semibold bg-cyan-500 text-black hover:bg-cyan-400 transition"
+  >
+    Register
+  </a>
 
-  {/* Learn More */}
-  <Link
-    to="/events"
-    onClick={(e) => e.stopPropagation()}
-    className="px-5 py-2 rounded-full text-sm font-semibold bg-white/90 text-black hover:bg-white transition"
-  >
-    Learn More
-  </Link>
+  {/* Learn More */}
+  <Link
+    to="/events"
+    onClick={(e) => e.stopPropagation()}
+    className="px-5 py-2 rounded-full text-sm font-semibold bg-white/90 text-black hover:bg-white transition"
+  >
+    Learn More
+  </Link>
 </div>
-                
+                
               </div>
             </article>
           ))}

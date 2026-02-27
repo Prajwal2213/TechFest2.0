@@ -20,16 +20,22 @@ const Navbar = () => {
 
       {/* Logo */}
       <div className="flex items-center cursor-pointer">
-        <Link to="/" className="flex items-center gap-2 md:gap-4">
+        <Link to="/" className="flex items-center  md:gap-4">
           <img
             src="https://res.cloudinary.com/dstbnmjwh/image/upload/v1771870025/Techfest_logo-removebg-preview_xikawj.png"
             alt="TechFest logo"
+            height={80}
+            width={120}
+            loading='lazy'
             className="h-12 sm:h-16 md:h-20 lg:h-16 scale-90 md:scale-100 mr-4 md:mr-7"
           />
           <img
             src="https://res.cloudinary.com/dstbnmjwh/image/upload/v1771526218/download_gnrxgw.png"
             alt="DSU logo"
             className="h-10 sm:h-12 md:h-14 lg:h-16 scale-90"
+            height={187}
+            width={160}
+            loading='lazy'
           />
         </Link>
       </div>
@@ -53,6 +59,7 @@ const Navbar = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="group p-2 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/20 hover:bg-white/10 hover:border-white/40 shadow-xl"
+           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           <svg
             className="h-6 w-6 text-white hover:text-cyan-400"
