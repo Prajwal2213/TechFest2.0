@@ -1,16 +1,22 @@
 import { exp } from "three/tsl";
-
 const Patrons = () => {
+
+   const optimize = (url) => {
+  return url.replace(
+    "/upload/",
+    "/upload/f_auto,q_auto,w_900/"
+  );
+};
   return (
      <div className="flex justify-center">
       <div className="relative z-1 grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 ">
         {[
-          { name: 'Prof. B. S. Satyanarayana', desc: 'Vice Chancellor, DSU', img: '/images/Patrons/vc.jpeg' },
-          { name: 'Prof. R Janardhan', desc: 'Pro-Vice Chancellor, DSU', img: '/images/Patrons/udk.jpg' },
-          { name: 'Dr. Prakash Sheelvanthmath', desc: 'Pro-Vice Chancellor, DSU', img: '/images/Patrons/covice.png' },
-          { name: 'Dr Puttamadappa C', desc: 'Registrar, DSU', img: '/images/Patrons/drputtamadappa.jpeg' },
-            { name: 'Dr. Udaya Kumar Reddy K R', desc: 'Dean School of Engineering , DSU', img: '/images/Patrons/udaykumar.jpeg' },
-            { name: 'Dr. Sudarshan TSB', desc: 'Dean Research, DSU', img: '/images/Patrons/Dr.Sudarshan_TSB.jpg' },
+          { name: 'Prof. B. S. Satyanarayana', desc: 'Vice Chancellor, DSU', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213437/vc_pnivov.jpg' )},
+          { name: 'Prof. R Janardhan', desc: 'Pro-Vice Chancellor, DSU', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213437/udk_lvbr4q.jpg') },
+          { name: 'Dr. Prakash Sheelvanthmath', desc: 'Pro-Vice Chancellor, DSU', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213438/covice_ag76ab.png' )},
+          { name: 'Dr Puttamadappa C', desc: 'Registrar, DSU', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213436/drputtamadappa_hkusi1.jpg' )},
+            { name: 'Dr. Udaya Kumar Reddy K R', desc: 'Dean School of Engineering , DSU', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213436/udaykumar_jwtl7n.jpg' )},
+            { name: 'Dr. Sudarshan TSB', desc: 'Dean Research, DSU', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213436/Dr.Sudarshan_TSB_uck2xr.jpg')},
 
             
         ].map((person, index) => (

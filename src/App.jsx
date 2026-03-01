@@ -1,45 +1,57 @@
 import './App.css'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, lazy, Suspense } from 'react';
+import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
-import Hero from "./components/Hero.jsx";
-import About from "./components/About.jsx";
-import EventSection from './components/EventSection.jsx';
 import Layout from './components/Layout.jsx';
-import FAQ from './components/FAQ.jsx';
-import Schedule from './components/Schedule.jsx';
-import TeamSection from './components/TeamSection.jsx';
-import Sponsors from './components/Sponsors.jsx';
-import EventPage from './components/EventPage.jsx';
-import { Routes, Route } from "react-router-dom";
-import CosmicParticles from './components/CosmicParticles.jsx';
-import ComingSoon from './components/ComingSoon.jsx';
 import ScrolltoTop from './components/ScrolltoTop.jsx';
 import Loader from './components/Loader.jsx';
-import PatronSection from './components/PatronSection.jsx';
-// import SponsorPage from './components/SponsorPage.jsx';
-import Gallery from './components/Gallery.jsx';
+import CountDown from './components/CountDown.jsx';
+
+// Lazy loaded components
+const Hero = lazy(() => import("./components/Hero.jsx"));
+const About = lazy(() => import("./components/About.jsx"));
+const EventSection = lazy(() => import("./components/EventSection.jsx"));
+const FAQ = lazy(() => import("./components/FAQ.jsx"));
+const Schedule = lazy(() => import("./components/Schedule.jsx"));
+const TeamSection = lazy(() => import("./components/TeamSection.jsx"));
+const Sponsors = lazy(() => import("./components/Sponsors.jsx"));
+const EventPage = lazy(() => import("./components/EventPage.jsx"));
+const CosmicParticles = lazy(() => import("./components/CosmicParticles.jsx"));
+const PatronSection = lazy(() => import("./components/PatronSection.jsx"));
+const Gallery = lazy(() => import("./components/Gallery.jsx"));
+
 function App() {
   const [loaderAnimationDone, setLoaderAnimationDone] = useState(false);
   const [canSignalBgReady, setCanSignalBgReady] = useState(false);
   const [bgReady, setBgReady] = useState(false);
+  const [showParticles, setShowParticles] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
+  // Shorter loader time (important for Lighthouse)
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoaderAnimationDone(true);
       setCanSignalBgReady(true);
-    }, 3500);
+    }, 1200);
 
     return () => clearTimeout(timer);
   }, []);
 
-  
-  const appReady = loaderAnimationDone && bgReady;
+  // Load particles after page becomes interactive
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowParticles(true);
+    }, 2000);
 
+    return () => clearTimeout(timer);
+  }, []);
+
+  const appReady = loaderAnimationDone && bgReady;
 
   useEffect(() => {
     document.body.style.overflow = appReady ? "auto" : "hidden";
@@ -51,14 +63,19 @@ function App() {
       {!appReady && <Loader />}
 
       <Layout>
+        {/* Background Particles */}
         <div className="fixed inset-0 z-[-1]">
-          <CosmicParticles
-            canSignalReady={canSignalBgReady}
-            onReady={() => setBgReady(true)}
-          />
+          <Suspense fallback={null}>
+            {showParticles && (
+              <CosmicParticles
+                canSignalReady={canSignalBgReady}
+                onReady={() => setBgReady(true)}
+              />
+            )}
+          </Suspense>
         </div>
 
-    
+        {/* Main Content */}
         <div
           className={`
             relative z-10 transition-opacity duration-700 ease-out
@@ -68,28 +85,29 @@ function App() {
           <Navbar />
           <ScrolltoTop />
 
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Hero />
-                  
-               
-                  <EventSection />
-                  <About />
-                  <Sponsors />
-                  <PatronSection />
-                  <FAQ />
-                </>
-              }
-            />
-            <Route path="/schedule" element={<Schedule />} />
-            <Route path="/events" element={<EventPage />} />
-            <Route path="/team" element={<TeamSection />} />
-            {/* <Route path="/sponsors" element={<SponsorPage />} /> */}
-            <Route path="/gallery" element={<Gallery />} />
-          </Routes>
+          <Suspense fallback={<Loader />}>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Hero />
+                    <EventSection />
+                    <About />
+                    
+                    <Sponsors />
+                    <PatronSection />
+                    <FAQ />
+                  </>
+                }
+              />
+              <Route path="/schedule" element={<Schedule />} />
+              <Route path="/events" element={<EventPage />} />
+              <Route path="/team" element={<TeamSection />} />
+              <Route path="/gallery" element={<Gallery />} />
+            </Routes>
+          </Suspense>
+
           <Footer />
         </div>
       </Layout>

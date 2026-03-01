@@ -1,11 +1,17 @@
 const Convenors = () => {
+   const optimize = (url) => {
+  return url.replace(
+    "/upload/",
+    "/upload/f_auto,q_auto,w_900/"
+  );
+};
   return (
      <div className="flex justify-center">
       <div className="relative z-1 grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 ">
         {[
-            { name: 'Dr. Arun Balodi', desc: 'Chairperson   (Electronics and communication Engineering)', img: './images/Convenors/Dr_arun_Balodi.jpeg' },
-            { name: 'Dr. Nagaraja S. R', desc: '   Chairperson (Aerospace Engineering)', img: './images/Convenors/snsr.png' },
-            { name: 'Dr. Shaila S. G', desc: '   Chairperson CSE(Data Science)', img: './images/Convenors/dr_Shaila.jpg' },
+            { name: 'Dr. Arun Balodi', desc: 'Chairperson   (Electronics and communication Engineering)', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213647/Dr_arun_Balodi_id3483.jpg') },
+            { name: 'Dr. Nagaraja S. R', desc: '   Chairperson (Aerospace Engineering)', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213649/snsr_cmdvuh.png') },
+            { name: 'Dr. Shaila S. G', desc: '   Chairperson CSE(Data Science)', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213648/dr_Shaila_wujwav.jpg') },
             
         ].map((person, index) => (
             <div key={index} className="p-6  bg-black/80 rounded-xl shadow-md text-center border-white border  hover:shadow-xl transition-all w-70">
