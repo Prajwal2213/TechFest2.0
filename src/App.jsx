@@ -7,6 +7,7 @@ import Footer from "./components/Footer.jsx";
 import Layout from './components/Layout.jsx';
 import ScrolltoTop from './components/ScrolltoTop.jsx';
 import Loader from './components/Loader.jsx';
+import CountDown from './components/CountDown.jsx';
 
 // Lazy loaded components
 const Hero = lazy(() => import("./components/Hero.jsx"));
@@ -92,8 +93,8 @@ function App() {
                   <>
                     <Hero />
                     <EventSection />
+                    <CountDown />
                     <About />
-                    
                     <Sponsors />
                     <PatronSection />
                     <FAQ />

@@ -11,7 +11,7 @@ const Convenors = () => {
         {[
             { name: 'Dr. Arun Balodi', desc: 'Chairperson   (Electronics and communication Engineering)', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213647/Dr_arun_Balodi_id3483.jpg') },
             { name: 'Dr. Nagaraja S. R', desc: '   Chairperson (Aerospace Engineering)', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213649/snsr_cmdvuh.png') },
-            { name: 'Dr. Shaila S. G', desc: '   Chairperson CSE(Data Science)', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213648/dr_Shaila_wujwav.jpg') },
+            { name: 'Dr. Shaila S. G', desc: '   Chairperson CSE(Data Science)', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772447786/Dr.Shaila%20S%20G.jpg') },
             
         ].map((person, index) => (
             <div key={index} className="p-6  bg-black/80 rounded-xl shadow-md text-center border-white border  hover:shadow-xl transition-all w-70">
