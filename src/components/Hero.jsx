@@ -31,9 +31,13 @@ const Hero = () => {
             CELEST<span className="text-sky-500">AI</span>’<span className="text-amber-500">26</span>
           </span>
 
-          <p className="from-purple-400 to-cyan-400 font-extrabold tracking-widest text-xl sm:text-2xl md:ml-40 lg:ml-105 mt-4">
+          <p className="text-white text-sm md:text-xl md:ml-45">
+            DSU'S ANNUAL TECH FEST
+          </p>
+          <p className="from-purple-400 to-cyan-400 font-extrabold tracking-widest text-xl sm:text-2xl  md:ml-60 mt-2">
             APRIL 23 – 25, 2026
           </p>
+
         </h1>
       </div>
 
