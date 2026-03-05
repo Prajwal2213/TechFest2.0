@@ -325,14 +325,14 @@ Clarity of implementation
 Examples
 Object detection, Line following, Image recognition, Signage Detection etc...`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
       },
-//       {
-//         title: "RoboRace", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771782762/roborace_r2wekc.jpg", description: `Robots must complete a predefined race track in the minimum possible time.
-// Manual or assisted control is permitted.
-// Time penalties may be imposed for:
-// 1.Track violations
-// 2.External or human interference
-// The fastest valid run will rank higher.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
-//       },
+      //       {
+      //         title: "RoboRace", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771782762/roborace_r2wekc.jpg", description: `Robots must complete a predefined race track in the minimum possible time.
+      // Manual or assisted control is permitted.
+      // Time penalties may be imposed for:
+      // 1.Track violations
+      // 2.External or human interference
+      // The fastest valid run will rank higher.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
+      //       },
       {
         title: "Robo Obstacle", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783003/roboobstcale_sic5xo.png", description: `Robots must navigate an obstacle course featuring ramps, turns, and barriers.
 Evaluation will focus on:
@@ -350,7 +350,7 @@ Robots designed to intentionally damage opponents are strictly prohibited.`, lin
       // { title: "Techno Hunt", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771522995/77d7fc94-b27d-4b5e-bcd0-f8b6451ee458_farwgs.jpg", description: "Spatial navigation and precision passing challenge in dynamic environments.", link: "", included: true },
     ],
     SkyRift: [
-      { title: "Sky Rift", sideLabel: "Main", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771841351/d4a46d47-8494-4918-bf0c-f2a7126c1d0f_by7ku6.png", description: "Skyrift is a competitive drone challenge featuring precision payload drops, obstacle navigation, and high‑speed racing. It tests teams on technical design, pilot skill, and safety.", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
+      { title: "Sky Rift", sideLabel: "Main", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772712153/skyrift_yoggky.png", description: "Skyrift is a competitive drone challenge featuring precision payload drops, obstacle navigation, and high‑speed racing. It tests teams on technical design, pilot skill, and safety.", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
       { title: "Fling Fury", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/fling_fury1_fce5l4.png", description: "Fling Fury is a hands-on mechanical design challenge where teams build safe, manually operated launchers inspired by sling and catapult systems. The competition tests engineering design, creativity, reliability, and accuracy, with the goal of hitting progressively difficult targets while meeting strict technical and safety standards.", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
       {
         title: "Blaze Wing", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771756030/blaze_wing_v4bd2y.png", description: `Design and build a drone capable of handling real-world challenges such as:
@@ -651,30 +651,27 @@ Body: Get ready for 24 hours of unstoppable innovation! HACK HUSTLE is the premi
                 onNext={() => scroll(refs[key], "right")}
               />
 
-              <div className={`max-w-[1600px] mx-auto px-6 md:px-10 lg:px-16 ${isFeatured ? 'flex flex-col items-center' : ''}`}>
+              <div className={`max-w-480  mx-auto px-6 md:px-10 lg:px-16 ${isFeatured ? 'flex flex-col items-center' : ''}`}>
 
                 {/* IF FEATURED: Show the first card as a centered Main Card */}
                 {isFeatured && (
                   <>
                     <div
-                      className="mb-20 w-full max-w-[1100px] cursor-pointer group relative overflow-hidden border border-zinc-800"
+                      className="mb-10 sm:mb-14 md:mb-16 lg:mb-20 
+                      w-full max-w-[1400px] mx-auto
+                      cursor-pointer group relative overflow-hidden 
+                      border border-zinc-800 rounded-lg
+                      aspect-video"
                       onClick={() => setSelectedEvent(events[0])}
                     >
                       <img
                         src={events[0].imageURL}
                         alt={events[0].title}
-                        className="w-full h-[260px] md:h-[380px] lg:h-[420px] object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
 
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-
-                      {/* Title */}
-                      {/* <div className="absolute bottom-6 left-6">
-                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-wide text-white group-hover:text-yellow-500 transition-colors">
-                          {events[0].title}
-                        </h2>
-                      </div> */}
                     </div>
 
                     <div className="flex justify-center">

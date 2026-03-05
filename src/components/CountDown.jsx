@@ -31,7 +31,7 @@ return (
 
     <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-widest mb-10 
                    text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-      EVENT COUNTDOWN
+      CELESTAI STARTS IN
     </h2>
 
     {/* Countdown Boxes */}

@@ -9,7 +9,7 @@ const FEST_SCHEDULE = [
     date: "April 23, 2026",
     theme: "Foundation & Exploration",
     events: [
-      { id: "d1e1", time: "08:00 AM - 10:00 AM", title: "Inauguration Ceremony", description: "Main Stage", location: "", accent: "cyan" },
+      { id: "d1e1", time: "09:00 AM - 10:00 AM", title: "Inauguration Ceremony", description: "Main Stage", location: "", accent: "cyan" },
       { id: "d1e2", time: "10:00 AM - 11:00 AM", title: "Skill Lab (Workshop 1) & Circuit-Thon", description: "Tracks: Workshops (Track 01), EdgeAI Elite Event", location: "", accent: "cyan" },
       { id: "d1e3", time: "11:00 AM - 1:30 PM", title: "Roboedge AI & Fling Fury", description: "Tracks: Roboedge (Track 01), Sky Rift (Track 01)", location: "", accent: "cyan" },
       { id: "d1e4", time: "01:30 PM - 02:30 PM", title: "Lunch Break", description: "", location: "", accent: "cyan" },

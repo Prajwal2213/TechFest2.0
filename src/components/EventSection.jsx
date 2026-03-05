@@ -9,11 +9,6 @@ const projects = [
   { title: "RoboEdge", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318000/RoboSoccer_w3fnhv.jpg"), link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" },
   { title: "EdgeIQ Challenge", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg"), link:"https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
   { title: "Sky Rift", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/sky_rift1_yig1jj.png"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "BlazeWing", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771756030/blaze_wing_v4bd2y.png"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "Fling Fury", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/fling_fury1_fce5l4.png"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "Glide Storm", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771756031/glide_storm_ryhu04.png"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "Fluid Force", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771778827/3085da35-50c2-4736-91f6-b03e2a890bb3_bdvg7m.png"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "Techzibition", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771737726/Picture4_wjrfog.jpg"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
   { title: "Artistic Aura", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
   { title: "Hack Hustle", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
   { title: "Workshop", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg"), link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" }
