@@ -37,7 +37,7 @@ function App() {
     const timer = setTimeout(() => {
       setLoaderAnimationDone(true);
       setCanSignalBgReady(true);
-    }, 1200);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
