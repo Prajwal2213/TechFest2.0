@@ -127,13 +127,18 @@ const DetailOverlay = ({ event, onClose }) => {
 
                 <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row gap-4">
                   <button
-                    className="w-full sm:flex-1 py-3 sm:py-4 bg-yellow-500 text-black font-black text-[10px] sm:text-xs tracking-[0.4em] uppercase hover:bg-white transition-all flex items-center justify-center gap-3"
+                    disabled={!event.link}
+                    className={`w-full sm:flex-1 py-3 sm:py-4 font-black text-[10px] sm:text-xs tracking-[0.4em] uppercase flex items-center justify-center gap-3 transition-all
+  ${event.link
+                        ? "bg-yellow-500 text-black hover:bg-white cursor-pointer"
+                        : "bg-zinc-800 text-white cursor-not-allowed"}`}
                     onClick={() => {
-                      window.location.href = event.link;
+                      if (event.link) {
+                        window.location.href = event.link;
+                      }
                     }}
                   >
-                    {/* Your button content/icon here */}
-                    REGISTER NOW
+                    {event.link ? "REGISTER NOW" : "COMING SOON"}
                   </button>
                 </div>
 
@@ -589,7 +594,7 @@ Bring your creative flair and design thinking to the table, and prove that your 
       {
         title: "TechQuest ", sideLabel: "Treasure Hunt", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: `The Ultimate Technical Treasure Hunt`, link: ""
       },
-       {
+      {
         title: "PosterVerse", sideLabel: "Poster Design", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773133908/poster_verse_sjyolv.jpg", description: `Multidomain Poster Presentation`, link: ""
       }
     ]
