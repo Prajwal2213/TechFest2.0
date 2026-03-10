@@ -383,24 +383,52 @@ Edge AI intelligence for advanced autonomy, perception, and decision-making.`, l
 Participants develop complete AI pipelines—from data processing and model development to optimization and deployment—focusing on performance, scalability, and real-world applicability. The challenge encourages system-level thinking and innovation beyond accuracy-centric solutions, pushing teams to build intelligent systems that are impactful and deployment-ready.`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "Audio Intelligence", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783676/unnamed_gpjz4n.jpg", description: `Innovative Solution for Audio Intelligence
-Create an innovative solution that addresses challenges in the Audio Intelligence domain.
+        title: "Agriculture & Rural Development", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773163254/agriandrural_mijvqb.png", description: `Innovative Solution for Audio Intelligence
+Create an innovative solution that addresses challenges in the Rural Areas.
 
-Focus Areas:
-   •  User experience optimization
-   •  Technology integration
-   •  Scalability and performance
-   •  Real-world impact`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
+1. Soil-Climate Adaptive Smart Irrigation
+
+Problem: Static irrigation schedules cause water wastage.
+Prototype Goal: AI irrigation controller using soil nutrients + weather prediction.
+Scope: Dynamic irrigation allocation algorithm.
+
+2. AI-Based Pre-Symptomatic Crop Disease Predictor
+
+Problem: Crop diseases detected only after visible damage.
+Prototype Goal: Vision + environmental data fusion model predicting disease outbreak early.
+Scope: Crop stress prediction engine.
+
+3. Blockchain-Enabled Transparent Agri Supply Chain
+
+Problem: Farmers lack pricing transparency and traceability.
+Prototype Goal: Smart contract-based produce tracking and pricing system.
+Scope: Tamper-proof agri transaction protocol.
+
+`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "Vision Intelligence", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783795/unnamed_nyryfp.jpg", description: `Innovative Solution for Vision Intelligence
-Create an innovative solution that addresses challenges in the Vision Intelligence domain.
+        title: "Smart Cities & Infrastructure", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773163275/smrtcity_uwctm3.png", description: `Innovative Solution for Vision Intelligence
+Create an innovative solution that addresses challenges in the Smart Cities and Infrastructure.
 
-Focus Areas:
-   •  User experience optimization
-   •  Technology integration
-   •  Scalability and performance
-   •  Real-world impact`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
+1. AI-Powered Adaptive Traffic Optimization
+
+Problem: Fixed traffic signals increase congestion and fuel consumption.
+Prototype Goal: Real-time traffic heatmap-based adaptive signal control.
+Scope: Predictive congestion redistribution algorithm.
+
+2. IoT-Based Structural Health Monitoring System
+
+Problem: Bridges/buildings lack continuous safety monitoring.
+Prototype Goal: Sensor-based micro-crack and vibration anomaly detection.
+Scope: Structural stress predictive analytics model.
+
+3. Urban Energy Load Redistribution Engine
+
+Problem: Peak load causes power instability.
+Prototype Goal: AI system dynamically redistributing power loads.
+Scope: Self-healing microgrid balancing framework.
+
+`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
         title: "Predictive Intelligence At The Edge", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771784309/pred_int_si2k8f.png", description: `Innovative Solution for Predictive Intelligence at the Edge
@@ -423,7 +451,7 @@ Focus Areas:
    •  Real-world impact`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "IOT Healthcare", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771839530/unnamed_mr9l1j.jpg", description: `Innovative Solution for IoT Healthcare
+        title: "HealthTech", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771839530/unnamed_mr9l1j.jpg", description: `Innovative Solution for IoT Healthcare
 Create an innovative solution that addresses challenges in the IoT Healthcare domain.
 
 Focus Areas:
