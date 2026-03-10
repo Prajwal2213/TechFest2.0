@@ -319,7 +319,7 @@ The challenge combines hands-on competitions that test core engineering fundamen
 ROBOEDGE emphasizes reliability, adaptability, and smart system integration, challenging teams to deliver robust robotic solutions under dynamic competitive conditions. It is not just a competition, but a platform to showcase technical depth, creativity, and real-world engineering capability.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
       },
       {
-        title: "ROBOEDGE AI", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783079/roboedgeai_xnplkt.png", description: `This round is software-only; no hardware is required.
+        title: "ROBOEDGE AI", sideLabel: "Round 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783079/roboedgeai_xnplkt.png", description: `This round is software-only; no hardware is required.
 
 Evaluation will be based on:
 
@@ -339,7 +339,7 @@ Object detection, Line following, Image recognition, Signage Detection etc...`, 
       // The fastest valid run will rank higher.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
       //       },
       {
-        title: "Robo Obstacle", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783003/roboobstcale_sic5xo.png", description: `Robots must navigate an obstacle course featuring ramps, turns, and barriers.
+        title: "Robo Obstacle", sideLabel: "Round 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783003/roboobstcale_sic5xo.png", description: `Robots must navigate an obstacle course featuring ramps, turns, and barriers.
 Evaluation will focus on:
 1.Stability and balance
 2.Control accuracy
@@ -347,7 +347,7 @@ Evaluation will focus on:
 Touching or modifying obstacles may result in penalties.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
       },
       {
-        title: "Robo Soccer", sideLabel: "Track 04", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318000/RoboSoccer_w3fnhv.jpg", description: `Matches may be one-on-one or team-based, as decided by organizers.
+        title: "Robo Soccer", sideLabel: "Round 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318000/RoboSoccer_w3fnhv.jpg", description: `Matches may be one-on-one or team-based, as decided by organizers.
 The objective is to score the maximum number of goals within the allotted time.
 Manual control is allowed.
 Robots designed to intentionally damage opponents are strictly prohibited.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
