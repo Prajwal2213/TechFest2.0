@@ -41,12 +41,12 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden lg:flex items-center gap-4 md:gap-10">
+      <div className="hidden lg:flex items-center gap-4 md:gap-8">
         {navItems.map(item => (
           <Link
             key={item.path}
             to={item.path}
-            className={`font-semibold text-base sm:text-lg md:text-xl ${item.color}`}
+            className={`font-semibold text-base sm:text-lg md:text-xl tracking-widest ${item.color}`}
             onClick={() => setIsOpen(false)}
           >
             {item.label}

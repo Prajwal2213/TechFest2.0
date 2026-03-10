@@ -576,7 +576,7 @@ change.`,
     ],
 
     workshops: [
-      { title: "Skill Lab", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg", description: "Deep-dive technical sessions in embedded logic and ROS.", link: "" }
+      { title: "Skill Lab", sideLabel: "WorkShop", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg", description: "Deep-dive technical sessions in embedded logic and ROS.", link: "" }
     ],
 
     Elite_Event: [
@@ -584,11 +584,13 @@ change.`,
         title: "Artistic Aura", sideLabel: "UI/UX", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg", description: `Artistic Aura: UI/UX Design Challenge
 "Where Creativity Meets Functionality"
 Do you have the vision to turn complex problems into intuitive, beautiful digital experiences? Welcome to Artistic Aura, the premier UI/UX showdown at [Insert Tech Fest Name] 2026. This isn't just about making things look good; it's about crafting seamless, user-centric designs that define the future of digital interaction.
-Bring your creative flair and design thinking to the table, and prove that your designs can deliver both, aesthetic appeal and user-friendly functionality.`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
+Bring your creative flair and design thinking to the table, and prove that your designs can deliver both, aesthetic appeal and user-friendly functionality.`, link: ""
       },
       {
-        title: "Circuit-thon", sideLabel: "Circuit Design", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: `HACK HUSTLE: Where Tech Meets Talent! 🚀
-Body: Get ready for 24 hours of unstoppable innovation! HACK HUSTLE is the premier multi-domain hackathon at [Tech Fest Name], designed to push boundaries and fuel your ambition. We invite the brightest minds to team up, code, and "hustle" through real-world problem statements. Whether you’re into AI, Web3, or CyberSecurity, this is your arena to turn bold ideas into groundbreaking, working prototypes. Are you ready to hustle for your vision?`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
+        title: "TechQuest ", sideLabel: "Treasure Hunt", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: `The Ultimate Technical Treasure Hunt`, link: ""
+      },
+       {
+        title: "PosterVerse", sideLabel: "Poster Design", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773133908/poster_verse_sjyolv.jpg", description: `Multidomain Poster Presentation`, link: ""
       }
     ]
   };

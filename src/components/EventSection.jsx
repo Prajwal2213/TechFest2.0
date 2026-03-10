@@ -9,9 +9,10 @@ const projects = [
   { title: "RoboEdge", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318000/RoboSoccer_w3fnhv.jpg"), link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" },
   { title: "EdgeIQ Challenge", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg"), link:"https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
   { title: "Sky Rift", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/sky_rift1_yig1jj.png"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "Artistic Aura", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "Hack Hustle", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "Workshop", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg"), link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" }
+  { title: "Techzibition", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1772104689/ChatGPT_Image_Feb_26_2026_04_47_52_PM_l1avvu.png"), link:"" },
+  { title: "Artistic Aura", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg"), link:"" },
+  { title: "Hack Hustle", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg"), link:"" },
+  { title: "Workshop", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg"), link:"" }
 ];
 
 const EventSection = () => {
@@ -20,7 +21,6 @@ const EventSection = () => {
   const cardRefs = useRef([]);
   const measurements = useRef([]);
 
-  // Cache layout measurements once
   const measureCards = useCallback(() => {
     const container = scrollContainerRef.current;
     if (!container) return;
@@ -56,7 +56,6 @@ const EventSection = () => {
     centerCard(index);
   };
 
-  // Smooth auto-scroll (lighter)
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (!container) return;
@@ -114,19 +113,19 @@ const EventSection = () => {
               />
 
               <div className="relative md:absolute inset-0 z-10 flex flex-col p-6 bg-gradient-to-t from-black/90">
-               <h3
-  className={`
-    text-white font-semibold transition-all duration-500 origin-left
-    text-xl md:text-3xl whitespace-nowrap
-    ${
-      current === i
-        ? 'md:[writing-mode:horizontal-tb] md:rotate-0'
-        : 'md:[writing-mode:vertical-rl] md:rotate-180 md:ml-2 md:text-center'
-    }
-  `}
->
-  {item.title}
-</h3>
+                <h3
+                  className={`
+                    text-white font-semibold transition-all duration-500 origin-left
+                    text-xl md:text-3xl whitespace-nowrap
+                    ${
+                      current === i
+                        ? 'md:[writing-mode:horizontal-tb] md:rotate-0'
+                        : 'md:[writing-mode:vertical-rl] md:rotate-180 md:ml-2 md:text-center'
+                    }
+                  `}
+                >
+                  {item.title}
+                </h3>
 
                 <div
                   className={`
@@ -136,13 +135,22 @@ const EventSection = () => {
                       : 'opacity-0 translate-y-4 pointer-events-none'}
                   `}
                 >
-                  <a
-                    href={item.link}
-                    onClick={(e) => e.stopPropagation()}
-                    className="px-5 py-2 rounded-full text-sm font-semibold bg-cyan-500 text-black hover:bg-cyan-400 transition"
-                  >
-                    Register
-                  </a>
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      onClick={(e) => e.stopPropagation()}
+                      className="px-5 py-2 rounded-full text-sm font-semibold bg-cyan-500 text-black hover:bg-cyan-400 transition"
+                    >
+                      Register
+                    </a>
+                  ) : (
+                    <span
+                      onClick={(e) => e.stopPropagation()}
+                      className="px-5 py-2 rounded-full text-sm font-semibold bg-gray-500 text-white cursor-not-allowed"
+                    >
+                      Coming Soon
+                    </span>
+                  )}
 
                   <Link
                     to="/events"

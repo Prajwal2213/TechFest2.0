@@ -1,8 +1,5 @@
 import React, { useRef, useState, useCallback, useMemo } from "react";
 
-/* ==========================================
-   1️⃣ DATASET
-========================================== */
 const EVENT_ORGANIZERS = [
   // ORGANISERS
   { id: "org1", name: "Dr. Divyashree HB", role: "Assistant Professor, ECE", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772956795/diviya1_ghl2id.jpg" },
@@ -28,9 +25,7 @@ const EVENT_ORGANIZERS = [
   // { id: "sc10", name: "Pavan Kumar G R ", role: "Member", category: "Student Committee", team: "Web Team", imageUrl: "" },
 ];
 
-/* ==========================================
-   2️⃣ BACKGROUND
-========================================== */
+
 const TeamBackground = () => (
   <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden bg-[#02040a] isolate">
     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/95" />
@@ -45,9 +40,7 @@ const TeamBackground = () => (
   </div>
 );
 
-/* ==========================================
-   3️⃣ TEAM CARD
-========================================== */
+
 const TeamCard = ({ member }) => {
   const cardRef = useRef(null);
   const [rotateX, setRotateX] = useState(0);
@@ -127,9 +120,8 @@ const TeamCard = ({ member }) => {
     </div>
   );
 };
-/* ==========================================
-   4️⃣ MAIN TEAM SECTION
-========================================== */
+
+
 export default function TeamSection() {
   const categories = useMemo(
     () => Array.from(new Set(EVENT_ORGANIZERS.map((m) => m.category))),

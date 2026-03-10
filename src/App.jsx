@@ -13,7 +13,7 @@ import CountDown from './components/CountDown.jsx';
 const Hero = lazy(() => import("./components/Hero.jsx"));
 const About = lazy(() => import("./components/About.jsx"));
 const EventSection = lazy(() => import("./components/EventSection.jsx"));
-const FAQ = lazy(() => import("./components/FAQ.jsx"));
+// const FAQ = lazy(() => import("./components/FAQ.jsx"));
 const Schedule = lazy(() => import("./components/Schedule.jsx"));
 const TeamSection = lazy(() => import("./components/TeamSection.jsx"));
 const Sponsors = lazy(() => import("./components/Sponsors.jsx"));
@@ -97,7 +97,7 @@ function App() {
                     <About />
                     <Sponsors />
                     <PatronSection />
-                    <FAQ />
+                    {/* <FAQ /> */}
                   </>
                 }
               />
