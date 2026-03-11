@@ -383,30 +383,6 @@ Edge AI intelligence for advanced autonomy, perception, and decision-making.`, l
 Participants develop complete AI pipelines—from data processing and model development to optimization and deployment—focusing on performance, scalability, and real-world applicability. The challenge encourages system-level thinking and innovation beyond accuracy-centric solutions, pushing teams to build intelligent systems that are impactful and deployment-ready.`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "Agriculture & Rural Development", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773163254/agriandrural_mijvqb.png", description: `Innovative Solution for Audio Intelligence
-Create an innovative solution that addresses challenges in the Rural Areas.
-
-1. Soil-Climate Adaptive Smart Irrigation
-
-Problem: Static irrigation schedules cause water wastage.
-Prototype Goal: AI irrigation controller using soil nutrients + weather prediction.
-Scope: Dynamic irrigation allocation algorithm.
-
-2. AI-Based Pre-Symptomatic Crop Disease Predictor
-
-Problem: Crop diseases detected only after visible damage.
-Prototype Goal: Vision + environmental data fusion model predicting disease outbreak early.
-Scope: Crop stress prediction engine.
-
-3. Blockchain-Enabled Transparent Agri Supply Chain
-
-Problem: Farmers lack pricing transparency and traceability.
-Prototype Goal: Smart contract-based produce tracking and pricing system.
-Scope: Tamper-proof agri transaction protocol.
-
-`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
-      },
-      {
         title: "Smart Cities & Infrastructure", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773163275/smrtcity_uwctm3.png", description: `Innovative Solution for Vision Intelligence
 Create an innovative solution that addresses challenges in the Smart Cities and Infrastructure.
 
@@ -427,6 +403,30 @@ Scope: Structural stress predictive analytics model.
 Problem: Peak load causes power instability.
 Prototype Goal: AI system dynamically redistributing power loads.
 Scope: Self-healing microgrid balancing framework.
+
+`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
+      },
+      {
+        title: "Agriculture & Rural Development", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773163254/agriandrural_mijvqb.png", description: `Innovative Solution for Audio Intelligence
+Create an innovative solution that addresses challenges in the Rural Areas.
+
+1. Soil-Climate Adaptive Smart Irrigation
+
+Problem: Static irrigation schedules cause water wastage.
+Prototype Goal: AI irrigation controller using soil nutrients + weather prediction.
+Scope: Dynamic irrigation allocation algorithm.
+
+2. AI-Based Pre-Symptomatic Crop Disease Predictor
+
+Problem: Crop diseases detected only after visible damage.
+Prototype Goal: Vision + environmental data fusion model predicting disease outbreak early.
+Scope: Crop stress prediction engine.
+
+3. Blockchain-Enabled Transparent Agri Supply Chain
+
+Problem: Farmers lack pricing transparency and traceability.
+Prototype Goal: Smart contract-based produce tracking and pricing system.
+Scope: Tamper-proof agri transaction protocol.
 
 `, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
@@ -697,7 +697,7 @@ Bring your creative flair and design thinking to the table, and prove that your 
                       cursor-pointer group relative overflow-hidden 
                       border border-zinc-800 rounded-lg
                       aspect-video"
-                      onClick={() => setSelectedEvent(events[0])}
+                      // onClick={() => setSelectedEvent(events[0])}
                     >
                       <img
                         src={events[0].imageURL}
