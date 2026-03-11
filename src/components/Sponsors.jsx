@@ -33,6 +33,11 @@ const sponsorData = [
     name: "IEEE AESS",
     logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771433518/aess-1-1-removebg-preview_dy27bj.png",
     url: "https://www.ieee-aess.org/"
+  },
+  {
+    name: "Global Degress",
+    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773229164/lgo-gd_dgmpns.png",
+    url: "https://globaldegrees.in/"
   }
 ];
 
