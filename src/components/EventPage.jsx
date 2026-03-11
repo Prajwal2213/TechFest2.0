@@ -347,7 +347,7 @@ Evaluation will focus on:
 Touching or modifying obstacles may result in penalties.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
       },
       {
-        title: "Robo Soccer", sideLabel: "Round 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318000/RoboSoccer_w3fnhv.jpg", description: `Matches may be one-on-one or team-based, as decided by organizers.
+        title: "Robo Soccer", sideLabel: "Round 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773238259/robosoccer_k7lr44.jpg", description: `Matches may be one-on-one or team-based, as decided by organizers.
 The objective is to score the maximum number of goals within the allotted time.
 Manual control is allowed.
 Robots designed to intentionally damage opponents are strictly prohibited.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
