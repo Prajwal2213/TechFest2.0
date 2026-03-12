@@ -27,7 +27,7 @@ const sponsorData = [
   {
     name: "IEEE CASS",
     logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771433276/ieee_cas_n7b5x3.svg",
-    url: "https://www.ieee-cass.org/"
+    url: "https://ieee-cas.org/"
   },
   {
     name: "IEEE AESS",
@@ -38,6 +38,11 @@ const sponsorData = [
     name: "Global Degress",
     logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773229164/lgo-gd_dgmpns.png",
     url: "https://globaldegrees.in/"
+  },
+  {
+    name: "AIC-DSU",
+    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773329840/logo_uresbl.png",
+    url: "https://aicdsu.foundation/index.html"
   }
 ];
 
@@ -147,8 +152,8 @@ const SponsorCard = ({ sponsor, tier }) => {
           src={sponsor.logo}
           alt={sponsor.name}
           width={200}
-         height={100}
-         loading="lazy"
+          height={100}
+          loading="lazy"
           className="max-h-16 max-w-[80%] object-contain opacity-100 group-hover:scale-105 sm:group-hover:scale-110 transition-all duration-500"
         />
       </div>
@@ -213,10 +218,16 @@ const Sponsors = () => {
               10,000+ students, engineers, innovators, and industry leaders
               at Dayananda Sagar University.
             </p>
-            <button className="relative z-10 inline-flex items-center gap-2 sm:gap-4 bg-white text-black font-black px-6 sm:px-12 py-3 sm:py-5 rounded-2xl sm:rounded-3xl hover:bg-cyan-400 transition-colors duration-300 text-sm sm:text-base">
-             COLLABORATE WITH CELESTAI     
-              <ChevronRight size={16} className="sm:ml-2" />
-            </button>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=dsutechfest@dsu.edu.in"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="relative z-10 inline-flex items-center gap-2 sm:gap-4 bg-white text-black font-black px-6 sm:px-12 py-3 sm:py-5 rounded-2xl sm:rounded-3xl hover:bg-cyan-400 transition-colors duration-300 text-sm sm:text-base">
+                COLLABORATE WITH CELESTAI
+                <ChevronRight size={16} className="sm:ml-2" />
+              </button>
+            </a>
           </div>
         </div>
       </div>
