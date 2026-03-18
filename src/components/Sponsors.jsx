@@ -43,6 +43,11 @@ const sponsorData = [
     name: "AIC-DSU",
     logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773329840/logo_uresbl.png",
     url: "https://aicdsu.foundation/index.html"
+  },
+  {
+    name: "Sagar Hospital",
+    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773857087/sagar-hospital-best-multispeciality-hospital-in-bangalore_ei7vfv.webp",
+    url: "https://www.sagarhospitals.in/"
   }
 ];
 
