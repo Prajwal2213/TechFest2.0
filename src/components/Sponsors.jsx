@@ -48,6 +48,16 @@ const sponsorData = [
     name: "Sagar Hospital",
     logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773857087/sagar-hospital-best-multispeciality-hospital-in-bangalore_ei7vfv.webp",
     url: "https://www.sagarhospitals.in/"
+  },
+  {
+    name: "DERBI Foundation",
+    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1774243169/derbi_s52ztp.webp",
+    url: "https://derbifoundation.com/"
+  },
+  {
+    name: "DevSwarm",
+    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1774243168/devSwarm_wxmwcp.png",
+    url: "https://devswarm.ai/"
   }
 ];
 
