@@ -58,7 +58,27 @@ const sponsorData = [
     name: "DevSwarm",
     logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1774243168/devSwarm_wxmwcp.png",
     url: "https://devswarm.ai/"
-  }
+  },
+  {
+    name: "IEEE Bangalore",
+    logo: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437101/IEEE-bang_ldls45.png",
+    url: "https://ieeebangalore.org/"
+  },,
+  {
+    name: "IEEE Information Theory Society",
+    logo: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437102/IEEE_ITS_r3yjih.svg",
+    url: "https://www.itsoc.org/"
+  },,
+  {
+    name: "IEEE Signal Processing",
+    logo: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437101/IEEE_signal_onricu.svg",
+    url: "https://signalprocessingsociety.org/"
+  },,
+  {
+    name: "IEEE CEDA",
+    logo: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437101/IEEE_CEDA_Logo_tyb6fj.png",
+    url: "https://ieee-ceda.org/"
+  },
 ];
 
 
