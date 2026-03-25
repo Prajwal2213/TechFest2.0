@@ -71,7 +71,7 @@ const sponsorData = [
   },,
   {
     name: "IEEE Signal Processing",
-    logo: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437101/IEEE_signal_onricu.svg",
+    logo: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437504/SPS_trbkhe.webp",
     url: "https://signalprocessingsociety.org/"
   },,
   {
