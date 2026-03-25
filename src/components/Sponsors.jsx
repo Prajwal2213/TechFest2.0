@@ -78,7 +78,7 @@ const sponsorData = [
     name: "IEEE CEDA",
     logo: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437101/IEEE_CEDA_Logo_tyb6fj.png",
     url: "https://ieee-ceda.org/"
-  },
+  }
 ];
 
 
