@@ -375,6 +375,52 @@ Edge AI intelligence for advanced autonomy, perception, and decision-making.`, l
       { title: "Glide Storm", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771756031/glide_storm_ryhu04.png", description: `GlideStrom is a premier aerospace design challenge focused on the core fundamentals of flight: lift, drag, and stability. Participants must engineer a high-performance, unpowered fixed-wing glider with a maximum wingspan of 50cm and a mass limit of 200g, utilizing foam as the primary structural material. The competition tests aero-efficiency through a specialized formula that rewards the longest flight time relative to the aircraft's weight. Following a mandatory Technical Audit, teams of three must execute precise manual launches to maximize airtime and distance while navigating a high-stakes "two-attempt" rule..`, link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
 
       { title: "Fluid Force X", sideLabel: "Track 04", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771778827/3085da35-50c2-4736-91f6-b03e2a890bb3_bdvg7m.png", description: "Fluid Force X is an intensive technical challenge where fluid power meets aerospace engineering. Designed to simulate real-world aircraft MRO (Maintenance, Repair, and Overhaul) environments, the event tests participants on their ability to design and troubleshoot complex hydraulic and pneumatic systems. Teams of 2 to 4 members must progress through two elimination rounds: conceptualizing and validating flight-critical circuits—such as landing gear and braking systems—before diagnosing faults in a high-pressure, time-bound troubleshooting scenario. Success requires a mastery of fluid mechanics principles combined with sound engineering logic.", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" }
+      { title: "The Flight Surge", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437971/Flight_surge_u8ztb7.jpg", description: `Event Overview: A fixed-wing UAV aerobatic challenge designed to
+evaluate aircraft stability, pilot control, and design efficiency through
+precision and freestyle flight.
+Team Size: 2 to 5 members.
+Aircraft Limits:
+Type: Strictly fixed-wing UAVs only.
+Weight & Size: Maximum Takeoff Weight of 2.0 kg; maximum
+wingspan of 2.2 meters.
+Power: Electric propulsion only (Max 6S LiPo/Li-ion).
+Prohibited Types: Multirotors, helicopters, and VTOL aircraft.
+Competition Rounds:
+Phase 1: Precision Aerobatics (Execution of compulsory maneuvers).
+Phase 2: Freestyle Aerobatic Battle (2-minute creative flight routine).
+Phase 3: Short Takeoff and Landing (STOL) Challenge (Minimal liftoff
+distance and precise landing).` }
+      { title: "Rover Rumble", sideLabel: "Track 06", imageURL: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437971/Rover_rumble_b6ybfg.jpg", description: `Event Overview: A simulated Martian exploration challenge where teams
+design and build custom rovers to traverse rugged terrain, collect
+samples, and deploy instruments.
+Team Size: 2 to 6 members.
+The Mission:
+Technical Limits: 30 kg weight and 50 cm³ size constraint. No readymade kits allowed.
+Objectives: Navigate inclines, gather environmental samples, and
+return to the base station.
+Safety: Includes mandatory emergency stop buttons and nonhazardous material compliance.
+Winning Criteria: Based on task completion points, mission time, and
+design innovation.
+rover rumble
+Event Co-Ordinators
+`, link: "https://hackculture.io/hackathons/aeronavis-celestai-26" }
+      { title: "Prompt Wars", sideLabel: "Track 07", imageURL: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437971/prompt_wars_m53hd0.jpg", description: `Event Overview: A high-intensity, 3-hour competitive hackathon
+replacing traditional CAD and coding with the power of Generative AI to
+design complex, future-ready engineering solutions.
+Team Size: Individual or Group of 2.
+Competition Rules:
+The "Pure Prompt" Rule: No external CAD, photos, or sketches;
+everything must be created via text prompts.
+Live Documentation: Teams must track their "Prompt History" to show
+the evolution of their engineering logic.
+The Wildcard: A surprise challenge introduced 90 minutes into the
+event that must be integrated into the final design.
+Scoring Categories:
+Technical Depth: Engineering feasibility of the generated design.
+Prompt Evolution: Mastery of "Chain of Thought" and AI hallucination
+management.
+Innovation & Adaptation: Branch-specific boundary-pushing and
+wildcard integration`, link: "https://hackculture.io/hackathons/aeronavis-celestai-26" }
     ],
     EdgeIQ_Challenge: [
       {
