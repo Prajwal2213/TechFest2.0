@@ -16,7 +16,7 @@ const sponsorData = [
   },
    {
     name: "DevSwarm",
-    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1774243168/devSwarm_wxmwcp.png",
+    logo: "https://res.cloudinary.com/dfrql1hb3/image/upload/v1774535166/Devswarm_logo_jwpnxq.png",
     url: "https://devswarm.ai/"
   },
   {
