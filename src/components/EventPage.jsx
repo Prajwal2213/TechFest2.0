@@ -423,7 +423,7 @@ wildcard integration`, link: "https://hackculture.io/hackathons/aeronavis-celest
     ],
     EdgeIQ_Challenge: [
       {
-        title: "EdgeIQ Challenge", sideLabel: "Main", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772015197/edgeIQ_jqkffx.jpg", description: `The EdgeIQ Challenge is a flagship AI hackathon under CELESTAI’26 – “AI at the Edge”, the annual tech fest of Dayananda Sagar University. This premier software-focused AI event brings together innovators to design and build intelligent systems that solve real-world problems through practical implementation and creative engineering.
+        title: "EdgeIQ Challenge(Hackathon )", sideLabel: "Main", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772015197/edgeIQ_jqkffx.jpg", description: `The EdgeIQ Challenge is a flagship AI hackathon under CELESTAI’26 – “AI at the Edge”, the annual tech fest of Dayananda Sagar University. This premier software-focused AI event brings together innovators to design and build intelligent systems that solve real-world problems through practical implementation and creative engineering.
 
 Participants develop complete AI pipelines—from data processing and model development to optimization and deployment—focusing on performance, scalability, and real-world applicability. The challenge encourages system-level thinking and innovation beyond accuracy-centric solutions, pushing teams to build intelligent systems that are impactful and deployment-ready.`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
@@ -652,11 +652,6 @@ change.`,
         link: ""
       }
     ],
-
-    workshops: [
-      { title: "Skill Lab", sideLabel: "WorkShop", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg", description: "Deep-dive technical sessions in embedded logic and ROS.", link: "" }
-    ],
-
     Elite_Event: [
       {
         title: "Artistic Aura", sideLabel: "UI/UX", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg", description: `Artistic Aura: UI/UX Design Challenge
@@ -670,7 +665,10 @@ Bring your creative flair and design thinking to the table, and prove that your 
       {
         title: "PosterVerse", sideLabel: "Poster Design", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773133908/poster_verse_sjyolv.jpg", description: `Multidomain Poster Presentation`, link: ""
       }
-    ]
+    ],
+      workshops: [
+      { title: "Skill Lab", sideLabel: "WorkShop", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg", description: "Deep-dive technical sessions in embedded logic and ROS.", link: "" }
+    ],
   };
 
   return (
