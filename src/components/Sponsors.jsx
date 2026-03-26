@@ -14,15 +14,24 @@ const sponsorData = [
     logo: "https://cdn.brandfetch.io/idw2s-0Tuo/w/820/h/410/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1764778603089?v=2",
     url: "https://www.geeksforgeeks.org/"
   },
+   {
+    name: "DevSwarm",
+    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1774243168/devSwarm_wxmwcp.png",
+    url: "https://devswarm.ai/"
+  },
   {
-    name: "Hackculture",
-    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771432659/hackculture_q4ioff.png",
-    url: "https://hackculture.io/"
+    name: "QuarkCube",
+    logo: "https://res.cloudinary.com/dfrql1hb3/image/upload/v1774534138/quarkcube_transparent_duxv1z.png",
+    url: "https://quarkcube.io/"
   },
   {
     name: "Edge Impulse",
     logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771432658/edge_impulse_jvffnt.svg",
     url: "https://www.edgeimpulse.com/"
+  },  {
+    name: "Hackculture",
+    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771432659/hackculture_q4ioff.png",
+    url: "https://hackculture.io/"
   },
   {
     name: "IEEE CASS",
@@ -55,25 +64,20 @@ const sponsorData = [
     url: "https://derbifoundation.com/"
   },
   {
-    name: "DevSwarm",
-    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1774243168/devSwarm_wxmwcp.png",
-    url: "https://devswarm.ai/"
-  },
-  {
     name: "IEEE Bangalore",
     logo: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437101/IEEE-bang_ldls45.png",
     url: "https://ieeebangalore.org/"
-  },,
+  },
   {
     name: "IEEE Information Theory Society",
     logo: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437102/IEEE_ITS_r3yjih.svg",
     url: "https://www.itsoc.org/"
-  },,
+  },
   {
     name: "IEEE Signal Processing",
     logo: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437504/SPS_trbkhe.webp",
     url: "https://signalprocessingsociety.org/"
-  },,
+  },
   {
     name: "IEEE CEDA",
     logo: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437101/IEEE_CEDA_Logo_tyb6fj.png",
