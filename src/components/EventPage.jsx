@@ -31,6 +31,10 @@ const GlitchText = ({ text, className }) => {
   );
 };
 
+const sectionTitles = {
+  EdgeIQ_Challenge: "EdgeIQ Challenge (Hackathon)",
+};
+
 // --- COMPONENTS ---
 
 const DetailOverlay = ({ event, onClose }) => {
@@ -126,21 +130,36 @@ const DetailOverlay = ({ event, onClose }) => {
                 </div>
 
                 <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row gap-4">
-                  <button
-                    disabled={!event.link}
-                    className={`w-full sm:flex-1 py-3 sm:py-4 font-black text-[10px] sm:text-xs tracking-[0.4em] uppercase flex items-center justify-center gap-3 transition-all
-  ${event.link
-                        ? "bg-yellow-500 text-black hover:bg-white cursor-pointer"
-                        : "bg-zinc-800 text-white cursor-not-allowed"}`}
-                    onClick={() => {
-                      if (event.link) {
-                        window.location.href = event.link;
-                      }
-                    }}
-                  >
-                    {event.link ? "REGISTER NOW" : "COMING SOON"}
-                  </button>
-                </div>
+  
+  {/* REGISTER BUTTON */}
+  <button
+    disabled={!event.link}
+    className={`w-full sm:flex-1 py-3 sm:py-4 font-black text-[10px] sm:text-xs tracking-[0.4em] uppercase flex items-center justify-center gap-3 transition-all
+      ${event.link
+        ? "bg-yellow-500 text-black hover:bg-white cursor-pointer"
+        : "bg-zinc-800 text-white cursor-not-allowed"}`}
+    onClick={() => {
+      if (event.link) {
+        window.location.href = event.link;
+      }
+    }}
+  >
+    {event.link ? "REGISTER NOW" : "COMING SOON"}
+  </button>
+
+  {/* SKYRIFT ONLY BUTTON */}
+  {event.section === "SkyRift" && (
+    <button
+      className="w-full sm:flex-1 py-3 sm:py-4 font-black text-[10px] sm:text-xs tracking-[0.4em] uppercase flex items-center justify-center gap-3 transition-all border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black"
+      onClick={() => {
+        window.open("https://drive.google.com/file/d/1yKxEaAthqKM_0ATp-FYUnxN1RSp8eo9X/view?usp=sharing");
+      }}
+    >
+      Rules
+    </button>
+  )}
+
+</div>
 
               </div>
             </div>
@@ -762,7 +781,7 @@ CLICK ON REGISTER`, link: ""
           return (
             <section key={key} className="relative">
               <SectionHeader
-                title={key.replace(/_/g, ' ')} // Replaces underscores with spaces for clean titles
+                title={sectionTitles[key] || key.replace(/_/g, ' ')} // Replaces underscores with spaces for clean titles
                 onPrev={() => scroll(refs[key], "left")}
                 onNext={() => scroll(refs[key], "right")}
               />
@@ -834,7 +853,7 @@ CLICK ON REGISTER`, link: ""
                     <EventCard
                       key={idx}
                       event={event}
-                      onOpenDetail={setSelectedEvent}
+                      onOpenDetail={(event) => setSelectedEvent({ ...event, section: key })}
                     />
                   ))}
 
