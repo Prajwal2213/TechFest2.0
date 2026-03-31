@@ -18,7 +18,7 @@ const Footer = () => {
             {/* Contact Us */}
             <div>
               <h4 className="text-xl font-bold text-white mb-6">Contact Us</h4>
-              <div className="space-y-3 text-white/80 text-sm"></div>
+              <div className="space-y-3 text-white/80 text-sm">
                 <p><span className="text-white">dsutechfest@dsu.edu.in</span></p>
                 <p>Helpline Number:</p>
                 <span className="text-white font-medium">Tanmay G R</span><br />
