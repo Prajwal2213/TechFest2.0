@@ -729,7 +729,7 @@ CLICK ON REGISTER`,
       {
         title: "Artistic Aura", sideLabel: "UI/UX", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg", description: `Artistic Aura: UI/UX Design Challenge
 "Where Creativity Meets Functionality"
-Do you have the vision to turn complex problems into intuitive, beautiful digital experiences? Welcome to Artistic Aura, the premier UI/UX showdown at [Insert Tech Fest Name] 2026. This isn't just about making things look good; it's about crafting seamless, user-centric designs that define the future of digital interaction.
+Do you have the vision to turn complex problems into intuitive, beautiful digital experiences? Welcome to Artistic Aura, the premier UI/UX showdown at CELESTAI 2026. This isn't just about making things look good; it's about crafting seamless, user-centric designs that define the future of digital interaction.
 Bring your creative flair and design thinking to the table, and prove that your designs can deliver both, aesthetic appeal and user-friendly functionality.
 Learn more About rules and Prizes 
 CLICK ON REGISTER`, link: ""
