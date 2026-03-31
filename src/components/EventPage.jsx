@@ -486,7 +486,8 @@ Problem: Peak load causes power instability.
 Prototype Goal: AI system dynamically redistributing power loads.
 Scope: Self-healing microgrid balancing framework.
 
-<strong>Round 1: Idea Submission is free of cost.<br/>Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.</strong>
+Round 1: Idea Submission is free of cost.
+Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.
 
 Learn more About rules and Prizes 
 CLICK ON REGISTER
@@ -515,7 +516,8 @@ Problem: Farmers lack pricing transparency and traceability.
 Prototype Goal: Smart contract-based produce tracking and pricing system.
 Scope: Tamper-proof agri transaction protocol.
 
-<strong>Round 1: Idea Submission is free of cost.<br/>Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.</strong>
+Round 1: Idea Submission is free of cost.
+Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.
 
 Learn more About rules and Prizes 
 CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
@@ -530,7 +532,8 @@ Focus Areas:
    •  Scalability and performance
    •  Real-world impact
 
-   <strong>Round 1: Idea Submission is free of cost.<br/>Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.</strong>
+   Round 1: Idea Submission is free of cost.
+   Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.
    
    Learn more About rules and Prizes 
    CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
@@ -545,7 +548,8 @@ Focus Areas:
    •  Scalability and performance
    •  Real-world impact
 
-   <strong>Round 1: Idea Submission is free of cost.<br/>Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.</strong>
+   Round 1: Idea Submission is free of cost.
+   Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.
    
    Learn more About rules and Prizes 
    CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
@@ -560,7 +564,8 @@ Focus Areas:
    •  Scalability and performance
    •  Real-world impact
 
-   <strong>Round 1: Idea Submission is free of cost.<br/>Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.</strong>
+   Round 1: Idea Submission is free of cost.
+   Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.
    
    Learn more About rules and Prizes 
    CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
@@ -575,7 +580,8 @@ Focus Areas:
    •  Scalability and performance
    •  Real-world impact
 
-   <strong>Round 1: Idea Submission is free of cost.<br/>Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.</strong>
+   Round 1: Idea Submission is free of cost.
+   Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.
    
    Learn more About rules and Prizes 
    CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
