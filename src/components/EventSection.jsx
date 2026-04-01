@@ -6,8 +6,8 @@ const optimize = (url) => {
 };
 
 const projects = [
-  { title: "RoboEdge", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318000/RoboSoccer_w3fnhv.jpg"), link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" },
-  { title: "EdgeIQ Challenge", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg"), link:"https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
+  { title: "RoboEdge", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1773238259/robosoccer_k7lr44.jpg"), link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" },
+  { title: "EdgeIQ Challenge",subtitle: "24 Hours Multi-Domain Hackathon", bg: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/v1774888333/edgeIQ_1_e3fmv1.png"), link:"https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
   { title: "Sky Rift", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/sky_rift1_yig1jj.png"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
   { title: "Techzibition", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1772104689/ChatGPT_Image_Feb_26_2026_04_47_52_PM_l1avvu.png"), link:"" },
   { title: "Artistic Aura", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg"), link:"" },
@@ -117,7 +117,7 @@ const EventSection = () => {
                 <h3
                   className={`
                     text-white font-semibold transition-all duration-500 origin-left
-                    text-xl md:text-3xl whitespace-nowrap
+                    text-xl md:text-3xl whitespace-nowrap break-words
                     ${
                       current === i
                         ? 'md:[writing-mode:horizontal-tb] md:rotate-0'
@@ -127,6 +127,11 @@ const EventSection = () => {
                 >
                   {item.title}
                 </h3>
+                {current === i && item.subtitle && (
+  <p className="text-xs text-white mt-3 font-bold tracking-widest">
+    {item.subtitle}
+  </p>
+)}
 
                 <div
                   className={`

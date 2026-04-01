@@ -105,9 +105,7 @@ const Hero = () => {
           </a>
         </div>
 
-        
-
-      </div>  
+  
     </section>
   );
 };
