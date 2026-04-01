@@ -25,7 +25,7 @@ const CountDown = () => {
   }, []);
 
 return (
-  <section className="w-full flex flex-col items-center justify-center py-16 ">
+  <section className="w-full flex flex-col items-center justify-center py-16 -mt-5">
     {/* Title */}
     <div className="bg-black/70 px-6 py-12 border-white">
 
