@@ -104,6 +104,7 @@ const Hero = () => {
             Register Now
           </a>
         </div>
+      </div>
 
   
     </section>
