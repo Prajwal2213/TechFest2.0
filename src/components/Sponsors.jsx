@@ -82,6 +82,11 @@ const sponsorData = [
     name: "IEEE CEDA",
     logo: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437101/IEEE_CEDA_Logo_tyb6fj.png",
     url: "https://ieee-ceda.org/"
+  },
+  {
+    name: "Pavan Hyundai",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775062562/pavan_hyundai_zpojvc.jpg",
+    url: ""
   }
 ];
 
