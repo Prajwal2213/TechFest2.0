@@ -418,7 +418,7 @@ Competition Rounds:
 Phase 1: Precision Aerobatics (Execution of compulsory maneuvers).
 Phase 2: Freestyle Aerobatic Battle (2-minute creative flight routine).
 Phase 3: Short Takeoff and Landing (STOL) Challenge (Minimal liftoff
-distance and precise landing).` }
+distance and precise landing).` },
       { title: "Rover Rumble", sideLabel: "Track 06", imageURL: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437971/Rover_rumble_b6ybfg.jpg", description: `Event Overview: A simulated Martian exploration challenge where teams
 design and build custom rovers to traverse rugged terrain, collect
 samples, and deploy instruments.
@@ -434,7 +434,7 @@ Winning Criteria: Based on task completion points, mission time, and
 design innovation.
 rover rumble
 Event Co-Ordinators
-`, link: "https://hackculture.io/hackathons/aeronavis-celestai-26" }
+`, link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
       { title: "Prompt Wars", sideLabel: "Track 07", imageURL: "https://res.cloudinary.com/dcwualklr/image/upload/v1774437971/prompt_wars_m53hd0.jpg", description: `Event Overview: A high-intensity, 3-hour competitive hackathon
 replacing traditional CAD and coding with the power of Generative AI to
 design complex, future-ready engineering solutions.

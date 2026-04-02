@@ -79,7 +79,7 @@ const EventSection = () => {
   return (
     <section className="text-[#c5c7ce] py-20 overflow-hidden bg-transparent relative -mb-10">
       <div className="max-w-[1400px] mx-auto px-5 mb-10">
-        <h1 className="md:text-cyan-400 text-4xl sm:text-5xl md:text-6xl uppercase font-extrabold text-white">
+        <h1 className="md:text-cyan-400 text-4xl sm:text-5xl md:text-6xl uppercase font-bold text-white">
           Events
         </h1>
       </div>

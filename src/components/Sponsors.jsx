@@ -87,6 +87,11 @@ const sponsorData = [
     name: "Pavan Hyundai",
     logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775062562/pavan_hyundai_zpojvc.jpg",
     url: ""
+  },
+  {
+    name: "Seeed Studio",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775117870/logo_2018_horizontal_gqgr3i.webp",
+    url: "https://www.seeedstudio.com/"
   }
 ];
 
