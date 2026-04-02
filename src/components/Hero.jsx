@@ -17,8 +17,8 @@ const Hero = () => {
         md:bg-[url('https://res.cloudinary.com/dstbnmjwh/image/upload/v1771321472/image2_oc8zev.webp')]
       "
     >
-       <div className="max-w-4xl space-y-6 mt-35 md:mt-20 lg:-mt-60 backdrop-blur-sm p-6 rounded-xl md:backdrop-blur-none">
-        <h1 className="font-extrabold uppercase tracking-wider leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 text-[clamp(3rem,8vw,6rem)] sm:text-xs lg:text-9xl">
+      <div className="max-w-4xl space-y-6 mt-35 md:mt-20 lg:-mt-60 backdrop-blur-sm p-6 rounded-xl md:backdrop-blur-none relative z-10">
+        <h1 className="font-bold uppercase tracking-wider leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 text-[clamp(3rem,8vw,6rem)] sm:text-xs lg:text-9xl">
           <span className="block text-white text-xs sm:text-lg md:text-xl lg:text-xl w-full md:ml-35">
             Dayananda Sagar University
           </span>
@@ -31,7 +31,7 @@ const Hero = () => {
           <p className="text-white text-sm md:text-xl md:ml-45">
             DSU'S ANNUAL TECH FEST
           </p>
-          <p className="text-cyan-400 font-extrabold tracking-widest text-xl sm:text-2xl md:ml-60 mt-2">
+          <p className="text-cyan-400 font-bold tracking-widest text-xl sm:text-2xl md:ml-60 mt-2">
             APRIL 23 – 25, 2026
           </p>
         </h1>
@@ -58,12 +58,10 @@ const Hero = () => {
             <span className="relative z-10">Register Now</span>
           </a>
         </div>
-
-        
       </div>
       
       {/* Optional Overlay for better readability on mobile */}
-      <div className="absolute inset-0 bg-black/40 md:hidden -z-0"></div>
+      <div className="absolute inset-0 bg-black/40 md:hidden pointer-events-none"></div>
     </section>
   );
 };

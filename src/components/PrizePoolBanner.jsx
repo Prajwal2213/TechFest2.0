@@ -141,13 +141,13 @@ const PrizePoolBanner = () => {
           background-size: 24px 24px;
         }
         .prize-text-shadow {
-          text-shadow: 0 0 10px rgba(255,224,102,0.9), 0 0 25px rgba(255,190,0,0.6), 0 0 50px rgba(255,160,0,0.3);
+          text-shadow: none;
         }
         .label-text-shadow {
-          text-shadow: 0 0 10px rgba(0,234,255,0.6);
+          text-shadow: none;
         }
         .cyan-text-shadow {
-          text-shadow: 0 0 10px rgba(0,234,255,0.9);
+          text-shadow: none;
         }
         .top-line-glow {
           box-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
@@ -306,7 +306,7 @@ const PrizePoolBanner = () => {
               color: "rgba(0,234,255,0.5)",
             }}
           >
-            
+            {/* status text placeholder */}
           </span>
         </div>
       </div>
