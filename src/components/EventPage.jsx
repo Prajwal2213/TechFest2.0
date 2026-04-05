@@ -14,6 +14,7 @@ import {
   Fingerprint,
   Radio
 } from 'lucide-react';
+import { useLocation } from "react-router-dom";
 
 // --- UTILITIES ---
 
@@ -305,8 +306,11 @@ export default function EventPage() {
     EdgeIQ_Challenge: useRef(null),
     techzibition: useRef(null),
     workshops: useRef(null),
-    Special_Events: useRef(null)
+    Special_Events: useRef(null),
+    Elite_Event: useRef(null)
   };
+
+  const location = useLocation();
 
   const FEATURED_SECTIONS = [ 'EdgeIQ_Challenge', 'RoboEdge', 'SkyRift'];
 
@@ -315,6 +319,24 @@ export default function EventPage() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  const section = params.get("section");
+
+  if (section) {
+    const ref = refs[section];
+
+    if (ref && ref.current) {
+      setTimeout(() => {
+        ref.current.scrollIntoView({
+          behavior: "auto",
+          block: "start"
+        });
+      }, 500); // increase delay for safety
+    }
+  }
+}, [location]);
 
   const scroll = (ref, direction) => {
     if (!ref || !ref.current) {
@@ -798,7 +820,7 @@ CLICK ON REGISTER`, link: "https://tally.so/r/ZjYoye"
           const isFeatured = FEATURED_SECTIONS.includes(key);
 
           return (
-            <section key={key} className="relative">
+            <section ref={refs[key]} key={key} className="relative">
               <SectionHeader
                 title={sectionTitles[key] || key.replace(/_/g, ' ')} // Replaces underscores with spaces for clean titles
                 onPrev={() => scroll(refs[key], "left")}
