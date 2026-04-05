@@ -308,7 +308,7 @@ export default function EventPage() {
     Special_Events: useRef(null)
   };
 
-  const FEATURED_SECTIONS = ['techzibition', 'EdgeIQ_Challenge', 'RoboEdge', 'SkyRift'];
+  const FEATURED_SECTIONS = [ 'EdgeIQ_Challenge', 'RoboEdge', 'SkyRift'];
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -592,8 +592,8 @@ Focus Areas:
     techzibition: [
       {
         title: "Techzibition",
-        sideLabel: "Main",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772104689/ChatGPT_Image_Feb_26_2026_04_47_52_PM_l1avvu.png",
+        sideLabel: "Techzibition",
+        imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775367118/techzibition_teq7ij.png",
         description: `TECHZIBITION is a distinguished three-day event dedicated to showcasing
 student innovations, cutting-edge projects, and pioneering research across
 all engineering disciplines. The event is designed to promote technical
@@ -602,129 +602,129 @@ innovative hardware and software solutions with the potential to drive social
 change.
 Learn more About rules and Prizes 
 CLICK ON REGISTER`,
-        link: "https://drive.google.com/file/d/184W7_RdVg2FPscZNR7w8KEQ_Zd5NL2Jl/view?usp=sharing"
+        link: "https://tally.so/r/yPxkxB"
       },
 
-      {
-        title: "Edge AI & Embedded Systems",
-        tag: "Electronics & Communication",
-        sideLabel: "Track 01",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771775430/edgeAi_oril7l.png",
-        description: "Deploying machine learning models on low-power hardware for real-time processing.",
-        link: ""
-      },
-      {
-        title: "VLSI & Chip Design",
-        tag: "Electronics & Communication",
-        sideLabel: "Track 02",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771775429/vlsi_scaleu.jpg",
-        description: "Innovations in circuit design, FPGA implementations, and semiconductor technology.",
-        link: ""
-      },
-      {
-        title: "IoT & Smart Infrastructure",
-        tag: "Electronics & Communication",
-        sideLabel: "Track 03",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774703/IOTandsmartinfra_gphopy.jpg",
-        description: "Connected devices for smart homes, cities, or industrial monitoring.",
-        link: ""
-      },
-      {
-        title: "Wireless Communication & 5G/6G",
-        tag: "Electronics & Communication",
-        sideLabel: "Track 04",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774703/wirless5g_6g_sulhe5.jpg",
-        description: "Advancements in signal processing, antenna design, and network protocols.",
-        link: ""
-      },
-      {
-        title: "Artificial Intelligence & Generative Models",
-        tag: "Computer Science & Information Technology",
-        sideLabel: "Track 05",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774703/aiandgenerativeModels_ldhdfl.jpg",
-        description: "Novel applications of LLMs, computer vision, and predictive analytics.",
-        link: ""
-      },
-      {
-        title: "Cybersecurity & Cryptography",
-        tag: "Computer Science & Information Technology",
-        sideLabel: "Track 06",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774704/cybersecurity_crypto_lwl1r4.jpg",
-        description: "Solutions for data privacy, blockchain, and threat detection.",
-        link: ""
-      },
-      {
-        title: "Cloud Computing & Distributed Systems",
-        tag: "Computer Science & Information Technology",
-        sideLabel: "Track 07",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774705/cloud_computing_m61rgu.jpg",
-        description: "Scalable architecture and edge-cloud orchestration.",
-        link: ""
-      },
-      {
-        title: "Augmented & Virtual Reality (AR/VR)",
-        tag: "Computer Science & Information Technology",
-        sideLabel: "Track 08",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774705/augmented_reality_bfx17f.jpg",
-        description: "Immersive technologies for education, training, or healthcare.",
-        link: ""
-      },
-      {
-        title: "Autonomous Systems & Drones",
-        tag: "Robotics & Automation",
-        sideLabel: "Track 09",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774705/autonomous_system_drones_zjsihm.jpg",
-        description: "Self-navigating robots, UAVs, and swarm intelligence.",
-        link: ""
-      },
-      {
-        title: "Industrial Automation & Industry 4.0",
-        tag: "Robotics & Automation",
-        sideLabel: "Track 10",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774705/industry_automation_r3bozo.jpg",
-        description: "Robotics in manufacturing and automated supply chain solutions.",
-        link: ""
-      },
-      {
-        title: "Human-Robot Interaction (HRI)",
-        tag: "Robotics & Automation",
-        sideLabel: "Track 11",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774705/human_robot_onf1ft.jpg",
-        description: "Assistive robotics and collaborative interfaces.",
-        link: ""
-      },
-      {
-        title: "Aerospace Structures & Propulsion",
-        tag: "Aerospace & Mechanical",
-        sideLabel: "Track 12",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774706/aerospace_propulsion_ewsnuq.jpg",
-        description: "Innovations in aerodynamics, satellite subsystems, and propulsion.",
-        link: ""
-      },
-      {
-        title: "Clean Energy & Green Tech",
-        tag: "Aerospace & Mechanical",
-        sideLabel: "Track 13",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774703/clean_green_lrr25d.jpg",
-        description: "Sustainable engineering, electric vehicle (EV) tech, and renewable energy storage.",
-        link: ""
-      },
-      {
-        title: "Bio-Mechanical & MedTech",
-        tag: "Aerospace & Mechanical",
-        sideLabel: "Track 14",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774702/biomech_oy9qt1.jpg",
-        description: "Engineering solutions for healthcare, prosthetics, and diagnostic tools.",
-        link: ""
-      },
-      {
-        title: "Open Innovation",
-        tag: "INTERDISCIPLINARY",
-        sideLabel: "Track 15",
-        imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774703/open_innovation_cxhrav.jpg",
-        description: "A wildcard category for interdisciplinary projects or niche domains not covered above (e.g., Fintech, Agritech, etc.).",
-        link: ""
-      }
+      // {
+      //   title: "Edge AI & Embedded Systems",
+      //   tag: "Electronics & Communication",
+      //   sideLabel: "Track 01",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771775430/edgeAi_oril7l.png",
+      //   description: "Deploying machine learning models on low-power hardware for real-time processing.",
+      //   link: ""
+      // },
+      // {
+      //   title: "VLSI & Chip Design",
+      //   tag: "Electronics & Communication",
+      //   sideLabel: "Track 02",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771775429/vlsi_scaleu.jpg",
+      //   description: "Innovations in circuit design, FPGA implementations, and semiconductor technology.",
+      //   link: ""
+      // },
+      // {
+      //   title: "IoT & Smart Infrastructure",
+      //   tag: "Electronics & Communication",
+      //   sideLabel: "Track 03",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774703/IOTandsmartinfra_gphopy.jpg",
+      //   description: "Connected devices for smart homes, cities, or industrial monitoring.",
+      //   link: ""
+      // },
+      // {
+      //   title: "Wireless Communication & 5G/6G",
+      //   tag: "Electronics & Communication",
+      //   sideLabel: "Track 04",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774703/wirless5g_6g_sulhe5.jpg",
+      //   description: "Advancements in signal processing, antenna design, and network protocols.",
+      //   link: ""
+      // },
+      // {
+      //   title: "Artificial Intelligence & Generative Models",
+      //   tag: "Computer Science & Information Technology",
+      //   sideLabel: "Track 05",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774703/aiandgenerativeModels_ldhdfl.jpg",
+      //   description: "Novel applications of LLMs, computer vision, and predictive analytics.",
+      //   link: ""
+      // },
+      // {
+      //   title: "Cybersecurity & Cryptography",
+      //   tag: "Computer Science & Information Technology",
+      //   sideLabel: "Track 06",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774704/cybersecurity_crypto_lwl1r4.jpg",
+      //   description: "Solutions for data privacy, blockchain, and threat detection.",
+      //   link: ""
+      // },
+      // {
+      //   title: "Cloud Computing & Distributed Systems",
+      //   tag: "Computer Science & Information Technology",
+      //   sideLabel: "Track 07",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774705/cloud_computing_m61rgu.jpg",
+      //   description: "Scalable architecture and edge-cloud orchestration.",
+      //   link: ""
+      // },
+      // {
+      //   title: "Augmented & Virtual Reality (AR/VR)",
+      //   tag: "Computer Science & Information Technology",
+      //   sideLabel: "Track 08",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774705/augmented_reality_bfx17f.jpg",
+      //   description: "Immersive technologies for education, training, or healthcare.",
+      //   link: ""
+      // },
+      // {
+      //   title: "Autonomous Systems & Drones",
+      //   tag: "Robotics & Automation",
+      //   sideLabel: "Track 09",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774705/autonomous_system_drones_zjsihm.jpg",
+      //   description: "Self-navigating robots, UAVs, and swarm intelligence.",
+      //   link: ""
+      // },
+      // {
+      //   title: "Industrial Automation & Industry 4.0",
+      //   tag: "Robotics & Automation",
+      //   sideLabel: "Track 10",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774705/industry_automation_r3bozo.jpg",
+      //   description: "Robotics in manufacturing and automated supply chain solutions.",
+      //   link: ""
+      // },
+      // {
+      //   title: "Human-Robot Interaction (HRI)",
+      //   tag: "Robotics & Automation",
+      //   sideLabel: "Track 11",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774705/human_robot_onf1ft.jpg",
+      //   description: "Assistive robotics and collaborative interfaces.",
+      //   link: ""
+      // },
+      // {
+      //   title: "Aerospace Structures & Propulsion",
+      //   tag: "Aerospace & Mechanical",
+      //   sideLabel: "Track 12",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774706/aerospace_propulsion_ewsnuq.jpg",
+      //   description: "Innovations in aerodynamics, satellite subsystems, and propulsion.",
+      //   link: ""
+      // },
+      // {
+      //   title: "Clean Energy & Green Tech",
+      //   tag: "Aerospace & Mechanical",
+      //   sideLabel: "Track 13",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774703/clean_green_lrr25d.jpg",
+      //   description: "Sustainable engineering, electric vehicle (EV) tech, and renewable energy storage.",
+      //   link: ""
+      // },
+      // {
+      //   title: "Bio-Mechanical & MedTech",
+      //   tag: "Aerospace & Mechanical",
+      //   sideLabel: "Track 14",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774702/biomech_oy9qt1.jpg",
+      //   description: "Engineering solutions for healthcare, prosthetics, and diagnostic tools.",
+      //   link: ""
+      // },
+      // {
+      //   title: "Open Innovation",
+      //   tag: "INTERDISCIPLINARY",
+      //   sideLabel: "Track 15",
+      //   imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771774703/open_innovation_cxhrav.jpg",
+      //   description: "A wildcard category for interdisciplinary projects or niche domains not covered above (e.g., Fintech, Agritech, etc.).",
+      //   link: ""
+      // }
     ],
     Elite_Event: [
       {
@@ -733,10 +733,10 @@ CLICK ON REGISTER`,
 Do you have the vision to turn complex problems into intuitive, beautiful digital experiences? Welcome to Artistic Aura, the premier UI/UX showdown at CELESTAI 2026. This isn't just about making things look good; it's about crafting seamless, user-centric designs that define the future of digital interaction.
 Bring your creative flair and design thinking to the table, and prove that your designs can deliver both, aesthetic appeal and user-friendly functionality.
 Learn more About rules and Prizes 
-CLICK ON REGISTER`, link: ""
+CLICK ON REGISTER`, link: "https://tally.so/r/ZjYoye"
       },
       {
-        title: "TechQuest ", sideLabel: "Treasure Hunt", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: `The Ultimate Technical Treasure Hunt`, link: ""
+        title: "TechQuest ", sideLabel: "Treasure Hunt", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: `The Ultimate Technical Treasure Hunt`, link: "https://tally.so/r/ODYAr7"
       },
       {
         title: "PosterVerse", sideLabel: "Poster Design", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773133908/poster_verse_sjyolv.jpg", description: `Multidomain Poster Presentation`, link: ""

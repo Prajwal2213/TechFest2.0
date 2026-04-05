@@ -9,9 +9,9 @@ const projects = [
   { title: "RoboEdge", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1773238259/robosoccer_k7lr44.jpg"), link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" },
   { title: "EdgeIQ Challenge",subtitle: "24 Hours Multi-Domain Hackathon", bg: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/v1774888333/edgeIQ_1_e3fmv1.png"), link:"https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
   { title: "Sky Rift", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/sky_rift1_yig1jj.png"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "Techzibition", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1772104689/ChatGPT_Image_Feb_26_2026_04_47_52_PM_l1avvu.png"), link:"" },
-  { title: "Artistic Aura", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg"), link:"" },
-  { title: "TechQuest", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg"), link:"" },
+  { title: "Techzibition", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1772104689/ChatGPT_Image_Feb_26_2026_04_47_52_PM_l1avvu.png"), link:"https://tally.so/r/yPxkxB" },
+  { title: "Artistic Aura", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg"), link:"https://tally.so/r/ZjYoye" },
+  { title: "TechQuest", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg"), link:"https://tally.so/r/ODYAr7" },
   { title: "PosterVerse", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1773133908/poster_verse_sjyolv.jpg"), link:"" },
   { title: "Workshop", bg: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg"), link:"" }
 ];

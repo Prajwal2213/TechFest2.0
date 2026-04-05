@@ -14,20 +14,20 @@ const sponsorData = [
     logo: "https://cdn.brandfetch.io/idw2s-0Tuo/w/820/h/410/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1764778603089?v=2",
     url: "https://www.geeksforgeeks.org/"
   },
-   {
-    name: "DevSwarm",
-    logo: "https://res.cloudinary.com/dfrql1hb3/image/upload/v1774535166/Devswarm_logo_jwpnxq.png",
-    url: "https://devswarm.ai/"
+  {
+    name: "Edge Impulse",
+    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771432658/edge_impulse_jvffnt.svg",
+    url: "https://www.edgeimpulse.com/"
   },
   {
     name: "QuarkCube",
     logo: "https://res.cloudinary.com/dfrql1hb3/image/upload/v1774534138/quarkcube_transparent_duxv1z.png",
     url: "https://quarkcube.io/"
   },
-  {
-    name: "Edge Impulse",
-    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771432658/edge_impulse_jvffnt.svg",
-    url: "https://www.edgeimpulse.com/"
+   {
+    name: "DevSwarm",
+    logo: "https://res.cloudinary.com/dfrql1hb3/image/upload/v1774535166/Devswarm_logo_jwpnxq.png",
+    url: "https://devswarm.ai/"
   },  {
     name: "Hackculture",
     logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771432659/hackculture_q4ioff.png",
@@ -94,6 +94,12 @@ const sponsorData = [
     url: "https://www.seeedstudio.com/"
   }
 ];
+
+const title_sponsor = {
+  name : "Laksh Properties",
+  logo : "https://res.cloudinary.com/duajsf7ft/image/upload/v1775365869/Laksh-properties-Logo-_uemksw.png",
+  url : "https://lakshproperties.in/"
+}
 
 
 const Squares = ({
@@ -247,6 +253,37 @@ const Sponsors = () => {
         <div className="text-center mb-20 sm:mb-32">
           <h2 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-wide text-white mb-8 uppercase bg-black/50 backdrop-blur-sm">Partners </h2>
         </div>
+
+        {/* Title Sponsor */}
+<div className="flex justify-center mb-16 sm:mb-24">
+  <a
+    href={title_sponsor.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group relative flex flex-col items-center justify-center p-8 sm:p-10 bg-white border-2 border-yellow-400 rounded-3xl shadow-xl hover:-translate-y-3 transition-all duration-500"
+  >
+    {/* Badge */}
+    <div className="absolute -top-4 px-4 py-1 bg-yellow-400 text-black text-xs font-bold rounded-full tracking-wider">
+      TITLE SPONSOR
+    </div>
+
+    {/* Logo */}
+    <div className="w-full h-28 flex items-center justify-center mb-4">
+      <img
+        src={title_sponsor.logo}
+        alt={title_sponsor.name}
+        className="max-h-20 object-contain group-hover:scale-110 transition-transform duration-500"
+      />
+    </div>
+
+    {/* Name */}
+    <span className="text-sm font-bold tracking-widest uppercase text-black">
+      {title_sponsor.name}
+    </span>
+
+    <ExternalLink className="absolute top-4 right-4 text-black/70 group-hover:text-black transition-all duration-300" size={16} />
+  </a>
+</div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 ">
           {sponsorData.map((sponsor, index) => (
