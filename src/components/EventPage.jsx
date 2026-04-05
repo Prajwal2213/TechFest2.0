@@ -333,7 +333,7 @@ export default function EventPage() {
           behavior: "auto",
           block: "start"
         });
-      }, 500); // increase delay for safety
+      }, 500);
     }
   }
 }, [location]);
@@ -616,12 +616,7 @@ Focus Areas:
         title: "Techzibition",
         sideLabel: "Techzibition",
         imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775367118/techzibition_teq7ij.png",
-        description: `TECHZIBITION is a distinguished three-day event dedicated to showcasing
-student innovations, cutting-edge projects, and pioneering research across
-all engineering disciplines. The event is designed to promote technical
-excellence and enhance problem-solving skills by providing a platform for
-innovative hardware and software solutions with the potential to drive social
-change.
+        description: `Unleash your innovation at Techzibition, the ultimate project showcase at Celestai’26! Open to every college, every domain, and every dreamer, this is the stage where your ideas—from tech prototypes to creative social solutions—take center stage. Whether you’re a coder, a designer, or a visionary from any program, come exhibit your hard work, connect with fellow creators, and compete for exciting prizes. Bring your best, inspire the crowd, and show us what’s possible when creativity knows no bounds!
 Learn more About rules and Prizes 
 CLICK ON REGISTER`,
         link: "https://tally.so/r/yPxkxB"
@@ -750,15 +745,57 @@ CLICK ON REGISTER`,
     ],
     Elite_Event: [
       {
-        title: "Artistic Aura", sideLabel: "UI/UX", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg", description: `Artistic Aura: UI/UX Design Challenge
+        title: "Artistic Aura", sideLabel: "UI/UX", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg", description: `UI/UX Design Challenge
 "Where Creativity Meets Functionality"
-Do you have the vision to turn complex problems into intuitive, beautiful digital experiences? Welcome to Artistic Aura, the premier UI/UX showdown at CELESTAI 2026. This isn't just about making things look good; it's about crafting seamless, user-centric designs that define the future of digital interaction.
-Bring your creative flair and design thinking to the table, and prove that your designs can deliver both, aesthetic appeal and user-friendly functionality.
+Artistic Aura is the premier UI/UX design showdown at CELESTAI'26, the flagship technical festival of Dayananda Sagar University. This isn't just about making things look pretty — it's about crafting seamless, user-centric digital experiences that solve real problems and define the future of human-digital interaction.
+If you have the vision to transform complex challenges into intuitive, beautiful interfaces, this event was built for you.
+
+🎨 What's the Challenge?
+Your team picks a design theme from a curated list of real-world application domains and crafts a complete UI/UX solution that balances visual aesthetics with functional, user-friendly design. Your work should reflect both creative flair and thoughtful design thinking — the kind of design that doesn't just impress, but actually works.
+
+🖥️ Available Design Themes
+Choose one from the following:
+#Theme
+A) Online Store
+B) Employee Management App
+C) Food Delivery Dashboard
+D) Student Learning Platform
+E) Hotel & Travel Booking 
+F) EV Charging Dashboard
+G) Job Search Website
+H) Fitness & Health Tracker
+I) Bank Account Manager
+J) Movie Ticket Booking App
+K) Sensor to Device Data Sync (Sensor Data on App)
+
+💡 Why Participate?
+Showcase Your Vision — Demonstrate that your designs can deliver both beauty and usability in equal measure.
+Innovation-Focused — Align your design thinking with CELESTAI'26's cutting-edge themes in AI, Robotics, and Automation.
+Compete & Connect — Meet and collaborate with a vibrant community of aspiring engineers and designers pushing the boundaries of UI/UX.
+Get Certified — Participants receive certificates; email ID and contact number are required for verification and issuance..
 Learn more About rules and Prizes 
 CLICK ON REGISTER`, link: "https://tally.so/r/ZjYoye"
       },
       {
-        title: "TechQuest ", sideLabel: "Treasure Hunt", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: `The Ultimate Technical Treasure Hunt`, link: "https://tally.so/r/ODYAr7"
+        title: "TechQuest ", sideLabel: "Treasure Hunt", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: `The Ultimate Technical Treasure Hunt
+Analyze. Hunt. Build.
+TechQuest is one of the most thrilling events at CELESTAI'26, the flagship technical festival of Dayananda Sagar University. It's not your typical hackathon — it's a high-octane scavenger hunt that tests your technical instinct, logical thinking, and rapid development skills all at once.
+
+🧩 How It Works
+The challenge begins the moment your team receives a random, high-impact problem statement. But here's the twist — you won't be handed the tools to solve it. You'll have to hunt for them.
+Step 1 — The Scavenge: Track down all the components you need to build your solution. These are deliberately hidden across two specialized tracks:
+
+🖥️ Software Track — Navigate a virtual environment using provided IP addresses. Dig through hidden URLs and directories to uncover code snippets, assets, and keys.
+🔧 Hardware Track — Crack logic-based clue sets to physically locate the hardware modules and sensors required for your build.
+
+Step 2 — The Hackathon: Once every component is found, the clock starts. Integrate everything you've gathered and build a fully functional solution before time runs out.
+
+⚡ Why TechQuest Stands Out
+
+Two tracks — choose Hardware or Software based on your team's strengths
+Bridges the gap between technical theory and real-world execution
+Tests speed and accuracy equally — every clue counts, every second matters
+A true multi-skill challenge: logic, networking, coding, and building — all in one event`, link: "https://tally.so/r/ODYAr7"
       },
       {
         title: "PosterVerse", sideLabel: "Poster Design", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773133908/poster_verse_sjyolv.jpg", description: `Multidomain Poster Presentation`, link: ""
