@@ -92,6 +92,21 @@ const sponsorData = [
     name: "Seeed Studio",
     logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775117870/logo_2018_horizontal_gqgr3i.webp",
     url: "https://www.seeedstudio.com/"
+  },
+  {
+    name: "Centum Electronics",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775466264/Centum-logo_white_shadebaseline-e1671704377366_svf6ih.png",
+    url: "https://www.centumelectronics.com/"
+  },
+  {
+    name: "Maven Silicon",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775467004/maven_silicon_logo_hpigxz.png",
+    url: "https://www.maven-silicon.com/"
+  },
+  {
+    name: "ICICI Bank",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775466890/ICICI_Bank_id_NFCjbgj_1_aguv7j.png",
+    url: "https://www.icici.bank.in/"
   }
 ];
 

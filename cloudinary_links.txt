@@ -1,0 +1,107 @@
+
+
+Source: src/components/EventPage.jsx
+1. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772015196/roboedge_kiitqy.jpg
+2. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783079/roboedgeai_xnplkt.png
+3. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783003/roboobstcale_sic5xo.png
+4. https://res.cloudinary.com/dstbnmjwh/image/upload/v1773238259/robosoccer_k7lr44.jpg
+5. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772712153/skyrift_yoggky.png
+6. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/fling_fury1_fce5l4.png
+7. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771756030/blaze_wing_v4bd2y.png
+8. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771756031/glide_storm_ryhu04.png
+9. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771778827/3085da35-50c2-4736-91f6-b03e2a890bb3_bdvg7m.png
+10. https://res.cloudinary.com/dcwualklr/image/upload/v1774437971/Flight_surge_u8ztb7.jpg
+11. https://res.cloudinary.com/dcwualklr/image/upload/v1774437971/Rover_rumble_b6ybfg.jpg
+12. https://res.cloudinary.com/dcwualklr/image/upload/v1774437971/prompt_wars_m53hd0.jpg
+13. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772015197/edgeIQ_jqkffx.jpg
+14. https://res.cloudinary.com/dstbnmjwh/image/upload/v1773163275/smrtcity_uwctm3.png
+15. https://res.cloudinary.com/dstbnmjwh/image/upload/v1773163254/agriandrural_mijvqb.png
+16. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771784309/pred_int_si2k8f.png
+17. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783964/ai_sustain_ee0n57.png
+18. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771839530/unnamed_mr9l1j.jpg
+19. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771784270/open_innnn_x6lxzn.png
+
+Source: src/components/About.jsx
+20. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771526218/download_gnrxgw.png
+
+Source: src/components/ChiefPatrons.jsx
+21. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213253/drhemachandra_nnbhhb.jpg
+22. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213254/drpremachandra_zxbgrq.jpg
+
+Source: src/components/Convenors.jsx
+23. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213647/Dr_arun_Balodi_id3483.jpg
+24. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213649/snsr_cmdvuh.png
+25. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772447786/Dr.Shaila%20S%20G.jpg
+
+Source: src/components/Hero.jsx
+26. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771321472/image2_oc8zev.webp
+
+Source: src/components/Sponsors.jsx
+27. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771432658/edge_impulse_jvffnt.svg
+28. https://res.cloudinary.com/dfrql1hb3/image/upload/v1774534138/quarkcube_transparent_duxv1z.png
+29. https://res.cloudinary.com/dfrql1hb3/image/upload/v1774535166/Devswarm_logo_jwpnxq.png
+30. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771432659/hackculture_q4ioff.png
+31. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771433276/ieee_cas_n7b5x3.svg
+32. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771433518/aess-1-1-removebg-preview_dy27bj.png
+33. https://res.cloudinary.com/dstbnmjwh/image/upload/v1773229164/lgo-gd_dgmpns.png
+34. https://res.cloudinary.com/dstbnmjwh/image/upload/v1773329840/logo_uresbl.png
+35. https://res.cloudinary.com/dstbnmjwh/image/upload/v1773857087/sagar-hospital-best-multispeciality-hospital-in-bangalore_ei7vfv.webp
+36. https://res.cloudinary.com/dstbnmjwh/image/upload/v1774243169/derbi_s52ztp.webp
+37. https://res.cloudinary.com/dcwualklr/image/upload/v1774437101/IEEE-bang_ldls45.png
+38. https://res.cloudinary.com/dcwualklr/image/upload/v1774437102/IEEE_ITS_r3yjih.svg
+39. https://res.cloudinary.com/dcwualklr/image/upload/v1774437504/SPS_trbkhe.webp
+40. https://res.cloudinary.com/dcwualklr/image/upload/v1774437101/IEEE_CEDA_Logo_tyb6fj.png
+41. https://res.cloudinary.com/duajsf7ft/image/upload/v1775062562/pavan_hyundai_zpojvc.jpg
+42. https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775117870/logo_2018_horizontal_gqgr3i.webp
+43. https://res.cloudinary.com/duajsf7ft/image/upload/v1775365869/Laksh-properties-Logo-_uemksw.png
+
+Source: src/components/EventSection.jsx
+44. https://res.cloudinary.com/dstbnmjwh/image/upload/v1773238259/robosoccer_k7lr44.jpg
+45. https://res.cloudinary.com/dxbsdgjm9/image/upload/v1774888333/edgeIQ_1_e3fmv1.png
+46. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318212/sky_rift1_yig1jj.png
+47. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772104689/ChatGPT_Image_Feb_26_2026_04_47_52_PM_l1avvu.png
+48. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg
+49. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg
+50. https://res.cloudinary.com/dstbnmjwh/image/upload/v1773133908/poster_verse_sjyolv.jpg
+51. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg
+
+Source: src/components/Gallery.jsx
+52. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771855943/Copy_of_IMG_2174_l4znpc.webp
+53. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771855944/Copy_of_IMG_2134_o31wfi.webp
+54. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771855945/Copy_of_IMG_2116_s4cklh.webp
+55. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771855943/Copy_of_IMG_2183_uobv5s.webp
+56. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771855944/Copy_of_IMG_2115_ytp9tp.webp
+57. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771855653/Copy_of_IMG_3500_vgahly.jpg
+58. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771864414/Copy_of_IMG_3584_n4tc7l.jpg
+59. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772380506/WhatsApp_Image_2026-03-01_at_8.46.07_PM_1_spdz0j.jpg
+60. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940645/WhatsApp_Image_2025-05-02_at_4.09.33_PM_sdponv.jpg
+61. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940645/WhatsApp_Image_2025-05-02_at_4.09.31_PM_tj5pby.jpg
+62. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940645/WhatsApp_Image_2025-05-02_at_4.09.25_PM_cslpey.jpg
+63. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772380507/WhatsApp_Image_2026-03-01_at_8.46.11_PM_1_alv1w6.jpg
+64. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772380507/photo2.jpg
+65. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772380508/photo3.jpg
+66. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772380506/WhatsApp_Image_2026-03-01_at_8.46.08_PM_a2ij0p.jpg
+67. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940646/WhatsApp_Image_2025-05-02_at_4.09.26_PM_fkcowl.jpg
+68. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940650/WhatsApp_Image_2025-05-02_at_4.09.28_PM_rcvwax.jpg
+69. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940651/WhatsApp_Image_2025-05-02_at_4.09.44_PM_ixkjf4.jpg
+70. https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940645/WhatsApp_Image_2025-05-02_at_4.09.24_PM_u8h4eh.jpg
+71. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772380506/WhatsApp_Image_2026-03-01_at_8.46.08_PM_2_wetwid.jpg
+
+Source: src/components/Navbar.jsx
+72. https://res.cloudinary.com/dstbnmjwh/image/upload/f_auto,q_auto,w_300/v1771870025/Techfest_logo-removebg-preview_xikawj.png
+73. https://res.cloudinary.com/dstbnmjwh/image/upload/f_auto,q_auto,w_300/v1771526218/download_gnrxgw.png
+
+Source: src/components/TeamSection.jsx
+74. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772956795/diviya1_ghl2id.jpg
+75. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772957134/Prashanth1_dhsstr.png
+76. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772957372/shivamma1_ivy1lq.png
+77. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772777194/Srinath.png
+78. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772779997/Sripad_enhanced_cbdnid.png
+79. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772779996/Karthik_enhanced_n94mmy.png
+80. https://res.cloudinary.com/dstbnmjwh/image/upload/v1773135263/Santhosh1_yrbdiz.png
+81. https://res.cloudinary.com/dstbnmjwh/image/upload/v1773135263/Jisy2_j9ri0x.png
+82. https://res.cloudinary.com/dstbnmjwh/image/upload/v1772958667/pavan_kumar_og5ek6.png
+
+SUMMARY
+==============================
+Total Uncommented Cloudinary Links: 82
