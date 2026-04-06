@@ -14,7 +14,7 @@ const Hero = () => {
         bg-no-repeat
         bg-cover
         bg-center
-        md:bg-[url('https://res.cloudinary.com/dstbnmjwh/image/upload/v1771321472/image2_oc8zev.webp')]
+        md:bg-[url('https://res.cloudinary.com/duajsf7ft/image/upload/v1775467201/image2_oc8zev_jqzmhl.webp')]
       "
     >
       <div className="max-w-4xl space-y-6 mt-35 md:mt-20 lg:-mt-60 backdrop-blur-sm p-6 rounded-xl md:backdrop-blur-none relative z-10">
