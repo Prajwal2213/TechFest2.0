@@ -107,6 +107,11 @@ const sponsorData = [
     name: "ICICI Bank",
     logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775466890/ICICI_Bank_id_NFCjbgj_1_aguv7j.png",
     url: "https://www.icici.bank.in/"
+  },
+  {
+    name: "DUN JUN",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775581385/Copy_of_djlogo1280_1280_urxj2c.png",
+    url: "https://dunjun.world/"
   }
 ];
 
