@@ -2,15 +2,15 @@ import React, { useRef, useState, useCallback, useMemo } from "react";
 
 const EVENT_ORGANIZERS = [
   // ORGANISERS
-  { id: "org1", name: "Dr. Divyashree HB", role: "Assistant Professor, ECE", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772956795/diviya1_ghl2id.jpg" },
-  { id: "org2", name: "Dr. Prashanth Kumar H G", role: "Associate Professor,ASE", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772957134/Prashanth1_dhsstr.png" },
-  { id: "org3", name: "Prof. Shivamma", role: "Assistant Professor,DS", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772957372/shivamma1_ivy1lq.png" },
-  { id: "org4", name: "Dr. Srinath Ramakrishnan", role: "Assistant Professor,ASE", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772777194/Srinath.png" },
-  { id: "org5", name: "Prof. Sripad Kulkarni", role: "Assistant Professor,ASE", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772779997/Sripad_enhanced_cbdnid.png" },
-  { id: "org6", name: "Dr. Kartik S. Tandel", role: "Assistant Professor,ASE", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772779996/Karthik_enhanced_n94mmy.png" },
-  { id: "org7", name: "Dr. Santhosh Kumar G", role: "Associate Professor,DS", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773135263/Santhosh1_yrbdiz.png" },
-  { id: "org8", name: "Ms. Jisy N K", role: "Assistant Professor,ECE", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773135263/Jisy2_j9ri0x.png" },
-  { id: "org9", name: "Dr. U Pavan Kumar", role: "Assistant Professor,DS", category: "Organisers", imageUrl: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1772958667/pavan_kumar_og5ek6.png" },
+  { id: "org1", name: "Dr. Divyashree HB", role: "Assistant Professor, ECE", category: "Organisers", imageUrl: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775564913/diviya1_ghl2id_qjff9g.jpg" },
+  { id: "org2", name: "Dr. Prashanth Kumar H G", role: "Associate Professor,ASE", category: "Organisers", imageUrl: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775564915/Prashanth1_dhsstr_dysehc.png" },
+  { id: "org3", name: "Prof. Shivamma", role: "Assistant Professor,DS", category: "Organisers", imageUrl: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775564928/shivamma1_ivy1lq_vyi10m.png" },
+  { id: "org4", name: "Dr. Srinath Ramakrishnan", role: "Assistant Professor,ASE", category: "Organisers", imageUrl: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775564933/Srinath_tglqtt.png" },
+  { id: "org5", name: "Prof. Sripad Kulkarni", role: "Assistant Professor,ASE", category: "Organisers", imageUrl: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775564928/Sripad_enhanced_cbdnid_tdddrt.png" },
+  { id: "org6", name: "Dr. Kartik S. Tandel", role: "Assistant Professor,ASE", category: "Organisers", imageUrl: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775564926/Karthik_enhanced_n94mmy_opkxow.png" },
+  { id: "org7", name: "Dr. Santhosh Kumar G", role: "Associate Professor,DS", category: "Organisers", imageUrl: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775564926/Santhosh1_yrbdiz_w019na.png" },
+  { id: "org8", name: "Ms. Jisy N K", role: "Assistant Professor,ECE", category: "Organisers", imageUrl: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775564914/Jisy2_j9ri0x_ovhbi4.png" },
+  { id: "org9", name: "Dr. U Pavan Kumar", role: "Assistant Professor,DS", category: "Organisers", imageUrl: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775564973/pavan_kumar_og5ek6_gia83s.png" },
 
   // // STUDENT COMMITTEE
   // { id: "sc1", name: "Prokshith", role: "Member", category: "Student Committee", team: "Marketing Team", imageUrl: "" },

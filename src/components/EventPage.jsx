@@ -505,7 +505,7 @@ Learn more About rules and Prizes
 CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "Smart Cities & Infrastructure", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773163275/smrtcity_uwctm3.png", description: `Innovative Solution for Vision Intelligence
+        title: "Smart Cities & Infrastructure", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562836/smrtcity_uwctm3_xpazhb.png", description: `Innovative Solution for Vision Intelligence
 Create an innovative solution that addresses challenges in the Smart Cities and Infrastructure.
 
 1. AI-Powered Adaptive Traffic Optimization
@@ -535,7 +535,7 @@ CLICK ON REGISTER
 `, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "Agriculture & Rural Development", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773163254/agriandrural_mijvqb.png", description: `Innovative Solution for Audio Intelligence
+        title: "Agriculture & Rural Development", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562831/agriandrural_mijvqb_n1onh0.png", description: `Innovative Solution for Audio Intelligence
 Create an innovative solution that addresses challenges in the Rural Areas.
 
 1. Soil-Climate Adaptive Smart Irrigation
@@ -563,7 +563,7 @@ Learn more About rules and Prizes
 CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "Predictive Intelligence At The Edge", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771784309/pred_int_si2k8f.png", description: `Innovative Solution for Predictive Intelligence at the Edge
+        title: "Predictive Intelligence At The Edge", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562834/pred_int_si2k8f_qjhjsx.png", description: `Innovative Solution for Predictive Intelligence at the Edge
 Create an innovative solution that addresses challenges in the Predictive Intelligence at the Edge domain.
 
 Focus Areas:
@@ -579,7 +579,7 @@ Focus Areas:
    CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "AI For Sustainability", sideLabel: "Track 04", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771783964/ai_sustain_ee0n57.png", description: `Innovative Solution fo AI for Sustainability
+        title: "AI For Sustainability", sideLabel: "Track 04", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562832/ai_sustain_ee0n57_m2vgnb.png", description: `Innovative Solution fo AI for Sustainability
 Create an innovative solution that addresses challenges in the AI for Sustainability domain.
 
 Focus Areas:
@@ -595,7 +595,7 @@ Focus Areas:
    CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "HealthTech", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771839530/unnamed_mr9l1j.jpg", description: `Innovative Solution for IoT Healthcare
+        title: "HealthTech", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562836/unnamed_mr9l1j_ugyd1o.jpg", description: `Innovative Solution for IoT Healthcare
 Create an innovative solution that addresses challenges in the IoT Healthcare domain.
 
 Focus Areas:
@@ -611,7 +611,7 @@ Focus Areas:
    CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "Open Innovation EdgeIQ Open Track", sideLabel: "Track 06", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771784270/open_innnn_x6lxzn.png", description: `Innovative Solution for Open Innovation (EdgeIQ Open Track)
+        title: "Open Innovation EdgeIQ Open Track", sideLabel: "Track 06", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562835/open_innnn_x6lxzn_tqjrvq.png", description: `Innovative Solution for Open Innovation (EdgeIQ Open Track)
 Create an innovative solution that addresses challenges in the Open Innovation (EdgeIQ Open Track) domain.
 
 Focus Areas:
@@ -762,7 +762,7 @@ CLICK ON REGISTER`,
     ],
     Elite_Event: [
       {
-        title: "Artistic Aura", sideLabel: "UI/UX", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771741937/Picture5_kgdckl.jpg", description: `UI/UX Design Challenge
+        title: "Artistic Aura", sideLabel: "UI/UX", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560107/Picture5_kgdckl_to5bxi.jpg", description: `UI/UX Design Challenge
 "Where Creativity Meets Functionality"
 Artistic Aura is the premier UI/UX design showdown at CELESTAI'26, the flagship technical festival of Dayananda Sagar University. This isn't just about making things look pretty — it's about crafting seamless, user-centric digital experiences that solve real problems and define the future of human-digital interaction.
 If you have the vision to transform complex challenges into intuitive, beautiful interfaces, this event was built for you.
@@ -794,7 +794,7 @@ Learn more About rules and Prizes
 CLICK ON REGISTER`, link: "https://tally.so/r/ZjYoye"
       },
       {
-        title: "TechQuest ", sideLabel: "Treasure Hunt", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318582/brain_hfhcod.jpg", description: `The Ultimate Technical Treasure Hunt
+        title: "TechQuest ", sideLabel: "Treasure Hunt", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560114/brain_hfhcod_ngr4fo.jpg", description: `The Ultimate Technical Treasure Hunt
 Analyze. Hunt. Build.
 TechQuest is one of the most thrilling events at CELESTAI'26, the flagship technical festival of Dayananda Sagar University. It's not your typical hackathon — it's a high-octane scavenger hunt that tests your technical instinct, logical thinking, and rapid development skills all at once.
 
@@ -815,11 +815,11 @@ Tests speed and accuracy equally — every clue counts, every second matters
 A true multi-skill challenge: logic, networking, coding, and building — all in one event`, link: "https://tally.so/r/ODYAr7"
       },
       {
-        title: "PosterVerse", sideLabel: "Poster Design", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773133908/poster_verse_sjyolv.jpg", description: `Multidomain Poster Presentation`, link: ""
+        title: "PosterVerse", sideLabel: "Poster Design", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560113/poster_verse_sjyolv_rjvjfy.jpg", description: `Multidomain Poster Presentation`, link: ""
       }
     ],
     workshops: [
-      { title: "Skill Lab", sideLabel: "WorkShop", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771318581/robohuman_gffew7.jpg", description: "Deep-dive technical sessions in embedded logic and ROS.", link: "" }
+      { title: "Skill Lab", sideLabel: "WorkShop", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560112/robohuman_gffew7_czfbag.jpg", description: "Deep-dive technical sessions in embedded logic and ROS.", link: "" }
     ],
   };
 

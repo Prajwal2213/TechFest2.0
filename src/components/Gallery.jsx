@@ -7,44 +7,43 @@ const optimize = (url) => {
 };
 
 const CAROUSEL_DATA = [
-  { id: 1, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771855943/Copy_of_IMG_2174_l4znpc.webp") },
-  { id: 2, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771855944/Copy_of_IMG_2134_o31wfi.webp") },
-  { id: 3, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771855945/Copy_of_IMG_2116_s4cklh.webp") },
-  { id: 4, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771855943/Copy_of_IMG_2183_uobv5s.webp") },
-  { id: 5, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771855944/Copy_of_IMG_2115_ytp9tp.webp") },
-  { id: 6, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771855653/Copy_of_IMG_3500_vgahly.jpg") },
-  { id: 7, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771864414/Copy_of_IMG_3584_n4tc7l.jpg") },
-  { id: 8, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1772380506/WhatsApp_Image_2026-03-01_at_8.46.07_PM_1_spdz0j.jpg") },
-  { id: 9, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940645/WhatsApp_Image_2025-05-02_at_4.09.33_PM_sdponv.jpg") },
-  { id: 10, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940645/WhatsApp_Image_2025-05-02_at_4.09.31_PM_tj5pby.jpg") }
+  { id: 1, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775565862/1_iwkpex.webp") },
+  { id: 2, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775565862/2_rfzi87.webp") },
+  { id: 3, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775565862/3_pvq7yp.webp") },
+  { id: 4, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775565862/4_ncsovh.webp") },
+  { id: 5, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775565866/5_efc4yp.webp") },
+  { id: 6, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775565873/6_nmjskg.jpg") },
+  { id: 7, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775565872/7_flp2us.jpg") },
+  { id: 8, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775565863/8_mgzsw1.jpg") },
+  { id: 9, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775565866/9_maykon.jpg") },
+  { id: 10, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775565868/10_wscr4j.jpg") }
 ];
 
 const CAROUSEL_DATA_BOTTOM = [
-  { id: 1, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940645/WhatsApp_Image_2025-05-02_at_4.09.25_PM_cslpey.jpg") },
-  { id: 2, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1772380507/WhatsApp_Image_2026-03-01_at_8.46.11_PM_1_alv1w6.jpg") },
-  { id: 3, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1772380507/photo2.jpg") },
-  { id: 4, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1772380508/photo3.jpg") },
-  { id: 5, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1772380506/WhatsApp_Image_2026-03-01_at_8.46.08_PM_a2ij0p.jpg") },
-  { id: 6, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940646/WhatsApp_Image_2025-05-02_at_4.09.26_PM_fkcowl.jpg") },
-  { id: 7, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940650/WhatsApp_Image_2025-05-02_at_4.09.28_PM_rcvwax.jpg") },
-  { id: 8, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940651/WhatsApp_Image_2025-05-02_at_4.09.44_PM_ixkjf4.jpg") },
-  { id: 9, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940645/WhatsApp_Image_2025-05-02_at_4.09.24_PM_u8h4eh.jpg") },
-  { id: 10, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1772380506/WhatsApp_Image_2026-03-01_at_8.46.08_PM_2_wetwid.jpg") },
-  { id: 11, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940651/WhatsApp_Image_2025-05-02_at_4.09.44_PM_ixkjf4.jpg") },
-  { id: 12, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940651/WhatsApp_Image_2025-05-02_at_4.09.44_PM_ixkjf4.jpg") }
+  { id: 1, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775566391/1_x3xvka.jpg") },
+  { id: 2, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775566390/2_j401db.jpg") },
+  { id: 3, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775566390/3_fyl7vw.jpg") },
+  { id: 4, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775566390/4_rryxwb.jpg") },
+  { id: 5, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775566390/5_rhsoeu.jpg") },
+  { id: 6, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775566394/6_zbmwel.jpg") },
+  { id: 7, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775566393/7_utnqp4.jpg") },
+  { id: 8, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775566395/8_pxrmbs.jpg") },
+  { id: 9, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775566395/9_rlftxk.jpg") },
+  { id: 10, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775566393/10_jqevy6.jpg") },
+  { id: 11, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775566394/11_foxhcq.jpg") }
 ];
 
 const CAROUSEL_DATA_THIRD = [
-  { id: 1, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940652/WhatsApp_Image_2025-05-12_at_12.19.55_PM_bpmncs.jpg") },
-  { id: 2, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940651/WhatsApp_Image_2025-05-12_at_12.19.54_PM_1_rxifhu.jpg") },
-  { id: 3, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940651/WhatsApp_Image_2025-05-12_at_12.19.54_PM_a3pi0t.jpg") },
-  { id: 4, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940651/WhatsApp_Image_2025-05-12_at_12.19.54_PM_2_w7cqwo.jpg") },
-  { id: 5, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940649/WhatsApp_Image_2025-05-02_at_4.09.39_PM_zb02av.jpg") },
-  { id: 6, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940648/WhatsApp_Image_2025-05-02_at_4.09.36_PM_bijo0t.jpg") },
-  { id: 7, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940648/WhatsApp_Image_2025-05-02_at_4.09.37_PM_xg8hsm.jpg") },
-  { id: 8, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940645/WhatsApp_Image_2025-05-02_at_4.09.35_PM_c77io1.jpg") },
-  { id: 9, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940649/WhatsApp_Image_2025-05-02_at_4.09.29_PM_okf5mv.jpg") },
-  { id: 10, img: optimize("https://res.cloudinary.com/dstbnmjwh/image/upload/v1771940648/WhatsApp_Image_2025-05-02_at_4.09.28_PM_1_il0ztx.jpg") }
+  { id: 1, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775567210/1_a4u0vo.jpg") },
+  { id: 2, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775567211/10_oquk8v.jpg") },
+  { id: 3, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775567211/9_dzm61f.jpg") },
+  { id: 4, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775567211/8_dgzxow.jpg") },
+  { id: 5, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775567211/7_hz07so.jpg") },
+  { id: 6, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775567213/6_cmnjk5.jpg") },
+  { id: 7, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775567210/5_xrkzzm.jpg") },
+  { id: 8, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775567210/4_hazmub.jpg") },
+  { id: 9, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775567210/3_flgebs.jpg") },
+  { id: 10, img: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775567210/2_fnzsca.jpg") }
 ];
 
 export default function Gallery() {
