@@ -16,7 +16,7 @@ const sponsorData = [
   },
   {
     name: "Edge Impulse",
-    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771432658/edge_impulse_jvffnt.svg",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561689/edge_impulse_jvffnt_dsqyda.svg",
     url: "https://www.edgeimpulse.com/"
   },
   {
@@ -40,37 +40,37 @@ const sponsorData = [
     url: "https://devswarm.ai/"
   },  {
     name: "Hackculture",
-    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771432659/hackculture_q4ioff.png",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561823/hackculture_q4ioff_bptd4k.png",
     url: "https://hackculture.io/"
   },
   {
     name: "IEEE CASS",
-    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771433276/ieee_cas_n7b5x3.svg",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561824/ieee_cas_n7b5x3_xdx44s.svg",
     url: "https://ieee-cas.org/"
   },
   {
     name: "IEEE AESS",
-    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771433518/aess-1-1-removebg-preview_dy27bj.png",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561822/aess-1-1-removebg-preview_dy27bj_asctig.png",
     url: "https://www.ieee-aess.org/"
   },
   {
     name: "Global Degress",
-    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773229164/lgo-gd_dgmpns.png",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561826/lgo-gd_dgmpns_oxxxhi.png",
     url: "https://globaldegrees.in/"
   },
   {
     name: "AIC-DSU",
-    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773329840/logo_uresbl.png",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561826/logo_uresbl_vov1sx.png",
     url: "https://aicdsu.foundation/index.html"
   },
   {
     name: "Sagar Hospital",
-    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1773857087/sagar-hospital-best-multispeciality-hospital-in-bangalore_ei7vfv.webp",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561826/sagar-hospital-best-multispeciality-hospital-in-bangalore_ei7vfv_wjnsgq.webp",
     url: "https://www.sagarhospitals.in/"
   },
   {
     name: "DERBI Foundation",
-    logo: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1774243169/derbi_s52ztp.webp",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561871/derbi_s52ztp_p8skkv.webp",
     url: "https://derbifoundation.com/"
   },
   {

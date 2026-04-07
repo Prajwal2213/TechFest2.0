@@ -12,8 +12,8 @@ const CheifPatrons = () => {
         <div className="flex justify-center">
       <div className="relative z-1 grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 md:ml-70 ">
         {[
-            { name: 'Dr. D. HEMACHANDRA SAGAR', desc: 'Chancellor, DSU', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213253/drhemachandra_nnbhhb.jpg') },
-            { name: 'Dr. D. PREMACHANDRA SAGAR', desc: 'Pro Chancellor, DSU', img: optimize('https://res.cloudinary.com/dstbnmjwh/image/upload/v1772213254/drpremachandra_zxbgrq.jpg') },
+            { name: 'Dr. D. HEMACHANDRA SAGAR', desc: 'Chancellor, DSU', img: optimize('https://res.cloudinary.com/duajsf7ft/image/upload/v1775560671/drhemachandra_nnbhhb_yuhzu3.jpg') },
+            { name: 'Dr. D. PREMACHANDRA SAGAR', desc: 'Pro Chancellor, DSU', img: optimize('https://res.cloudinary.com/duajsf7ft/image/upload/v1775560671/drpremachandra_zxbgrq_ojqyfu.jpg') },
         ].map((person, index) => (
             <div key={index} className="p-6  bg-black/80 rounded-xl shadow-md text-center border-white border  hover:shadow-xl transition-all w-70">
             <img src={person.img} alt={person.name} className="w-42 h-42 mx-auto rounded-full mb-4" />
