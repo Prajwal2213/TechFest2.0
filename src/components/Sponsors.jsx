@@ -30,6 +30,11 @@ const sponsorData = [
     url: "https://www.maven-silicon.com/"
   },
    {
+    name: "Centum Electronics",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775466264/Centum-logo_white_shadebaseline-e1671704377366_svf6ih.png",
+    url: "https://www.centumelectronics.com/"
+  },
+   {
     name: "DevSwarm",
     logo: "https://res.cloudinary.com/dfrql1hb3/image/upload/v1774535166/Devswarm_logo_jwpnxq.png",
     url: "https://devswarm.ai/"
@@ -97,11 +102,6 @@ const sponsorData = [
     name: "Seeed Studio",
     logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775117870/logo_2018_horizontal_gqgr3i.webp",
     url: "https://www.seeedstudio.com/"
-  },
-  {
-    name: "Centum Electronics",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775466264/Centum-logo_white_shadebaseline-e1671704377366_svf6ih.png",
-    url: "https://www.centumelectronics.com/"
   },
   {
     name: "ICICI Bank",
