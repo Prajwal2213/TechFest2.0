@@ -24,6 +24,11 @@ const sponsorData = [
     logo: "https://res.cloudinary.com/dfrql1hb3/image/upload/v1774534138/quarkcube_transparent_duxv1z.png",
     url: "https://quarkcube.io/"
   },
+  {
+    name: "Maven Silicon",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775467004/maven_silicon_logo_hpigxz.png",
+    url: "https://www.maven-silicon.com/"
+  },
    {
     name: "DevSwarm",
     logo: "https://res.cloudinary.com/dfrql1hb3/image/upload/v1774535166/Devswarm_logo_jwpnxq.png",
@@ -97,11 +102,6 @@ const sponsorData = [
     name: "Centum Electronics",
     logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775466264/Centum-logo_white_shadebaseline-e1671704377366_svf6ih.png",
     url: "https://www.centumelectronics.com/"
-  },
-  {
-    name: "Maven Silicon",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775467004/maven_silicon_logo_hpigxz.png",
-    url: "https://www.maven-silicon.com/"
   },
   {
     name: "ICICI Bank",
