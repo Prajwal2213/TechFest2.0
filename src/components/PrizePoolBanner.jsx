@@ -4,7 +4,7 @@ const PrizePoolBanner = () => {
   const [count, setCount] = useState(0);
   const [visible, setVisible] = useState(false);
   const ref = useRef(null);
-  const target = 1000000;
+  const target = 3000000;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -272,7 +272,7 @@ const PrizePoolBanner = () => {
                   letterSpacing: "0.05em",
                 }}
               >
-                ₹{count >= target ? "10,00,000" : formatINR(count)}
+                ₹{count >= target ? "30,00,000" : formatINR(count)}
                 <span
                   className="cyan-text-shadow"
                   style={{

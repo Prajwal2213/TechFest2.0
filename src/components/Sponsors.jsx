@@ -112,6 +112,21 @@ const sponsorData = [
     name: "DUN JUN",
     logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775581385/Copy_of_djlogo1280_1280_urxj2c.png",
     url: "https://dunjun.world/"
+  },
+  {
+    name: "Mathworks",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775692423/Mathworks1_hqco1r.webp",
+    url: "https://in.mathworks.com/"
+  },
+  {
+    name: "EVE paper",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775691874/Eve_paper_qmw11t.jpg",
+    url: "https://evepaper.com/"
+  },
+  {
+    name: "EVE placement",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775691874/eve_placement_vrdeji.jpg",
+    url: "https://eveplacement.com/"
   }
 ];
 
