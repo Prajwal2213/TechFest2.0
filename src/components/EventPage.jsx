@@ -498,7 +498,7 @@ CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/aeronavis-celestai-
     ],
     EdgeIQ_Challenge: [
       {
-        title: "EdgeIQ Challenge(Hackathon)", sideLabel: "Main", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562826/edgeIQ_jqkffx_hccy9e.jpg", description: `The EdgeIQ Challenge is a flagship AI hackathon under CELESTAI’26 – “AI at the Edge”, the annual tech fest of Dayananda Sagar University. This premier software-focused AI event brings together innovators to design and build intelligent systems that solve real-world problems through practical implementation and creative engineering.
+        title: "EdgeIQ Challenge(Hackathon)", sideLabel: "Main", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775466552/edge_IQ_azad3m.jpg", description: `The EdgeIQ Challenge is a flagship AI hackathon under CELESTAI’26 – “AI at the Edge”, the annual tech fest of Dayananda Sagar University. This premier software-focused AI event brings together innovators to design and build intelligent systems that solve real-world problems through practical implementation and creative engineering.
 
 Participants develop complete AI pipelines—from data processing and model development to optimization and deployment—focusing on performance, scalability, and real-world applicability. The challenge encourages system-level thinking and innovation beyond accuracy-centric solutions, pushing teams to build intelligent systems that are impactful and deployment-ready.
 Learn more About rules and Prizes 
