@@ -35,6 +35,16 @@ const sponsorData = [
     url: "https://in.mathworks.com/"
   },
   {
+    name: "IEEE CASS",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561824/ieee_cas_n7b5x3_xdx44s.svg",
+    url: "https://ieee-cas.org/"
+  },
+   {
+    name: "IEEE AESS",
+    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561822/aess-1-1-removebg-preview_dy27bj_asctig.png",
+    url: "https://www.ieee-aess.org/"
+  },
+  {
     name: "Seeed Studio",
     logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775117870/logo_2018_horizontal_gqgr3i.webp",
     url: "https://www.seeedstudio.com/"
@@ -115,16 +125,7 @@ const sponsorData = [
     logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775581385/Copy_of_djlogo1280_1280_urxj2c.png",
     url: "https://dunjun.world/"
   },
-  {
-    name: "IEEE CASS",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561824/ieee_cas_n7b5x3_xdx44s.svg",
-    url: "https://ieee-cas.org/"
-  },
-  {
-    name: "IEEE AESS",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561822/aess-1-1-removebg-preview_dy27bj_asctig.png",
-    url: "https://www.ieee-aess.org/"
-  },
+ 
   
 ];
 

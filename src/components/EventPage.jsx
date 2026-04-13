@@ -93,11 +93,22 @@ const DetailOverlay = ({ event, onClose }) => {
                 </div>
               </div>
 
-              <div className="p-4 sm:p-6 border-t border-zinc-800 flex items-center">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-wide text-white uppercase leading-tight">
-                  {event.title}
-                </h2>
-              </div>
+              <div className="p-4 sm:p-6 border-t border-zinc-800 flex flex-col items-start">
+  <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-wide text-white uppercase leading-tight">
+    {event.title}
+  </h2>
+
+  {event.prize && (
+    <div className="mt-2">
+      <span className="text-[10px] tracking-[0.3em] text-yellow-500 uppercase">
+        Prize Pool
+      </span>
+      <div className="text-lg sm:text-xl font-bold text-white">
+        {event.prize}
+      </div>
+    </div>
+  )}
+</div>
             </div>
 
 
@@ -305,6 +316,8 @@ export default function EventPage() {
     SkyRift: useRef(null),
     EdgeIQ_Challenge: useRef(null),
     techzibition: useRef(null),
+    Rover_Rumble: useRef(null),
+    Game_Rush: useRef(null),
     workshops: useRef(null),
     Special_Events: useRef(null),
     Elite_Event: useRef(null)
@@ -315,6 +328,8 @@ export default function EventPage() {
     SkyRift: useRef(null),
     EdgeIQ_Challenge: useRef(null),
     techzibition: useRef(null),
+    Rover_Rumble: useRef(null),
+    Game_Rush: useRef(null),
     workshops: useRef(null),
     Special_Events: useRef(null),
     Elite_Event: useRef(null)
@@ -407,12 +422,12 @@ The objective is to score the maximum number of goals within the allotted time.
 Manual control is allowed.
 Robots designed to intentionally damage opponents are strictly prohibited.
 Learn more About rules and Prizes 
-CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
+CLICK ON REGISTER`,prize:"₹2,00,000+" ,link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
       },
       // { title: "Techno Hunt", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771522995/77d7fc94-b27d-4b5e-bcd0-f8b6451ee458_farwgs.jpg", description: "Spatial navigation and precision passing challenge in dynamic environments.", link: "", included: true },
     ],
     SkyRift: [
-      { title: "Sky Rift", sideLabel: "Main", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562827/skyrift_yoggky_zvwg4t.png", description: "Skyrift is a competitive drone challenge featuring precision payload drops, obstacle navigation, and high‑speed racing. It tests teams on technical design, pilot skill, and safety. Learn more About rules and Prizes CLICK ON REGISTER", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
+      { title: "Sky Rift", sideLabel: "Main", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562827/skyrift_yoggky_zvwg4t.png",prize:"₹2,00,000+", description: "Skyrift is a competitive drone challenge featuring precision payload drops, obstacle navigation, and high‑speed racing. It tests teams on technical design, pilot skill, and safety. Learn more About rules and Prizes CLICK ON REGISTER", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
       { title: "Fling Fury", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562831/fling_fury1_fce5l4_fusjej.png", description: "Fling Fury is a hands-on mechanical design challenge where teams build safe, manually operated launchers inspired by sling and catapult systems. The competition tests engineering design, creativity, reliability, and accuracy, with the goal of hitting progressively difficult targets while meeting strict technical and safety standards. Learn more About rules and Prizes CLICK ON REGISTER", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
       {
         title: "Blaze Wing", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562828/blaze_wing_v4bd2y_k8gnbn.png", description: `Design and build a drone capable of handling real-world challenges such as:
@@ -454,24 +469,24 @@ Phase 1: Precision Aerobatics (Execution of compulsory maneuvers).
 Phase 2: Freestyle Aerobatic Battle (2-minute creative flight routine).
 Phase 3: Short Takeoff and Landing (STOL) Challenge (Minimal liftoff
 distance and precise landing).` },
-      {
-        title: "Rover Rumble", sideLabel: "Track 06", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562824/Rover_rumble_b6ybfg_u2nxny.jpg", description: `Event Overview: A simulated Martian exploration challenge where teams
-design and build custom rovers to traverse rugged terrain, collect
-samples, and deploy instruments.
-Team Size: 2 to 6 members.
+//       {
+//         title: "Rover Rumble", sideLabel: "Track 06", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562824/Rover_rumble_b6ybfg_u2nxny.jpg", description: `Event Overview: A simulated Martian exploration challenge where teams
+// design and build custom rovers to traverse rugged terrain, collect
+// samples, and deploy instruments.
+// Team Size: 2 to 6 members.
 
-The Mission:
-Technical Limits: 30 kg weight and 50 cm³ size constraint. No readymade kits allowed.
-Objectives: Navigate inclines, gather environmental samples, and
-return to the base station.
+// The Mission:
+// Technical Limits: 30 kg weight and 50 cm³ size constraint. No readymade kits allowed.
+// Objectives: Navigate inclines, gather environmental samples, and
+// return to the base station.
 
-Safety: Includes mandatory emergency stop buttons and nonhazardous material compliance.
-Winning Criteria: Based on task completion points, mission time, and
-design innovation.
-rover rumble
-Event Co-Ordinators
-`, link: "https://hackculture.io/hackathons/aeronavis-celestai-26"
-      },
+// Safety: Includes mandatory emergency stop buttons and nonhazardous material compliance.
+// Winning Criteria: Based on task completion points, mission time, and
+// design innovation.
+// rover rumble
+// Event Co-Ordinators
+// `, link: "https://hackculture.io/hackathons/aeronavis-celestai-26"
+//       },
       {
         title: "Prompt Wars", sideLabel: "Track 07", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562834/prompt_wars_m53hd0_uwtxma.jpg", description: `Event Overview: A high-intensity, 3-hour competitive hackathon
 replacing traditional CAD and coding with the power of Generative AI to
@@ -636,8 +651,9 @@ Focus Areas:
         description: `Unleash your innovation at Techzibition, the ultimate project showcase at Celestai’26! Open to every college, every domain, and every dreamer, this is the stage where your ideas—from tech prototypes to creative social solutions—take center stage. Whether you’re a coder, a designer, or a visionary from any program, come exhibit your hard work, connect with fellow creators, and compete for exciting prizes. Bring your best, inspire the crowd, and show us what’s possible when creativity knows no bounds!
 Learn more About rules and Prizes 
 CLICK ON REGISTER`,
+prize:"₹1,50,000+",
         link: "https://tally.so/r/yPxkxB"
-      },
+      }
 
       // {
       //   title: "Edge AI & Embedded Systems",
@@ -760,6 +776,42 @@ CLICK ON REGISTER`,
       //   link: ""
       // }
     ],
+     Rover_Rumble: [
+        {
+          title: "Rover Rumble",
+          sideLabel: "Rover",
+          imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562824/Rover_rumble_b6ybfg_u2nxny.jpg",
+          description: `Event Overview: A simulated Martian exploration challenge where teams
+design and build custom rovers to traverse rugged terrain, collect
+samples, and deploy instruments.
+Team Size: 2 to 6 members.
+
+The Mission:
+Technical Limits: 30 kg weight and 50 cm³ size constraint. No readymade kits allowed.
+Objectives: Navigate inclines, gather environmental samples, and
+return to the base station.
+
+Safety: Includes mandatory emergency stop buttons and nonhazardous material compliance.
+Winning Criteria: Based on task completion points, mission time, and
+design innovation.
+rover rumble
+Event Co-Ordinators`,
+prize:"₹50,000+",
+          link: "https://hackculture.io/hackathons/aeronavis-celestai-26"
+
+        }
+      ],
+      // Game_Rush: [
+      //   {
+      //     title: "Game Rush",
+      //     sideLabel: "Online Games",
+      //     imageURL: "",
+      //     description: ``,
+      //     prize:"₹50,000+",
+      //     link: ""
+
+      //   }
+      // ],
     Elite_Event: [
       {
         title: "Artistic Aura", sideLabel: "UI/UX", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560107/Picture5_kgdckl_to5bxi.jpg", description: `UI/UX Design Challenge
@@ -791,7 +843,7 @@ Innovation-Focused — Align your design thinking with CELESTAI'26's cutting-edg
 Compete & Connect — Meet and collaborate with a vibrant community of aspiring engineers and designers pushing the boundaries of UI/UX.
 Get Certified — Participants receive certificates; email ID and contact number are required for verification and issuance..
 Learn more About rules and Prizes 
-CLICK ON REGISTER`, link: "https://tally.so/r/ZjYoye"
+CLICK ON REGISTER`,prize:"₹50,000+", link: "https://tally.so/r/ZjYoye"
       },
       {
         title: "TechQuest ", sideLabel: "Treasure Hunt", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560114/brain_hfhcod_ngr4fo.jpg", description: `The Ultimate Technical Treasure Hunt
@@ -812,10 +864,10 @@ Step 2 — The Hackathon: Once every component is found, the clock starts. Integ
 Two tracks — choose Hardware or Software based on your team's strengths
 Bridges the gap between technical theory and real-world execution
 Tests speed and accuracy equally — every clue counts, every second matters
-A true multi-skill challenge: logic, networking, coding, and building — all in one event`, link: "https://tally.so/r/ODYAr7"
+A true multi-skill challenge: logic, networking, coding, and building — all in one event`,prize:"₹50,000", link: "https://tally.so/r/ODYAr7"
       },
       {
-        title: "PosterVerse", sideLabel: "Poster Design", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560113/poster_verse_sjyolv_rjvjfy.jpg", description: `Multidomain Poster Presentation`, link: ""
+        title: "PosterVerse", sideLabel: "Poster Design",prize:"₹1,50,000+", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560113/poster_verse_sjyolv_rjvjfy.jpg", description: `Multidomain Poster Presentation`, link: ""
       }
     ],
     workshops: [
