@@ -14,7 +14,7 @@ const projects = [
   { title: "Game Rush",section:"Game_Rush", bg: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1776233400/Game_rush_p0jgjo.png"), link:"https://docs.google.com/forms/d/e/1FAIpQLSdxao5l5YpD6YL35dsfySJSggRAJeVUsjwNIP0uhnagm1r0Qw/viewform" },
   { title: "Artistic Aura",section:"Elite_Event", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775560107/Picture5_kgdckl_to5bxi.jpg"), link:"https://tally.so/r/ZjYoye" },
   { title: "TechQuest",section:"Elite_Event", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775560114/brain_hfhcod_ngr4fo.jpg"), link:"https://tally.so/r/ODYAr7" },
-  { title: "PosterVerse",section:"Elite_Event", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775560113/poster_verse_sjyolv_rjvjfy.jpg"), link:"" },
+  { title: "PosterVerse",section:"Elite_Event", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775560113/poster_verse_sjyolv_rjvjfy.jpg"), link:"https://tally.so/r/ODJOqM" },
   { title: "Workshop",section:"workshops", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775560112/robohuman_gffew7_czfbag.jpg"), link:"" }
 ];
 

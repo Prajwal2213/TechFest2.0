@@ -873,7 +873,7 @@ Tests speed and accuracy equally — every clue counts, every second matters
 A true multi-skill challenge: logic, networking, coding, and building — all in one event`,prize:"₹50,000", link: "https://tally.so/r/ODYAr7"
       },
       {
-        title: "PosterVerse", sideLabel: "Poster Design",prize:"₹1,50,000+", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560113/poster_verse_sjyolv_rjvjfy.jpg", description: `Multidomain Poster Presentation`, link: ""
+        title: "PosterVerse", sideLabel: "Poster Design",prize:"₹1,50,000+", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560113/poster_verse_sjyolv_rjvjfy.jpg", description: `Multidomain Poster Presentation`, link: "https://tally.so/r/ODJOqM"
       }
     ],
     workshops: [
