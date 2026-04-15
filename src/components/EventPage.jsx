@@ -460,7 +460,7 @@ Team Size: 2 to 5 members.
 Aircraft Limits:
 Type: Strictly fixed-wing UAVs only.
 Weight & Size: Maximum Takeoff Weight of 2.0 kg; maximum
-wingspan of 2.2 meters.
+wingspan of 1.2 meters.
 Power: Electric propulsion only (Max 6S LiPo/Li-ion).
 Prohibited Types: Multirotors, helicopters, and VTOL aircraft.
 
@@ -468,7 +468,7 @@ Competition Rounds:
 Phase 1: Precision Aerobatics (Execution of compulsory maneuvers).
 Phase 2: Freestyle Aerobatic Battle (2-minute creative flight routine).
 Phase 3: Short Takeoff and Landing (STOL) Challenge (Minimal liftoff
-distance and precise landing).` },
+distance and precise landing).`,link : "https://hackculture.io/hackathons/aeronavis-celestai-26" },
 //       {
 //         title: "Rover Rumble", sideLabel: "Track 06", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562824/Rover_rumble_b6ybfg_u2nxny.jpg", description: `Event Overview: A simulated Martian exploration challenge where teams
 // design and build custom rovers to traverse rugged terrain, collect
@@ -801,17 +801,23 @@ prize:"₹50,000+",
 
         }
       ],
-      // Game_Rush: [
-      //   {
-      //     title: "Game Rush",
-      //     sideLabel: "Online Games",
-      //     imageURL: "",
-      //     description: ``,
-      //     prize:"₹50,000+",
-      //     link: ""
+       Game_Rush: [
+         {
+           title: "Game Rush",
+           sideLabel: "Online Games",
+          imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1776233400/Game_rush_p0jgjo.png",
+          description: `Game - Battlegrounds Mobile India(BGMI)
 
-      //   }
-      // ],
+No Of players per team: 4
+Mode: Squad TPP
+Map: Erangel / Miramar / Rondo
+Registration fee: 300/team
+Game format: Round robin`,
+           prize:"₹50,000+",
+           link: "https://docs.google.com/forms/d/e/1FAIpQLSdxao5l5YpD6YL35dsfySJSggRAJeVUsjwNIP0uhnagm1r0Qw/viewform"
+
+         }
+     ],
     Elite_Event: [
       {
         title: "Artistic Aura", sideLabel: "UI/UX", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560107/Picture5_kgdckl_to5bxi.jpg", description: `UI/UX Design Challenge
