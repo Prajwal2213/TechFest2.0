@@ -164,7 +164,7 @@ const DetailOverlay = ({ event, onClose }) => {
                     <button
                       className="w-full sm:flex-1 py-3 sm:py-4 font-black text-[10px] sm:text-xs tracking-[0.4em] uppercase flex items-center justify-center gap-3 transition-all border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black"
                       onClick={() => {
-                        window.open("https://drive.google.com/file/d/1yKxEaAthqKM_0ATp-FYUnxN1RSp8eo9X/view?usp=sharing");
+                        window.open("https://drive.google.com/file/d/1v81wasonqAWizrQxQosWen2-DI2A9aNY/view?usp=sharing");
                       }}
                     >
                       Rules
