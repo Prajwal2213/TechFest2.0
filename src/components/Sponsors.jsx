@@ -125,9 +125,13 @@ const sponsorData = [
     logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775581385/Copy_of_djlogo1280_1280_urxj2c.png",
     url: "https://dunjun.world/"
   },{
+    name: "Give My certificate",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1776356118/Give_my_certificate_e4caif.jpg",
+    url: "dsucelestai.tech"
+  },{
     name: "AERO Bangalore Club",
     logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1776355946/Aero_banglore_club_tgvgjy.jpg",
-    url: ""
+    url: "dsucelestai.tech"
   },
  
   
