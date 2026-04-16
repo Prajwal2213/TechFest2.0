@@ -130,7 +130,7 @@ const sponsorData = [
     url: "dsucelestai.tech"
   },{
     name: "AERO Bangalore Club",
-    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1776355946/Aero_banglore_club_tgvgjy.jpg",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1776358736/aero_za252y.jpg",
     url: "dsucelestai.tech"
   },
  
