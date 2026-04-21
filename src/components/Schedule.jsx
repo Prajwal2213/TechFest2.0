@@ -9,43 +9,48 @@ const FEST_SCHEDULE = [
     date: "April 23, 2026",
     theme: "Foundation & Exploration",
     events: [
-      { id: "d1e1", time: "09:00 AM - 10:00 AM", title: "Inauguration Ceremony", description: "Main Stage", location: "", accent: "cyan" },
-      { id: "d1e2", time: "10:00 AM - 11:00 AM", title: "Skill Lab (Workshop 1) & Circuit-Thon", description: "Tracks: Workshops (Track 01), EdgeAI Elite Event", location: "", accent: "cyan" },
-      { id: "d1e3", time: "11:00 AM - 1:30 PM", title: "Roboedge AI & Fling Fury", description: "Tracks: Roboedge (Track 01), Sky Rift (Track 01)", location: "", accent: "cyan" },
-      { id: "d1e4", time: "01:30 PM - 02:30 PM", title: "Lunch Break", description: "", location: "", accent: "cyan" },
-      { id: "d1e5", time: "03:00 PM - 05:00 PM", title: "Robo-Obstacle & Blaze Wing", description: "Tracks: Roboedge (Track 02), Sky Rift (Track 02)", location: "", accent: "cyan" },
-      { id: "d1e6", time: "05:00 PM - 07:00 PM", title: "Cultural Nights", description: "", location: "", accent: "cyan" },
+      { id: "d1e1", time: "09:00 AM", title: "Team OnBoarding & Check-in", location: "Board Room", accent: "cyan" },
+      { id: "d1e2", time: "09:30 AM - 11:00 AM", title: "Inauguration", location: "LH2", accent: "cyan" },
+      { id: "d1e3", time: "10:00 AM", title: "Poster Presentation & Tech Exhibition", location: "LH1 (ECE), LH3 (DS), LH4 (AS)", accent: "cyan" },
+      { id: "d1e4", time: "11:00 AM", title: "Panel Discussion", location: "LH2", accent: "cyan" },
+      { id: "d1e5", time: "01:00 PM", title: "Lunch Break", location: "", accent: "cyan" },
+      { id: "d1e6", time: "02:00 PM", title: "Event Registrations", location: "Lobby", accent: "cyan" },
+      { id: "d1e7", time: "02:30 PM", title: "Tech Walk", location: "LH2", accent: "cyan" },
+      { id: "d1e8", time: "07:00 PM", title: "Jamming / Cultural Night", location: "LH2", accent: "cyan" },
     ]
   },
+
   {
     id: 2,
     label: "Phase 02",
     date: "April 24, 2026",
     theme: "The Endurance Phase",
     events: [
-      { id: "d2e1", time: "09:00 AM", title: "EdgeIQ Challenge Start", description: "24hr Hackathon Kickoff", location: "", accent: "purple" },
-      { id: "d2e2", time: "09:00 AM - 1:00 AM", title: "Robo Obstacle, Techzibition & Glide Storm Events Kickoff", description: "Roboedge (Track 03) and Techzibition & Sky Rift(Track 03) start", location: "", accent: "purple" },
-      { id: "d2e3", time: "11:00 AM - 12:00 PM", title: "Workshop 2 ", description: "Workshops (Track 02)", location: "", accent: "magenta" },
-      { id: "d2e4", time: "01:00 PM", title: "Hackathon Milestone 1", description: "1st Prototype Due", location: "", accent: "purple" },
-      { id: "d2e5", time: "01:00 PM - 02:00 PM", title: "Lunch Break", description: "", location: "", accent: "purple" },
-      { id: "d2e6", time: "02:00 PM - 05:00 PM", title: "Robo Soccer", description: "Roboedge (Track 04)", location: "", accent: "purple" },
-      { id: "d2e7", time: "03:00 PM - 06:00 PM", title: "Artistic Aura", description: "EdgeAI Elite Event", location: "", accent: "purple" },
-      { id: "d2e8", time: "07:00 PM", title: "Hackathon Milestone 2", description: "2nd Prototype Due", location: "", accent: "purple" },
-      { id: "d2e9", time: "07:00 PM", title: "Cultural Nights", description: "Cultural Events", location: "", accent: "purple" },
+      { id: "d2e1", time: "08:30 AM", title: "Inauguration", location: "LH2", accent: "purple" },
+      { id: "d2e2", time: "08:30 AM", title: "Event Registration", location: "Lobby", accent: "purple" },
+      { id: "d2e3", time: "09:00 AM", title: "EdgeIQ Challenge Begins", location: "LH3", accent: "purple" },
+      { id: "d2e4", time: "09:00 AM", title: "Drone Quest", location: "Amphitheatre", accent: "purple" },
+      { id: "d2e5", time: "09:00 AM", title: "Robo Soccer", location: "Front of SOE", accent: "purple" },
+      { id: "d2e6", time: "10:00 AM", title: "Technical Treasure Hunt", location: "Amphitheatre", accent: "purple" },
+      { id: "d2e7", time: "10:00 AM", title: "Workshop", location: "LH4", accent: "magenta" },
+      { id: "d2e8", time: "11:00 AM", title: "International Guest Lecture", location: "LH2", accent: "purple" },
+      { id: "d2e9", time: "01:00 PM", title: "Lunch Break", location: "", accent: "purple" },
+      { id: "d2e10", time: "02:00 PM", title: "UI/UX Event", location: "LH4", accent: "purple" },
     ]
   },
+
   {
     id: 3,
     label: "Phase 03",
     date: "April 25, 2026",
     theme: "The Grand Finale",
     events: [
-      { id: "d3e1", time: "09:00 AM", title: "Hackathon Milestone 3", description: "3rd Prototype Due", location: "", accent: "magenta" },
-      { id: "d3e2", time: "09:00 AM - 01:00 AM", title: "Robowar & Fluid Force X", description: "Roboedge (New Event), Sky Rift (Track 04)", location: "", accent: "magenta" },
-      { id: "d3e6", time: "11:00 PM - 01:00 PM", title: "Workshop 3 ", description: "Workshops (Track 03)", location: "", accent: "magenta" },
-      { id: "d3e4", time: "01:00 PM", title: "EdgeIQ Conclusion", description: "Final Prototype Due", location: "", accent: "magenta" },
-      { id: "d3e5", time: "01:00 PM - 02:00 PM", title: "Lunch Break", description: "", location: "", accent: "magenta" },
-      { id: "d3e7", time: "02:00 PM - 05:00 PM", title: "Valedictory Ceremony", description: "Grand Finale & Awards", location: "Main Stage", accent: "magenta" }
+      { id: "d3e1", time: "09:00 AM", title: `Final Rounds: 
+        EdgeIQ Challenge, 
+        Drone Quest, 
+        Robo Soccer`, location: "Arena", accent: "magenta" },
+      { id: "d3e2", time: "01:00 PM", title: "Lunch Break", location: "", accent: "magenta" },
+      { id: "d3e3", time: "02:00 PM", title: "Valedictory Ceremony", location: "LH2", accent: "magenta" },
     ]
   }
 ];
@@ -183,7 +188,7 @@ const Schedule = () => {
                         {event.title}
                       </h3>
                       <p className="text-zinc-500 text-sm leading-relaxed mb-6 camelcase tracking-wider">
-                        {event.description}
+                        {event.location}
                       </p>
                       <div className="flex gap-6 text-[9px] font-black uppercase tracking-[0.2em] text-cyan-500/60">
                          {/* <span className="flex items-center gap-2"><MapPin size={12} /> {event.location}</span> */}
