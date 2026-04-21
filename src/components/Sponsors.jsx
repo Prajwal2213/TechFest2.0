@@ -121,7 +121,7 @@ const sponsorData = [
     url: "https://evepaper.com/"
   },
    {
-    name: "DUN JUN",
+    name: "DUN JUN Studios",
     logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775581385/Copy_of_djlogo1280_1280_urxj2c.png",
     url: "https://dunjun.world/"
   },{
