@@ -128,9 +128,15 @@ const sponsorData = [
     name: "Give My certificate",
     logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1776356118/Give_my_certificate_e4caif.jpg",
     url: "dsucelestai.tech"
-  },{
+  },
+  {
     name: "AERO Bangalore Club",
     logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1776358736/aero_za252y.jpg",
+    url: "dsucelestai.tech"
+  },,
+  {
+    name: "IITians GATE classes",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1776784416/IIT_GATE_zipqm3.jpg",
     url: "dsucelestai.tech"
   },
  
