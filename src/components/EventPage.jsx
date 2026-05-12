@@ -378,7 +378,7 @@ useEffect(() => {
   const eventData = {
     RoboEdge: [
       {
-        title: "RoboEdge", sideLabel: "Main", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592972/skyrift_auejzp.jpg", description: `ROBOEDGE, the flagship robotics event of CELESTAI’26 – “AI at the Edge”, is a premier multi-event robotics challenge that celebrates innovation, precision, and intelligent system design. This high-energy competition brings together aspiring engineers and robotics enthusiasts to design, control, and operate advanced robotic systems in real-world scenarios.
+        title: "RoboEdge", sideLabel: "Main", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778595850/roboedge_eifwhp.jpg", description: `ROBOEDGE, the flagship robotics event of CELESTAI’26 – “AI at the Edge”, is a premier multi-event robotics challenge that celebrates innovation, precision, and intelligent system design. This high-energy competition brings together aspiring engineers and robotics enthusiasts to design, control, and operate advanced robotic systems in real-world scenarios.
 
 The challenge combines hands-on competitions that test core engineering fundamentals including electronics, embedded systems, control logic, mechanical integration, and intelligent on-device decision-making. Participants work across complete robotic pipelines — from sensing and signal processing to control, motion planning, and execution — transforming theoretical concepts into practical, high-performance systems.
 
@@ -407,7 +407,7 @@ CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/robotics-challenge-
       // The fastest valid run will rank higher.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
       //       },
       {
-        title: "Robo Obstacle", sideLabel: "Round 02", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562826/roboobstcale_sic5xo_uydque.png", description: `Robots must navigate an obstacle course featuring ramps, turns, and barriers.
+        title: "Robo Obstacle", sideLabel: "Round 02", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592972/roboobstcale_rkg6sg.png", description: `Robots must navigate an obstacle course featuring ramps, turns, and barriers.
 Evaluation will focus on:
 1.Stability and balance
 2.Control accuracy
@@ -417,7 +417,7 @@ Learn more About rules and Prizes
 CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
       },
       {
-        title: "Robo Soccer", sideLabel: "Round 03", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562824/robosoccer_k7lr44_xbieeu.jpg", description: `Matches may be one-on-one or team-based, as decided by organizers.
+        title: "Robo Soccer", sideLabel: "Round 03", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778596362/robosoccer_scmfo0.jpg", description: `Matches may be one-on-one or team-based, as decided by organizers.
 The objective is to score the maximum number of goals within the allotted time.
 Manual control is allowed.
 Robots designed to intentionally damage opponents are strictly prohibited.
@@ -427,10 +427,10 @@ CLICK ON REGISTER`,prize:"₹2,00,000+" ,link: "https://hackculture.io/hackathon
       // { title: "Techno Hunt", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/dstbnmjwh/image/upload/v1771522995/77d7fc94-b27d-4b5e-bcd0-f8b6451ee458_farwgs.jpg", description: "Spatial navigation and precision passing challenge in dynamic environments.", link: "", included: true },
     ],
     SkyRift: [
-      { title: "Sky Rift", sideLabel: "Main", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562827/skyrift_yoggky_zvwg4t.png",prize:"₹2,00,000+", description: "Skyrift is a competitive drone challenge featuring precision payload drops, obstacle navigation, and high‑speed racing. It tests teams on technical design, pilot skill, and safety. Learn more About rules and Prizes CLICK ON REGISTER", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
+      { title: "Sky Rift", sideLabel: "Main", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592972/skyrift_auejzp.jpg",prize:"₹2,00,000+", description: "Skyrift is a competitive drone challenge featuring precision payload drops, obstacle navigation, and high‑speed racing. It tests teams on technical design, pilot skill, and safety. Learn more About rules and Prizes CLICK ON REGISTER", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
       { title: "Fling Fury", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778594528/fling_fury1_ajno68.png", description: "Fling Fury is a hands-on mechanical design challenge where teams build safe, manually operated launchers inspired by sling and catapult systems. The competition tests engineering design, creativity, reliability, and accuracy, with the goal of hitting progressively difficult targets while meeting strict technical and safety standards. Learn more About rules and Prizes CLICK ON REGISTER", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
       {
-        title: "Blaze Wing", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562828/blaze_wing_v4bd2y_k8gnbn.png", description: `Design and build a drone capable of handling real-world challenges such as:
+        title: "Blaze Wing", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592981/blaze_wing_-_Copy_ecylrm.png", description: `Design and build a drone capable of handling real-world challenges such as:
 Obstacle Avoidance: Navigate safely in dynamic environments.
 
 Payload Delivery: Execute precise payload drops with reliability.
@@ -447,14 +447,14 @@ CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/aeronavis-celestai-
       },
 
       {
-        title: "Glide Storm", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562834/glide_storm_ryhu04_tu3aqk.png", description: `GlideStrom is a premier aerospace design challenge focused on the core fundamentals of flight: lift, drag, and stability. Participants must engineer a high-performance, unpowered fixed-wing glider with a maximum wingspan of 40cm and a mass limit of 100g, utilizing foam as the primary structural material. The competition tests aero-efficiency through a specialized formula that rewards the longest flight time relative to the aircraft's weight. Following a mandatory Technical Audit, teams of three must execute precise manual launches to maximize airtime and distance while navigating a high-stakes "two-attempt" rule..
+        title: "Glide Storm", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592971/glide_storm_-_Copy_hyooha.png", description: `GlideStrom is a premier aerospace design challenge focused on the core fundamentals of flight: lift, drag, and stability. Participants must engineer a high-performance, unpowered fixed-wing glider with a maximum wingspan of 40cm and a mass limit of 100g, utilizing foam as the primary structural material. The competition tests aero-efficiency through a specialized formula that rewards the longest flight time relative to the aircraft's weight. Following a mandatory Technical Audit, teams of three must execute precise manual launches to maximize airtime and distance while navigating a high-stakes "two-attempt" rule..
         Learn more About rules and Prizes 
 CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/aeronavis-celestai-26"
       },
 
-      { title: "Fluid Force X", sideLabel: "Track 04", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562826/3085da35-50c2-4736-91f6-b03e2a890bb3_bdvg7m_rj2bso.png", description: "Fluid Force X is an intensive technical challenge where fluid power meets aerospace engineering. Designed to simulate real-world aircraft MRO (Maintenance, Repair, and Overhaul) environments, the event tests participants on their ability to design and troubleshoot complex hydraulic and pneumatic systems. Teams of 2 to 4 members must progress through two elimination rounds: conceptualizing and validating flight-critical circuits—such as landing gear and braking systems—before diagnosing faults in a high-pressure, time-bound troubleshooting scenario. Success requires a mastery of fluid mechanics principles combined with sound engineering logic.Learn more About rules and Prizes CLICK ON REGISTER", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" }, ,
+      { title: "Fluid Force X", sideLabel: "Track 04", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592969/fluidforce_330x380_-_Copy_kuywym.png", description: "Fluid Force X is an intensive technical challenge where fluid power meets aerospace engineering. Designed to simulate real-world aircraft MRO (Maintenance, Repair, and Overhaul) environments, the event tests participants on their ability to design and troubleshoot complex hydraulic and pneumatic systems. Teams of 2 to 4 members must progress through two elimination rounds: conceptualizing and validating flight-critical circuits—such as landing gear and braking systems—before diagnosing faults in a high-pressure, time-bound troubleshooting scenario. Success requires a mastery of fluid mechanics principles combined with sound engineering logic.Learn more About rules and Prizes CLICK ON REGISTER", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" }, ,
       {
-        title: "The Flight Surge", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562827/Flight_surge_u8ztb7_wlqlbc.jpg", description: `Event Overview: A fixed-wing UAV aerobatic challenge designed to evaluate aircraft stability, pilot control, and design efficiency through precision and freestyle flight.
+        title: "The Flight Surge", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778595850/flight_surge_afi3vp.jpg", description: `Event Overview: A fixed-wing UAV aerobatic challenge designed to evaluate aircraft stability, pilot control, and design efficiency through precision and freestyle flight.
 Team Size: 2 to 5 members.
 
 Aircraft Limits:
@@ -488,7 +488,7 @@ distance and precise landing).`,link : "https://hackculture.io/hackathons/aerona
 // `, link: "https://hackculture.io/hackathons/aeronavis-celestai-26"
 //       },
       {
-        title: "Prompt Wars", sideLabel: "Track 07", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562834/prompt_wars_m53hd0_uwtxma.jpg", description: `Event Overview: A high-intensity, 3-hour competitive hackathon
+        title: "Prompt Wars", sideLabel: "Track 07", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778595850/prompt_wars_qge8wh.jpg", description: `Event Overview: A high-intensity, 3-hour competitive hackathon
 replacing traditional CAD and coding with the power of Generative AI to
 design complex, future-ready engineering solutions.
 Team Size: Individual or Group of 2.
@@ -513,14 +513,14 @@ CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/aeronavis-celestai-
     ],
     EdgeIQ_Challenge: [
       {
-        title: "EdgeIQ Challenge(Hackathon)", sideLabel: "Main", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775466552/edge_IQ_azad3m.jpg", description: `The EdgeIQ Challenge is a flagship AI hackathon under CELESTAI’26 – “AI at the Edge”, the annual tech fest of Dayananda Sagar University. This premier software-focused AI event brings together innovators to design and build intelligent systems that solve real-world problems through practical implementation and creative engineering.
+        title: "EdgeIQ Challenge(Hackathon)", sideLabel: "Main", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592974/edgeIQ_-_Copy_ifhkif.jpg", description: `The EdgeIQ Challenge is a flagship AI hackathon under CELESTAI’26 – “AI at the Edge”, the annual tech fest of Dayananda Sagar University. This premier software-focused AI event brings together innovators to design and build intelligent systems that solve real-world problems through practical implementation and creative engineering.
 
 Participants develop complete AI pipelines—from data processing and model development to optimization and deployment—focusing on performance, scalability, and real-world applicability. The challenge encourages system-level thinking and innovation beyond accuracy-centric solutions, pushing teams to build intelligent systems that are impactful and deployment-ready.
 Learn more About rules and Prizes 
 CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "Smart Cities & Infrastructure", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562836/smrtcity_uwctm3_xpazhb.png", description: `Innovative Solution for Vision Intelligence
+        title: "Smart Cities & Infrastructure", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778596435/smart_zc4cgy.jpg", description: `Innovative Solution for Vision Intelligence
 Create an innovative solution that addresses challenges in the Smart Cities and Infrastructure.
 
 1. AI-Powered Adaptive Traffic Optimization
@@ -549,36 +549,36 @@ CLICK ON REGISTER
 
 `, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
+//       {
+//         title: "Agriculture & Rural Development", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562831/agriandrural_mijvqb_n1onh0.png", description: `Innovative Solution for Audio Intelligence
+// Create an innovative solution that addresses challenges in the Rural Areas.
+
+// 1. Soil-Climate Adaptive Smart Irrigation
+
+// Problem: Static irrigation schedules cause water wastage.
+// Prototype Goal: AI irrigation controller using soil nutrients + weather prediction.
+// Scope: Dynamic irrigation allocation algorithm.
+
+// 2. AI-Based Pre-Symptomatic Crop Disease Predictor
+
+// Problem: Crop diseases detected only after visible damage.
+// Prototype Goal: Vision + environmental data fusion model predicting disease outbreak early.
+// Scope: Crop stress prediction engine.
+
+// 3. Blockchain-Enabled Transparent Agri Supply Chain
+
+// Problem: Farmers lack pricing transparency and traceability.
+// Prototype Goal: Smart contract-based produce tracking and pricing system.
+// Scope: Tamper-proof agri transaction protocol.
+
+// Round 1: Idea Submission is free of cost.
+// Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.
+
+// Learn more About rules and Prizes 
+// CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
+//       },
       {
-        title: "Agriculture & Rural Development", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562831/agriandrural_mijvqb_n1onh0.png", description: `Innovative Solution for Audio Intelligence
-Create an innovative solution that addresses challenges in the Rural Areas.
-
-1. Soil-Climate Adaptive Smart Irrigation
-
-Problem: Static irrigation schedules cause water wastage.
-Prototype Goal: AI irrigation controller using soil nutrients + weather prediction.
-Scope: Dynamic irrigation allocation algorithm.
-
-2. AI-Based Pre-Symptomatic Crop Disease Predictor
-
-Problem: Crop diseases detected only after visible damage.
-Prototype Goal: Vision + environmental data fusion model predicting disease outbreak early.
-Scope: Crop stress prediction engine.
-
-3. Blockchain-Enabled Transparent Agri Supply Chain
-
-Problem: Farmers lack pricing transparency and traceability.
-Prototype Goal: Smart contract-based produce tracking and pricing system.
-Scope: Tamper-proof agri transaction protocol.
-
-Round 1: Idea Submission is free of cost.
-Round 2: Only shortlisted teams are required to pay a registration fee of ₹300.
-
-Learn more About rules and Prizes 
-CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
-      },
-      {
-        title: "Predictive Intelligence At The Edge", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562834/pred_int_si2k8f_qjhjsx.png", description: `Innovative Solution for Predictive Intelligence at the Edge
+        title: "Predictive Intelligence At The Edge", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592972/pred_int_zvksku.png", description: `Innovative Solution for Predictive Intelligence at the Edge
 Create an innovative solution that addresses challenges in the Predictive Intelligence at the Edge domain.
 
 Focus Areas:
@@ -594,7 +594,7 @@ Focus Areas:
    CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "AI For Sustainability", sideLabel: "Track 04", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562832/ai_sustain_ee0n57_m2vgnb.png", description: `Innovative Solution fo AI for Sustainability
+        title: "AI For Sustainability", sideLabel: "Track 03", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778596362/smart_cities_vy84te.jpg", description: `Innovative Solution fo AI for Sustainability
 Create an innovative solution that addresses challenges in the AI for Sustainability domain.
 
 Focus Areas:
@@ -610,7 +610,7 @@ Focus Areas:
    CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "HealthTech", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562836/unnamed_mr9l1j_ugyd1o.jpg", description: `Innovative Solution for IoT Healthcare
+        title: "HealthTech", sideLabel: "Track 04", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778596362/ai_sus_fglqbv.jpg", description: `Innovative Solution for IoT Healthcare
 Create an innovative solution that addresses challenges in the IoT Healthcare domain.
 
 Focus Areas:
@@ -626,7 +626,7 @@ Focus Areas:
    CLICK ON REGISTER`, link: "https://hackculture.io/hackathons/edgeiq-challenge-celestai-26"
       },
       {
-        title: "Open Innovation EdgeIQ Open Track", sideLabel: "Track 06", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562835/open_innnn_x6lxzn_tqjrvq.png", description: `Innovative Solution for Open Innovation (EdgeIQ Open Track)
+        title: "Open Innovation EdgeIQ Open Track", sideLabel: "Track 05", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592970/open_innnn_bx5nv9.png", description: `Innovative Solution for Open Innovation (EdgeIQ Open Track)
 Create an innovative solution that addresses challenges in the Open Innovation (EdgeIQ Open Track) domain.
 
 Focus Areas:
@@ -647,7 +647,7 @@ Focus Areas:
       {
         title: "Techzibition",
         sideLabel: "Techzibition",
-        imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775367118/techzibition_teq7ij.png",
+        imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592969/Picture4_mtuykv.jpg",
         description: `Unleash your innovation at Techzibition, the ultimate project showcase at Celestai’26! Open to every college, every domain, and every dreamer, this is the stage where your ideas—from tech prototypes to creative social solutions—take center stage. Whether you’re a coder, a designer, or a visionary from any program, come exhibit your hard work, connect with fellow creators, and compete for exciting prizes. Bring your best, inspire the crowd, and show us what’s possible when creativity knows no bounds!
 Learn more About rules and Prizes 
 CLICK ON REGISTER`,
@@ -780,7 +780,7 @@ prize:"₹1,50,000+",
         {
           title: "Rover Rumble",
           sideLabel: "Rover",
-          imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562824/Rover_rumble_b6ybfg_u2nxny.jpg",
+          imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778595850/rover_rumble_flrbfg.jpg",
           description: `Event Overview: A simulated Martian exploration challenge where teams
 design and build custom rovers to traverse rugged terrain, collect
 samples, and deploy instruments.
@@ -820,7 +820,7 @@ Game format: Round robin`,
      ],
     Elite_Event: [
       {
-        title: "Artistic Aura", sideLabel: "UI/UX", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560107/Picture5_kgdckl_to5bxi.jpg", description: `UI/UX Design Challenge
+        title: "Artistic Aura", sideLabel: "UI/UX", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592970/Picture5_-_Copy_qterjg.jpg", description: `UI/UX Design Challenge
 "Where Creativity Meets Functionality"
 Artistic Aura is the premier UI/UX design showdown at CELESTAI'26, the flagship technical festival of Dayananda Sagar University. This isn't just about making things look pretty — it's about crafting seamless, user-centric digital experiences that solve real problems and define the future of human-digital interaction.
 If you have the vision to transform complex challenges into intuitive, beautiful interfaces, this event was built for you.
@@ -852,7 +852,7 @@ Learn more About rules and Prizes
 CLICK ON REGISTER`,prize:"₹50,000+", link: "https://tally.so/r/ZjYoye"
       },
       {
-        title: "TechQuest ", sideLabel: "Treasure Hunt", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560114/brain_hfhcod_ngr4fo.jpg", description: `The Ultimate Technical Treasure Hunt
+        title: "TechQuest ", sideLabel: "Treasure Hunt", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778594356/brain_fnzxf0.jpg", description: `The Ultimate Technical Treasure Hunt
 Analyze. Hunt. Build.
 TechQuest is one of the most thrilling events at CELESTAI'26, the flagship technical festival of Dayananda Sagar University. It's not your typical hackathon — it's a high-octane scavenger hunt that tests your technical instinct, logical thinking, and rapid development skills all at once.
 
@@ -873,11 +873,11 @@ Tests speed and accuracy equally — every clue counts, every second matters
 A true multi-skill challenge: logic, networking, coding, and building — all in one event`,prize:"₹50,000", link: "https://tally.so/r/ODYAr7"
       },
       {
-        title: "PosterVerse", sideLabel: "Poster Design",prize:"₹1,50,000+", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560113/poster_verse_sjyolv_rjvjfy.jpg", description: `Multidomain Poster Presentation`, link: "https://tally.so/r/ODJOqM"
+        title: "PosterVerse", sideLabel: "Poster Design",prize:"₹1,50,000+", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778595851/event_enwpsa.jpg", description: `Multidomain Poster Presentation`, link: "https://tally.so/r/ODJOqM"
       }
     ],
     workshops: [
-      { title: "Skill Lab", sideLabel: "WorkShop", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775560112/robohuman_gffew7_czfbag.jpg", description: "Deep-dive technical sessions in embedded logic and ROS.", link: "" }
+      { title: "Skill Lab", sideLabel: "WorkShop", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778594356/robohuman_efzrdc.jpg", description: "Deep-dive technical sessions in embedded logic and ROS.", link: "" }
     ],
   };
 
