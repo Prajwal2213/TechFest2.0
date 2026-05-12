@@ -378,14 +378,14 @@ useEffect(() => {
   const eventData = {
     RoboEdge: [
       {
-        title: "RoboEdge", sideLabel: "Main", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562833/roboedge_kiitqy_sqgbpg.jpg", description: `ROBOEDGE, the flagship robotics event of CELESTAI’26 – “AI at the Edge”, is a premier multi-event robotics challenge that celebrates innovation, precision, and intelligent system design. This high-energy competition brings together aspiring engineers and robotics enthusiasts to design, control, and operate advanced robotic systems in real-world scenarios.
+        title: "RoboEdge", sideLabel: "Main", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592972/skyrift_auejzp.jpg", description: `ROBOEDGE, the flagship robotics event of CELESTAI’26 – “AI at the Edge”, is a premier multi-event robotics challenge that celebrates innovation, precision, and intelligent system design. This high-energy competition brings together aspiring engineers and robotics enthusiasts to design, control, and operate advanced robotic systems in real-world scenarios.
 
 The challenge combines hands-on competitions that test core engineering fundamentals including electronics, embedded systems, control logic, mechanical integration, and intelligent on-device decision-making. Participants work across complete robotic pipelines — from sensing and signal processing to control, motion planning, and execution — transforming theoretical concepts into practical, high-performance systems.
 
 ROBOEDGE emphasizes reliability, adaptability, and smart system integration, challenging teams to deliver robust robotic solutions under dynamic competitive conditions. It is not just a competition, but a platform to showcase technical depth, creativity, and real-world engineering capability.`, link: "https://hackculture.io/hackathons/robotics-challenge-celestai26"
       },
       {
-        title: "ROBOEDGE AI", sideLabel: "Round 01", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562837/roboedgeai_xnplkt_wvirae.png", description: `This round is software-only; no hardware is required.
+        title: "ROBOEDGE AI", sideLabel: "Round 01", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592973/roboedgeai_lina2t.png", description: `This round is software-only; no hardware is required.
 
 Evaluation will be based on:
 
@@ -428,7 +428,7 @@ CLICK ON REGISTER`,prize:"₹2,00,000+" ,link: "https://hackculture.io/hackathon
     ],
     SkyRift: [
       { title: "Sky Rift", sideLabel: "Main", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562827/skyrift_yoggky_zvwg4t.png",prize:"₹2,00,000+", description: "Skyrift is a competitive drone challenge featuring precision payload drops, obstacle navigation, and high‑speed racing. It tests teams on technical design, pilot skill, and safety. Learn more About rules and Prizes CLICK ON REGISTER", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
-      { title: "Fling Fury", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562831/fling_fury1_fce5l4_fusjej.png", description: "Fling Fury is a hands-on mechanical design challenge where teams build safe, manually operated launchers inspired by sling and catapult systems. The competition tests engineering design, creativity, reliability, and accuracy, with the goal of hitting progressively difficult targets while meeting strict technical and safety standards. Learn more About rules and Prizes CLICK ON REGISTER", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
+      { title: "Fling Fury", sideLabel: "Track 01", imageURL: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778594528/fling_fury1_ajno68.png", description: "Fling Fury is a hands-on mechanical design challenge where teams build safe, manually operated launchers inspired by sling and catapult systems. The competition tests engineering design, creativity, reliability, and accuracy, with the goal of hitting progressively difficult targets while meeting strict technical and safety standards. Learn more About rules and Prizes CLICK ON REGISTER", link: "https://hackculture.io/hackathons/aeronavis-celestai-26" },
       {
         title: "Blaze Wing", sideLabel: "Track 02", imageURL: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775562828/blaze_wing_v4bd2y_k8gnbn.png", description: `Design and build a drone capable of handling real-world challenges such as:
 Obstacle Avoidance: Navigate safely in dynamic environments.

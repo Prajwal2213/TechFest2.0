@@ -11,7 +11,7 @@ import {
 const sponsorData = [
   {
     name: "Edge Impulse",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561689/edge_impulse_jvffnt_dsqyda.svg",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593614/edge_impulse_zhj5v4.svg",
     url: "https://www.edgeimpulse.com/"
   },
   {
@@ -26,7 +26,7 @@ const sponsorData = [
   },
   {
     name: "Centum Electronics",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775963976/Centum-Logo_bluebaseline-2-e1671704402244_zdtie6.png",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593614/Centum-Logo_bluebaseline-2-e1671704402244_ii8stk.png",
     url: "https://www.centumelectronics.com/"
   },
   {
@@ -36,12 +36,12 @@ const sponsorData = [
   },
   {
     name: "IEEE CASS",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561824/ieee_cas_n7b5x3_xdx44s.svg",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593614/cas-vector-logo-w-text-horizontal_web_fxknvu.svg",
     url: "https://ieee-cas.org/"
   },
    {
     name: "IEEE AESS",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561822/aess-1-1-removebg-preview_dy27bj_asctig.png",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593613/aess-logo_d36c0k.svg",
     url: "https://www.ieee-aess.org/"
   },
   {
@@ -50,40 +50,35 @@ const sponsorData = [
     url: "https://www.seeedstudio.com/"
   }, {
     name: "Hackculture",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561823/hackculture_q4ioff_bptd4k.png",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593613/Black_Full_Logo_o6ua1a.webp",
     url: "https://hackculture.io/"
   },
   
   {
     name: "Maven Silicon",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775467004/maven_silicon_logo_hpigxz.png",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593613/maven-silicon-light_mfpqrs.svg",
     url: "https://www.maven-silicon.com/"
   },
   {
     name: "DERBI Foundation",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561871/derbi_s52ztp_p8skkv.webp",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593613/953165d5-02fa-4948-9e59-c9078e7fd48a_dqk28u.webp",
     url: "https://derbifoundation.com/"
   },
    {
     name: "Sagar Hospital",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561826/sagar-hospital-best-multispeciality-hospital-in-bangalore_ei7vfv_wjnsgq.webp",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593613/sagar-hospital-best-multispeciality-hospital-in-bangalore_jtzcjn.webp",
     url: "https://www.sagarhospitals.in/"
   },
 
   {
     name: "AIC-DSU",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561826/logo_uresbl_vov1sx.png",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593820/logo_2_e9uglt.png",
     url: "https://aicdsu.foundation/index.html"
   },
   {
     name: "Global Degress",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775561826/lgo-gd_dgmpns_oxxxhi.png",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593613/Logo_0000_Group-1-copy-1_wbxvzi.png",
     url: "https://globaldegrees.in/"
-  },
-    {
-    name: "ICICI Bank",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775466890/ICICI_Bank_id_NFCjbgj_1_aguv7j.png",
-    url: "https://www.icici.bank.in/"
   },
    {
     name: "IEEE Bangalore",
@@ -107,7 +102,7 @@ const sponsorData = [
   },
   {
     name: "Pavan Hyundai",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775062562/pavan_hyundai_zpojvc.jpg",
+    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593821/logo_1_zspvv4.png",
     url: ""
   },
   {
@@ -120,20 +115,11 @@ const sponsorData = [
     logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1775691874/Eve_paper_qmw11t.jpg",
     url: "https://evepaper.com/"
   },
-   {
-    name: "DUN JUN Studios",
-    logo: "https://res.cloudinary.com/duajsf7ft/image/upload/v1775581385/Copy_of_djlogo1280_1280_urxj2c.png",
-    url: "https://dunjun.world/"
-  },{
-    name: "Give My certificate",
-    logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1776356118/Give_my_certificate_e4caif.jpg",
-    url: "dsucelestai.tech"
-  },
   {
     name: "AERO Bangalore Club",
     logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1776358736/aero_za252y.jpg",
     url: "dsucelestai.tech"
-  },,
+  },
   {
     name: "IITians GATE classes",
     logo: "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1776784416/IIT_GATE_zipqm3.jpg",
@@ -145,7 +131,7 @@ const sponsorData = [
 
 const title_sponsor = {
   name : "Laksh Properties",
-  logo : "https://res.cloudinary.com/duajsf7ft/image/upload/v1775365869/Laksh-properties-Logo-_uemksw.png",
+  logo : "https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593614/Laksh-properties-Logo-_mdgm0h.png",
   url : "https://lakshproperties.in/"
 }
 

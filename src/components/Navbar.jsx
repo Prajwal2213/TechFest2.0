@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="flex items-center cursor-pointer">
         <Link to="/" className="flex items-center  md:gap-4">
           <img
-            src="https://res.cloudinary.com/duajsf7ft/image/upload/f_auto,q_auto,w_300/v1775467265/Techfest_logo-removebg-preview_xikawj_myvyha.png"
+            src="https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593061/logo_yfswbx.png"
             alt="TechFest logo"
             height={80}
             width={120}
@@ -30,7 +30,7 @@ const Navbar = () => {
             className="h-12 sm:h-16 md:h-20 lg:h-16 scale-90 md:scale-100 mr-4 md:mr-7"
           />
           <img
-            src="https://res.cloudinary.com/duajsf7ft/image/upload/v1775467264/download_gnrxgw_fst2dh.png"
+            src="https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778593122/logo_dsu_eizrt4.png"
             alt="DSU logo"
             className="h-10 sm:h-12 md:h-14 lg:h-16 scale-90"
             height={187}

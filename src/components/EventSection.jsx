@@ -6,16 +6,16 @@ const optimize = (url) => {
 };
 
 const projects = [
-  { title: "RoboEdge",section:"RoboEdge", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775560114/robosoccer_k7lr44_y9jnzv.jpg"), link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" },
-  { title: "EdgeIQ Challenge",section:"EdgeIQ_Challenge", subtitle: "24 Hours Multi-Domain Hackathon", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775560127/edgeIQ_1_e3fmv1_l1ppqj.png"), link:"https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
-  { title: "Sky Rift",section:"SkyRift", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775560242/sky_rift1_yig1jj_k6ew0y.png"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
-  { title: "Techzibition",section:"techzibition", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775560131/ChatGPT_Image_Feb_26_2026_04_47_52_PM_l1avvu_nd9azn.png"), link:"https://tally.so/r/yPxkxB" },
+  { title: "RoboEdge",section:"RoboEdge", bg: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592973/roboedgeai_lina2t.png"), link:"https://hackculture.io/hackathons/robotics-challenge-celestai26" },
+  { title: "EdgeIQ Challenge",section:"EdgeIQ_Challenge", subtitle: "24 Hours Multi-Domain Hackathon", bg: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592974/edgeIQ_-_Copy_ifhkif.jpg"), link:"https://hackculture.io/hackathons/edgeiq-challenge-celestai-26" },
+  { title: "Sky Rift",section:"SkyRift", bg: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778594356/sky_rift1_em5jrb.jpg"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
+  { title: "Techzibition",section:"techzibition", bg: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592969/Picture4_mtuykv.jpg"), link:"https://tally.so/r/yPxkxB" },
   { title: "Rover Rumble",section:"Rover_Rumble", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775562824/Rover_rumble_b6ybfg_u2nxny.jpg"), link:"https://hackculture.io/hackathons/aeronavis-celestai-26" },
   { title: "Game Rush",section:"Game_Rush", bg: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/q_auto/f_auto/v1776233400/Game_rush_p0jgjo.png"), link:"https://docs.google.com/forms/d/e/1FAIpQLSdxao5l5YpD6YL35dsfySJSggRAJeVUsjwNIP0uhnagm1r0Qw/viewform" },
-  { title: "Artistic Aura",section:"Elite_Event", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775560107/Picture5_kgdckl_to5bxi.jpg"), link:"https://tally.so/r/ZjYoye" },
-  { title: "TechQuest",section:"Elite_Event", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775560114/brain_hfhcod_ngr4fo.jpg"), link:"https://tally.so/r/ODYAr7" },
+  { title: "Artistic Aura",section:"Elite_Event", bg: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778592970/Picture5_-_Copy_qterjg.jpg"), link:"https://tally.so/r/ZjYoye" },
+  { title: "TechQuest",section:"Elite_Event", bg: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778594356/brain_fnzxf0.jpg"), link:"https://tally.so/r/ODYAr7" },
   { title: "PosterVerse",section:"Elite_Event", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775560113/poster_verse_sjyolv_rjvjfy.jpg"), link:"https://tally.so/r/ODJOqM" },
-  { title: "Workshop",section:"workshops", bg: optimize("https://res.cloudinary.com/duajsf7ft/image/upload/v1775560112/robohuman_gffew7_czfbag.jpg"), link:"" }
+  { title: "Workshop",section:"workshops", bg: optimize("https://res.cloudinary.com/dxbsdgjm9/image/upload/v1778594356/robohuman_efzrdc.jpg"), link:"" }
 ];
 
 
