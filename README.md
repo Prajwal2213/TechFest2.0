@@ -1,6 +1,6 @@
-# TechFest 2.0 🎉
+# TechFest 2.0 
 
-TechFest 2.0 is a modern and responsive web application designed for managing and showcasing a technical festival. The platform provides an engaging interface for participants to explore events, register for competitions, and stay updated with festival information.
+TechFest is a modern and responsive web application designed for managing and showcasing a technical festival. The platform provides an engaging interface for participants to explore events, register for competitions, and stay updated with festival information.
 
 ---
 
