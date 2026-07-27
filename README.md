@@ -1,16 +1,179 @@
-# React + Vite
+# TechFest 2.0 🎉
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TechFest 2.0 is a modern and responsive web application designed for managing and showcasing a technical festival. The platform provides an engaging interface for participants to explore events, register for competitions, and stay updated with festival information.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 🎯 Modern and responsive user interface
+- 📱 Mobile-friendly design
+- 🏆 Event showcase and details
+- 📝 Registration interface
+- 📅 Schedule and event information
+- 💡 Clean and intuitive navigation
+- ⚡ Fast performance with Vite
+- 🎨 Beautiful UI using React components
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+- React.js
+- Vite
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+
+### Styling
+- Tailwind CSS
+- Responsive Design
+
+### Version Control
+- Git
+- GitHub
+
+---
+
+## 📂 Project Structure
+
+```
+TechFest2.0/
+│
+├── public/                 # Static assets
+├── src/
+│   ├── assets/             # Images and icons
+│   ├── components/         # Reusable React components
+│   ├── pages/              # Application pages
+│   ├── App.jsx             # Main application
+│   ├── main.jsx            # Entry point
+│   └── index.css           # Global styles
+│
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Prajwal2213/TechFest2.0.git
+```
+
+Navigate to the project directory
+
+```bash
+cd TechFest2.0
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+Preview the production build
+
+```bash
+npm run preview
+```
+
+---
+
+## 📸 Screenshots
+
+Add screenshots of your application here.
+
+Example:
+
+```
+screenshots/
+├── home.png
+├── events.png
+└── registration.png
+```
+
+---
+
+## 🎯 Future Enhancements
+
+- User Authentication
+- Online Event Registration
+- Admin Dashboard
+- Payment Integration
+- Email Notifications
+- Certificate Generation
+- Live Event Updates
+- Leaderboard and Results
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a new branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push to your branch
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+## 👨‍💻 Author
+
+**Prajwal M**
+
+- GitHub: https://github.com/Prajwal2213
+
+---
+
+## ⭐ Support
+
+If you found this project helpful, consider giving it a ⭐ on GitHub!
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
